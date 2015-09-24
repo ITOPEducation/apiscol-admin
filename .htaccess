@@ -7,7 +7,7 @@ RewriteRule ^resources/detail/([^/]+)/display/display-mode/([^/]+)$ .?page=resou
 RewriteRule ^resources/detail/([^/]+)/display/display-device/([^/]+)$ .?page=resources&action=detail&panel=display&metadata-id=$1&display-device=$2 [L]
 RewriteRule ^resources/detail/([^/]+)/file-list/async$ .?page=resources&action=detail&metadata-id=$1&panel=edit&file-list=file-list&mode=async [L]
 RewriteRule ^resources/detail/[^/]+/edit/url-parsing-report/([a-z.0-9/:_-]+)/async$ .?page=resources&action=detail&panel=edit&url-parsing-report=$1&mode=async [L]
-RewriteRule ^add/metadata/url-parsing-report/([a-z.0-9/:_-]+)/async$ .?page=add&action=metadata&url-parsing-report=$1&mode=async [L]
+RewriteRule ^add/import/url-parsing-report/([a-z.0-9/:_-]+)/async$ .?page=add&action=import&url-parsing-report=$1&mode=async [L]
 RewriteRule ^resources/detail/[^/]+/edit/file-transfer-report/([a-z.0-9/:_-]+)/async$ .?page=resources&action=detail&panel=edit&file-transfer-report=$1&mode=async [L]
 RewriteRule ^resources/detail/([^/]+)/([^/]+)/async$ .?page=resources&action=detail&metadata-id=$1&panel=$2&mode=async [L]
 RewriteRule ^resources/detail/([^/]+)/([^/]+)$ .?page=resources&action=detail&metadata-id=$1&panel=$2 [L]
