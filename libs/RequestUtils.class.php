@@ -47,7 +47,7 @@ class RequestUtils {
 	}
 	public static function isValidURL($url)
 	{
-		return preg_match('|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|i', $url);
+		return filter_var($url, FILTER_VALIDATE_URL);
 	}
 
 }
