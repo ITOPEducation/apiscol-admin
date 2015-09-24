@@ -31,7 +31,7 @@ class ResourceImportView extends AbstractView implements IView {
 		$this->render=str_replace("[URL-REGISTRATION-RESULT]", $urlRegistrationResultArea, $this->render);
 	}
 	private function getImportMetadataArea() {
-		$action=$this->prefix.'/add/metadata';
+		$action=$this->prefix.'/add/import';
 		$area='<div class="add-metadata-input-container"><form id="import-metadata" enctype="multipart/form-data"	action="'.$action.'" method="POST"><input id="metadata_upload" type="file" name="import-metadata" /><input id="metadata_submit" type="submit" value="Créez une nouvelle entrée en important un fichier scoLOMfr" />'.
 				'</form>	<div class="progress">	<div class="bar"></div><div class="percent">0%</div></div></div>';
 		return $area;
