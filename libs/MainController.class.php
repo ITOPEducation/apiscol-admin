@@ -151,6 +151,19 @@ class MainController {
 						break;
 				}
 				break;
+			case 'maintenance' :
+				switch (Security::$_CLEAN ['action']) {
+					case 'recovery' :
+						if ($this->userIsAllowedToWrite ())
+							$this->secundaryController = new MaintenanceController ( $this, $this->model, $this->prefix );
+						else {
+							$this->secundaryController = new HomeController ( $this, $this->model, $this->prefix );
+							$this->setInError ( true );
+							$this->setErrorMessage ( "Vos droits ne vous permettent pas d'ajouter des ressources." );
+						}
+						break;
+				}
+				break;
 			default :
 				$this->secundaryController = new HomeController ( $this, $this->model, $this->prefix );
 				break;

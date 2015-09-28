@@ -3,9 +3,11 @@
 <language>
 	<xmldata id="TITRE-GENERAL">
 		<translation lang="fr">ApiScol - La banque de ressources
-			numériques scolaires </translation>
+			numériques scolaires
+		</translation>
 		<translation lang="en-gb">ApiScol - The k12 learning object
-			repository </translation>
+			repository
+		</translation>
 	</xmldata>
 	<xmldata id="HOME">
 		<translation lang="fr">Accueil</translation>
@@ -23,9 +25,13 @@
 		<translation lang="fr">Alertes</translation>
 		<translation lang="en-gb">Alerts</translation>
 	</xmldata>
-	<xmldata id="SERVICES">
-		<translation lang="fr">Services</translation>
-		<translation lang="en-gb">Services</translation>
+	<xmldata id="MAINTENANCE">
+		<translation lang="fr">Maintenance</translation>
+		<translation lang="en-gb">Maintenance</translation>
+	</xmldata>
+	<xmldata id="MAINTENANCE-MENU-RECOVERY">
+		<translation lang="fr">Restauration</translation>
+		<translation lang="en-gb">Rcovery</translation>
 	</xmldata>
 	<xmldata id="PREFERENCES">
 		<translation lang="fr">Preferences</translation>
@@ -80,7 +86,8 @@
 		<translation lang="en-gb">Recherche</translation>
 	</xmldata>
 	<xmldata id="RESOURCES-LIST-AGGREGATION-LEVEL-LEARNING-OBJECT">
-		<translation lang="fr">Niveau d'agrégation : objet d'apprentissage</translation>
+		<translation lang="fr">Niveau d'agrégation : objet
+			d'apprentissage</translation>
 		<translation lang="en-gb">Agregation level : learning object</translation>
 	</xmldata>
 	<xmldata id="RESOURCES-LIST-AGGREGATION-LEVEL-LESSON">

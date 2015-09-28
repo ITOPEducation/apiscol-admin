@@ -25,6 +25,7 @@ RewriteRule ^warning .?page=home&warning=warning [L]
 RewriteRule ^([\w]+)/([\w]+)$ .?page=$1&action=$2 [L]
 RewriteRule ^resources .?page=resources&action=list
 RewriteRule ^add .?page=add&action=metadata
+RewriteRule ^maintenance .?page=maintenance&action=recovery
 RewriteRule ^([\w]+)$ .?page=$1 
 RewriteCond %{QUERY_STRING}     ^$              [OR]
 RewriteCond %{QUERY_STRING}     ^query=(.*)$    [NC]

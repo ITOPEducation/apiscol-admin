@@ -1674,3 +1674,34 @@ input[type=checkbox].css-checkbox.semi-checked+label.css-label {
 .css-label {
 	background-image: url(../img/checkbox.png);
 }
+/*
+maintenance-recovery
+*/
+html.js body div.content div#maintenance-recovery.detail-pane div.pane h2.ui-state-highlight img
+	{
+	margin: 5px 20px;
+	vertical-align: middle;
+	width: 32px;
+}
+
+html.js body div.content div#maintenance-recovery.detail-pane div.pane h2.ui-state-highlight
+	{
+	display: inline-block;
+	padding-right: 20px;
+	margin-top: 0;
+}
+html.js body div.content div#maintenance-recovery.detail-pane div.pane h3.ui-state-highlight
+	{
+	padding: 0.5em;
+	text-align: center;
+	clear: left;
+}
+html.js body div.content div#maintenance-recovery.detail-pane div.pane div.recovery-control form#metadata-recovery.ui-button span.ui-button-icon-primary.ui-icon-preview
+	{
+	background-image: url("../img/wall.png");
+}
+
+html.js body div#maintenance-recovery.detail-pane div.pane div.recovery-control form.ui-button span.ui-icon-refresh-state
+	{
+	background-image: url("../img/refresh-icon.gif");
+}
