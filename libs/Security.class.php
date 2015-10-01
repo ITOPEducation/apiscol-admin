@@ -63,9 +63,9 @@ class Security {
 			"lifeCycle-contributor-vcard" => "string-array",
 			"lifeCycle-contributor-role" => "string-array",
 			"educational-difficulty" => "string",
-			"classifications" => "json" 
-	)
-	;
+			"classifications" => "json",
+			"target-repository" => "target-repository" 
+	);
 	private static $DEFAULTS = array (
 			"page" => "home" 
 	);
@@ -266,6 +266,12 @@ class Security {
 				case "json" :
 					$valid = true;
 					self::$_BUFFER [$key] = json_decode ( $value, true );
+					break;
+				case "target-repository" :
+					$valid = in_array ( $value, array (
+							"metadata",
+							"resources" 
+					) );
 					break;
 			}
 			if ($valid === true) {

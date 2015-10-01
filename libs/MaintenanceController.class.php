@@ -32,6 +32,7 @@ class MaintenanceController implements IController {
 		}
 	}
 	public function processAsyncRequest() {
+		print_r(Security::$_CLEAN);
 		if (isset ( Security::$_CLEAN ['import-metadata'] )) {
 			$this->processMetadataImport ();
 			$this->defineView ();

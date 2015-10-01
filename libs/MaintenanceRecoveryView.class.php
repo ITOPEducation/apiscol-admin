@@ -19,7 +19,7 @@ class MaintenanceRecoveryView extends AbstractView implements IView {
 		$this->render = str_replace ( "[METADATA-RECOVERY]", $metadataRecoveryArea, $this->render );
 	}
 	private function getMetadataRecoveryArea() {
-		$area = '<div class="recovery-control ui-helper-clearfix"><form action="[PREFIX]/resources/detail/[MDID]/refresh" method="POST"	id="metadata-recovery"> <input type="submit" value="recovery" />Reconstruire le dépôt de métadonnées</form>	<div class="display-result"></div></div>';
+		$area = '<div class="recovery-control ui-helper-clearfix"><form action="[PREFIX]/maintenance/recovery" method="POST"	id="metadata-recovery"> <input type="submit" value="recovery" />Reconstruire le dépôt de métadonnées<input type="hidden" name="target-repository" value="metadata" /></form>	<div class="display-result"></div></div>';
 		return $area;
 	}
 }
