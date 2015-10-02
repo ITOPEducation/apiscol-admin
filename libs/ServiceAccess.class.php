@@ -5,8 +5,8 @@ class ServiceAccess {
 	private $client;
 	public function __construct($parameters) {
 		$this->parameters = $parameters;
-		if (! is_null ( $this->parameters ) && is_array ( $this->parameters ) )
-			$this->client = new RestClient ( $this->parameters ["services"] ["edit"]);
+		if (! is_null ( $this->parameters ) && is_array ( $this->parameters ))
+			$this->client = new RestClient ( $this->parameters ["services"] ["edit"] );
 		else
 			throw new Exception ( "La session a expiré" );
 	}
@@ -98,6 +98,11 @@ class ServiceAccess {
 		$response = $this->client->setUrl ( $url )->get ();
 		return $response ["content"];
 	}
+	public function getMaintenanceProcessReport($url) {
+		// TODO tester si commence par adresse de meta ou content
+		$response = $this->client->setUrl ( $url )->get ();
+		return $response ["content"];
+	}
 	public function getThumbsSuggestions($metadataLink) {
 		$params ["mdid"] = $metadataLink;
 		$response = $this->client->setUrl ( $this->parameters ["services"] ["thumbs"] . '/suggestions' )->get ( $params );
@@ -179,6 +184,10 @@ class ServiceAccess {
 	}
 	public function deleteMetadata($mdid, $ifMatch) {
 		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/meta/' . $mdid )->delete ( null, null, "application/xml", "application/x-www-form-urlencoded", $ifMatch, null );
+		return $response;
+	}
+	public function askForRecoveryMaintenance($target) {
+		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/maintenance/meta/recovery' )->post ( null, null, "application/xml", "application/x-www-form-urlencoded" );
 		return $response;
 	}
 }

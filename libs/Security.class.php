@@ -41,6 +41,7 @@ class Security {
 			"file-transfer-report" => "uri",
 			"url-parsing-report" => "uri",
 			"refresh-process-report" => "uri",
+			"maintenance-process-report" => "uri",
 			"url" => "uri",
 			"resid" => "uuid",
 			"etag" => "string",
@@ -91,7 +92,7 @@ class Security {
 			),
 			"alerts" => array (),
 			"maintenance" => array (
-					"recovery" => array () 
+					"recovery" => array ()
 			) 
 	);
 	public static function cleanPost() {

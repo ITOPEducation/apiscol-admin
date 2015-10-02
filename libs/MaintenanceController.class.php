@@ -22,43 +22,35 @@ class MaintenanceController implements IController {
 		}
 	}
 	public function processSyncRequest() {
-		if (isset ( Security::$_CLEAN ['import-metadata'] )) {
-			$this->processMetadataImport ();
-		}
-		if (isset ( Security::$_CLEAN ['url'] ) && isset ( Security::$_CLEAN ['resid'] ) && isset ( Security::$_CLEAN ['etag'] )) {
-			$this->registerMetadataId ();
-			$this->acquireContent ();
-			$this->registerUrl ();
-		}
 	}
 	public function processAsyncRequest() {
-		print_r(Security::$_CLEAN);
-		if (isset ( Security::$_CLEAN ['import-metadata'] )) {
-			$this->processMetadataImport ();
-			$this->defineView ();
-			if (! is_null ( $this->getView () ))
-				echo $this->getView ()->getImportOfMetadataResultArea ();
-			else {
-				echo MainController::xmlErrorMessage ( "Erreur inconnue", 0, "Une erreur est survenue" );
-			}
-		} else if (isset ( Security::$_CLEAN ['url'] ) && isset ( Security::$_CLEAN ['metadata-id'] )) {
-			$this->registerMetadataId ();
-			if (! $this->mainController->isInError ())
-				$this->acquireContent ();
-			if (! $this->mainController->isInError ())
-				$this->registerUrl ();
-			$this->defineView ();
-			if (! $this->mainController->isInError ())
-				echo $this->getView ()->getUrlRegistrationResultArea ();
-			else {
-				// TODO écrire du html
-				$errors = $this->mainController->getErrorMessage ();
-				echo MainController::xmlErrorMessage ( $errors ['private'], 0, $errors ['public'] );
-			}
-		} else if (isset ( Security::$_CLEAN ['url-parsing-report'] )) {
-			$url = RequestUtils::restoreProtocole ( Security::$_CLEAN ['url-parsing-report'] );
-			// TODO catch bad url
-			echo $this->model->getUrlParsingReport ( $url );
+		switch ($_SESSION ['action']) {
+			case 'recovery' :
+				if (isset ( Security::$_CLEAN ['target-repository'] ))
+					switch (Security::$_CLEAN ['target-repository']) {
+						case 'metadata' :
+							try {
+								$response = $this->model->askForRecoveryMaintenance ( 'metadata' );
+								echo $response ['content'];
+							} catch ( HttpRequestException $e ) {
+								echo MainController::xmlErrorMessage ( $e->getMessage (), 500, "Le service ne semble pas répondre" );
+							}
+							;
+							break;
+						
+						default :
+							;
+							break;
+					}
+				else if (isset ( Security::$_CLEAN ['maintenance-process-report'] )) {
+					$url = RequestUtils::restoreProtocole ( Security::$_CLEAN ['maintenance-process-report'] );
+					try {
+						echo $this->model->getMaintenanceProcessReport ( $url );
+					} catch ( HttpRequestException $e ) {
+						echo MainController::xmlErrorMessage ( $url . "  " . $e->getMessage (), 404, "Le service ne semble pas répondre" );
+					}
+				}
+				break;
 		}
 	}
 	public function getView() {

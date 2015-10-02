@@ -25,7 +25,9 @@ RewriteRule ^warning .?page=home&warning=warning [L]
 RewriteRule ^([\w]+)/([\w]+)$ .?page=$1&action=$2 [L]
 RewriteRule ^resources .?page=resources&action=list
 RewriteRule ^add .?page=add&action=metadata
+RewriteRule ^maintenance/recovery/maintenance-process-report/([a-z.0-9/:_-]+)/async$ .?page=maintenance&action=recovery&maintenance-process-report=$1&mode=async [L]
 RewriteRule ^maintenance/recovery .?page=maintenance&action=recovery
+
 RewriteRule ^([\w]+)$ .?page=$1 
 RewriteCond %{QUERY_STRING}     ^$              [OR]
 RewriteCond %{QUERY_STRING}     ^query=(.*)$    [NC]

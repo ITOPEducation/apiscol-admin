@@ -202,7 +202,7 @@ function scanForFileTransferReports() {
 			console.log(msg);
 		},
 		success : function(result) {
-			handleRefreshProcessReport(result);
+			handleMaintenanceProcessReport(result);
 		}
 	});
 }

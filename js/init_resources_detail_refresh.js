@@ -311,7 +311,7 @@ function handleRefreshRequestFirstResponse(data, $displayArea,
 			color : color
 		});
 		if (!scanIsRunning)
-			scanForRefreshProcessReports();
+			scanForMaintenanceProcessReports();
 	}
 }
 function scanForRefreshProcessReports() {
@@ -331,7 +331,7 @@ function scanForRefreshProcessReports() {
 			console.log(msg);
 		},
 		success : function(result) {
-			handleRefreshProcessReport(result, refreshProcessReport.element,
+			handleMaintenanceProcessReport(result, refreshProcessReport.element,
 					refreshProcessReport.button, refreshProcessReport.color);
 		}
 	});

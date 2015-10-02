@@ -1,6 +1,8 @@
 var activeLabel;
 var submitButton;
 var displayConsole;
+var awaitedMetadataRecoveryReports = new Array();
+var scanIsRunning = false;
 function secundaryInit() {
 	displayConsole = $("div.pane div.console-area", "div#refresh.detail-pane");
 	activeLabel = "main_menu_item_maitenance";
@@ -27,23 +29,23 @@ function initMetadataRecoveryControls() {
 	$metadataRecoveryForm.find("input[type=submit]").remove();
 
 	$metadataRecoveryForm.attr("action",
-			$metadataRecoveryForm.attr("action") + "/async").ajaxForm({
-		dataType : 'xml',
-		cache : true,
-		beforeSend : function() {
+			$metadataRecoveryForm.attr("action") + "/async").ajaxForm(
+			{
+				dataType : 'xml',
+				cache : true,
+				beforeSend : function() {
 
-			changeButtonState($metadataRecoveryForm, "pending");
-			// displayResult("Veuillez patienter",
-			// "La requête de mise à jour a été envoyée.", "wait",
-			// $metadataRecoveryDisplayArea, "blue");
+					changeButtonState($metadataRecoveryForm, "pending");
+					displayResult("Veuillez patienter",
+							"La requête de mise à jour a été envoyée.");
 
-		},
-		complete : function(xhr) {
-			// handleRefreshRequestFirstResponse(xhr.responseXML,
-			// $metadataRecoveryDisplayArea, $metadataRecoveryForm,
-			// "blue");
-		}
-	});
+				},
+				complete : function(xhr) {
+					handleMetadataRecoveryFirstResponse(xhr.responseXML,
+
+					$metadataRecoveryForm, "blue");
+				}
+			});
 	$metadataRecoveryForm.button({
 		icons : {
 			primary : "ui-icon-preview",
@@ -54,6 +56,96 @@ function initMetadataRecoveryControls() {
 			return false;
 		$metadataRecoveryForm.submit();
 	});
+}
+function handleMetadataRecoveryFirstResponse(data, $refreshPreviewForm, color) {
+	if (!data)
+		displayResult("Problème inconnu", "Pas de réponse du serveur");
+	else if (data.firstChild.tagName == "error") {
+
+		displayResult($(data).find("intro").text(), $(data).find("message")
+				.text());
+		changeButtonState($refreshPreviewForm, "error");
+
+	} else {
+		var messages = getMessagesAsText(data);
+		var state = $(data).find("apiscol\\:state, state").text();
+		displayResult(state, messages);
+		var linkElement = $(data).find("link[rel='self']");
+		awaitedMetadataRecoveryReports.push({
+			url : linkElement.attr("href"),
+			button : $refreshPreviewForm
+		});
+		if (!scanIsRunning)
+			scanForMaintenanceProcessReports();
+		if (state == "done") {
+			{
+				changeButtonState($refreshPreviewForm, "success");
+			}
+		} else {
+
+		}
+	}
+}
+function getMessagesAsText(data) {
+	$messages = $(data).find("apiscol\\:message, message");
+	$messagesText = "";
+	$messages.each(function(index, elem) {
+		$messagesText += $(elem).text() + "<br/>";
+	});
+	return $messagesText;
+}
+function scanForMaintenanceProcessReports() {
+	scanIsRunning = true;
+	if (awaitedMetadataRecoveryReports.length == 0) {
+		scanIsRunning = false;
+		return;
+	}
+	var maintenanceProcessReport = awaitedMetadataRecoveryReports[0];
+
+	$.ajax({
+		dataType : 'xml',
+		type : "GET",
+		url : window.location + "/maintenance-process-report/"
+				+ maintenanceProcessReport.url + "/async",
+		error : function(msg) {
+			console.log(msg);
+		},
+		success : function(result) {
+			handleMaintenanceProcessReport(result,
+					maintenanceProcessReport.button);
+		}
+	});
+}
+function handleMaintenanceProcessReport(data, button) {
+	if (data.firstChild.tagName == "error") {
+		{
+			displayResult($(data).find("intro").text(), $(data).find("message")
+					.text());
+			changeButtonState(button, "error");
+			awaitedMetadataRecoveryReports.shift();
+			return;
+		}
+	}
+	var state = $(data).find("apiscol\\:state,state").text();
+	var messages = getMessagesAsText(data);
+	var link = $(data).find("link[rel='self']").attr("href");
+	if (state == "done") {
+		displayResult("Processus terminé", messages);
+		changeButtonState(button, "success");
+	} else if (state == "aborted") {
+		$('form#send_file').find("input").removeClass("ui-state-disabled");
+		displayResult("Abandon", messages);
+		changeButtonState(button, "error");
+	} else if (state == "recovery_running") {
+		displayResult("En cours", messages);
+		changeButtonState(button, "pending");
+	}
+
+	if (state == "done" || state == "aborted") {
+		awaitedMetadataRecoveryReports.shift();
+
+	}
+	setTimeout(scanForMaintenanceProcessReports, 500);
 }
 function changeButtonState(button, state) {
 	var iconClass = "ui-icon-refresh-state";
@@ -85,33 +177,10 @@ function changeButtonState(button, state) {
 	else
 		button.removeClass("ui-state-disabled")
 }
-function displayResult(status, message, decoration, element, color) {
-	var decorationClass = "ui-corner-all ";
-	var imgsrc = "";
-	switch (decoration) {
-	case "error":
-		decorationClass += "ui-state-error ";
-		imgsrc = "warning.png";
-		break;
-	case "running":
-		decorationClass += "ui-state-active ";
-		imgsrc = "running.gif";
-		break;
-	case "wait":
-		decorationClass += "ui-state-active ";
-		imgsrc = "wait-icon.gif";
-		break;
-	case "success":
-		decorationClass += "ui-state-active ";
-		imgsrc = "success.png";
-		break;
-	}
-	element.removeClass().addClass(decorationClass).html(
-			"<h5>" + status + "</h5>");
-	var moreLines = (decoration == "success") ? "<p></p>" : "";
-	displayConsole.html(displayConsole.html() + '<p style="color:' + color
-			+ '">' + message + "</p>" + moreLines);
-	fixHeightProblems();
+function displayResult(title, message) {
+	$("div.console-area").empty();
+	$("div.console-area").html(message).scrollTop(1E10);
+	;
 }
 function fixHeightProblems() {
 	if (displayConsole.get(0).scrollHeight > displayConsole.get(0).clientHeight) {
