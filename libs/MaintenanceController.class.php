@@ -2,6 +2,9 @@
 class MaintenanceController implements IController {
 	public function __construct($mainController, $model, $prefix) {
 		$this->mainController = $mainController;
+		/**
+		 * @var Model
+		 */
 		$this->model = $model;
 		$this->prefix = $prefix;
 	}
@@ -44,8 +47,9 @@ class MaintenanceController implements IController {
 					}
 				else if (isset ( Security::$_CLEAN ['maintenance-process-report'] )) {
 					$url = RequestUtils::restoreProtocole ( Security::$_CLEAN ['maintenance-process-report'] );
+					$nbLines=isset(Security::$_CLEAN['nb-lines'])?Security::$_CLEAN['nb-lines']:0;
 					try {
-						echo $this->model->getMaintenanceProcessReport ( $url );
+						echo $this->model->getMaintenanceProcessReport ( $url,$nbLines );
 					} catch ( HttpRequestException $e ) {
 						echo MainController::xmlErrorMessage ( $url . "  " . $e->getMessage (), 404, "Le service ne semble pas répondre" );
 					}

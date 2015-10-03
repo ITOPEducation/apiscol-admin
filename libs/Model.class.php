@@ -163,8 +163,8 @@ class Model {
 	public function getRefreshProcessReport($url) {
 		return $this->getServiceAccess ()->getRefreshProcessReport ( $url );
 	}
-	public function getMaintenanceProcessReport($url) {
-		return $this->getServiceAccess ()->getMaintenanceProcessReport ( $url );
+	public function getMaintenanceProcessReport($url, $nbLines = 0) {
+		return $this->getServiceAccess ()->getMaintenanceProcessReport ( $url, $nbLines );
 	}
 	public function getThumbsSuggestions() {
 		return $this->thumbSuggestions;

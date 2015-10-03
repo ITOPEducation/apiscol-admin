@@ -1,6 +1,6 @@
 @CHARSET "UTF-8";
 
-html.js,body {
+html.js, body {
 	font-family: arial, helvetica, sans-serif;
 	overflow: visible;
 }
@@ -13,7 +13,7 @@ html.js,body {
 /*
 Page header
 */
-html.js a,html.js a:hover,html.js a:active,html.js a:focus {
+html.js a, html.js a:hover, html.js a:active, html.js a:focus {
 	outline: 0 !important;
 }
 
@@ -40,7 +40,7 @@ html.js header.ui-helper-clearfix div.status-bar {
 	overflow: visible;
 }
 
-html.js header.ui-helper-clearfix div.status-bar div.connexion-box,html.js body header.ui-helper-clearfix div.status-bar div.private-error-message
+html.js header.ui-helper-clearfix div.status-bar div.connexion-box, html.js body header.ui-helper-clearfix div.status-bar div.private-error-message
 	{
 	width: 250px;
 	z-index: 9999;
@@ -75,7 +75,8 @@ html.js body header.ui-helper-clearfix div.status-bar span.status span.ui-button
 	background-image: url("../img/disconnect.png");
 }
 
-html.js body header.ui-helper-clearfix div.status-bar span.status.ui-button.ui-button-icon-only,html.js body header.ui-helper-clearfix div.status-bar span.status form span.disconnect-wrapper
+html.js body header.ui-helper-clearfix div.status-bar span.status.ui-button.ui-button-icon-only,
+	html.js body header.ui-helper-clearfix div.status-bar span.status form span.disconnect-wrapper
 	{
 	width: 1.5em;
 	height: 1.5em;
@@ -122,7 +123,8 @@ html.js body>header h1 {
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
-html.js div.ui-layout-center table thead tr th span.delete-selection-button,html.js div.ui-layout-center table thead tr th span.refresh-selection-button
+html.js div.ui-layout-center table thead tr th span.delete-selection-button,
+	html.js div.ui-layout-center table thead tr th span.refresh-selection-button
 	{
 	width: 16px;
 }
@@ -171,7 +173,7 @@ html.js body>header div.status-bar span.status.content {
 	margin-left: 1em;
 }
 
-html.js body>header div span.status.connexion,html.js body>header div span.status.disconnect
+html.js body>header div span.status.connexion, html.js body>header div span.status.disconnect
 	{
 	position: absolute;
 	right: 1em;
@@ -199,7 +201,7 @@ html.js header.ui-helper-clearfix>nav .menu-item {
 	z-index: 2000;
 }
 
-html.js .menu-item,html.js .sub-menu-item {
+html.js .menu-item, html.js .sub-menu-item {
 	z-index: 999;
 }
 
@@ -249,7 +251,7 @@ html.js header.ui-helper-clearfix div.status-bar span.private-error-message-butt
 	background-image: url("../img/bug.png");
 }
 
-html.js .menu li a,html.js .menu li span {
+html.js .menu li a, html.js .menu li span {
 	display: block;
 	padding: 0;
 	margin: 6px 0;
@@ -415,7 +417,8 @@ html.js body>div.content>div.ui-layout-west div#facets.basic div.ui-accordion-co
 	padding-left: 0.5em;
 }
 
-html.js body>div.content>div.ui-layout-north div.filters-list a.ui-state-default,html.js div.content div.pane div.filters-list span.facet a span.ui-icon
+html.js body>div.content>div.ui-layout-north div.filters-list a.ui-state-default,
+	html.js div.content div.pane div.filters-list span.facet a span.ui-icon
 	{
 	display: inline-block;
 }
@@ -460,7 +463,8 @@ html.js body div.content div.pane div.inner-layout div.ui-layout-center table tb
 	white-space: nowrap;
 }
 
-html.js body div.content div.pane div.inner-layout div.ui-layout-center table tbody tr td form.ui-button,html.js body div.content div.pane div.inner-layout div.ui-layout-center table tbody tr td a.resource-download-link
+html.js body div.content div.pane div.inner-layout div.ui-layout-center table tbody tr td form.ui-button,
+	html.js body div.content div.pane div.inner-layout div.ui-layout-center table tbody tr td a.resource-download-link
 	{
 	width: 16px;
 	height: 16px;
@@ -567,7 +571,8 @@ html.js body div.content div.detail-pane {
 	clear: both;
 }
 
-html.js div.content div#display.detail-pane div.display-options button#change-display-mode.ui-button,html.js div.content div#display.detail-pane div.display-options ul#display-mode.ui-popup
+html.js div.content div#display.detail-pane div.display-options button#change-display-mode.ui-button,
+	html.js div.content div#display.detail-pane div.display-options ul#display-mode.ui-popup
 	{
 	width: 200px;
 }
@@ -591,12 +596,14 @@ html.js div.content div#display.detail-pane div.display-options button#change-di
 	position: absolute;
 }
 
-html.js div.content div#display.detail-pane div.display-options button#change-display-device.ui-button,html.js div.content div#display.detail-pane div.display-options ul#display-device.ui-popup
+html.js div.content div#display.detail-pane div.display-options button#change-display-device.ui-button,
+	html.js div.content div#display.detail-pane div.display-options ul#display-device.ui-popup
 	{
 	width: 260px;
 }
 
-html.js div.content div#display.detail-pane div.display-options ul#display-mode.ui-popup li,html.js div.content div#display.detail-pane div.display-options ul#display-device.ui-popup li
+html.js div.content div#display.detail-pane div.display-options ul#display-mode.ui-popup li,
+	html.js div.content div#display.detail-pane div.display-options ul#display-device.ui-popup li
 	{
 	list-style: none;
 	padding: 7px;
@@ -667,7 +674,7 @@ html.js div.content div#uris.detail-pane div.uris-bloc {
 	margin: 1em;
 }
 
-html.js body>div.content div.pane div.filters-list span.facet,html.js .badge
+html.js body>div.content div.pane div.filters-list span.facet, html.js .badge
 	{
 	border-radius: 3px 3px 3px 3px;
 	background-color: #999999;
@@ -712,7 +719,8 @@ html.js body div.content div#search.detail-pane div.search-results p.badge
 	margin: 0 0 0 1em;
 }
 
-html.js div.content div#uris.detail-pane div.uris-bloc details summary a,html.js  div.content div#uris.detail-pane div.uris-bloc p a,html.js  div.content div#uris.detail-pane div.uris-bloc details div ul li a
+html.js div.content div#uris.detail-pane div.uris-bloc details summary a,
+	html.js  div.content div#uris.detail-pane div.uris-bloc p a, html.js  div.content div#uris.detail-pane div.uris-bloc details div ul li a
 	{
 	margin-left: 1em;
 }
@@ -725,7 +733,9 @@ html.js div.content div#uris.detail-pane div.uris-bloc details div h4 {
 	margin: 0.5em 0;
 }
 
-html.js div.content div#uris.detail-pane div.uris-bloc h3 span.badge,html.js div.content div#uris.detail-pane div.uris-bloc h3 span.server-origin,html.js div.content div#uris.detail-pane div.uris-bloc h3 span.server-origin img
+html.js div.content div#uris.detail-pane div.uris-bloc h3 span.badge,
+	html.js div.content div#uris.detail-pane div.uris-bloc h3 span.server-origin,
+	html.js div.content div#uris.detail-pane div.uris-bloc h3 span.server-origin img
 	{
 	vertical-align: middle;
 }
@@ -799,19 +809,22 @@ html.js body div#edit.detail-pane div.pane h2.ui-state-highlight img {
 	width: 32px;
 }
 
-html.js div#edit.detail-pane div.pane div.progress div#upload-result-status,html.js div#add-metadata-result div.content-suggestion-wrapper div#upload-result-status
+html.js div#edit.detail-pane div.pane div.progress div#upload-result-status,
+	html.js div#add-metadata-result div.content-suggestion-wrapper div#upload-result-status
 	{
 	margin: 5px 50px;
 	padding: 10px;
 	font-weight: bold;
 }
 
-html.js div#edit.detail-pane div.pane div.progress div#upload-result-status img.status-icon,html.js div#add-metadata-result div#upload-result-status.ui-corner-all img.status-icon
+html.js div#edit.detail-pane div.pane div.progress div#upload-result-status img.status-icon,
+	html.js div#add-metadata-result div#upload-result-status.ui-corner-all img.status-icon
 	{
 	margin-right: 10px;
 }
 
-html.js div#edit.detail-pane div.pane div.progress div#upload-result-message,html.js div#add-metadata-result div.content-suggestion-wrapper div#upload-result-message
+html.js div#edit.detail-pane div.pane div.progress div#upload-result-message,
+	html.js div#add-metadata-result div.content-suggestion-wrapper div#upload-result-message
 	{
 	margin: 5px 50px;
 	padding: 10px;
@@ -855,8 +868,7 @@ html.js body div.content div#edit.detail-pane div.pane ul.files-list li span for
 }
 
 html.js body div#refresh.detail-pane div.pane div.refresh-control form.ui-button span.ui-icon-refresh-state-wait,
-html.js body div#maintenance-recovery form.ui-button span.ui-icon-refresh-state-wait
-
+	html.js body div#maintenance-recovery form.ui-button span.ui-icon-refresh-state-wait
 	{
 	background-image: url("../img/refresh-icon-wait.gif");
 }
@@ -886,7 +898,8 @@ html.js body div.content div#refresh.detail-pane div.pane div.refresh-control fo
 	background-image: url("../img/archive.png");
 }
 
-html.js body div.content div#refresh.detail-pane div.pane div.refresh-control form#refresh-resource-index.ui-button span.ui-button-icon-primary.ui-icon-solr,html.js body div.content div#refresh.detail-pane div.pane div.refresh-control form#refresh-meta-index.ui-button span.ui-button-icon-primary.ui-icon-solr
+html.js body div.content div#refresh.detail-pane div.pane div.refresh-control form#refresh-resource-index.ui-button span.ui-button-icon-primary.ui-icon-solr,
+	html.js body div.content div#refresh.detail-pane div.pane div.refresh-control form#refresh-meta-index.ui-button span.ui-button-icon-primary.ui-icon-solr
 	{
 	background-image: url("../img/solr.png");
 }
@@ -918,7 +931,8 @@ html.js body div.content div#refresh.detail-pane div.pane div.refresh-control di
 	margin-left: 1em;
 }
 
-html.js body div.content div#refresh.detail-pane div.pane div.refresh-control div.ui-corner-all h5,html.js body div.content div#refresh.detail-pane div.pane div.refresh-control div.ui-corner-all p
+html.js body div.content div#refresh.detail-pane div.pane div.refresh-control div.ui-corner-all h5,
+	html.js body div.content div#refresh.detail-pane div.pane div.refresh-control div.ui-corner-all p
 	{
 	margin: 0;
 }
@@ -1022,8 +1036,7 @@ html.js div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation
 	padding: 3px 3px 3px 15px;
 }
 
-html.js span.ui-button.submit-button span.ui-button-icon-primary
-	{
+html.js span.ui-button.submit-button span.ui-button-icon-primary {
 	background-image: url("../img/save_icon.png");
 	width: 32px;
 	height: 32px;
@@ -1036,29 +1049,32 @@ html.js span.ui-button.submit-button span.ui-button-icon-primary.ui-icon-wait
 	background-image: url("../img/wait-round.gif");
 }
 
-html.js span.ui-button.submit-button 
-	{
+html.js span.ui-button.submit-button {
 	display: block;
 	width: 38px;
 	height: 38px;
 	float: right;
 	margin-right: 12px;
 }
-html.js summary span.ui-button.submit-button 
-	{
+
+html.js summary span.ui-button.submit-button {
 	margin-top: -12px;
 }
 
-html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#keyword-container.element div.elt_champ_form span.delete-keyword-button span.ui-button-icon-primary,html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div.entry-list-container.element div.elt_champ_form span.delete-entry-button span.ui-button-icon-primary
+html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#keyword-container.element div.elt_champ_form span.delete-keyword-button span.ui-button-icon-primary,
+	html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div.entry-list-container.element div.elt_champ_form span.delete-entry-button span.ui-button-icon-primary
 	{
 	background-image: url("../img/delete-icon.png");
 }
-html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre span.submit-button {
+
+html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre span.submit-button
+	{
 	float: right;
 	margin-right: 1em;
 }
 
-html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#keyword-container.element div.elt_champ_form span.delete-keyword-button.ui-button,html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div.entry-list-container.element div.elt_champ_form span.delete-entry-button
+html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#keyword-container.element div.elt_champ_form span.delete-keyword-button.ui-button,
+	html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div.entry-list-container.element div.elt_champ_form span.delete-entry-button
 	{
 	width: 22px;
 	height: 22px;
@@ -1069,7 +1085,8 @@ html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr 
 	display: none;
 }
 
-html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div.entry-list-container.element span.register-entry span.ui-button-icon-primary,html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#contributors-container.element table tbody tr td span.register-entry span.ui-button-icon-primary
+html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div.entry-list-container.element span.register-entry span.ui-button-icon-primary,
+	html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#contributors-container.element table tbody tr td span.register-entry span.ui-button-icon-primary
 	{
 	background-image: url("../img/ajouter.png");
 }
@@ -1116,23 +1133,29 @@ html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr 
 }
 
 html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#contributors-container.element div.elt_champ_form table tbody tr th select,
-html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#contributors-container.element div.elt_champ_form table tbody tr th input
+	html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#contributors-container.element div.elt_champ_form table tbody tr th input
 	{
-	margin-bottom: 0px;	
+	margin-bottom: 0px;
 	vertical-align: middle;
 }
-html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#contributors-container.element div.elt_champ_form table tbody tr th {
+
+html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#contributors-container.element div.elt_champ_form table tbody tr th
+	{
 	text-align: left;
 }
+
 html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#contributors-container.element div.elt_champ_form table tbody tr.role td span.delete-button,
-html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#contributors-container.element div.elt_champ_form table tbody tr td span.register-entry {
-	width:24px;
+	html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#contributors-container.element div.elt_champ_form table tbody tr td span.register-entry
+	{
+	width: 24px;
 	height: 24px;
 	float: right;
 }
-html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#contributors-container.element div.elt_champ_form table tbody tr td span.register-entry span.ui-button-icon-primary {
+
+html.js body div.content div#edit.detail-pane div.pane form#formulaire_scolomfr div#visualisation div.cadre details div div#contributors-container.element div.elt_champ_form table tbody tr td span.register-entry span.ui-button-icon-primary
+	{
 	margin-left: -7px;
-	margin-top: -7px;	
+	margin-top: -7px;
 }
 /*
 edit url
@@ -1158,7 +1181,8 @@ html.js body div.content div#edit.detail-pane div.pane form#update_url  span.url
 	float: right;
 }
 
-html.js body div.content div#edit.detail-pane div.pane form#update_url input[type=text],html.js body div.content div#search.detail-pane form#search_test_request input[type=text]
+html.js body div.content div#edit.detail-pane div.pane form#update_url input[type=text],
+	html.js body div.content div#search.detail-pane form#search_test_request input[type=text]
 	{
 	margin-top: 1em;
 	width: 88%;
@@ -1168,7 +1192,8 @@ html.js body div.content div#edit.detail-pane div.pane form#update_url input[typ
 	color: #000;
 }
 
-html.js body div.content div#edit.detail-pane div.pane form#update_url input[type=text].focusField,html.js body div.content div#search.detail-pane form#search_test_request input[type=text].focusField
+html.js body div.content div#edit.detail-pane div.pane form#update_url input[type=text].focusField,
+	html.js body div.content div#search.detail-pane form#search_test_request input[type=text].focusField
 	{
 	background: none repeat scroll 0 0 #EFF5FF;
 	border: 2px solid #73A6FF;
@@ -1224,7 +1249,8 @@ html.js body div.content div#search.detail-pane div.ui-layout-center div.search-
 	padding: 5px;
 }
 
-html.js body div.content div#search.detail-pane div.search-results ul li em,html.js body div.content div#search.detail-pane div.search-results ul li b
+html.js body div.content div#search.detail-pane div.search-results ul li em,
+	html.js body div.content div#search.detail-pane div.search-results ul li b
 	{
 	background-color: yellow;
 	font-weight: bold;
@@ -1277,8 +1303,8 @@ html.js body div.content div#search.detail-pane div.search-results h4.ui-state-h
 /*
 carousel
 */
-html.js a#ui-carousel-prev:link,html.js a#ui-carousel-prev:visited,html.js a#ui-carousel-prev:hover,html.js a#ui-carousel-prev:active
-	{
+html.js a#ui-carousel-prev:link, html.js a#ui-carousel-prev:visited,
+	html.js a#ui-carousel-prev:hover, html.js a#ui-carousel-prev:active {
 	color: #FF5C43;
 }
 
@@ -1286,7 +1312,7 @@ html.js #carousel {
 	float: left;
 }
 
-html.js #ui-carousel-next,html.js #ui-carousel-prev {
+html.js #ui-carousel-next, html.js #ui-carousel-prev {
 	background: url("../img/arrow-left.png") no-repeat scroll center center
 		#FFFFFF;
 	display: block;
@@ -1344,7 +1370,8 @@ html.js body div.content div#display.detail-pane div.pane div.custom-image-input
 	clear: both;
 }
 
-html.js body div.content div.add-metadata div.pane div.add-metadata-input-container form#import-metadata,html.js body div.content div#edit.detail-pane div.pane div.file-input-container form#send_file
+html.js body div.content div.add-metadata div.pane div.add-metadata-input-container form#import-metadata,
+	html.js body div.content div#edit.detail-pane div.pane div.file-input-container form#send_file
 	{
 	cursor: pointer;
 	display: block;
@@ -1353,7 +1380,9 @@ html.js body div.content div.add-metadata div.pane div.add-metadata-input-contai
 	width: 800px;
 }
 
-html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_thumb #image_upload,html.js body div.content div.add-metadata div.pane div.add-metadata-input-container form#import-metadata input#metadata_upload,html.js body div.content div#edit.detail-pane div.pane div.file-input-container form#send_file input#file_upload
+html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_thumb #image_upload,
+	html.js body div.content div.add-metadata div.pane div.add-metadata-input-container form#import-metadata input#metadata_upload,
+	html.js body div.content div#edit.detail-pane div.pane div.file-input-container form#send_file input#file_upload
 	{
 	cursor: pointer;
 	position: absolute;
@@ -1390,7 +1419,8 @@ html.js body div.content div.add-metadata div.pane div.add-metadata-input-contai
 	height: 36px;
 }
 
-html.js div#display.detail-pane div.pane div.custom-image-input-container div.progress .bar,html.js body div.content div#edit.detail-pane div.pane div.file-input-container div.bar
+html.js div#display.detail-pane div.pane div.custom-image-input-container div.progress .bar,
+	html.js body div.content div#edit.detail-pane div.pane div.file-input-container div.bar
 	{
 	background-color: #b4f5b4;
 	width: 0%;
@@ -1476,11 +1506,16 @@ html.js body div.content div#refresh.detail-pane div.pane div.refresh-control
 	margin-top: 1em;
 }
 
-html.js body div.content div#refresh.detail-pane div.pane div.console-area
+html.js body div.content div#refresh.detail-pane div.pane div.console-area-container
 	{
 	font-family: Courier;
 	height: 100%;
-	overflow-y: hidden;
+	overflow-y: scroll;
+}
+
+html.js body div.content div#refresh.detail-pane div.pane div.console-area
+	{
+	
 }
 
 html.js body div.content div#refresh.detail-pane div.pane {
@@ -1489,7 +1524,7 @@ html.js body div.content div#refresh.detail-pane div.pane {
 /*
 details
 */
-html.js details,html.js summary {
+html.js details, html.js summary {
 	display: block;
 	padding: 0.5em;
 }
@@ -1498,7 +1533,7 @@ html.js div.content div#uris.detail-pane div.uris-bloc p {
 	padding: 1em;
 }
 
-html.js details,html.js  div.content div#uris.detail-pane div.uris-bloc p
+html.js details, html.js  div.content div#uris.detail-pane div.uris-bloc p
 	{
 	border: 1px solid #666;
 	margin-top: 0.5em;
@@ -1509,7 +1544,7 @@ html.js summary {
 	cursor: pointer;
 }
 
-html.js summary:hover,html.js summary:focus {
+html.js summary:hover, html.js summary:focus {
 	
 }
 
@@ -1573,7 +1608,7 @@ html.js.no-details body div.content div#uris.detail-pane div.uris-bloc details d
 		color: #066
 	} /* a literal value */
 	/* punctuation, lisp open bracket, lisp close bracket */
-	.pun,.opn,.clo {
+	.pun, .opn, .clo {
 		color: #660
 	}
 	.tag {
@@ -1585,7 +1620,7 @@ html.js.no-details body div.content div#uris.detail-pane div.uris-bloc details d
 	.atv {
 		color: #080
 	} /* a markup attribute value */
-	.dec,.var {
+	.dec, .var {
 		color: #606
 	} /* a declaration; a variable name */
 	.fun {
@@ -1613,7 +1648,7 @@ html.js.no-details body div.content div#uris.detail-pane div.uris-bloc details d
 	.lit {
 		color: #044
 	}
-	.pun,.opn,.clo {
+	.pun, .opn, .clo {
 		color: #440
 	}
 	.tag {
@@ -1639,11 +1674,11 @@ ol.linenums {
 	margin-top: 0;
 	margin-bottom: 0
 } /* IE indents via margin-left */
-li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 {
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
 	list-style-type: none
 }
 /* Alternate shading for lines */
-li.L1,li.L3,li.L5,li.L7,li.L9 {
+li.L1, li.L3, li.L5, li.L7, li.L9 {
 	background: #eee
 }
 /*
@@ -1692,12 +1727,14 @@ html.js body div.content div#maintenance-recovery.detail-pane div.pane h2.ui-sta
 	padding-right: 20px;
 	margin-top: 0;
 }
+
 html.js body div.content div#maintenance-recovery.detail-pane div.pane h3.ui-state-highlight
 	{
 	padding: 0.5em;
 	text-align: center;
 	clear: left;
 }
+
 html.js body div.content div#maintenance-recovery.detail-pane div.pane div.recovery-control form#metadata-recovery.ui-button span.ui-button-icon-primary.ui-icon-preview
 	{
 	background-image: url("../img/wall.png");
@@ -1706,4 +1743,38 @@ html.js body div.content div#maintenance-recovery.detail-pane div.pane div.recov
 html.js body div#maintenance-recovery.detail-pane div.pane div.recovery-control form.ui-button span.ui-icon-refresh-state
 	{
 	background-image: url("../img/refresh-icon.gif");
+}
+
+html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-container div.pane.ui-layout-center.ui-layout-pane.ui-layout-pane-center div.console-header
+	{
+	margin: -10px;
+	padding: 10px;
+	position: fixed;
+}
+
+html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-container div.pane.ui-layout-center.ui-layout-pane.ui-layout-pane-center div.console-header.ui-state-highlight.ui-helper-clearfix span#full-report-container input#full-report-checkbox
+	{
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
+html.js body div.content div#maintenance-recovery div#progressbar {
+	display: inline-block;
+	width: 40%;
+	height:25px;
+	float: left;
+}
+
+html.js body div.content div#maintenance-recovery span#console-title-container
+	{
+	display: inline-block;
+	width: 25%;
+	float: left;
+}
+
+html.js body div.content div#maintenance-recovery span#full-report-container
+	{
+	display: inline-block;
+	width: 15%;
+	float: right;
 }

@@ -65,7 +65,8 @@ class Security {
 			"lifeCycle-contributor-role" => "string-array",
 			"educational-difficulty" => "string",
 			"classifications" => "json",
-			"target-repository" => "target-repository" 
+			"target-repository" => "target-repository" ,
+			"nb-lines" => "integer"
 	);
 	private static $DEFAULTS = array (
 			"page" => "home" 

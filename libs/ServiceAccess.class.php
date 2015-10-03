@@ -98,9 +98,11 @@ class ServiceAccess {
 		$response = $this->client->setUrl ( $url )->get ();
 		return $response ["content"];
 	}
-	public function getMaintenanceProcessReport($url) {
+	public function getMaintenanceProcessReport($url, $nbLines) {
 		// TODO tester si commence par adresse de meta ou content
-		$response = $this->client->setUrl ( $url )->get ();
+		$response = $this->client->setUrl ( $url )->get ( array (
+				"nblines" => intval ( $nbLines ) 
+		) );
 		return $response ["content"];
 	}
 	public function getThumbsSuggestions($metadataLink) {
