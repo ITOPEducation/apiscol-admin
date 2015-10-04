@@ -867,25 +867,20 @@ html.js body div.content div#edit.detail-pane div.pane ul.files-list li span for
 	background-image: url("../img/wait-round.gif");
 }
 
-html.js body div#refresh.detail-pane div.pane div.refresh-control form.ui-button span.ui-icon-refresh-state-wait,
-	html.js body div#maintenance-recovery form.ui-button span.ui-icon-refresh-state-wait
-	{
-	background-image: url("../img/refresh-icon-wait.gif");
+span.ui-icon-refresh-state-wait {
+	background-image: url("../img/refresh-icon-wait.gif") !important;
 }
 
-html.js body div#refresh.detail-pane div.pane div.refresh-control form.ui-button span.ui-icon-refresh-state-error
-	{
-	background-image: url("../img/refresh-icon-error.gif");
+span.ui-icon-refresh-state-error {
+	background-image: url("../img/refresh-icon-error.gif") !important;
 }
 
-html.js body div#refresh.detail-pane div.pane div.refresh-control form.ui-button span.ui-icon-refresh-state-success
-	{
-	background-image: url("../img/refresh-icon-success.gif");
+span.ui-icon-refresh-state-success {
+	background-image: url("../img/refresh-icon-success.gif") !important;
 }
 
-html.js body div#refresh.detail-pane div.pane div.refresh-control form.ui-button span.ui-icon-refresh-state
-	{
-	background-image: url("../img/refresh-icon.gif");
+span.ui-icon-refresh-state {
+	background-image: url("../img/refresh-icon.gif") !important;
 }
 
 html.js body div.content div#refresh.detail-pane div.pane div.refresh-control form#refresh-resource-preview.ui-button span.ui-button-icon-primary.ui-icon-preview
@@ -1761,7 +1756,7 @@ html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-containe
 html.js body div.content div#maintenance-recovery div#progressbar {
 	display: inline-block;
 	width: 40%;
-	height:25px;
+	height: 25px;
 	float: left;
 }
 

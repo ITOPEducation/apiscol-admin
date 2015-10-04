@@ -3,6 +3,7 @@ class MaintenanceController implements IController {
 	public function __construct($mainController, $model, $prefix) {
 		$this->mainController = $mainController;
 		/**
+		 *
 		 * @var Model
 		 */
 		$this->model = $model;
@@ -37,21 +38,20 @@ class MaintenanceController implements IController {
 								echo $response ['content'];
 							} catch ( HttpRequestException $e ) {
 								echo MainController::xmlErrorMessage ( $e->getMessage (), 500, "Le service ne semble pas répondre" );
+							} catch ( BadUrlRequestException $e2 ) {
+								echo MainController::xmlErrorMessage ( $e2->getMessage (), 404, "L'url appelée ne renvoie pas de réponse" );
 							}
-							;
-							break;
-						
-						default :
-							;
 							break;
 					}
 				else if (isset ( Security::$_CLEAN ['maintenance-process-report'] )) {
 					$url = RequestUtils::restoreProtocole ( Security::$_CLEAN ['maintenance-process-report'] );
-					$nbLines=isset(Security::$_CLEAN['nb-lines'])?Security::$_CLEAN['nb-lines']:0;
+					$nbLines = isset ( Security::$_CLEAN ['nb-lines'] ) ? Security::$_CLEAN ['nb-lines'] : 0;
 					try {
-						echo $this->model->getMaintenanceProcessReport ( $url,$nbLines );
+						echo $this->model->getMaintenanceProcessReport ( $url, $nbLines );
 					} catch ( HttpRequestException $e ) {
 						echo MainController::xmlErrorMessage ( $url . "  " . $e->getMessage (), 404, "Le service ne semble pas répondre" );
+					} catch ( BadUrlRequestException $e2 ) {
+						echo MainController::xmlErrorMessage ( $url . "  " . $e2->getMessage (), 404, "L'url appelée ne renvoie pas de réponse" );
 					}
 				}
 				break;
