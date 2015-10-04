@@ -2,7 +2,7 @@
 
 html.js, body {
 	font-family: arial, helvetica, sans-serif;
-	overflow: visible;
+	overflow: hidden;
 }
 
 .not-yet {
@@ -1508,14 +1508,6 @@ html.js body div.content div#refresh.detail-pane div.pane div.console-area-conta
 	overflow-y: scroll;
 }
 
-html.js body div.content div#refresh.detail-pane div.pane div.console-area
-	{
-	
-}
-
-html.js body div.content div#refresh.detail-pane div.pane {
-	
-}
 /*
 details
 */
@@ -1730,9 +1722,14 @@ html.js body div.content div#maintenance-recovery.detail-pane div.pane h3.ui-sta
 	clear: left;
 }
 
-html.js body div.content div#maintenance-recovery.detail-pane div.pane div.recovery-control form#metadata-recovery.ui-button span.ui-button-icon-primary.ui-icon-preview
+html.js body div.content div#maintenance-recovery.detail-pane div.pane div.recovery-control form#metadata-recovery.ui-button span.ui-button-icon-primary.ui-icon-wall
 	{
 	background-image: url("../img/wall.png");
+}
+
+html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west div.recovery-control.ui-helper-clearfix form#metadata-optimization.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icons span.ui-button-icon-primary.ui-icon.ui-icon-optimize
+	{
+	background-image: url("../img/optimize.png");
 }
 
 html.js body div#maintenance-recovery.detail-pane div.pane div.recovery-control form.ui-button span.ui-icon-refresh-state
@@ -1758,6 +1755,13 @@ html.js body div.content div#maintenance-recovery div#progressbar {
 	width: 40%;
 	height: 25px;
 	float: left;
+	visibility: hidden;
+}
+
+html.js body div.content div#maintenance-recovery div.pane.ui-layout-center.ui-layout-pane.ui-layout-pane-center div.console-header.ui-state-highlight.ui-helper-clearfix div#progressbar.ui-progressbar.ui-widget.ui-widget-content.ui-corner-all div.ui-progressbar-value.ui-widget-header.ui-corner-left
+	{
+	background-color: rgb(0, 204, 0);
+	background-image: none;
 }
 
 html.js body div.content div#maintenance-recovery span#console-title-container
@@ -1765,6 +1769,8 @@ html.js body div.content div#maintenance-recovery span#console-title-container
 	display: inline-block;
 	width: 25%;
 	float: left;
+	text-align: center;
+	font-weight: bold;
 }
 
 html.js body div.content div#maintenance-recovery span#full-report-container
@@ -1772,4 +1778,41 @@ html.js body div.content div#maintenance-recovery span#full-report-container
 	display: inline-block;
 	width: 15%;
 	float: right;
+}
+
+html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west div.recovery-control+div.recovery-control
+	{
+	margin-top: 10px;
+}
+
+html.js body div.content div#maintenance-recovery.detail-pane div.pane div.console-area-container
+	{
+	font-family: Courier;
+	height: 90%%;
+	margin-top: 10%;
+}
+
+html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-container div.pane.ui-layout-center.ui-layout-pane.ui-layout-pane-center
+	{
+	background-color: rgb(0, 0, 0) !important;
+}
+
+html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-container div.console-area-container div.console-area
+	{
+	color: white;
+}
+
+html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-container div.console-area-container div.console-area .info_type
+	{
+	color: yellow !important;
+}
+
+html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-container div.console-area-container div.console-area .error_type
+	{
+	color: red !important;
+}
+
+html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-container div.console-area-container div.console-area .warning_type
+	{
+	color: orange !important;
 }

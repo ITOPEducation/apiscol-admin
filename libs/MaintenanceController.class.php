@@ -28,7 +28,7 @@ class MaintenanceController implements IController {
 	public function processSyncRequest() {
 	}
 	public function processAsyncRequest() {
-		switch ($_SESSION ['action']) {
+		switch (Security::$_CLEAN ['action']) {
 			case 'recovery' :
 				if (isset ( Security::$_CLEAN ['target-repository'] ))
 					switch (Security::$_CLEAN ['target-repository']) {
@@ -52,8 +52,28 @@ class MaintenanceController implements IController {
 						echo MainController::xmlErrorMessage ( $url . "  " . $e->getMessage (), 404, "Le service ne semble pas répondre" );
 					} catch ( BadUrlRequestException $e2 ) {
 						echo MainController::xmlErrorMessage ( $url . "  " . $e2->getMessage (), 404, "L'url appelée ne renvoie pas de réponse" );
+					} catch ( ConnexionFailureException $e3 ) {
+						echo MainController::xmlErrorMessage ( $e3->getMessage (), 500, "Impossible de se conencer à ApiScol" );
 					}
 				}
+				break;
+			case 'optimization' :
+				if (isset ( Security::$_CLEAN ['target-repository'] ))
+					switch (Security::$_CLEAN ['target-repository']) {
+						case 'metadata' :
+							try {
+								$response = $this->model->askForOptimizationMaintenance ( 'metadata' );
+								echo $response ['content'];
+							} catch ( HttpRequestException $e ) {
+								echo MainController::xmlErrorMessage ( $e->getMessage (), 500, "Le service ne semble pas répondre" );
+							} catch ( BadUrlRequestException $e2 ) {
+								echo MainController::xmlErrorMessage ( $e2->getMessage (), 404, "L'url appelée ne renvoie pas de réponse" );
+							} catch ( ConnexionFailureException $e3 ) {
+								echo MainController::xmlErrorMessage ( $e3->getMessage (), 500, "Impossible de se conencer à ApiScol" );
+							}
+							break;
+					}
+				
 				break;
 		}
 	}

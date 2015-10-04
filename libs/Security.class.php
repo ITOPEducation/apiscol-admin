@@ -93,7 +93,8 @@ class Security {
 			),
 			"alerts" => array (),
 			"maintenance" => array (
-					"recovery" => array ()
+					"recovery" => array (),
+					"optimization" => array ()
 			) 
 	);
 	public static function cleanPost() {

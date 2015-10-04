@@ -292,5 +292,12 @@ class Model {
 		) ) );
 		return $this->getServiceAccess ()->askForRecoveryMaintenance ( $target );
 	}
+	public function askForOptimizationMaintenance($target) {
+		assert ( in_array ( $target, array (
+				'metadata',
+				'resources' 
+		) ) );
+		return $this->getServiceAccess ()->askForOptimizationMaintenance ( $target );
+	}
 }
 ?>

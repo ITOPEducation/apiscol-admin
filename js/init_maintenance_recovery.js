@@ -33,10 +33,16 @@ function secundaryInit() {
 	scanForMaintenanceProcessReports();
 
 }
+function displayProgressBar(bool) {
+	$progressBar.css('visibility', bool ? "visible" : "hidden");
+}
 function initMetadataRecoveryControls() {
 	var $metadataRecoveryForm = $("form#metadata-recovery",
 			"div#maintenance-recovery");
 	$metadataRecoveryForm.find("input[type=submit]").remove();
+	var $metadataOptimizationForm = $("form#metadata-optimization",
+			"div#maintenance-recovery");
+	$metadataOptimizationForm.find("input[type=submit]").remove();
 
 	$metadataRecoveryForm.attr("action",
 			$metadataRecoveryForm.attr("action") + "/async").ajaxForm(
@@ -56,15 +62,44 @@ function initMetadataRecoveryControls() {
 					handleMetadataRecoveryFirstResponse(xhr.responseXML);
 				}
 			});
+	$metadataOptimizationForm
+			.attr("action", $metadataOptimizationForm.attr("action") + "/async")
+			.ajaxForm(
+					{
+						dataType : 'xml',
+						cache : true,
+						beforeSend : function() {
+							setRunningMaintenanceProcess($metadataOptimizationForm
+									.attr("id"));
+							setRunningMaintenanceProcessState("running");
+							updateButtonState();
+							displayResult("Veuillez patienter",
+									"La requête d'optimisation de l'index a été envoyée.");
+
+						},
+						complete : function(xhr) {
+							handleMetadataOptimizationResponse(xhr.responseXML);
+						}
+					});
 	$metadataRecoveryForm.button({
 		icons : {
-			primary : "ui-icon-preview",
+			primary : "ui-icon-wall",
 			secondary : "ui-icon-refresh-state"
 		}
 	}).click(function() {
 		if ($metadataRecoveryForm.hasClass("ui-state-disabled"))
 			return false;
 		$metadataRecoveryForm.submit();
+	});
+	$metadataOptimizationForm.button({
+		icons : {
+			primary : "ui-icon-optimize",
+			secondary : "ui-icon-refresh-state"
+		}
+	}).click(function() {
+		if ($metadataOptimizationForm.hasClass("ui-state-disabled"))
+			return false;
+		$metadataOptimizationForm.submit();
 	});
 }
 function maintenanceReportUrl() {
@@ -84,6 +119,31 @@ function runningMaintenanceProcessState() {
 }
 function setRunningMaintenanceProcessState(identifier) {
 	$.cookie('running-maintenance-process-state', identifier);
+}
+function handleMetadataOptimizationResponse(data) {
+	if (!data)
+		displayResult("Problème inconnu", "Pas de réponse du serveur");
+	else if (data.firstChild.tagName == "error") {
+
+		displayResult($(data).find("intro").text(), $(data).find("message")
+				.text());
+		setRunningMaintenanceProcessState("error");
+		updateButtonState();
+
+	} else {
+		var message = $(data).find("apiscol\\:message, message").text();
+		var state = $(data).find("apiscol\\:state, state").text();
+		displayResult("Requête traitée", message);
+		if (state == "done") {
+			{
+				setRunningMaintenanceProcessState("success");
+				updateButtonState();
+			}
+		} else {
+			setRunningMaintenanceProcessState("error");
+			updateButtonState();
+		}
+	}
 }
 function handleMetadataRecoveryFirstResponse(data) {
 	if (!data)
@@ -108,8 +168,6 @@ function handleMetadataRecoveryFirstResponse(data) {
 				setRunningMaintenanceProcessState("success");
 				updateButtonState();
 			}
-		} else {
-
 		}
 	}
 }
@@ -117,7 +175,9 @@ function getMessagesAsText(data) {
 	$messages = $(data).find("apiscol\\:message, message");
 	$messagesText = "";
 	$messages.each(function(index, elem) {
-		$messagesText += $(elem).text() + "<br/>";
+		console.log(elem);
+		$messagesText += "<div class=\"" + $(elem).attr("type") + "\">"
+				+ $(elem).text() + "</div>";
 	});
 	return $messagesText;
 }
@@ -125,6 +185,7 @@ function scanForMaintenanceProcessReports() {
 	scanIsRunning = true;
 	if (runningMaintenanceProcessState() != "running") {
 		scanIsRunning = false;
+		displayProgressBar(false);
 		return;
 	}
 	var fullReport = $("#full-report-checkbox").is(":checked");
@@ -149,9 +210,11 @@ function handleMaintenanceProcessReport(data) {
 					.text());
 			setRunningMaintenanceProcessState("error");
 			updateButtonState();
+			displayProgressBar(false);
 			return;
 		}
 	}
+	displayProgressBar(true);
 	var state = $(data).find("apiscol\\:state,state").text();
 	var progress = parseInt($(data).find("apiscol\\:processed,processed")
 			.text() * 100);
@@ -161,11 +224,13 @@ function handleMaintenanceProcessReport(data) {
 	if (state == "done") {
 		displayResult("Processus terminé", messages);
 		setRunningMaintenanceProcessState("success");
+		displayProgressBar(false);
 		updateButtonState();
 	} else if (state == "aborted") {
 		$('form#send_file').find("input").removeClass("ui-state-disabled");
 		displayResult("Abandon", messages);
 		setRunningMaintenanceProcessState("error");
+		displayProgressBar(false);
 		updateButtonState();
 	} else if (state == "recovery_running") {
 		displayResult("En cours", messages);
@@ -173,16 +238,14 @@ function handleMaintenanceProcessReport(data) {
 		updateButtonState();
 	}
 
-	if (state == "done" || state == "aborted") {
-
-	}
 	setTimeout(scanForMaintenanceProcessReports, 500);
 }
 function updateButtonState() {
 	$(".recovery-control>form").addClass("ui-icon-refresh-state");
+	$(".recovery-control>form").removeClass("ui-state-disabled");
 	if (!runningMaintenanceProcess())
 		return;
-	$(".recovery-control>form").addClass("ui-state-disabled");
+
 	button = $("form#" + runningMaintenanceProcess());
 	state = runningMaintenanceProcessState();
 	var iconClass = "ui-icon-refresh-state";
@@ -203,16 +266,17 @@ function updateButtonState() {
 	default:
 		break;
 	}
+	if (state == "running")
+		$(".recovery-control>form").addClass("ui-state-disabled");
+	else
+		$(".recovery-control>form").removeClass("ui-state-disabled");
 	if (button.hasClass(iconClass))
 		return;
 	button.find("span.ui-icon.ui-button-icon-secondary").removeClass(
 			"ui-icon-refresh-state").removeClass("ui-icon-refresh-state-wait")
 			.removeClass("ui-icon-refresh-state-success").removeClass(
 					"ui-icon-refresh-state-error").addClass(iconClass);
-	if (state == "running")
-		button.addClass("ui-state-disabled");
-	else
-		button.removeClass("ui-state-disabled")
+
 }
 function displayResult(title, message) {
 	if (!$consoleArea)

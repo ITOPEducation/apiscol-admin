@@ -45,6 +45,7 @@ class MainController {
 			echo $this->model->getQuerySuggestion ( Security::$_CLEAN ['query'] );
 		} else {
 			$this->defineSecundaryController ();
+			assert ( ! is_null ( $this->secundaryController ) );
 			header ( "Content-Type:text/xml" );
 			echo $this->secundaryController->processAsyncRequest ();
 		}
@@ -152,8 +153,9 @@ class MainController {
 				}
 				break;
 			case 'maintenance' :
-				switch (Security::$_CLEAN ['action']) {
+				switch (Security::$_CLEAN ['action']) {					
 					case 'recovery' :
+					case 'optimization' :
 						if ($this->userIsAllowedToWrite ())
 							$this->secundaryController = new MaintenanceController ( $this, $this->model, $this->prefix );
 						else {

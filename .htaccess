@@ -27,6 +27,7 @@ RewriteRule ^resources .?page=resources&action=list
 RewriteRule ^add .?page=add&action=metadata
 RewriteRule ^maintenance/recovery/maintenance-process-report/([a-z.0-9/:_-]+)/async$ .?page=maintenance&action=recovery&maintenance-process-report=$1&mode=async [QSA]
 RewriteRule ^maintenance/recovery .?page=maintenance&action=recovery
+RewriteRule ^maintenance/optimization .?page=maintenance&action=optimization
 
 RewriteRule ^([\w]+)$ .?page=$1 
 RewriteCond %{QUERY_STRING}     ^$              [OR]

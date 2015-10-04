@@ -192,5 +192,9 @@ class ServiceAccess {
 		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/maintenance/meta/recovery' )->post ( null, null, "application/xml", "application/x-www-form-urlencoded" );
 		return $response;
 	}
+	public function askForOptimizationMaintenance($target) {
+		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/maintenance/meta/optimization' )->post ( null, null, "application/xml", "application/x-www-form-urlencoded" );
+		return $response;
+	}
 }
 ?>

@@ -15,11 +15,17 @@ class MaintenanceRecoveryView extends AbstractView implements IView {
 		$urlRegistrationResultArea = '';
 		if ($this->mainController->userIsAllowedToWrite ()) {
 			$metadataRecoveryArea = $this->getMetadataRecoveryArea ();
+			$metadataOptimizationArea = $this->getMetadataOptimizationArea ();
 		}
 		$this->render = str_replace ( "[METADATA-RECOVERY]", $metadataRecoveryArea, $this->render );
+		$this->render = str_replace ( "[METADATA-OPTIMIZATION]", $metadataOptimizationArea, $this->render );
 	}
 	private function getMetadataRecoveryArea() {
-		$area = '<div class="recovery-control ui-helper-clearfix"><form action="[PREFIX]/maintenance/recovery" method="POST"	id="metadata-recovery"> <input type="submit" value="recovery" />Reconstruire le dépôt de métadonnées<input type="hidden" name="target-repository" value="metadata" /></form>	<div class="display-result"></div></div>';
+		$area = '<div class="recovery-control ui-helper-clearfix"><form action="[PREFIX]/maintenance/recovery" method="POST"	id="metadata-recovery"> <input type="submit" value="recovery" />Reconstruire le dépôt de métadonnées<input type="hidden" name="target-repository" value="metadata" /></form>	</div>';
+		return $area;
+	}
+	private function getMetadataOptimizationArea() {
+		$area = '<div class="recovery-control ui-helper-clearfix"><form action="[PREFIX]/maintenance/optimization" method="POST"	id="metadata-optimization"> <input type="submit" value="optimization" />Optimiser l\'index de recherche des  métadonnées<input type="hidden" name="target-repository" value="metadata" /></form>	</div>';
 		return $area;
 	}
 }
