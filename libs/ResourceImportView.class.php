@@ -8,7 +8,7 @@ class ResourceImportView extends AbstractView implements IView {
 		$this->addContent ();
 	}
 	private function addContent() {
-		$this->render .= HTMLLoader::load ( 'maintenance-recovery' );
+		$this->render .= HTMLLoader::load ( 'add-metadata' );
 		$importMetadataArea = '<br/>Vos droits sont insuffisants pour accéder à ces fonctionnalités.';
 		$writeMetadataArea = '<br/>Vos droits sont insuffisants pour accéder à ces fonctionnalités.';
 		$importMetadataResultArea = '';
