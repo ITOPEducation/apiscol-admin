@@ -101,7 +101,7 @@
 							ressource</summary>
 						<div>
 							<xsl:apply-templates select="/lom:lom/lom:educational/lom:description"></xsl:apply-templates>
-							<div name="element" class="element" id="elt_droite_11">
+							<div name="element" class="element">
 								<div class="elt_champ_form">
 									<div id="ned_tree">
 
@@ -127,7 +127,7 @@
 
 							</div>
 
-							<div name="element" class="element" id="elt_droite_11">
+							<div name="element" class="element">
 								<div class="elt_champ_form">
 									<div id="ens_tree">
 
@@ -145,7 +145,7 @@
 								</div>
 							</div>
 
-							<div name="element" class="element" id="elt_droite_11">
+							<div name="element" class="element">
 								<div class="elt_champ_form">
 									<div id="scc_tree">
 
