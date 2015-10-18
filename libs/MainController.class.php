@@ -102,37 +102,43 @@ class MainController {
 				$this->secundaryController = new HomeController ( $this, $this->model, $this->prefix );
 				break;
 			case 'resources' :
-				switch (Security::$_CLEAN ['action']) {
-					case 'list' :
-						$this->secundaryController = new ResourcesListController ( $this, $this->model, $this->prefix );
-						break;
-					case 'detail' :
-						switch (Security::$_CLEAN ['panel']) {
-							case 'display' :
-								$this->secundaryController = new ResourcesDetailDisplayController ( $this, $this->model, $this->prefix );
-								break;
-							case 'uris' :
-								$this->secundaryController = new ResourcesDetailUrisController ( $this, $this->model, $this->prefix );
-								;
-								break;
-							case 'refresh' :
-								$this->secundaryController = new ResourcesDetailRefreshController ( $this, $this->model, $this->prefix );
-								;
-								break;
-							case 'edit' :
-								$this->secundaryController = new ResourcesDetailEditController ( $this, $this->model, $this->prefix );
-								;
-								break;
-							case 'search' :
-								$this->secundaryController = new ResourcesDetailSearchController ( $this, $this->model, $this->prefix );
-								break;
-							case 'stats' :
-								$this->secundaryController = new ResourcesDetailStatsController ( $this, $this->model, $this->prefix );
-								break;
-							default :
-								$this->secundaryController = new ResourcesDetailDisplayController ( $this, $this->model, $this->prefix );
-								break;
-						}
+				if ($this->userIsAllowedToRead ()) {
+					switch (Security::$_CLEAN ['action']) {
+						case 'list' :
+							$this->secundaryController = new ResourcesListController ( $this, $this->model, $this->prefix );
+							break;
+						case 'detail' :
+							switch (Security::$_CLEAN ['panel']) {
+								case 'display' :
+									$this->secundaryController = new ResourcesDetailDisplayController ( $this, $this->model, $this->prefix );
+									break;
+								case 'uris' :
+									$this->secundaryController = new ResourcesDetailUrisController ( $this, $this->model, $this->prefix );
+									;
+									break;
+								case 'refresh' :
+									$this->secundaryController = new ResourcesDetailRefreshController ( $this, $this->model, $this->prefix );
+									;
+									break;
+								case 'edit' :
+									$this->secundaryController = new ResourcesDetailEditController ( $this, $this->model, $this->prefix );
+									;
+									break;
+								case 'search' :
+									$this->secundaryController = new ResourcesDetailSearchController ( $this, $this->model, $this->prefix );
+									break;
+								case 'stats' :
+									$this->secundaryController = new ResourcesDetailStatsController ( $this, $this->model, $this->prefix );
+									break;
+								default :
+									$this->secundaryController = new ResourcesDetailDisplayController ( $this, $this->model, $this->prefix );
+									break;
+							}
+					}
+				} else {
+					$this->secundaryController = new HomeController ( $this, $this->model, $this->prefix );
+					$this->setInError ( true );
+					$this->setErrorMessage ( "Vos droits ne vous permettent pas de consulter des ressources." );
 				}
 				
 				break;
@@ -153,7 +159,7 @@ class MainController {
 				}
 				break;
 			case 'maintenance' :
-				switch (Security::$_CLEAN ['action']) {					
+				switch (Security::$_CLEAN ['action']) {
 					case 'recovery' :
 					case 'optimization' :
 						if ($this->userIsAllowedToWrite ())
