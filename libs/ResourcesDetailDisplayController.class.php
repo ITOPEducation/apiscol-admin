@@ -25,6 +25,7 @@ class ResourcesDetailDisplayController extends AbstractResourcesDetailController
 		if($this->mainController->isInError())
 			return;
 		try {
+			//TODO very slow, change to async
 			$this->model->acquireThumbsSuggestions();
 			$this->processThumbChoice();
 			$this->processCustomThumb();

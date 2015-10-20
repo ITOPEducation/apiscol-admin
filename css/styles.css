@@ -2,7 +2,7 @@
 
 html.js, body {
 	font-family: arial, helvetica, sans-serif;
-	overflow: hidden;
+	overflow: visible;
 }
 
 .not-yet {

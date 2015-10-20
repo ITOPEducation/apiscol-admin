@@ -8,6 +8,7 @@ class ResourcesDetailDisplayView extends AbstractResourceDetailView {
 	}
 
 	protected function addContent() {
+		error_log("1--".microtime(true));
 		parent::addContent();
 		$this->render = str_replace("[PANEL]", HTMLLoader::load('resources-detail-display'), $this->render);
 		$displaySnippet='<br/>Vos droits sont insuffisants pour accéder à ces fonctionnalités.';
@@ -16,16 +17,17 @@ class ResourcesDetailDisplayView extends AbstractResourceDetailView {
 		if($this->mainController->userIsAllowedToRead()) {
 			$displaySnippet=$this->getDisplaySnippet();
 		}
-
+		error_log("2--".microtime(true));
 		if($this->mainController->userIsAllowedToWrite()) {
 			$thumbsChoiceArea=$this->getThumbsChoiceArea();
 			$customThumbsArea=$this->getCustomThumbArea();
-		}
+		}error_log("3--".microtime(true));
 		$this->render=str_replace("[DISPLAY]", $displaySnippet, $this->render);
 		$this->render=str_replace("[DISPLAY-MODE-LABEL]", $this->model->getDisplayModeLabel(), $this->render);
 		$this->render=str_replace("[DISPLAY-DEVICE-LABEL]", $this->model->getDisplayDeviceLabel(), $this->render);
 		$this->render=str_replace("[THUMBS]", $thumbsChoiceArea, $this->render);
 		$this->render=str_replace("[CUSTOM-THUMBS]", $customThumbsArea, $this->render);
+		error_log("4--".microtime(true));
 	}
 
 	private function getDisplaySnippet() {
@@ -46,6 +48,7 @@ class ResourcesDetailDisplayView extends AbstractResourceDetailView {
 		if($this->mainController->isInError())
 			return $area;
 		try {
+			//TODO change to async
 			$thumbsSuggestions = $this->model->getThumbsSuggestions();
 			$area.= $this->transformXMLThumbsSuggestions($thumbsSuggestions->getDocument());
 
