@@ -27,9 +27,6 @@ class ResourcesDetailDisplayController extends AbstractResourcesDetailController
 		try {
 			//TODO very slow, change to async
 			$this->model->acquireThumbsSuggestions();
-			$this->processThumbChoice();
-			$this->processCustomThumb();
-			$this->model->acquireThumbsSuggestions();
 		} catch (HttpRequestException $e) {
 			$this->mainController->setInError(true);
 			$this->mainController->setErrorMessage("Impossible de récupérer les suggestions de miniatures", $e->getMessage());
