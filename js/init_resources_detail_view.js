@@ -112,7 +112,25 @@ function buildInterface() {
 			size : 390
 		}
 	});
-	createCarousel();
+	
+	$.ajax({
+		dataType : 'html',
+		type : "GET",
+		url : $('form#set_custom_thumb').attr("action") + "/async",
+		error : function(msg) {
+			
+			console.log(msg);
+		},
+		success : function(result) {
+			
+			$(
+			"div#display.detail-pane div.pane div.refresh-area div.thumbs-container")
+			.removeClass("void-thumbs-container")
+			.empty()
+			.html(result);
+			createCarousel();
+		}
+	});
 
 	var bar = $('.bar');
 	var status = $('#status');
@@ -129,7 +147,7 @@ function buildInterface() {
 
 							freeze(true);
 							$(
-									"div#display.detail-pane div.pane div.refresh-area div.present-thumb img")
+									"div#display.detail-pane div.pane div.refresh-area div.thumbs-container div.present-thumb img")
 									.attr("src", $("input#waiter-url").val())
 							putBlocked = true;
 							status.empty();
@@ -149,7 +167,7 @@ function buildInterface() {
 						},
 						complete : function(xhr) {
 							$(
-									"div#display.detail-pane div.pane div.refresh-area")
+									"div#display.detail-pane div.pane div.refresh-area div.thumbs-container")
 									.empty().html(xhr.responseText);
 							createCarousel();
 							freeze(false);
@@ -197,7 +215,7 @@ function createCarousel() {
 													return false;
 												freeze(true);
 												$(
-														"div#display.detail-pane div.pane div.refresh-area div.present-thumb img")
+														"div#display.detail-pane div.pane div.refresh-area div.thumbs-container div.present-thumb img")
 														.attr(
 																"src",
 																$(
@@ -208,7 +226,7 @@ function createCarousel() {
 											},
 											complete : function(xhr) {
 												$(
-														"div#display.detail-pane div.pane div.refresh-area")
+														"div#display.detail-pane div.pane div.refresh-area div.thumbs-container")
 														.empty()
 														.html(xhr.responseText);
 												createCarousel();

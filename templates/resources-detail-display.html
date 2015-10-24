@@ -37,7 +37,13 @@
 		<h2 class="ui-state-highlight">
 			<img src="[PREFIX]/img/img.png" />Choisir une miniature
 		</h2>
-		<div class="refresh-area">[THUMBS][CUSTOM-THUMBS]</div>
+		<div class="refresh-area">
+			<div class="thumbs-container void-thumbs-container">
+				<img src="[PREFIX]/img/thumbs-preload.gif"/><br/>
+				Veillez patienter pendant la récupération des suggestions de miniature
+			</div>
+			[CUSTOM-THUMBS]
+		</div>
 		<div class="pane ui-layout-south">
 			<h2 class="ui-state-error">
 				<img src="[PREFIX]/img/delete.png" />Détruire la ressource

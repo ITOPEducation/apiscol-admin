@@ -1816,3 +1816,8 @@ html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-containe
 	{
 	color: orange !important;
 }
+
+html.js body div.content div#display.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west div.refresh-area div.thumbs-container.void-thumbs-container
+	{
+	text-align: center;
+}
