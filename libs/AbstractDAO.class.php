@@ -3,6 +3,10 @@ abstract class AbstractDAO implements IDAO {
 	protected $document;
 	protected $xpath;
 	protected $xmlString;
+	/**
+	 * 
+	 * @var ServiceAccess
+	 */
 	protected $serviceAccess;
 	protected $id;
 	protected $url;

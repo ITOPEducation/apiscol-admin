@@ -9,6 +9,7 @@ var DEFAULTS = {
 	ROWS : 20
 };
 var globalCheckBox;
+var checkedResourcesIds;
 function secundaryInit() {
 	globalCheckBox = $("input#select-all-resources.css-checkbox");
 	queryBox = $("div.content div.pane div.query-container form input#query");
@@ -266,14 +267,33 @@ function secundaryInit() {
 			})
 			.click(
 					function() {
-						$
-								.confirm(
-										"Cette action supprimera les ressources sélectionnées.",
-										"Non implémenté", function() {
+						var nbChecked = 0;
+						checkedResourcesIds = new Array();
+						$(
+								"div.ui-layout-center table tbody tr td input.css-checkbox")
+								.each(function(index, elem) {
+									var checked = $(elem).is(':checked');
+									if (checked) {
+										nbChecked++;
+										checkedResourcesIds.push(elem.id);
+									}
+								});
+						if (nbChecked == 0) {
+							$
+									.confirm(
+											"Veuillez sélectionner une ou plusieurs resources.",
+											"Action impossible", $.noop);
 
-										});
+						} else {
+							$.confirm("Cette action supprimera définitivement "
+									+ nbChecked + " ressource(s)",
+									"Confirmer la suppression", function() {
+										displayBlockingModal(true);
+										asyncResourcesDeletion();
+									});
+						}
+
 					});
-	;
 	$(
 			"html.js body div.content div.pane div.inner-layout div.ui-layout-center table thead tr th span.refresh-selection-button")
 			.button({
@@ -390,4 +410,55 @@ function getPaginationParameters() {
 function getQueryParameter() {
 	var query = $("input#query.ui-autocomplete-input").val();
 	return "/query/" + (query.match(/^\s*$/) ? "~" : query);
+}
+function asyncResourcesDeletion() {
+	if (checkedResourcesIds.length == 0) {
+		window.location = window.location;
+	} else {
+		var nextId = checkedResourcesIds.pop();
+		displayTestInBlockingModal("Suppression en cours de la ressource : "
+				+ nextId, false);
+		$
+				.ajax({
+					type : "POST",
+					url : "/resources/list/async",
+					data : {
+						'delete-resource' : nextId
+					},
+					headers : {
+						accept : "application/atom+xml"
+					},
+					error : function(xhr) {
+						console.log(xhr.responseXML);
+						displayTestInBlockingModal("Erreur au cours de la suppression en cours de la ressource : "
+								+ nextId
+								+ " avec le message :"
+								+ xhr.responseXML);
+						$('body').click(function() {
+							window.location = window.location;
+						})
+
+					},
+					success : function(data) {
+						if (data.firstChild.tagName == "error") {
+							displayTestInBlockingModal($(data).find("intro")
+									.text()
+									+ "<br/>" + $(data).find("message").text());
+							putBlocked = false;
+						} else if (data.firstChild.tagName == "status") {
+							displayTestInBlockingModal($(data).find("message")
+									.text());
+							asyncResourcesDeletion();
+						} else {
+							displayTestInBlockingModal("Erreur au cours de la suppression en cours de la ressource : "
+									+ nextId);
+							$('body').click(function() {
+								window.location = window.location;
+							})
+						}
+
+					}
+				});
+	}
+
 }

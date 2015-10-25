@@ -100,3 +100,16 @@ function displayActiveLabel() {
 				$(elem).toggleClass("ui-state-focus", activeLabel == elem.id);
 			});
 }
+function displayBlockingModal(bool) {
+	if (bool) {
+		$('body').addClass('blocked');
+		displayTestInBlockingModal("", true);
+	} else
+		$('body').removeClass('blocked');
+}
+function displayTestInBlockingModal(html, erase) {
+	if (erase)
+		$("#blocking-modal-text").empty();
+	$("#blocking-modal-text").html(
+			$("#blocking-modal-text").html() + "<br/>" + html);
+}

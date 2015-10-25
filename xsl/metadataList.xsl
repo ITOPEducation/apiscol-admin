@@ -23,17 +23,19 @@
 						<thead>
 							<tr>
 								<th>
+								
 									<input type="checkbox" class="css-checkbox" id="select-all-resources" />
 									<label class="css-label" for="select-all-resources">{RESOURCES-LIST-TITLE}
 									</label>
+									<span class="refresh-selection-button"></span><span class="delete-selection-button"></span>
 								</th>
 								<th>
 								</th>
 								<th>
-									<span class="refresh-selection-button"></span>
+									
 								</th>
 								<th>
-									<span class="delete-selection-button"></span>
+									
 								</th>
 							</tr>
 						</thead>

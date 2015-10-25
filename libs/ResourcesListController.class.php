@@ -25,7 +25,19 @@ class ResourcesListController extends AbstractResourcesController {
 			$this->mainController->setTitle ( 'Ressources pédagogiques ' . $start . ' à ' . $end . ' sur ' . $count );
 	}
 	public function processAsyncRequest() {
-		// do nothing;
+		if (isset ( Security::$_CLEAN ['delete-resource'] )) {
+			try {
+				$response = $this->processDeleteRequest ( false );
+				if (isset ( $response ['content'] )) {
+					echo $response ['content'];
+					return;
+				}
+			} catch ( HttpRequestException $e ) {
+				echo MainController::xmlErrorMessage ( $e->getMessage (), $e->getCode (), "Problème lors de la suppression de la ressource" );
+				return;
+			}
+			echo MainController::xmlErrorMessage ( "Problème lors de la suppression de la ressource", 500, "Erreur d'origine inconnue" );
+		}
 	}
 	public function processSyncRequest() {
 		$this->processDeleteRequest ( false );
@@ -111,7 +123,7 @@ class ResourcesListController extends AbstractResourcesController {
 			}
 			
 			try {
-				$this->model->getMetadata ()->delete ();
+				return $this->model->getMetadata ()->delete ();
 			} catch ( HttpRequestException $e ) {
 				if (! $secondTry) {
 					$this->processDeleteRequest ( true );

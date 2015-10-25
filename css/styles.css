@@ -127,6 +127,7 @@ html.js div.ui-layout-center table thead tr th span.delete-selection-button,
 	html.js div.ui-layout-center table thead tr th span.refresh-selection-button
 	{
 	width: 16px;
+	margin-left: 12px;
 }
 /*
 Language pad
@@ -1820,4 +1821,44 @@ html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-containe
 html.js body div.content div#display.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west div.refresh-area div.thumbs-container.void-thumbs-container
 	{
 	text-align: center;
+}
+
+.blocking-modal {
+	display: none;
+	position: fixed;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(255, 255, 255, .8) url("../img/thumbs-preload.gif") 50%
+		10% no-repeat;
+}
+
+#blocking-modal-text {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	height: 400px;
+	width: 400px;
+	margin-left: -200px;
+	margin-top: -200px;
+	background-color: #333;
+	color: rgb(255, 255, 255);
+	opacity : 1;
+	border: thin solid #000;
+	padding: 25px;
+	z-index: 10001;
+	overflow-y: auto;
+	border: thin solid #000;
+	opacity: 1;
+}
+
+body.blocked {
+	overflow: hidden;
+}
+
+body.blocked .blocking-modal, body.blocked #blocking-modal-text {
+	display: block;
 }

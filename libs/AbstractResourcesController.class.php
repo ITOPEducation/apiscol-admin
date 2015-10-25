@@ -1,6 +1,10 @@
 <?php
 abstract class AbstractResourcesController implements IController {
 	protected $view;
+	/**
+	 * 
+	 * @var Model
+	 */
 	protected $model;
 	protected $mainController;
 	protected $prefix;
