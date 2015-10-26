@@ -228,6 +228,23 @@ function secundaryInit() {
 										});
 					});
 	$(
+	"div.pane div.inner-layout div.ui-layout-center table input.select-for-structure-control")
+	.each(
+			function(index, elem) {
+				
+				$(elem)
+						.button({
+							icons : {
+								primary : "ui-icon-cart"
+							},
+							text : false
+						})
+						.click(
+								function() {
+									
+								});
+			});
+	$(
 			"div.pane div.inner-layout div.ui-layout-center table form.refresh-control")
 			.each(
 					function(index, elem) {

@@ -23,19 +23,23 @@
 						<thead>
 							<tr>
 								<th>
-								
+
 									<input type="checkbox" class="css-checkbox" id="select-all-resources" />
 									<label class="css-label" for="select-all-resources">{RESOURCES-LIST-TITLE}
 									</label>
-									<span class="refresh-selection-button"></span><span class="delete-selection-button"></span>
+									<span class="refresh-selection-button"></span>
+									<span class="delete-selection-button"></span>
 								</th>
 								<th>
 								</th>
 								<th>
-									
+
 								</th>
 								<th>
-									
+
+								</th>
+								<th>
+
 								</th>
 							</tr>
 						</thead>
@@ -170,6 +174,21 @@
 					</xsl:choose>
 					</xsl:attribute>
 				</xsl:element>
+			</td>
+			<td>
+				<xsl:element name="input">
+					<xsl:attribute name="type">checkbox</xsl:attribute>
+					<xsl:attribute name="class">select-for-structure-control</xsl:attribute>
+					<xsl:attribute name="value"><xsl:value-of
+						select="$mdid"></xsl:value-of></xsl:attribute>
+					<xsl:attribute name="id">select-for-structure<xsl:value-of
+						select="$mdid"></xsl:value-of></xsl:attribute>
+				</xsl:element>
+				<label>
+					<xsl:attribute name="for">select-for-structure<xsl:value-of
+						select="$mdid"></xsl:value-of></xsl:attribute>
+					
+				</label>
 			</td>
 			<td>
 				<xsl:element name="a">

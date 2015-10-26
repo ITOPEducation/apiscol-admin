@@ -465,7 +465,8 @@ html.js body div.content div.pane div.inner-layout div.ui-layout-center table tb
 }
 
 html.js body div.content div.pane div.inner-layout div.ui-layout-center table tbody tr td form.ui-button,
-	html.js body div.content div.pane div.inner-layout div.ui-layout-center table tbody tr td a.resource-download-link
+	html.js body div.content div.pane div.inner-layout div.ui-layout-center table tbody tr td a.resource-download-link,
+	html.js body div.content div.pane div.inner-layout div.ui-layout-center.ui-layout-pane.ui-layout-pane-center table tbody tr td label.ui-button.ui-widget
 	{
 	width: 16px;
 	height: 16px;
