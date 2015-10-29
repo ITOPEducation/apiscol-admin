@@ -2,6 +2,10 @@
 abstract class AbstractView implements IView {
 
 	protected $render;
+	/**
+	 * 
+	 * @var Model
+	 */
 	protected $model;
 	protected $prefix;
 	protected $hiddenInputs;

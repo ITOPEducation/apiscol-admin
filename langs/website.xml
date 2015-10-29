@@ -49,9 +49,9 @@
 		<translation lang="fr">Liste</translation>
 		<translation lang="en-gb">List</translation>
 	</xmldata>
-	<xmldata id="RESOURCES-MENU-FOLDER">
-		<translation lang="fr">Dossiers</translation>
-		<translation lang="en-gb">Folders</translation>
+	<xmldata id="RESOURCES-MENU-STRUCTURE">
+		<translation lang="fr">Structure</translation>
+		<translation lang="en-gb">Structure</translation>
 	</xmldata>
 	<xmldata id="RESOURCES-FOLDERS">
 		<translation lang="fr">Dossiers</translation>

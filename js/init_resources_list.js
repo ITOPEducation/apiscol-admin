@@ -228,22 +228,78 @@ function secundaryInit() {
 										});
 					});
 	$(
-	"div.pane div.inner-layout div.ui-layout-center table input.select-for-structure-control")
-	.each(
-			function(index, elem) {
-				
-				$(elem)
-						.button({
-							icons : {
-								primary : "ui-icon-cart"
-							},
-							text : false
-						})
-						.click(
-								function() {
-									
-								});
-			});
+			"div.pane div.inner-layout div.ui-layout-center table input.select-for-structure-control")
+			.each(
+					function(index, elem) {
+
+						$(elem)
+								.button({
+									icons : {
+										primary : "ui-icon-cart"
+									},
+									text : false
+								})
+								.click(
+										function() {
+											var checked = $(elem)
+													.is(":checked");
+											var resId = $(elem).closest("tr")
+													.find("input.css-checkbox")
+													.attr("id");
+
+											$
+													.ajax({
+														type : "POST",
+														url : "/resources/structure/async",
+														data : {
+															'select-metadata' : checked,
+															'select-metadata-id' : resId
+														},
+														headers : {
+															accept : "application/atom+xml"
+														},
+														error : function(xhr) {
+															console
+																	.log(xhr.responseXML);
+
+														},
+														success : function(data) {
+															console.log(data);
+															return;
+															if (data.firstChild.tagName == "error") {
+																displayTestInBlockingModal($(
+																		data)
+																		.find(
+																				"intro")
+																		.text()
+																		+ "<br/>"
+																		+ $(
+																				data)
+																				.find(
+																						"message")
+																				.text());
+																putBlocked = false;
+															} else if (data.firstChild.tagName == "status") {
+																displayTestInBlockingModal($(
+																		data)
+																		.find(
+																				"message")
+																		.text());
+																asyncResourcesDeletion();
+															} else {
+																displayTestInBlockingModal("Erreur au cours de la suppression en cours de la ressource : "
+																		+ nextId);
+																$('body')
+																		.click(
+																				function() {
+																					window.location = window.location;
+																				})
+															}
+
+														}
+													});
+										});
+					});
 	$(
 			"div.pane div.inner-layout div.ui-layout-center table form.refresh-control")
 			.each(
@@ -316,6 +372,23 @@ function secundaryInit() {
 			.button({
 				icons : {
 					primary : "ui-icon-arrowrefresh-1-w"
+				},
+				text : false
+			})
+			.click(
+					function() {
+						$
+								.confirm(
+										"Cette action lancera le processus de mise à jour (archive, index du moteur de recherche, prévisualisation) pour les ressources sélectionnées.",
+										"Non implémenté", function() {
+
+										});
+					});
+	$(
+			"html.js body div.content div.pane div.inner-layout div.ui-layout-center table thead tr th span.select-for-structure-selection-button")
+			.button({
+				icons : {
+					primary : "ui-icon-cart"
 				},
 				text : false
 			})

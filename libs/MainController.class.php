@@ -107,6 +107,9 @@ class MainController {
 						case 'list' :
 							$this->secundaryController = new ResourcesListController ( $this, $this->model, $this->prefix );
 							break;
+						case 'structure' :
+							$this->secundaryController = new ResourcesStructureController ( $this, $this->model, $this->prefix );
+							break;
 						case 'detail' :
 							switch (Security::$_CLEAN ['panel']) {
 								case 'display' :

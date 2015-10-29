@@ -17,7 +17,10 @@ class ResourcesListView extends AbstractView implements IView {
 		$this->proc->setParameter('', 'query', $this->model->getMetadataList()->getQuery());
 		$this->proc->setParameter('', 'write_permission', $this->mainController->userIsAllowedToWrite());
 		try {
-			$resourcesList=$this->model->getMetadataList()->getDocumentAsString();
+			
+			$resourcesListXml=$this->model->getMetadataList(true);
+			
+			$resourcesList=$resourcesListXml->getDocumentAsString();
 			$doc=new DOMDocument();
 			$doc->loadXML($resourcesList);
 			return $this->proc->transformToXML($doc);

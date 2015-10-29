@@ -29,6 +29,7 @@
 									</label>
 									<span class="refresh-selection-button"></span>
 									<span class="delete-selection-button"></span>
+									<span class="select-for-structure-selection-button"></span>
 								</th>
 								<th>
 								</th>
@@ -113,6 +114,9 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="atom:entry">
+		<xsl:variable name="selected">
+			<xsl:value-of select="./@selected"></xsl:value-of>
+		</xsl:variable>
 		<xsl:variable name="mdid">
 			<xsl:call-template name="substring-after-last">
 				<xsl:with-param name="string" select="atom:id" />
@@ -183,11 +187,16 @@
 						select="$mdid"></xsl:value-of></xsl:attribute>
 					<xsl:attribute name="id">select-for-structure<xsl:value-of
 						select="$mdid"></xsl:value-of></xsl:attribute>
+					<xsl:choose>
+						<xsl:when test="$selected=1">
+							<xsl:attribute name="checked">checked</xsl:attribute>
+						</xsl:when>
+					</xsl:choose>
 				</xsl:element>
 				<label>
 					<xsl:attribute name="for">select-for-structure<xsl:value-of
 						select="$mdid"></xsl:value-of></xsl:attribute>
-					
+
 				</label>
 			</td>
 			<td>

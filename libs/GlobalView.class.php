@@ -28,6 +28,7 @@ class GlobalView {
 			'init_home' => '#/js/init_home.js',
 			'init_scolomfr' => '#/js/init_scolomfr.js',
 			'init_resources_list' => '#/js/init_resources_list.js',
+			'init_resources_structure' => '#/js/init_resources_structure.js',
 			'init_resources_detail_view' => '#/js/init_resources_detail_view.js',
 			'init_resources_detail_uris' => '#/js/init_resources_detail_uris.js',
 			'init_resources_detail_refresh' => '#/js/init_resources_detail_refresh.js',
@@ -95,7 +96,7 @@ class GlobalView {
 		$this->menu->addItem ( 'UTILISATEURS', "utilisateurs", $_SESSION ['page'], false );
 		$this->menu->addItem ( 'STATISTIQUES', "stats", $_SESSION ['page'], false );
 		$this->menu->addSubItem ( 'resources', 'RESOURCES-MENU-LIST', 'list', $_SESSION ['action'] );
-		$this->menu->addSubItem ( 'resources', 'RESOURCES-MENU-FOLDER', 'folder', $_SESSION ['action'] );
+		$this->menu->addSubItem ( 'resources', 'RESOURCES-MENU-STRUCTURE', 'structure', $_SESSION ['action'] );
 		$this->menu->addSubItem ( 'add', 'ADD-MENU-NEW', 'new', $_SESSION ['action'] );
 		$this->menu->addSubItem ( 'add', 'ADD-MENU-IMPORT', 'import', $_SESSION ['action'] );
 		$this->menu->addSubItem ( 'maintenance', 'MAINTENANCE-MENU-RECOVERY', 'recovery', $_SESSION ['action'] );

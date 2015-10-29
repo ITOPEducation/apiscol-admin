@@ -8,6 +8,7 @@ class Model {
 	// data access objects
 	private $metadata;
 	private $metadataList;
+	private $selectedMetadataList;
 	private $lomMetadata;
 	private $facetsSearchTest;
 	private $manifest;
@@ -30,6 +31,7 @@ class Model {
 		$this->inError = false;
 		$this->displayMode = "full";
 		$this->displayDevice = "screen";
+		$this->selectedMetadataList = array ();
 	}
 	public function __sleep() {
 		return array (
@@ -37,7 +39,8 @@ class Model {
 				'serviceAccess',
 				'displayMode',
 				'displayDevice',
-				'metadataList' 
+				'metadataList',
+				'selectedMetadataList' 
 		);
 	}
 	private function getServiceAccess() {
@@ -124,7 +127,9 @@ class Model {
 	public function getMetadata() {
 		return $this->metadata;
 	}
-	public function getMetadataList() {
+	public function getMetadataList($markSelected=false) {
+		if(true===$markSelected)
+			$this->metadataList->markSelectedMetadata($this->selectedMetadataList);
 		return $this->metadataList;
 	}
 	public function getFacetsSearchTest() {
@@ -298,6 +303,21 @@ class Model {
 				'resources' 
 		) ) );
 		return $this->getServiceAccess ()->askForOptimizationMaintenance ( $target );
+	}
+	public function setMetadataIdSelected($metadataId, $select) {
+		if (true === $select && ! in_array ( $metadataId, $this->selectedMetadataList )) {
+			$this->selectedMetadataList [] = $metadataId;
+			return true;
+		} else if (false === $select) {
+			$this->selectedMetadataList = array_diff ( $this->selectedMetadataList, [ 
+					$metadataId 
+			] );
+			return true;
+		}
+		return false;
+	}
+	public function getSelectedMetadataList() {
+		return $this->selectedMetadataList;
 	}
 }
 ?>

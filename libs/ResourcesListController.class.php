@@ -2,7 +2,7 @@
 class ResourcesListController extends AbstractResourcesController {
 	private $actions = array (
 			"index",
-			"folders",
+			"structure",
 			"display",
 			"uris",
 			"update",

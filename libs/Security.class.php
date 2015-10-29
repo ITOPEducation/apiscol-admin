@@ -65,8 +65,10 @@ class Security {
 			"lifeCycle-contributor-role" => "string-array",
 			"educational-difficulty" => "string",
 			"classifications" => "json",
-			"target-repository" => "target-repository" ,
-			"nb-lines" => "integer"
+			"target-repository" => "target-repository",
+			"nb-lines" => "integer",
+			"select-metadata-id" => "integer",
+			"select-metadata" => "bool" 
 	);
 	private static $DEFAULTS = array (
 			"page" => "home" 
@@ -76,7 +78,7 @@ class Security {
 			"home" => array (),
 			"resources" => array (
 					"list" => array (),
-					"folders" => array (),
+					"structure" => array (),
 					"detail" => array (
 							"display",
 							"uris",
@@ -94,7 +96,7 @@ class Security {
 			"alerts" => array (),
 			"maintenance" => array (
 					"recovery" => array (),
-					"optimization" => array ()
+					"optimization" => array () 
 			) 
 	);
 	public static function cleanPost() {
@@ -154,7 +156,7 @@ class Security {
 							"true",
 							"false" 
 					) );
-					self::$_BUFFER [$key] = $valid == "true";
+					self::$_BUFFER [$key] = $value === "true";
 					break;
 				case "checkbox" :
 					$valid = in_array ( $value, array (

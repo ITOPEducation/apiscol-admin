@@ -1,10 +1,14 @@
 <?php
 abstract class AbstractDAO implements IDAO {
+	/**
+	 *
+	 * @var DOMDocument
+	 */
 	protected $document;
 	protected $xpath;
 	protected $xmlString;
 	/**
-	 * 
+	 *
 	 * @var ServiceAccess
 	 */
 	protected $serviceAccess;
@@ -46,7 +50,6 @@ abstract class AbstractDAO implements IDAO {
 	protected function setXPathNameSpace() {
 		$rootNamespace = $this->document->lookupNamespaceUri ( $this->document->namespaceURI );
 		$this->xpath->registerNamespace ( $this->getDefaultNameSpace (), $rootNamespace );
-		;
 	}
 	public function getDocumentAsString() {
 		assert ( $this->isBuilt );

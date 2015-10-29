@@ -124,7 +124,8 @@ html.js body>header h1 {
 }
 
 html.js div.ui-layout-center table thead tr th span.delete-selection-button,
-	html.js div.ui-layout-center table thead tr th span.refresh-selection-button
+	html.js div.ui-layout-center table thead tr th span.refresh-selection-button,
+	html.js div.ui-layout-center table thead tr th span.select-for-structure-selection-button
 	{
 	width: 16px;
 	margin-left: 12px;
@@ -1862,4 +1863,7 @@ body.blocked {
 
 body.blocked .blocking-modal, body.blocked #blocking-modal-text {
 	display: block;
+}
+html.js body div.content.ui-layout-container div.pane.ui-layout-center table tbody tr td label.ui-button.ui-widget.ui-state-default.ui-state-active {
+	border-color: #ff0000;
 }
