@@ -67,8 +67,8 @@ class Security {
 			"classifications" => "json",
 			"target-repository" => "target-repository",
 			"nb-lines" => "integer",
-			"select-metadata-id" => "integer",
-			"select-metadata" => "bool" 
+			"select-metadata-id" => "string-array",
+			"select-metadata" => "bool-array" 
 	);
 	private static $DEFAULTS = array (
 			"page" => "home" 
@@ -133,11 +133,30 @@ class Security {
 				case "string-array" :
 					$valid = is_array ( $value );
 					if ($valid) {
+						self::$_BUFFER [$key] = array ();
 						foreach ( $value as $key2 => $value2 ) {
 							self::$_BUFFER [$key] [$key2] = filter_var ( $value2, FILTER_SANITIZE_STRING );
 							$valid = $valid && strlen ( self::$_BUFFER [$key] [$key2] ) > 0 && strlen ( self::$_BUFFER [$key] [$key2] ) < self::$STRINGS_MAX_LENGTH;
 							if (! $valid)
 								break;
+						}
+					}
+					break;
+				case "bool-array" :
+					$valid = is_array ( $value );
+					if ($valid) {
+						self::$_BUFFER [$key] = array ();
+						foreach ( $value as $key2 => $value2 ) {
+							$valid = $valid && in_array ( $value2, array (
+									"true",
+									"false",
+									true,
+									false 
+							) );
+							if (! $valid)
+								break;
+							
+							self::$_BUFFER [$key] [$key2] = ($value2 === "true" || $value2 === true);
 						}
 					}
 					break;

@@ -246,14 +246,15 @@ function secundaryInit() {
 											var resId = $(elem).closest("tr")
 													.find("input.css-checkbox")
 													.attr("id");
-
+											var selectedMetadata = [ checked ];
+											var selectedMetadataId = [ resId ];
 											$
 													.ajax({
 														type : "POST",
 														url : "/resources/structure/async",
 														data : {
-															'select-metadata' : checked,
-															'select-metadata-id' : resId
+															'select-metadata[]' : selectedMetadata,
+															'select-metadata-id[]' : selectedMetadataId
 														},
 														headers : {
 															accept : "application/atom+xml"

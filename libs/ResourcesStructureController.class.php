@@ -15,7 +15,7 @@ class ResourcesStructureController extends AbstractResourcesController {
 			$response = $this->processMetadataSelection ( Security::$_CLEAN ['select-metadata-id'], Security::$_CLEAN ['select-metadata'] );
 			if (isset ( $response ['content'] )) {
 				
-				return $this->metadataArrayToXml( $response ['content'] );
+				return $this->metadataArrayToXml ( $response ['content'] );
 			}
 			
 			echo MainController::xmlErrorMessage ( "Problème lors de la selection", 500, "Erreur d'origine inconnue" );
@@ -42,8 +42,14 @@ class ResourcesStructureController extends AbstractResourcesController {
 	public function getView() {
 		return $this->view;
 	}
-	private function processMetadataSelection($metadataId, $select) {
-		$success = $this->model->setMetadataIdSelected ( $metadataId, $select );
+	private function processMetadataSelection(array $metadataIds, array $selecteds) {
+		$success = true;
+		$counter = 0;
+		foreach ( $metadataIds as $key=>$metadataId ) {
+			$success = $this->model->setMetadataIdSelected ( $metadataId, $selecteds [$counter] ) && $success;
+			$counter ++;
+		}
+		
 		if ($success)
 			return array (
 					"content" => $this->model->getSelectedMetadataList () 
@@ -56,9 +62,8 @@ class ResourcesStructureController extends AbstractResourcesController {
 			$xml = new SimpleXMLElement ( '<data/>' );
 		}
 		foreach ( $array as $key => $value ) {
-
-				$xml->addChild ( 'mdid', $value );
 			
+			$xml->addChild ( 'mdid', $value );
 		}
 		return $xml->asXML ();
 	}
