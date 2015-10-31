@@ -45,17 +45,14 @@ class ResourcesStructureController extends AbstractResourcesController {
 	private function processMetadataSelection(array $metadataIds, array $selecteds) {
 		$success = true;
 		$counter = 0;
-		foreach ( $metadataIds as $key=>$metadataId ) {
-			$success = $this->model->setMetadataIdSelected ( $metadataId, $selecteds [$counter] ) && $success;
+		foreach ( $metadataIds as $key => $metadataId ) {
+			$this->model->setMetadataIdSelected ( $metadataId, $selecteds [$counter] ) && $success;
 			$counter ++;
 		}
 		
-		if ($success)
-			return array (
-					"content" => $this->model->getSelectedMetadataList () 
-			);
-		else
-			return false;
+		return array (
+				"content" => $this->model->getSelectedMetadataList () 
+		);
 	}
 	function metadataArrayToXml($array, $xml = false) {
 		if ($xml === false) {

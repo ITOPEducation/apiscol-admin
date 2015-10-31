@@ -127,9 +127,9 @@ class Model {
 	public function getMetadata() {
 		return $this->metadata;
 	}
-	public function getMetadataList($markSelected=false) {
-		if(true===$markSelected)
-			$this->metadataList->markSelectedMetadata($this->selectedMetadataList);
+	public function getMetadataList($markSelected = false) {
+		if (true === $markSelected)
+			$this->metadataList->markSelectedMetadata ( $this->selectedMetadataList );
 		return $this->metadataList;
 	}
 	public function getFacetsSearchTest() {
@@ -307,14 +307,11 @@ class Model {
 	public function setMetadataIdSelected($metadataId, $select) {
 		if (true === $select && ! in_array ( $metadataId, $this->selectedMetadataList )) {
 			$this->selectedMetadataList [] = $metadataId;
-			return true;
 		} else if (false === $select) {
 			$this->selectedMetadataList = array_diff ( $this->selectedMetadataList, [ 
 					$metadataId 
 			] );
-			return true;
 		}
-		return false;
 	}
 	public function getSelectedMetadataList() {
 		return $this->selectedMetadataList;

@@ -10,6 +10,8 @@ var DEFAULTS = {
 };
 var globalCheckBox;
 var checkedResourcesIds;
+var resourcesIds;
+var resourcesSelectionState;
 function secundaryInit() {
 	globalCheckBox = $("input#select-all-resources.css-checkbox");
 	queryBox = $("div.content div.pane div.query-container form input#query");
@@ -232,74 +234,22 @@ function secundaryInit() {
 			.each(
 					function(index, elem) {
 
-						$(elem)
-								.button({
-									icons : {
-										primary : "ui-icon-cart"
-									},
-									text : false
-								})
-								.click(
-										function() {
-											var checked = $(elem)
-													.is(":checked");
-											var resId = $(elem).closest("tr")
-													.find("input.css-checkbox")
-													.attr("id");
-											var selectedMetadata = [ checked ];
-											var selectedMetadataId = [ resId ];
-											$
-													.ajax({
-														type : "POST",
-														url : "/resources/structure/async",
-														data : {
-															'select-metadata[]' : selectedMetadata,
-															'select-metadata-id[]' : selectedMetadataId
-														},
-														headers : {
-															accept : "application/atom+xml"
-														},
-														error : function(xhr) {
-															console
-																	.log(xhr.responseXML);
-
-														},
-														success : function(data) {
-															console.log(data);
-															return;
-															if (data.firstChild.tagName == "error") {
-																displayTestInBlockingModal($(
-																		data)
-																		.find(
-																				"intro")
-																		.text()
-																		+ "<br/>"
-																		+ $(
-																				data)
-																				.find(
-																						"message")
-																				.text());
-																putBlocked = false;
-															} else if (data.firstChild.tagName == "status") {
-																displayTestInBlockingModal($(
-																		data)
-																		.find(
-																				"message")
-																		.text());
-																asyncResourcesDeletion();
-															} else {
-																displayTestInBlockingModal("Erreur au cours de la suppression en cours de la ressource : "
-																		+ nextId);
-																$('body')
-																		.click(
-																				function() {
-																					window.location = window.location;
-																				})
-															}
-
-														}
-													});
-										});
+						$(elem).button({
+							icons : {
+								primary : "ui-icon-cart"
+							},
+							text : false
+						}).click(
+								function() {
+									var checked = $(elem).is(":checked");
+									var resId = $(elem).closest("tr").find(
+											"input.css-checkbox").attr("id");
+									var selectedMetadata = [ checked ];
+									var selectedMetadataId = [ resId ];
+									sendSelectedResourcesList(
+											selectedMetadataId,
+											selectedMetadata);
+								});
 					});
 	$(
 			"div.pane div.inner-layout div.ui-layout-center table form.refresh-control")
@@ -341,17 +291,8 @@ function secundaryInit() {
 			})
 			.click(
 					function() {
-						var nbChecked = 0;
-						checkedResourcesIds = new Array();
-						$(
-								"div.ui-layout-center table tbody tr td input.css-checkbox")
-								.each(function(index, elem) {
-									var checked = $(elem).is(':checked');
-									if (checked) {
-										nbChecked++;
-										checkedResourcesIds.push(elem.id);
-									}
-								});
+						var nbChecked = getNbChecked();
+
 						if (nbChecked == 0) {
 							$
 									.confirm(
@@ -395,12 +336,17 @@ function secundaryInit() {
 			})
 			.click(
 					function() {
-						$
-								.confirm(
-										"Cette action lancera le processus de mise à jour (archive, index du moteur de recherche, prévisualisation) pour les ressources sélectionnées.",
-										"Non implémenté", function() {
+						var nbChecked = getNbChecked();
 
-										});
+						if (nbChecked == 0) {
+							$
+									.confirm(
+											"Veuillez sélectionner une ou plusieurs resources.",
+											"Action impossible", $.noop);
+
+						} else {
+							sendSelectedResourcesList(resourcesIds, resourcesSelectionState)
+						}
 					});
 	$(
 			"html.js body div.content div.pane div.inner-layout div.ui-layout-center table tbody tr td a.resource-download-link")
@@ -441,6 +387,57 @@ function secundaryInit() {
 				}
 			});
 
+}
+function getNbChecked() {
+	var nbChecked = 0;
+	resourcesIds=new Array();
+	checkedResourcesIds = new Array();
+	resourcesSelectionState = new Array();
+	$("div.ui-layout-center table tbody tr td input.css-checkbox").each(
+			function(index, elem) {
+				var checked = $(elem).is(':checked');
+				var selectionState = false;
+				
+				if (checked) {
+					nbChecked++;
+					checkedResourcesIds.push(elem.id);
+					selectionState = true;
+				} else {
+					selectionState = $(elem).closest("tr").find(
+							".select-for-structure-control ").is(":checked");
+				}
+				resourcesIds.push(elem.id);
+				resourcesSelectionState.push(selectionState);
+			});
+	return nbChecked;
+}
+function sendSelectedResourcesList(selectedMetadataId, selectedMetadata) {
+	$.ajax({
+		type : "POST",
+		url : "/resources/structure/async",
+		data : {
+			'select-metadata[]' : selectedMetadata,
+			'select-metadata-id[]' : selectedMetadataId
+		},
+		headers : {
+			accept : "application/atom+xml"
+		},
+		error : function(xhr) {
+			console.log(xhr.responseXML);
+
+		},
+		success : function(data) {
+			$mdids=$(data).find("mdid");
+			var mdid,$cartButton;
+			$mdids.each(function(i,e) {
+				mdid=$(e).text();
+				$cartButton=$("#select-for-structure"+mdid);
+				if(!$cartButton.is(":checked"))
+					$cartButton.attr("checked","checked").button( "refresh" );
+			})
+
+		}
+	});
 }
 function submitQuery(query) {
 	var href = $("div.content div.pane div.query-container form")
