@@ -36,7 +36,6 @@ class GlobalView {
 			'init_resources_detail_stats' => '#/js/init_resources_detail_stats.js',
 			'init_resources_detail_search' => '#/js/init_resources_detail_search.js',
 			'init_add_metadata' => '#/js/init_add_metadata.js',
-			'init_add_package' => '#/js/init_add_package.js',
 			'init_maintenance_recovery' => '#/js/init_maintenance_recovery.js',
 			'apiscol' => 'http://apiscol.crdp-versailles.fr/cdn/0.0.1/js/jquery.apiscol.js' 
 	);

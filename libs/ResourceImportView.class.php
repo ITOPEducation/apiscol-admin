@@ -14,13 +14,11 @@ class ResourceImportView extends AbstractView implements IView {
 		$importMetadataResultArea = '';
 		$urlRegistrationResultArea = '';
 		if ($this->mainController->userIsAllowedToWrite ()) {
-			$writeMetadataArea = "à venir";
-			// $writeMetadataArea=$this->getScolomfrForm();
+			
 			$importMetadataArea = $this->getImportMetadataArea ();
 			$importMetadataResultArea = $this->getImportOfMetadataResultArea ();
 			$urlRegistrationResultArea = $this->getUrlRegistrationResultArea ();
 		}
-		$this->render = str_replace ( "[WRITE-METADATA]", $writeMetadataArea, $this->render );
 		$this->render = str_replace ( "[IMPORT-METADATA]", $importMetadataArea, $this->render );
 		$this->render = str_replace ( "[IMPORT-METADATA-RESULT]", $importMetadataResultArea, $this->render );
 		$this->render = str_replace ( "[URL-REGISTRATION-RESULT]", $urlRegistrationResultArea, $this->render );

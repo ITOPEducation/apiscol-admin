@@ -69,13 +69,6 @@ class ServiceAccess {
 		$response = $this->client->setUrl ( $contentLink )->get ();
 		return $response ["content"];
 	}
-	public function getPack($packLink) {
-		$params = array (
-				"desc" => "true" 
-		);
-		$response = $this->client->setUrl ( $packLink )->get ( $params );
-		return $response ["content"];
-	}
 	public function getContentThumb($contentThumbLink) {
 		$response = $this->client->setUrl ( $contentThumbLink )->get ();
 		return $response ["content"];

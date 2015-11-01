@@ -2,7 +2,7 @@
 abstract class AbstractResourcesController implements IController {
 	protected $view;
 	/**
-	 * 
+	 *
 	 * @var Model
 	 */
 	protected $model;
@@ -30,20 +30,17 @@ abstract class AbstractResourcesController implements IController {
 	}
 	public function acquireContent($throwErrorIfNoContent = true) {
 		try {
-			if (! $this->model->getMetadata ()->isPackage ())
-				$this->model->acquireContentRepresentation ();
-			else
-				$this->model->acquirePackRepresentation ();
-			if (! $this->model->getMetadata ()->isPackage ())
-				try {
-					$this->model->acquireContentThumbRepresentation ();
-				} catch ( HttpRequestException $e ) {
-					$this->mainController->setInError ( true );
-					$this->mainController->setErrorMessage ( "Problèmes de connexion à ApiScol pour obtenir les suggestions de miniatures basées sur le contenu.", $e->getContent () );
-				} catch ( BadUrlRequestException $e ) {
-					$this->mainController->setInError ( true );
-					$this->mainController->setErrorMessage ( "Problèmes de connexion à ApiScol pour obtenir les suggestions de miniatures basées sur le contenu.", $e->getMessage () );
-				}
+			$this->model->acquireContentRepresentation ();
+			
+			try {
+				$this->model->acquireContentThumbRepresentation ();
+			} catch ( HttpRequestException $e ) {
+				$this->mainController->setInError ( true );
+				$this->mainController->setErrorMessage ( "Problèmes de connexion à ApiScol pour obtenir les suggestions de miniatures basées sur le contenu.", $e->getContent () );
+			} catch ( BadUrlRequestException $e ) {
+				$this->mainController->setInError ( true );
+				$this->mainController->setErrorMessage ( "Problèmes de connexion à ApiScol pour obtenir les suggestions de miniatures basées sur le contenu.", $e->getMessage () );
+			}
 		} catch ( HttpRequestException $e ) {
 			$this->mainController->setInError ( true );
 			$this->mainController->setErrorMessage ( "Problèmes de connexion à ApiScol pour obtenir le contenu de la ressource.", $e->getContent () );

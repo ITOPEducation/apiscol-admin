@@ -27,10 +27,7 @@ class MetadataDAO extends AtomDAO {
 		assert($this->isBuilt);
 		return $this->serviceAccess->deleteMetadata($this->id, $this->getEtag());
 	}
-	public function isPackage() {
-		assert($this->isBuilt);
-		return $this->xpath->query("atom:category/@term")->item(0)->value=="lesson";
-	}
+
 	public function sendRefreshRequest($target) {
 		return $this->serviceAccess->createMetadataRefreshRequest($target, $this->id, $this->getEtag());
 	}

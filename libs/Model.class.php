@@ -13,7 +13,6 @@ class Model {
 	private $facetsSearchTest;
 	private $manifest;
 	private $content;
-	private $pack;
 	private $contentThumb;
 	private $thumbSuggestions;
 	private $displayMode;
@@ -74,11 +73,7 @@ class Model {
 		$this->facetsSearchTest->setMdid ( $this->getMetadata ()->getLink () );
 		$this->facetsSearchTest->build ();
 	}
-	public function acquireIMSLDManifest() {
-		$this->manifest = new ManifestDAO ( $this->getServiceAccess () );
-		$this->manifest->setUrl ( $this->getPack ()->getManifestLink () );
-		$this->manifest->build ();
-	}
+
 	public function acquireThumbsSuggestions() {
 		$this->thumbSuggestions = new ThumbsSuggestionsDAO ( $this->getServiceAccess () );
 		$this->thumbSuggestions->setMetadatadid ( $this->getMetadata ()->getLink () );
@@ -100,14 +95,6 @@ class Model {
 			$this->content->setUrl ( $contentLink );
 		}
 		$this->content->build ();
-	}
-	public function acquirePackRepresentation() {
-		$this->pack = new PackDAO ( $this->serviceAccess );
-		$packLink = $this->getMetadata ()->getContentLink ();
-		if ($packLink == self::NO_ANSWER)
-			throw new MetadataWithoutContentException ( 'The metadata representation ' . ($this->getMetadata ()->getId ()) . ' has no associated package' );
-		$this->pack->setUrl ( $packLink );
-		$this->pack->build ();
 	}
 	public function acquireContentThumbRepresentation() {
 		$this->contentThumb = new ContentThumbsDAO ( $this->getServiceAccess () );

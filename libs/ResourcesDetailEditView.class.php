@@ -9,9 +9,6 @@ class ResourcesDetailEditView extends AbstractResourceDetailView {
 		$updateMetaArea='Vos droits sont insuffisants pour accéder à ces fonctionnalités.';
 		if($this->mainController->userIsAllowedToWrite()) {
 			if($this->model->getMetadata()->isBuilt())
-				if($this->model->getMetadata()->isPackage())
-				$updateContentArea='Fonctionnalité à venir pour les packages';
-			else
 				$updateContentArea=$this->getUpdateContentArea();
 			else $updateContentArea='';
 			if(!is_null($this->model->getMetadata()) && $this->model->getMetadata()->isBuilt()) {

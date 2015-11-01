@@ -20,10 +20,9 @@ class ResourcesDetailUrisController extends AbstractResourcesDetailController {
 			$this->acquireContent();
 		} catch (HttpRequestException $e) {
 			$this->mainController->setInError(true);
-			$this->mainController->setErrorMessage("Impossible de récupérer le contenu (données ou package) de la ressource", $e->getMessage());
+			$this->mainController->setErrorMessage("Impossible de récupérer le contenu de la ressource", $e->getMessage());
 		}
-		if($this->model->getMetadata()->isPackage())
-			$this->acquireManifest();
+
 		try{
 			$this->acquireScolomfr();
 			$this->acquireSnippet();

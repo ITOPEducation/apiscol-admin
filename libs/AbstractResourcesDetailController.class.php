@@ -17,17 +17,7 @@ public function acquireScolomfr() {
 			$this->mainController->setErrorMessage("Problèmes de connexion à ApiScol pour obtenir les métadonnées scoLOMfr.", $e->getMessage());
 		}
 	}
-	public function acquireManifest() {
-		try {
-			$this->model->acquireIMSLDManifest();
-		} catch (HttpRequestException $e) {
-			$this->mainController->setInError(true);
-			$this->mainController->setErrorMessage("Problèmes de connexion à ApiScol pour obtenir le manifeste IMS LD", $e->getContent());
-		} catch (BadUrlRequestException $e) {
-			$this->mainController->setInError(true);
-			$this->mainController->setErrorMessage("Problèmes de connexion à ApiScol pour obtenir le manifeste IMS LD", $e->getMessage());
-		}
-	}
+
 	protected function acquireSnippet() {
 		try {
 			$this->model->acquireSnippet();
