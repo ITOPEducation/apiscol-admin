@@ -82,6 +82,9 @@ function initScolomFr() {
 	$("div#difficulty-container.element div select").change(function() {
 		activateSubmitButton(true);
 	});
+	$("div#aggregationLevel-container.element div select").change(function() {
+		activateSubmitButton(true);
+	});
 	handleContributors();
 	initialization = false;
 

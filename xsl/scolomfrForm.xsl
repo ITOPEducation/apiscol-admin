@@ -40,6 +40,11 @@
 								<xsl:call-template name="generalResourceType"></xsl:call-template>
 
 							</div>
+							<div class="element ui-helper-clearfix entry-list-container"
+								id="aggregationLevel-container">
+								<xsl:call-template name="aggregationLevel"></xsl:call-template>
+
+							</div>
 							<div name="element" class="element" id="contributors-container">
 								<div class="elt_label">
 									contributeurs :
@@ -307,6 +312,40 @@
 		</div>
 
 	</xsl:template>
+	<xsl:template name="aggregationLevel">
+		<div class="elt_label">
+			Niveau d'agrégation
+		</div>
+
+
+		<xsl:variable name="aggregationLevel-vocabvalues"
+			select="document('../scolomfr/xsd/common/vocabValues.xsd')/xs:schema" />
+		<xsl:variable name="registredValue"
+			select="/lom:lom/lom:general/lom:aggregationLevel/lom:value" />
+		<div>
+			<select size="1" name="general-aggregationLevel">
+				<option value="none">
+
+					Non renseigné</option>
+				<xsl:for-each
+					select="$aggregationLevel-vocabvalues/*[@name='aggregationLevelValues']/xs:restriction/xs:enumeration">
+
+					<option>
+						<xsl:attribute name="value">
+				<xsl:value-of select="@value"></xsl:value-of>
+				</xsl:attribute>
+						<xsl:if test="@value=$registredValue">
+							<xsl:attribute name="selected">selected</xsl:attribute>
+						</xsl:if>
+						<xsl:value-of select="@value"></xsl:value-of>
+					</option>
+				</xsl:for-each>
+			</select>
+		</div>
+
+
+	</xsl:template>
+
 	<xsl:template name="learningResourceType">
 		<div class="elt_label">
 			Type pédagogique de la ressource

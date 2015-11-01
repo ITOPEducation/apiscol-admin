@@ -163,6 +163,8 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 				$this->model->getLomMetadata ()->updateKeywords ( Security::$_CLEAN ['general-keyword'] );
 			if (array_key_exists ( 'general-generalResourceType', Security::$_CLEAN ))
 				$this->model->getLomMetadata ()->updateGeneralResourceType ( Security::$_CLEAN ['general-generalResourceType'] );
+			if (array_key_exists ( 'general-aggregationLevel', Security::$_CLEAN ))
+				$this->model->getLomMetadata ()->updateAggregationLevel( Security::$_CLEAN ['general-aggregationLevel'] );
 			if (array_key_exists ( 'educational-description', Security::$_CLEAN ))
 				$this->model->getLomMetadata ()->updateEducationalDescription ( Security::$_CLEAN ['educational-description'] );
 			if (array_key_exists ( 'educational-learningResourceType', Security::$_CLEAN ))

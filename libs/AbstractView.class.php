@@ -43,6 +43,7 @@ abstract class AbstractView implements IView {
 	protected  function getScolomfrForm($url) {
 		assert(!is_null($this->model->getLomMetadata()) && $this->model->getLomMetadata()->isBuilt());
 		$scolomfrXML=$this->model->getLomMetadata()->getDocument();
+		//die($scolomfrXML->saveXML());
 		return $this->transformScolomfrToForm($scolomfrXML, $url);
 	}
 	private function transformScolomfrToForm($scolomfrXML, $url) {

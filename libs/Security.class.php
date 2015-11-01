@@ -54,6 +54,7 @@ class Security {
 			"general-coverage" => "string",
 			"general-keyword" => "string-array",
 			"general-generalResourceType" => "string-array",
+			"general-aggregationLevel"=> "string",
 			"educational-description" => "string",
 			"educational-learningResourceType" => "string-array",
 			"educational-place" => "string-array",
