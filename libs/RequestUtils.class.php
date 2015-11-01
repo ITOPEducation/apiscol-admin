@@ -3,7 +3,7 @@ class RequestUtils {
 
 	public static function join($params) {
 		$paramsJoined = array();
-		if(is_null($params) || array_count_values($params)==0)
+		if(is_null($params) || count($params)==0)
 			return "";
 		foreach($params as $param => $value) {
 			if(trim($param)=="dynamic-filters" || trim($param)=="static-filters")

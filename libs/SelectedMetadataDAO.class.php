@@ -1,35 +1,22 @@
 <?php
-class MetadataFeedDAO extends AtomFeedDAO {
-	private $start;
-	private $rows;
-	private $query;
+class SelectedMetadataDAO extends AtomFeedDAO {
 	// research parameters
-	private $staticFilters;
-	private $dynamicFilters;
 	private $metadataIds;
 	public function __construct($serviceAccess) {
 		parent::__construct ( $serviceAccess );
-		$this->start = 0;
-		$this->rows = 10000;
-		$this->query = "";
-		$this->staticFilters = array ();
-		$this->dynamicFilters = array ();
 		$this->metadataIds = array ();
 	}
 	public function __sleep() {
 		return array (
-				'staticFilters',
-				'dynamicFilters',
-				'metadataIds',
-				'serviceAccess' 
+				'metadataIds'
 		);
 	}
 	protected function acquireXMLString() {
-		return $this->serviceAccess->getMetadataList ( isset ( $this->query ) ? $this->query : null, $this->dynamicFilters, $this->staticFilters, $this->metadataIds, $this->start, $this->rows );
+		return $this->serviceAccess->getMetadataList( null, null, staticFilters, 0, 100 );
 	}
 	public function getStaticFilters() {
 		$filters = array ();
-		foreach ( $this->staticFilters as $value ) {
+		foreach ( $this->metadataIds as $value ) {
 			$filters [$value] = str_replace ( "::", "=", $value );
 		}
 		return $filters;
@@ -48,9 +35,6 @@ class MetadataFeedDAO extends AtomFeedDAO {
 	public function addDynamicFilter($filter) {
 		if (! in_array ( $filter, $this->dynamicFilters ))
 			$this->dynamicFilters [] = $filter;
-	}
-	public function setMetadataIds(array $metadataIds) {
-		$this->metadataIds = $metadataIds;
 	}
 	public function clearFilters($filter) {
 		if ($filter == "all") {

@@ -18,7 +18,7 @@ class ServiceAccess {
 	}
 	public function __wakeup() {
 	}
-	public function getMetadataList($query = null, $dynamicFilters = array(), $staticFilters = array(), $start, $rows) {
+	public function getMetadataList($query = null, $dynamicFilters = array(), $staticFilters = array(), $metadataIds = array(), $start, $rows) {
 		$params = array (
 				"desc" => "true",
 				"start" => $start,
@@ -30,6 +30,8 @@ class ServiceAccess {
 			$params ["dynamic-filters"] = json_encode ( $dynamicFilters );
 		if (count ( $staticFilters ) > 0)
 			$params ["static-filters"] = json_encode ( $staticFilters );
+		if (count ( $metadataIds ) > 0)
+			$params ["mdids"] = json_encode ( $metadataIds );
 		$response = $this->client->setUrl ( $this->parameters ["services"] ["seek"] )->get ( $params );
 		return $response ["content"];
 	}

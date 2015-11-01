@@ -117,6 +117,10 @@ class Model {
 	public function prepareSearchQuery() {
 		if (! isset ( $this->metadataList ))
 			$this->metadataList = new MetadataFeedDAO ( $this->getServiceAccess () );
+		$this->metadataList->setMetadataIds ( array () );
+	}
+	public function addSelectedMetadataIdsToMetadataList() {
+		$this->metadataList->setMetadataIds ( $this->getSelectedMetadataList () );
 	}
 	public function launchSearchQuery() {
 		$this->metadataList->build ();

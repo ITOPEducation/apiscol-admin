@@ -467,7 +467,8 @@ html.js body div.content div.pane div.inner-layout div.ui-layout-center table tb
 
 html.js body div.content div.pane div.inner-layout div.ui-layout-center table tbody tr td form.ui-button,
 	html.js body div.content div.pane div.inner-layout div.ui-layout-center table tbody tr td a.resource-download-link,
-	html.js body div.content div.pane div.inner-layout div.ui-layout-center.ui-layout-pane.ui-layout-pane-center table tbody tr td label.ui-button.ui-widget
+	html.js body div.content div.pane div.inner-layout div.ui-layout-center.ui-layout-pane.ui-layout-pane-center table tbody tr td label.ui-button.ui-widget,
+	html.js body div.content div.pane ul li.resource-selected a.resource-detail-link
 	{
 	width: 16px;
 	height: 16px;
@@ -1866,4 +1867,24 @@ body.blocked .blocking-modal, body.blocked #blocking-modal-text {
 }
 html.js body div.content.ui-layout-container div.pane.ui-layout-center table tbody tr td label.ui-button.ui-widget.ui-state-default.ui-state-active {
 	border-color: #ff0000;
+}
+/*
+structure
+*/
+html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west ul  {
+	list-style: none;
+	padding-left: 0;
+}
+html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west ul li.resource-selected {
+	margin: 8px 0;
+	padding: 4px;
+}
+html.js body div.content div#structure div.pane h2.ui-state-highlight img
+	{
+	margin: 5px 20px;
+	vertical-align: middle;
+	width: 32px;
+}
+html.js body div.content div#structure div.pane ul li.resource-selected a.resource-detail-link {
+	float: right;
 }

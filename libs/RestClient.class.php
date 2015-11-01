@@ -141,7 +141,7 @@ class RestClient {
 		return stream_context_create ( $opts );
 	}
 	protected function _makeUrl($pParams) {
-		if (is_null ( $pParams ) || ! is_array ( $pParams ) || array_count_values ( $pParams ) == 0)
+		if (is_null ( $pParams ) || ! is_array ( $pParams ) || count ( $pParams ) == 0)
 			return $this->_url;
 		else
 			return $this->_url . (strpos ( $this->_url, '?' ) === FALSE ? '?' : '') . RequestUtils::join ( $pParams );

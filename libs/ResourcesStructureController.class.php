@@ -22,7 +22,8 @@ class ResourcesStructureController extends AbstractResourcesController {
 		}
 	}
 	public function processSyncRequest() {
-		$resetStart = false;
+		$this->model->prepareSearchQuery ();
+		$this->model->addSelectedMetadataIdsToMetadataList ();
 		
 		if (isset ( Security::$_CLEAN ['active-tab'] )) {
 			$this->model->setDisplayParameter ( 'active-tab', Security::$_CLEAN ['active-tab'] );
@@ -37,6 +38,18 @@ class ResourcesStructureController extends AbstractResourcesController {
 		}
 		if (isset ( Security::$_CLEAN ['south-pane'] )) {
 			$this->model->setDisplayParameter ( 'south-pane', Security::$_CLEAN ['south-pane'] );
+		}
+		try {
+			$this->model->launchSearchQuery ();
+		} catch ( BadUrlRequestException $e ) {
+			$this->mainController->setInError ( true );
+			$this->mainController->setErrorMessage ( "Impossible de consulter les ressources. Le service est peut-être arrêté.", $e->getMessage () );
+		} catch ( HttpRequestException $e ) {
+			$this->mainController->setInError ( true );
+			$this->mainController->setErrorMessage ( "Le service ApiScol Seek n'a pas répondu ou a dysfonctionné (erreur " . $e->getCode () . ").", $e->getContent () );
+		} catch ( CorruptedXMLStringException $e ) {
+			$this->mainController->setInError ( true );
+			$this->mainController->setErrorMessage ( "Le service ApiScol Seek a renvoyé des données illisibles.", $e->getMessage () );
 		}
 	}
 	public function getView() {
