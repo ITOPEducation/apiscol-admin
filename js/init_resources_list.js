@@ -252,6 +252,23 @@ function secundaryInit() {
 								});
 					});
 	$(
+			"div.pane div.inner-layout div.ui-layout-center table input.edit-in-structure-view-control")
+			.each(
+					function(index, elem) {
+
+						$(elem).button({
+							icons : {
+								primary : "ui-icon-folder-collapsed"
+							},
+							text : false
+						}).click(
+								function() {
+									var resId = $(elem).closest("tr").find(
+											"input.css-checkbox").attr("id");
+									sendResourceToEditInStructureView(resId);
+								});
+					});
+	$(
 			"div.pane div.inner-layout div.ui-layout-center table form.refresh-control")
 			.each(
 					function(index, elem) {
@@ -345,7 +362,8 @@ function secundaryInit() {
 											"Action impossible", $.noop);
 
 						} else {
-							sendSelectedResourcesList(resourcesIds, resourcesSelectionState)
+							sendSelectedResourcesList(resourcesIds,
+									resourcesSelectionState)
 						}
 					});
 	$(
@@ -390,21 +408,21 @@ function secundaryInit() {
 }
 function getNbChecked() {
 	var nbChecked = 0;
-	resourcesIds=new Array();
+	resourcesIds = new Array();
 	checkedResourcesIds = new Array();
 	resourcesSelectionState = new Array();
 	$("div.ui-layout-center table tbody tr td input.css-checkbox").each(
 			function(index, elem) {
 				var checked = $(elem).is(':checked');
 				var selectionState = false;
-				
+
 				if (checked) {
 					nbChecked++;
 					checkedResourcesIds.push(elem.id);
 					selectionState = true;
 				} else {
 					selectionState = $(elem).closest("tr").find(
-							".select-for-structure-control ").is(":checked");
+							".select-for-structure-control").is(":checked");
 				}
 				resourcesIds.push(elem.id);
 				resourcesSelectionState.push(selectionState);
@@ -427,14 +445,34 @@ function sendSelectedResourcesList(selectedMetadataId, selectedMetadata) {
 
 		},
 		success : function(data) {
-			$mdids=$(data).find("mdid");
-			var mdid,$cartButton;
-			$mdids.each(function(i,e) {
-				mdid=$(e).text();
-				$cartButton=$("#select-for-structure"+mdid);
-				if(!$cartButton.is(":checked"))
-					$cartButton.attr("checked","checked").button( "refresh" );
+			$mdids = $(data).find("mdid");
+			var mdid, $cartButton;
+			$mdids.each(function(i, e) {
+				mdid = $(e).text();
+				$cartButton = $("#select-for-structure" + mdid);
+				if (!$cartButton.is(":checked"))
+					$cartButton.attr("checked", "checked").button("refresh");
 			})
+
+		}
+	});
+}
+function sendResourceToEditInStructureView(metadataId) {
+	$.ajax({
+		type : "POST",
+		url : "/resources/structure/async",
+		data : {
+			'edit-struture-metadata-id' : metadataId
+		},
+		headers : {
+			accept : "application/atom+xml"
+		},
+		error : function(xhr) {
+			console.log(xhr.responseXML);
+
+		},
+		success : function(data) {
+			window.location = "/resources/structure"
 
 		}
 	});

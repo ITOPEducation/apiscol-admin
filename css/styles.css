@@ -1849,7 +1849,7 @@ html.js body div.content div#display.detail-pane.ui-layout-container div.pane.ui
 	margin-top: -200px;
 	background-color: #333;
 	color: rgb(255, 255, 255);
-	opacity : 1;
+	opacity: 1;
 	border: thin solid #000;
 	padding: 25px;
 	z-index: 10001;
@@ -1865,26 +1865,41 @@ body.blocked {
 body.blocked .blocking-modal, body.blocked #blocking-modal-text {
 	display: block;
 }
-html.js body div.content.ui-layout-container div.pane.ui-layout-center table tbody tr td label.ui-button.ui-widget.ui-state-default.ui-state-active {
+
+html.js body div.content.ui-layout-container div.pane.ui-layout-center table tbody tr td label.ui-button.ui-widget.ui-state-default.ui-state-active
+	{
 	border-color: #ff0000;
 }
 /*
 structure
 */
-html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west ul  {
+html.js body div.content div#structure.detail-pane.ui-layout-container div.pane ul
+	{
 	list-style: none;
 	padding-left: 0;
 }
-html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west ul li.resource-selected {
+
+html.js body div.content div#structure.detail-pane.ui-layout-container  div.pane ul li.resource-selected,
+	html.js body div.content div#structure.detail-pane.ui-layout-container  div.pane ul.sortable-list li
+	{
 	margin: 8px 0;
 	padding: 4px;
+	min-height: 1em;
 }
+
+html.js body div.content div#structure.detail-pane.ui-layout-container  div.pane ul.sortable-list ul
+	{
+	min-height: 10px;
+}
+
 html.js body div.content div#structure div.pane h2.ui-state-highlight img
 	{
 	margin: 5px 20px;
 	vertical-align: middle;
 	width: 32px;
 }
-html.js body div.content div#structure div.pane ul li.resource-selected a.resource-detail-link {
+
+html.js body div.content div#structure div.pane ul li.resource-selected a.resource-detail-link
+	{
 	float: right;
 }

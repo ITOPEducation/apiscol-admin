@@ -9,6 +9,7 @@ class Model {
 	private $metadata;
 	private $metadataList;
 	private $selectedMetadataList;
+	private $resourceIdForStructureView;
 	private $lomMetadata;
 	private $facetsSearchTest;
 	private $manifest;
@@ -39,7 +40,8 @@ class Model {
 				'displayMode',
 				'displayDevice',
 				'metadataList',
-				'selectedMetadataList' 
+				'selectedMetadataList',
+				'resourceIdForStructureView' 
 		);
 	}
 	private function getServiceAccess() {
@@ -73,7 +75,6 @@ class Model {
 		$this->facetsSearchTest->setMdid ( $this->getMetadata ()->getLink () );
 		$this->facetsSearchTest->build ();
 	}
-
 	public function acquireThumbsSuggestions() {
 		$this->thumbSuggestions = new ThumbsSuggestionsDAO ( $this->getServiceAccess () );
 		$this->thumbSuggestions->setMetadatadid ( $this->getMetadata ()->getLink () );
@@ -306,6 +307,12 @@ class Model {
 	}
 	public function getSelectedMetadataList() {
 		return $this->selectedMetadataList;
+	}
+	public function setResourceIdForStructureView($metadataId) {
+		$this->resourceIdForStructureView = $metadataId;
+	}
+	public function getResourceIdForStructureView() {
+		return $this->resourceIdForStructureView;
 	}
 }
 ?>

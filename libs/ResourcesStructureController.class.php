@@ -2,6 +2,7 @@
 class ResourcesStructureController extends AbstractResourcesController {
 	public function completeScripts() {
 		$this->mainController->addScript ( 'layout' );
+		$this->mainController->addScript ( 'sortable_lists' );
 		$this->mainController->addScript ( 'init_resources_structure' );
 		$this->mainController->addScript ( 'init' );
 	}
@@ -20,8 +21,19 @@ class ResourcesStructureController extends AbstractResourcesController {
 			
 			echo MainController::xmlErrorMessage ( "Problème lors de la selection", 500, "Erreur d'origine inconnue" );
 		}
+		if (isset ( Security::$_CLEAN ['edit-struture-metadata-id'] )) {
+			$response = $this->processResourceSelectionForStructureView ( Security::$_CLEAN ['edit-struture-metadata-id'] );
+			if (isset ( $response ['content'] )) {
+				return $this->metadataArrayToXml ( $response ['content'] );
+			}
+			
+			echo MainController::xmlErrorMessage ( "Problème lors du choix de ressources pour la vue 'structure'", 500, "Erreur d'origine inconnue" );
+		}
 	}
 	public function processSyncRequest() {
+		$this->registerMetadataId ( $this->model->getResourceIdForStructureView () );
+		if ($this->mainController->isInError ())
+			return;
 		$this->model->prepareSearchQuery ();
 		$this->model->addSelectedMetadataIdsToMetadataList ();
 		
@@ -56,15 +68,21 @@ class ResourcesStructureController extends AbstractResourcesController {
 		return $this->view;
 	}
 	private function processMetadataSelection(array $metadataIds, array $selecteds) {
-		$success = true;
 		$counter = 0;
 		foreach ( $metadataIds as $key => $metadataId ) {
-			$this->model->setMetadataIdSelected ( $metadataId, $selecteds [$counter] ) && $success;
+			$this->model->setMetadataIdSelected ( $metadataId, $selecteds [$counter] );
 			$counter ++;
 		}
 		
 		return array (
 				"content" => $this->model->getSelectedMetadataList () 
+		);
+	}
+	private function processResourceSelectionForStructureView($metadataId) {
+		$this->model->setResourceIdForStructureView ( $metadataId );
+		
+		return array (
+				"content" => $this->model->getResourceIdForStructureView () 
 		);
 	}
 	function metadataArrayToXml($array, $xml = false) {

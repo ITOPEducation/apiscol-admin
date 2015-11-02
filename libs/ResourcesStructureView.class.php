@@ -9,39 +9,50 @@ class ResourcesStructureView extends AbstractView implements IView {
 	}
 	private function addContent() {
 		$this->render .= HTMLLoader::load ( 'resources-structure' );
-		$availableResources='';
-		if($this->mainController->userIsAllowedToRead()) {
- 			if(!(is_null($this->model->getMetadataList())) && $this->model->getMetadataList()->isbuilt())
- 				$availableResources=$this->transformXMLResults();
+		$availableResources = '';
+		if ($this->mainController->userIsAllowedToRead ()) {
+			if (! (is_null ( $this->model->getMetadataList () )) && $this->model->getMetadataList ()->isbuilt ())
+				$availableResources = $this->transformXMLResults ();
 		} else {
-			$this->mainController->setInError(true);
-			//TODO traduire
-			$this->mainController->setErrorMessage("{RIGHTS-IMPOSSIBLE-BROWSE-RESOURCES}");
+			$this->mainController->setInError ( true );
+			// TODO traduire
+			$this->mainController->setErrorMessage ( "{RIGHTS-IMPOSSIBLE-BROWSE-RESOURCES}" );
 		}
-		$this->render=str_replace("[AVAILABLE-RESOURCES]", $availableResources, $this->render);
+		$this->render = str_replace ( "[AVAILABLE-RESOURCES]", $availableResources, $this->render );
+		$this->render = str_replace ( "[EDITED-RESOURCE]", $this->getEditedResourceHierarchy (), $this->render );
 	}
 	private function transformXMLResults() {
-		$this->proc=$this->getXSLTProcessor('xsl/structureViewAvailableMetadataList.xsl');
-		$this->proc->setParameter('', 'prefix', $this->prefix);
-		$this->proc->setParameter('', 'write_permission', $this->mainController->userIsAllowedToWrite());
+		$this->proc = $this->getXSLTProcessor ( 'xsl/structureViewAvailableMetadataList.xsl' );
+		$this->proc->setParameter ( '', 'prefix', $this->prefix );
+		$this->proc->setParameter ( '', 'write_permission', $this->mainController->userIsAllowedToWrite () );
 		try {
-				
-			$resourcesListXml=$this->model->getMetadataList(false);
-				
-			$resourcesList=$resourcesListXml->getDocumentAsString();
-			$doc=new DOMDocument();
-			$doc->loadXML($resourcesList);
-			return $this->proc->transformToXML($doc);
-		} catch (HttpRequestException $e) {
-			$this->mainController->setInError(true);
-			//TODO traduire
-			$this->mainController->setErrorMessage("{ERROR-IMPOSSIBLE-CONNECT-META}", $e->getContent());
+			
+			$resourcesListXml = $this->model->getMetadataList ( false );
+			
+			$resourcesList = $resourcesListXml->getDocumentAsString ();
+			$doc = new DOMDocument ();
+			$doc->loadXML ( $resourcesList );
+			return $this->proc->transformToXML ( $doc );
+		} catch ( HttpRequestException $e ) {
+			$this->mainController->setInError ( true );
+			// TODO traduire
+			$this->mainController->setErrorMessage ( "{ERROR-IMPOSSIBLE-CONNECT-META}", $e->getContent () );
 			return "";
-		} catch (BadUrlRequestException $e) {
-			$this->mainController->setInError(true);
-			//TODO traduire
-			$this->mainController->setErrorMessage("{ERROR-IMPOSSIBLE-CONNECT-META}", $e->getMessage());
+		} catch ( BadUrlRequestException $e ) {
+			$this->mainController->setInError ( true );
+			// TODO traduire
+			$this->mainController->setErrorMessage ( "{ERROR-IMPOSSIBLE-CONNECT-META}", $e->getMessage () );
 		}
+	}
+	private function getEditedResourceHierarchy() {
+		$hierarchy = '<ul class="sortable-list"><li class="ui-widget-content ui-state-default" id="' . $this->model->getMetadata ()->getId () . '">';
+		$hierarchy .= $this->model->getMetadata ()->getTitle ();
+		$hierarchy .= '<ul></ul></li>';
+		$hierarchy .= '<li class="ui-widget-content ui-state-default" id="' . $this->model->getMetadata ()->getId () . '">';
+		$hierarchy .= $this->model->getMetadata ()->getTitle ();
+		$hierarchy .= '<ul>&nbsp;</ul></li>	';
+		$hierarchy .= '</ul>';
+		return $hierarchy;
 	}
 }
 ?>

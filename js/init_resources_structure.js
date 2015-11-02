@@ -21,15 +21,26 @@ function secundaryInit() {
 			size : "20%"
 		}
 	});
-	$(
-	"div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west ul li.resource-selected a.resource-detail-link", "div#structure")
-	.button({
+	$("div.pane ul li.resource-selected a.resource-detail-link",
+			"div#structure").button({
 		icons : {
 			primary : "ui-icon-extlink"
 		},
 		text : false
 	});
-	
+	$('ul.sortable-list').sortable({
+		placeholder : "ui-state-highlight"
+	});
+	$("ul#selected-resources-for-structure").sortable({
+		connectWith : "ul.sortable-list",
+		placeholder : "ui-state-highlight"
+	});
+	$("ul.sortable-list>li>ul").sortable({
+		placeholder : "ui-state-highlight"
+	});
+	$connectTo=$("ul#selected-resources-for-structure").add("ul.sortable-list>li>ul")
+	$('ul.sortable-list').sortable("option", "connectWith",
+			$connectTo);
 
 }
 function getDisplayParameters() {

@@ -162,7 +162,13 @@
 					<xsl:when test="$category='lesson'">
 					<xsl:text>aggregation_level_lesson.png</xsl:text>
 					</xsl:when>
-					<xsl:otherwise><xsl:text>aggregation_level_unkhnown.png</xsl:text></xsl:otherwise>
+					<xsl:when test="$category='course'">
+					<xsl:text>aggregation_level_course.png</xsl:text>
+					</xsl:when>
+					<xsl:when test="$category='curriculum'">
+					<xsl:text>aggregation_level_curriculum.png</xsl:text>
+					</xsl:when>
+					<xsl:otherwise><xsl:text>aggregation_level_unknown.png</xsl:text></xsl:otherwise>
 					</xsl:choose>
 					</xsl:attribute>
 					<xsl:attribute name="title">
@@ -180,24 +186,46 @@
 				</xsl:element>
 			</td>
 			<td>
+				<xsl:variable name="category">
+					<xsl:value-of select="atom:category/@term"></xsl:value-of>
+				</xsl:variable>
+
+
+
+
 				<xsl:element name="input">
-					<xsl:attribute name="type">checkbox</xsl:attribute>
-					<xsl:attribute name="class">select-for-structure-control</xsl:attribute>
+
+					<xsl:choose>
+						<xsl:when test="$category='course' or $category='curriculum'">
+							<xsl:attribute name="type">checkbox</xsl:attribute>
+							<xsl:attribute name="class">edit-in-structure-view-control</xsl:attribute>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:attribute name="type">checkbox</xsl:attribute>
+							<xsl:attribute name="class">select-for-structure-control</xsl:attribute>
+							<xsl:choose>
+								<xsl:when test="$selected=1">
+									<xsl:attribute name="checked">checked</xsl:attribute>
+								</xsl:when>
+							</xsl:choose>
+						</xsl:otherwise>
+					</xsl:choose>
 					<xsl:attribute name="value"><xsl:value-of
 						select="$mdid"></xsl:value-of></xsl:attribute>
 					<xsl:attribute name="id">select-for-structure<xsl:value-of
 						select="$mdid"></xsl:value-of></xsl:attribute>
-					<xsl:choose>
-						<xsl:when test="$selected=1">
-							<xsl:attribute name="checked">checked</xsl:attribute>
-						</xsl:when>
-					</xsl:choose>
+
 				</xsl:element>
 				<label>
 					<xsl:attribute name="for">select-for-structure<xsl:value-of
 						select="$mdid"></xsl:value-of></xsl:attribute>
 
 				</label>
+
+
+
+
+
 			</td>
 			<td>
 				<xsl:element name="a">

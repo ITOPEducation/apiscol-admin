@@ -18,7 +18,7 @@
 	<xsl:template match="atom:feed">
 
 
-		<ul>
+		<ul id="selected-resources-for-structure">
 			<xsl:apply-templates select="atom:entry"></xsl:apply-templates>
 		</ul>
 

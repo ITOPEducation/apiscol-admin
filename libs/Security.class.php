@@ -54,7 +54,7 @@ class Security {
 			"general-coverage" => "string",
 			"general-keyword" => "string-array",
 			"general-generalResourceType" => "string-array",
-			"general-aggregationLevel"=> "string",
+			"general-aggregationLevel" => "string",
 			"educational-description" => "string",
 			"educational-learningResourceType" => "string-array",
 			"educational-place" => "string-array",
@@ -69,7 +69,8 @@ class Security {
 			"target-repository" => "target-repository",
 			"nb-lines" => "integer",
 			"select-metadata-id" => "string-array",
-			"select-metadata" => "bool-array" 
+			"select-metadata" => "bool-array",
+			"edit-struture-metadata-id" => "string" 
 	);
 	private static $DEFAULTS = array (
 			"page" => "home" 
