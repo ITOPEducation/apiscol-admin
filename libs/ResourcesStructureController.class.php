@@ -2,7 +2,7 @@
 class ResourcesStructureController extends AbstractResourcesController {
 	public function completeScripts() {
 		$this->mainController->addScript ( 'layout' );
-		$this->mainController->addScript ( 'sortable_lists' );
+		$this->mainController->addScript ( 'nested_sortable' );
 		$this->mainController->addScript ( 'init_resources_structure' );
 		$this->mainController->addScript ( 'init' );
 	}

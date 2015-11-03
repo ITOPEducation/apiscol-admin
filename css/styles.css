@@ -1876,15 +1876,6 @@ structure
 html.js body div.content div#structure.detail-pane.ui-layout-container div.pane ul
 	{
 	list-style: none;
-	padding-left: 0;
-}
-
-html.js body div.content div#structure.detail-pane.ui-layout-container  div.pane ul li.resource-selected,
-	html.js body div.content div#structure.detail-pane.ui-layout-container  div.pane ul.sortable-list li
-	{
-	margin: 8px 0;
-	padding: 4px;
-	min-height: 1em;
 }
 
 html.js body div.content div#structure.detail-pane.ui-layout-container  div.pane ul.sortable-list ul
@@ -1902,4 +1893,23 @@ html.js body div.content div#structure div.pane h2.ui-state-highlight img
 html.js body div.content div#structure div.pane ul li.resource-selected a.resource-detail-link
 	{
 	float: right;
+}
+
+html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west
+	{
+	overflow: visible !important;
+	z-index: 2 !important;
+}
+
+html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.ui-layout-center.ui-layout-pane.ui-layout-pane-center
+	{
+	overflow: visible !important;
+	z-index: 1 !important;
+}
+
+html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.ui-layout-center.ui-layout-pane.ui-layout-pane-center ul#resource-hierarchy.nested-sortable.ui-sortable li div.ui-widget-content.ui-state-default,
+	html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west ul#selected-resources-for-structure.nested-sortable.ui-sortable li.resource-selected
+	{
+	padding: 4px;
+	cursor: pointer;
 }

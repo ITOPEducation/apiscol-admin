@@ -45,12 +45,10 @@ class ResourcesStructureView extends AbstractView implements IView {
 		}
 	}
 	private function getEditedResourceHierarchy() {
-		$hierarchy = '<ul class="sortable-list"><li class="ui-widget-content ui-state-default" id="' . $this->model->getMetadata ()->getId () . '">';
-		$hierarchy .= $this->model->getMetadata ()->getTitle ();
-		$hierarchy .= '<ul></ul></li>';
-		$hierarchy .= '<li class="ui-widget-content ui-state-default" id="' . $this->model->getMetadata ()->getId () . '">';
-		$hierarchy .= $this->model->getMetadata ()->getTitle ();
-		$hierarchy .= '<ul>&nbsp;</ul></li>	';
+		$hierarchy = '<ul id="resource-hierarchy" class="nested-sortable"><li id="' . $this->model->getMetadata ()->getId () . '">';
+		$hierarchy .= '<div class="ui-widget-content ui-state-default">' . $this->model->getMetadata ()->getTitle () . '</div>';
+		$hierarchy .= '<ul>&nbsp;</ul></li>';
+		
 		$hierarchy .= '</ul>';
 		return $hierarchy;
 	}

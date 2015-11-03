@@ -28,19 +28,22 @@ function secundaryInit() {
 		},
 		text : false
 	});
-	$('ul.sortable-list').sortable({
-		placeholder : "ui-state-highlight"
-	});
-	$("ul#selected-resources-for-structure").sortable({
-		connectWith : "ul.sortable-list",
-		placeholder : "ui-state-highlight"
-	});
-	$("ul.sortable-list>li>ul").sortable({
-		placeholder : "ui-state-highlight"
-	});
-	$connectTo=$("ul#selected-resources-for-structure").add("ul.sortable-list>li>ul")
-	$('ul.sortable-list').sortable("option", "connectWith",
-			$connectTo);
+
+	$("ul#selected-resources-for-structure").nestedSortable({
+		connectWith : ".nested-sortable",
+		handle : 'div',
+		items : 'li',
+		listType : 'ul'
+
+	}).disableSelection();
+	$("ul#resource-hierarchy").nestedSortable({
+		connectWith : ".nested-sortable",
+		protectRoot : true,
+		handle : 'div',
+		items : 'li',
+		listType : 'ul'
+
+	}).disableSelection();
 
 }
 function getDisplayParameters() {

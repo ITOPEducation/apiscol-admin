@@ -24,7 +24,7 @@ class GlobalView {
 			'custom-file-input' => '#/js/custom-file-input/jquery-custom-file-input.js',
 			'form' => '#/js/form/jquery.form.js',
 			'vcard' => '#/js/vcard/vcard.js',
-			'sortable_lists' => '#/js/sortable-lists/jquery-sortable-lists.js',
+			'nested_sortable' => '#/js/nested-sortable/jquery.mjs.nestedSortable.js',
 			'init' => '#/js/init.js',
 			'init_home' => '#/js/init_home.js',
 			'init_scolomfr' => '#/js/init_scolomfr.js',
