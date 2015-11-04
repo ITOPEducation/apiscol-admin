@@ -17,10 +17,10 @@
 	</xsl:template>
 	<xsl:template match="atom:feed">
 
-
-		<ul id="selected-resources-for-structure" class="nested-sortable">
+		<ol id="selected-resources-for-structure"
+			class="sortable ui-sortable mjs-nestedSortable-branch mjs-nestedSortable-expanded">
 			<xsl:apply-templates select="atom:entry"></xsl:apply-templates>
-		</ul>
+		</ol>
 
 
 
@@ -35,27 +35,41 @@
 				<xsl:with-param name="delimiter" select="':'" />
 			</xsl:call-template>
 		</xsl:variable>
-		<li class="resource-selected">
-			<xsl:attribute name="id">resource_selected_<xsl:value-of
-				select="$mdid"></xsl:value-of></xsl:attribute>
+		<li class="mjs-nestedSortable-leaf" id="menuItem_6">
+			<xsl:attribute name="id"><xsl:value-of select="$mdid"></xsl:value-of></xsl:attribute>
+			<div class="menuDiv">
+				<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
+					<span></span>
+				</span>
+				<span title="Click to show/hide item editor" data-id="6"
+					class="expandEditor ui-icon ui-icon-triangle-1-n">
+					<span></span>
+				</span>
+				<span>
+					<span title="Click to delete item."
+						class="deleteMenu ui-icon ui-icon-closethick">
+						<xsl:attribute name="data-id"><xsl:value-of select="$mdid"></xsl:value-of></xsl:attribute>
+						<span></span>
+					</span>
+					<span class="itemTitle">
+						<xsl:element name="a">
+							<xsl:attribute name="class"> ui-icon ui-icon-extlink
+				</xsl:attribute>
+							<xsl:attribute name="href"> <xsl:value-of
+								select="$prefix"></xsl:value-of>/resources/detail/ 
+				<xsl:call-template name="substring-after-last"><xsl:with-param
+								name="string" select="atom:link[@rel='self'][@type='text/html']/@href" /> <xsl:with-param
+								name="delimiter" select="'/'" /> </xsl:call-template>/display </xsl:attribute>
+							Accéder
+						</xsl:element>
+					</span>
 
-			<xsl:element name="a">
-				<xsl:attribute name="class">
-				resource-detail-link
-				</xsl:attribute>
-				<xsl:attribute name="href">
-					
-					<xsl:value-of select="$prefix"></xsl:value-of>/resources/detail/
-					<xsl:call-template name="substring-after-last">
-  						<xsl:with-param name="string"
-					select="atom:link[@rel='self'][@type='text/html']/@href" />
-  						<xsl:with-param name="delimiter" select="'/'" />
-					</xsl:call-template>/display
-				</xsl:attribute>
-				Accéder
-			</xsl:element>
-			<div class="ui-widget-content ui-state-default resource-selected">
-				<xsl:value-of select="atom:title"></xsl:value-of>
+				</span>
+				<div id="menuEdit6" class="menuEdit hidden resource-selected">
+					<p>
+						<xsl:value-of select="atom:title"></xsl:value-of>
+					</p>
+				</div>
 			</div>
 
 		</li>

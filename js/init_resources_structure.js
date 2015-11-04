@@ -29,22 +29,31 @@ function secundaryInit() {
 		text : false
 	});
 
-	$("ul#selected-resources-for-structure").nestedSortable({
-		connectWith : ".nested-sortable",
-		handle : 'div',
-		items : 'li',
-		listType : 'ul'
+	$("ol#resource-hierarchy,ol#selected-resources-for-structure")
+			.nestedSortable({
+				// protectRoot : true,
+				forcePlaceholderSize : true,
+				handle : 'div',
+				helper : 'clone',
+				items : 'li',
+				opacity : .6,
+				placeholder : 'placeholder',
+				revert : 250,
+				tabSize : 25,
+				tolerance : 'pointer',
+				toleranceElement : '> div',
+				maxLevels : 4,
+				isTree : true,
+				expandOnHover : 700,
+				startCollapsed : false
 
-	}).disableSelection();
-	$("ul#resource-hierarchy").nestedSortable({
-		connectWith : ".nested-sortable",
-		protectRoot : true,
-		handle : 'div',
-		items : 'li',
-		listType : 'ul'
-
-	}).disableSelection();
-
+			}).disableSelection();
+	$("ol#selected-resources-for-structure").nestedSortable("option",
+			"connectWith", "ol#resource-hierarchy");
+	$('.deleteMenu').click(function() {
+		var id = $(this).attr('data-id');
+		$('#' + id).remove();
+	});
 }
 function getDisplayParameters() {
 	return "";

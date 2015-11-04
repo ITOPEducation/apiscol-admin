@@ -1907,9 +1907,72 @@ html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.
 	z-index: 1 !important;
 }
 
-html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.ui-layout-center.ui-layout-pane.ui-layout-pane-center ul#resource-hierarchy.nested-sortable.ui-sortable li div.ui-widget-content.ui-state-default,
+html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.ui-layout-center.ui-layout-pane.ui-layout-pane-center ul.sortable.nested-sortable.ui-sortable li div.ui-widget-content.ui-state-default,
 	html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west ul#selected-resources-for-structure.nested-sortable.ui-sortable li.resource-selected
 	{
 	padding: 4px;
+	cursor: pointer;
+}
+
+ol.sortable {
+	padding-left: 25px;
+}
+
+ol.sortable.sortable, ol.sortable ol {
+	list-style-type: none;
+}
+
+ol.sortable.sortable li div {
+	border: 1px solid #d4d4d4;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: move;
+	border-color: #D4D4D4 #D4D4D4 #BCBCBC;
+	margin: 0;
+	padding: 3px;
+}
+
+ol.sortable li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div
+	{
+	border-color: #999;
+}
+
+ol.sortable .disclose, ol.sortable .expandEditor {
+	cursor: pointer;
+	width: 20px;
+	display: none;
+}
+
+ol.sortable li.mjs-nestedSortable-collapsed>ol {
+	display: none;
+}
+
+ol.sortable li.mjs-nestedSortable-branch>div>.disclose
+	{
+	display: inline-block;
+}
+
+ol.sortable span.ui-icon {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+ol.sortable  .menuDiv {
+	background: #EBEBEB;
+}
+
+ol.sortable  .menuEdit {
+	background: #FFF;
+}
+
+ol.sortable  .itemTitle {
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+ol.sortable  .deleteMenu, ol.sortable  .ui-icon-extlink {
+	float: right;
 	cursor: pointer;
 }

@@ -45,12 +45,47 @@ class ResourcesStructureView extends AbstractView implements IView {
 		}
 	}
 	private function getEditedResourceHierarchy() {
-		$hierarchy = '<ul id="resource-hierarchy" class="nested-sortable"><li id="' . $this->model->getMetadata ()->getId () . '">';
-		$hierarchy .= '<div class="ui-widget-content ui-state-default">' . $this->model->getMetadata ()->getTitle () . '</div>';
-		$hierarchy .= '<ul>&nbsp;</ul></li>';
+		$hierarchy = $this->getListTemplate ();
+		$rootItem = $this->getListItemTemplate ();
+		$rootItem = str_replace ( '[TITLE]', $this->model->getMetadata ()->getTitle (), $rootItem );
+		$hierarchy = str_replace ( '[ITEMS]', $rootItem, $hierarchy );
 		
-		$hierarchy .= '</ul>';
 		return $hierarchy;
 	}
+	private function getListTemplate() {
+		return '<ol id="resource-hierarchy" class="sortable ui-sortable mjs-nestedSortable-branch mjs-nestedSortable-expanded">[ITEMS]</ol>';
+	}
+	private function getListItemTemplate() {
+		return '<li class="mjs-nestedSortable-leaf" id="menuItem_6">
+					<div class="menuDiv">
+					<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
+						<span></span>
+					</span>
+					<span title="Click to show/hide item editor" data-id="6" class="expandEditor ui-icon ui-icon-triangle-1-n">
+						<span></span>
+					</span>
+					<span title="Click to delete item." data-id="6" class="deleteMenu ui-icon ui-icon-closethick">
+						<span></span>
+					</span>
+					<span>
+						<span data-id="6" class="itemTitle">
+							<a href="/resources/detail/44c93b2b-76f2-4a81-acc5-2f85eb224707/display" 
+								class=" ui-icon ui-icon-extlink
+							">
+							Accéder
+						</a>
+					</span>
+					
+					</span>
+						<div id="menuEdit6" class="menuEdit hidden">
+							<p>
+							[TITLE]
+							</p>
+						</div>
+					</div>
+				<ol></ol>
+				</li>';
+	}
 }
+
 ?>
