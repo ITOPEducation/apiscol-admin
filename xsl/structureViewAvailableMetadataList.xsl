@@ -46,9 +46,9 @@
 					<span></span>
 				</span>
 				<span>
-					<span title="Click to delete item."
-						class="deleteMenu ui-icon ui-icon-closethick">
-						<xsl:attribute name="data-id"><xsl:value-of select="$mdid"></xsl:value-of></xsl:attribute>
+					<span title="Click to delete item." class="deleteMenu ui-icon ui-icon-closethick">
+						<xsl:attribute name="data-id"><xsl:value-of
+							select="$mdid"></xsl:value-of></xsl:attribute>
 						<span></span>
 					</span>
 					<span class="itemTitle">
@@ -67,6 +67,11 @@
 				</span>
 				<div id="menuEdit6" class="menuEdit hidden resource-selected">
 					<p>
+						<img class="ui-widget-content">
+							<xsl:attribute name="src">
+					<xsl:value-of select="atom:link[@rel='icon']/@href"></xsl:value-of>
+					</xsl:attribute>
+						</img>
 						<xsl:value-of select="atom:title"></xsl:value-of>
 					</p>
 				</div>

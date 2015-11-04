@@ -1948,8 +1948,7 @@ ol.sortable li.mjs-nestedSortable-collapsed>ol {
 	display: none;
 }
 
-ol.sortable li.mjs-nestedSortable-branch>div>.disclose
-	{
+ol.sortable li.mjs-nestedSortable-branch>div>.disclose {
 	display: inline-block;
 }
 
@@ -1961,6 +1960,10 @@ ol.sortable span.ui-icon {
 
 ol.sortable  .menuDiv {
 	background: #EBEBEB;
+}
+
+ol.sortable#resource-hierarchy>li>.menuDiv {
+	background: #999;
 }
 
 ol.sortable  .menuEdit {
@@ -1975,4 +1978,11 @@ ol.sortable  .itemTitle {
 ol.sortable  .deleteMenu, ol.sortable  .ui-icon-extlink {
 	float: right;
 	cursor: pointer;
+}
+
+ol.sortable li.mjs-nestedSortable-leaf div.menuDiv  img {
+	vertical-align: top;
+	margin-right: 20px;
+	margin-left:5px;
+	width: 50px;
 }
