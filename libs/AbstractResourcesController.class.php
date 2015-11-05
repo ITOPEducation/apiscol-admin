@@ -6,6 +6,10 @@ abstract class AbstractResourcesController implements IController {
 	 * @var Model
 	 */
 	protected $model;
+	/**
+	 *
+	 * @var MainController
+	 */
 	protected $mainController;
 	protected $prefix;
 	public function __construct($mainController, $model, $prefix) {
@@ -14,7 +18,7 @@ abstract class AbstractResourcesController implements IController {
 		$this->prefix = $prefix;
 	}
 	public function registerMetadataId($metadataId = null) {
-		if (is_null ( $metadataId ))
+		if (is_null ( $metadataId ) && isset ( Security::$_CLEAN ['metadata-id'] ))
 			$metadataId = Security::$_CLEAN ['metadata-id'];
 		if (! empty ( $metadataId )) {
 			try {

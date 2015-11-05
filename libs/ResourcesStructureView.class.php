@@ -15,7 +15,6 @@ class ResourcesStructureView extends AbstractView implements IView {
 				$availableResources = $this->transformXMLResults ();
 		} else {
 			$this->mainController->setInError ( true );
-			// TODO traduire
 			$this->mainController->setErrorMessage ( "{RIGHTS-IMPOSSIBLE-BROWSE-RESOURCES}" );
 		}
 		$this->render = str_replace ( "[AVAILABLE-RESOURCES]", $availableResources, $this->render );
@@ -45,10 +44,17 @@ class ResourcesStructureView extends AbstractView implements IView {
 		}
 	}
 	private function getEditedResourceHierarchy() {
-		$hierarchy = $this->getListTemplate ();
-		$rootItem = $this->getListItemTemplate ();
-		$rootItem = str_replace ( '[TITLE]', $this->model->getMetadata ()->getTitle (), $rootItem );
-		$hierarchy = str_replace ( '[ITEMS]', $rootItem, $hierarchy );
+		$hierarchy = '';
+		if (null !== $this->model->getMetadata ()) {
+			$hierarchy = $this->getListTemplate ();
+			
+			$rootItem = $this->getListItemTemplate ();
+			$title = "";
+			
+			$title = $this->model->getMetadata ()->getTitle ();
+			$rootItem = str_replace ( '[TITLE]', $title, $rootItem );
+			$hierarchy = str_replace ( '[ITEMS]', $rootItem, $hierarchy );
+		}
 		
 		return $hierarchy;
 	}

@@ -31,11 +31,31 @@ class ResourcesStructureController extends AbstractResourcesController {
 		}
 	}
 	public function processSyncRequest() {
-		$this->registerMetadataId ( $this->model->getResourceIdForStructureView () );
-		if ($this->mainController->isInError ())
-			return;
+		// List of selected resources
 		$this->model->prepareSearchQuery ();
 		$this->model->addSelectedMetadataIdsToMetadataList ();
+		try {
+			$this->model->launchSearchQuery ();
+		} catch ( BadUrlRequestException $e ) {
+			$this->mainController->setInError ( true );
+			$this->mainController->setErrorMessage ( "Impossible de consulter les ressources. Le service est peut-être arrêté.", $e->getMessage () );
+		} catch ( HttpRequestException $e ) {
+			$this->mainController->setInError ( true );
+			$this->mainController->setErrorMessage ( "Le service ApiScol Seek n'a pas répondu ou a dysfonctionné (erreur " . $e->getCode () . ").", $e->getContent () );
+		} catch ( CorruptedXMLStringException $e ) {
+			$this->mainController->setInError ( true );
+			$this->mainController->setErrorMessage ( "Le service ApiScol Seek a renvoyé des données illisibles.", $e->getMessage () );
+		}
+		// Root resource to be edited
+		$resourceIdForStructureView = $this->model->getResourceIdForStructureView ();
+		if (empty ( $resourceIdForStructureView )) {
+			$this->mainController->setInError ( true );
+			$this->mainController->setErrorMessage ( "Veuillez sélectionner la ressource à éditer dans les listes de ressources." );
+			return;
+		}
+		$this->registerMetadataId ( $resourceIdForStructureView );
+		if ($this->mainController->isInError ())
+			return;
 		
 		if (isset ( Security::$_CLEAN ['active-tab'] )) {
 			$this->model->setDisplayParameter ( 'active-tab', Security::$_CLEAN ['active-tab'] );
@@ -50,18 +70,6 @@ class ResourcesStructureController extends AbstractResourcesController {
 		}
 		if (isset ( Security::$_CLEAN ['south-pane'] )) {
 			$this->model->setDisplayParameter ( 'south-pane', Security::$_CLEAN ['south-pane'] );
-		}
-		try {
-			$this->model->launchSearchQuery ();
-		} catch ( BadUrlRequestException $e ) {
-			$this->mainController->setInError ( true );
-			$this->mainController->setErrorMessage ( "Impossible de consulter les ressources. Le service est peut-être arrêté.", $e->getMessage () );
-		} catch ( HttpRequestException $e ) {
-			$this->mainController->setInError ( true );
-			$this->mainController->setErrorMessage ( "Le service ApiScol Seek n'a pas répondu ou a dysfonctionné (erreur " . $e->getCode () . ").", $e->getContent () );
-		} catch ( CorruptedXMLStringException $e ) {
-			$this->mainController->setInError ( true );
-			$this->mainController->setErrorMessage ( "Le service ApiScol Seek a renvoyé des données illisibles.", $e->getMessage () );
 		}
 	}
 	public function getView() {
