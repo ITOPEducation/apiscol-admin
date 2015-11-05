@@ -1980,9 +1980,15 @@ ol.sortable  .deleteMenu, ol.sortable  .ui-icon-extlink {
 	cursor: pointer;
 }
 
-ol.sortable li.mjs-nestedSortable-leaf div.menuDiv  img {
+ol.sortable li div.menuDiv  img {
 	vertical-align: top;
 	margin-right: 20px;
-	margin-left:5px;
+	margin-left: 5px;
 	width: 50px;
+	float: left;
+}
+
+ol#selected-resources-for-structure.sortable
+	{
+	padding-left: 0;
 }

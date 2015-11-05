@@ -49,10 +49,13 @@ class ResourcesStructureView extends AbstractView implements IView {
 			$hierarchy = $this->getListTemplate ();
 			
 			$rootItem = $this->getListItemTemplate ();
-			$title = "";
 			
 			$title = $this->model->getMetadata ()->getTitle ();
+			$desc = $this->model->getMetadata ()->getSummary ();
+			$id = $this->model->getMetadata ()->getId ();
 			$rootItem = str_replace ( '[TITLE]', $title, $rootItem );
+			$rootItem = str_replace ( '[DESC]', $desc, $rootItem );
+			$rootItem = str_replace ( '[ID]', $id, $rootItem );
 			$hierarchy = str_replace ( '[ITEMS]', $rootItem, $hierarchy );
 		}
 		
@@ -62,30 +65,31 @@ class ResourcesStructureView extends AbstractView implements IView {
 		return '<ol id="resource-hierarchy" class="sortable ui-sortable mjs-nestedSortable-branch mjs-nestedSortable-expanded">[ITEMS]</ol>';
 	}
 	private function getListItemTemplate() {
-		return '<li class="mjs-nestedSortable-leaf" id="menuItem_6">
+		return '<li class="mjs-nestedSortable-leaf" id="[ID]">
 					<div class="menuDiv">
+					
+					<span title="Click to show/hide item details" data-id="[ID]" class="expandEditor ui-icon ui-icon-triangle-1-n">
+						<span></span>
+					</span>
 					<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
 						<span></span>
 					</span>
-					<span title="Click to show/hide item editor" data-id="6" class="expandEditor ui-icon ui-icon-triangle-1-n">
-						<span></span>
-					</span>
-					<span title="Click to delete item." data-id="6" class="deleteMenu ui-icon ui-icon-closethick">
+					<span title="Click to delete item." data-id="[ID]" class="deleteMenu ui-icon ui-icon-closethick">
 						<span></span>
 					</span>
 					<span>
-						<span data-id="6" class="itemTitle">
-							<a href="/resources/detail/44c93b2b-76f2-4a81-acc5-2f85eb224707/display" 
-								class=" ui-icon ui-icon-extlink
-							">
+						<span class="itemTitle">
+							[TITLE]
+							<a href="/resources/detail/[ID]/display" 
+								class="ui-icon ui-icon-extlink">
 							Accéder
 						</a>
 					</span>
 					
 					</span>
-						<div id="menuEdit6" class="menuEdit hidden">
+						<div id="menuEdit[ID]" class="menuEdit hidden">
 							<p>
-							[TITLE]
+							[DESC]
 							</p>
 						</div>
 					</div>

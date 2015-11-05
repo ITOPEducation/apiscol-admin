@@ -17,6 +17,12 @@ abstract class AtomDAO extends AbstractDAO {
 			return $this->xpath->query ( "/atom:entry/atom:title" )->item ( 0 )->textContent;
 		return "";
 	}
+	public function getSummary() {
+		assert ( $this->isBuilt );
+		if ($this->xpath->query ( "/atom:entry/atom:summary" )->length > 0)
+			return $this->xpath->query ( "/atom:entry/atom:summary" )->item ( 0 )->textContent;
+		return "";
+	}
 	public function getEtag() {
 		assert ( $this->isBuilt );
 		return $this->xpath->query ( "atom:updated" )->item ( 0 )->textContent;

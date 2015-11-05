@@ -35,14 +35,16 @@
 				<xsl:with-param name="delimiter" select="':'" />
 			</xsl:call-template>
 		</xsl:variable>
-		<li class="mjs-nestedSortable-leaf" id="menuItem_6">
+		<li class="mjs-nestedSortable-leaf">
 			<xsl:attribute name="id"><xsl:value-of select="$mdid"></xsl:value-of></xsl:attribute>
-			<div class="menuDiv">
-				<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
+			<div class="menuDiv  ui-helper-clearfix">
+
+				<span title="Click to show/hide item details" class="expandEditor ui-icon ui-icon-triangle-1-n">
+					<xsl:attribute name="data-id"><xsl:value-of
+						select="$mdid"></xsl:value-of></xsl:attribute>
 					<span></span>
 				</span>
-				<span title="Click to show/hide item editor" data-id="6"
-					class="expandEditor ui-icon ui-icon-triangle-1-n">
+				<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
 					<span></span>
 				</span>
 				<span>
@@ -52,12 +54,12 @@
 						<span></span>
 					</span>
 					<span class="itemTitle">
+						<xsl:value-of select="atom:title"></xsl:value-of>
 						<xsl:element name="a">
 							<xsl:attribute name="class"> ui-icon ui-icon-extlink
 				</xsl:attribute>
-							<xsl:attribute name="href"> <xsl:value-of
-								select="$prefix"></xsl:value-of>/resources/detail/ 
-				<xsl:call-template name="substring-after-last"><xsl:with-param
+							<xsl:attribute name="href"><xsl:value-of
+								select="$prefix"></xsl:value-of>/resources/detail/<xsl:call-template name="substring-after-last"><xsl:with-param
 								name="string" select="atom:link[@rel='self'][@type='text/html']/@href" /> <xsl:with-param
 								name="delimiter" select="'/'" /> </xsl:call-template>/display </xsl:attribute>
 							Accéder
@@ -65,14 +67,17 @@
 					</span>
 
 				</span>
-				<div id="menuEdit6" class="menuEdit hidden resource-selected">
+				<div class="menuEdit hidden resource-selected ui-helper-clearfix"
+					style="display: none;">
+					<xsl:attribute name="id">menuEdit<xsl:value-of
+						select="$mdid"></xsl:value-of></xsl:attribute>
 					<p>
 						<img class="ui-widget-content">
 							<xsl:attribute name="src">
 					<xsl:value-of select="atom:link[@rel='icon']/@href"></xsl:value-of>
 					</xsl:attribute>
 						</img>
-						<xsl:value-of select="atom:title"></xsl:value-of>
+						<xsl:value-of select="atom:summary"></xsl:value-of>
 					</p>
 				</div>
 			</div>

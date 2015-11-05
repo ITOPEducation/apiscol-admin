@@ -50,10 +50,27 @@ function secundaryInit() {
 			}).disableSelection();
 	$("ol#selected-resources-for-structure").nestedSortable("option",
 			"connectWith", "ol#resource-hierarchy");
-	$('.deleteMenu').click(function() {
+	$('ol.sortable .deleteMenu').click(function() {
 		var id = $(this).attr('data-id');
 		$('#' + id).remove();
 	});
+	$('ol.sortable .disclose').on(
+			'click',
+			function() {
+				$(this).closest('li').toggleClass(
+						'mjs-nestedSortable-collapsed').toggleClass(
+						'mjs-nestedSortable-expanded');
+				$(this).toggleClass('ui-icon-plusthick').toggleClass(
+						'ui-icon-minusthick');
+			});
+
+	$('ol.sortable .expandEditor, ol.sortable .itemTitle').click(
+			function() {
+				var id = $(this).attr('data-id');
+				$('#menuEdit' + id).toggle();
+				$(this).toggleClass('ui-icon-triangle-1-n').toggleClass(
+						'ui-icon-triangle-1-s');
+			});
 }
 function getDisplayParameters() {
 	return "";
