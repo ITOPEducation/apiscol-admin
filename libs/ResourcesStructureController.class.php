@@ -3,8 +3,10 @@ class ResourcesStructureController extends AbstractResourcesController {
 	public function completeScripts() {
 		$this->mainController->addScript ( 'layout' );
 		$this->mainController->addScript ( 'nested_sortable' );
+		$this->mainController->addScript ( 'perfect_scrollbar' );
 		$this->mainController->addScript ( 'init_resources_structure' );
 		$this->mainController->addScript ( 'init' );
+		$this->mainController->addCss ( 'perfect_scrollbar' );
 	}
 	public function defineView() {
 		$this->view = new ResourcesStructureView ( $this->model, $this->prefix, $this->mainController );

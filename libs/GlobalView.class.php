@@ -25,6 +25,7 @@ class GlobalView {
 			'form' => '#/js/form/jquery.form.js',
 			'vcard' => '#/js/vcard/vcard.js',
 			'nested_sortable' => '#/js/nested-sortable/jquery.mjs.nestedSortable.js',
+			'perfect_scrollbar' => '#/js/perfect-scrollbar/perfect-scrollbar.jquery.js',
 			'init' => '#/js/init.js',
 			'init_home' => '#/js/init_home.js',
 			'init_scolomfr' => '#/js/init_scolomfr.js',
@@ -47,7 +48,8 @@ class GlobalView {
 			'rcarousel' => '#/js/rcarousel/rcarousel.css',
 			'dynatree' => '#/js/dynatree/ui.dynatree.css',
 			'tagit' => '#/js/tagit/jquery.tagit.css',
-			'vocabnomen' => '#/css/vocabnomen.css' 
+			'vocabnomen' => '#/css/vocabnomen.css',
+			'perfect_scrollbar' => '#/js/perfect-scrollbar/perfect-scrollbar.css' 
 	);
 	function GlobalView($prefix, $controller) {
 		$this->prefix = $prefix;

@@ -45,15 +45,25 @@ function secundaryInit() {
 				maxLevels : 4,
 				isTree : true,
 				expandOnHover : 700,
-				startCollapsed : false
+				startCollapsed : false,
+				relocate : function(event, ui) {
+					var $container = ui.item.parent().closest("li");
+					if ($container.length == 0)
+						return false;
+					updateDiscloseIcon();
+				}
 
 			}).disableSelection();
 	$("ol#selected-resources-for-structure").nestedSortable("option",
 			"connectWith", "ol#resource-hierarchy");
+	$("ol#selected-resources-for-structure").nestedSortable("option",
+			"maxLevels", 1);
+	// $("ol#resource-hierarchy").nestedSortable("option", "protectRoot", true);
 	$('ol.sortable .deleteMenu').click(function() {
 		var id = $(this).attr('data-id');
 		$('#' + id).remove();
 	});
+
 	$('ol.sortable .disclose').on(
 			'click',
 			function() {
@@ -70,6 +80,28 @@ function secundaryInit() {
 				$('#menuEdit' + id).toggle();
 				$(this).toggleClass('ui-icon-triangle-1-n').toggleClass(
 						'ui-icon-triangle-1-s');
+			});
+	var $selectedResourcesContainer = $("div.selected-resources-container",
+			"div#structure");
+	var $title = $selectedResourcesContainer.prev("h2");
+	var selectedResourcesContainerHeight = $selectedResourcesContainer.parent()
+			.height()
+			- $title.height();
+	$selectedResourcesContainer.height(selectedResourcesContainerHeight)
+			.perfectScrollbar();
+	updateDiscloseIcon();
+}
+function updateDiscloseIcon() {
+	var $disclose, $elem;
+	$(".mjs-nestedSortable-branch").each(
+			function(index, elem) {
+				$elem = $(elem);
+				$disclose = $elem.find(">.menuDiv>span.disclose");
+				if ($elem.find("ol").length == 0
+						|| $elem.find("ol").find("li").length == 0)
+					$disclose.css("visibility", "hidden");
+				else
+					$disclose.css("visibility", "visible");
 			});
 }
 function getDisplayParameters() {

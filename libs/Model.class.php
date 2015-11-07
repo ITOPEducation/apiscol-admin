@@ -108,7 +108,8 @@ class Model {
 		$this->metadataList->setMetadataIds ( array () );
 	}
 	public function addSelectedMetadataIdsToMetadataList() {
-		$this->metadataList->setMetadataIds ( $this->getSelectedMetadataList () );
+		if (! empty ( $this->selectedMetadataList ))
+			$this->metadataList->setMetadataIds ( $this->getSelectedMetadataList () );
 	}
 	public function launchSearchQuery() {
 		$this->metadataList->build ();
