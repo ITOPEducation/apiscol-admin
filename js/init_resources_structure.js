@@ -48,8 +48,9 @@ function secundaryInit() {
 				startCollapsed : false,
 				relocate : function(event, ui) {
 					var $container = ui.item.parent().closest("li");
-					if ($container.length == 0)
+					if ($container.length == 0) {
 						return false;
+					}
 					updateDiscloseIcon();
 				}
 
@@ -58,10 +59,14 @@ function secundaryInit() {
 			"connectWith", "ol#resource-hierarchy");
 	$("ol#selected-resources-for-structure").nestedSortable("option",
 			"maxLevels", 1);
-	// $("ol#resource-hierarchy").nestedSortable("option", "protectRoot", true);
+	$("ol#resource-hierarchy").nestedSortable("option", "maxLevels", 0);
 	$('ol.sortable .deleteMenu').click(function() {
 		var id = $(this).attr('data-id');
-		$('#' + id).remove();
+
+		var $element = $('#' + id);
+		if ($("ol#resource-hierarchy").has($element))
+			recursivelyReturnToSelectedResourcesRepository($element);
+		updateDiscloseIcon();
 	});
 
 	$('ol.sortable .disclose').on(
@@ -89,7 +94,24 @@ function secundaryInit() {
 			- $title.height();
 	$selectedResourcesContainer.height(selectedResourcesContainerHeight)
 			.perfectScrollbar();
+	var $editedResourcesContainer = $("div.edited-resources-container",
+			"div#structure");
+	var $title = $editedResourcesContainer.prev("h2");
+	var editedResourcesContainerHeight = $editedResourcesContainer.parent()
+			.height()
+			- $title.height();
+	$editedResourcesContainer.height(editedResourcesContainerHeight)
+			.perfectScrollbar();
 	updateDiscloseIcon();
+}
+function recursivelyReturnToSelectedResourcesRepository($element) {
+	$element.find("li").each(function(index, elem) {
+		recursivelyReturnToSelectedResourcesRepository($(elem));
+	})
+	$element.removeClass("mjs-nestedSortable-branch").addClass(
+			"mjs-nestedSortable-leaf").prependTo(
+			"ol#selected-resources-for-structure");
+	$element.find(">.menuDiv>span.disclose").css("visibility", "hidden");
 }
 function updateDiscloseIcon() {
 	var $disclose, $elem;
