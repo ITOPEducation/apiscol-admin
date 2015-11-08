@@ -60,14 +60,23 @@ function secundaryInit() {
 	$("ol#selected-resources-for-structure").nestedSortable("option",
 			"maxLevels", 1);
 	$("ol#resource-hierarchy").nestedSortable("option", "maxLevels", 0);
-	$('ol.sortable .deleteMenu').click(function() {
-		var id = $(this).attr('data-id');
+	$('ol.sortable .deleteMenu').click(
+			function() {
+				var id = $(this).attr('data-id');
 
-		var $element = $('#' + id);
-		if ($("ol#resource-hierarchy").has($element))
-			recursivelyReturnToSelectedResourcesRepository($element);
-		updateDiscloseIcon();
-	});
+				var $element = $('#' + id);
+				if ($element.closest("ol#resource-hierarchy").length > 0) {
+					recursivelyReturnToSelectedResourcesRepository($element);
+				} else {
+					var selectedMetadata = [ false ];
+					var selectedMetadataId = [ id ];
+					sendSelectedResourcesList(selectedMetadataId,
+							selectedMetadata, function() {
+								$element.remove();
+							});
+				}
+				updateDiscloseIcon();
+			});
 
 	$('ol.sortable .disclose').on(
 			'click',

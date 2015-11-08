@@ -239,17 +239,21 @@ function secundaryInit() {
 								primary : "ui-icon-cart"
 							},
 							text : false
-						}).click(
-								function() {
-									var checked = $(elem).is(":checked");
-									var resId = $(elem).closest("tr").find(
-											"input.css-checkbox").attr("id");
-									var selectedMetadata = [ checked ];
-									var selectedMetadataId = [ resId ];
-									sendSelectedResourcesList(
-											selectedMetadataId,
-											selectedMetadata);
-								});
+						})
+								.click(
+										function() {
+											var checked = $(elem)
+													.is(":checked");
+											var resId = $(elem).closest("tr")
+													.find("input.css-checkbox")
+													.attr("id");
+											var selectedMetadata = [ checked ];
+											var selectedMetadataId = [ resId ];
+											sendSelectedResourcesList(
+													selectedMetadataId,
+													selectedMetadata,
+													updateCartButtons);
+										});
 					});
 	$(
 			"div.pane div.inner-layout div.ui-layout-center table input.edit-in-structure-view-control")
@@ -363,7 +367,7 @@ function secundaryInit() {
 
 						} else {
 							sendSelectedResourcesList(resourcesIds,
-									resourcesSelectionState)
+									resourcesSelectionState, updateCartButtons)
 						}
 					});
 	$(
@@ -429,33 +433,16 @@ function getNbChecked() {
 			});
 	return nbChecked;
 }
-function sendSelectedResourcesList(selectedMetadataId, selectedMetadata) {
-	$.ajax({
-		type : "POST",
-		url : "/resources/structure/async",
-		data : {
-			'select-metadata[]' : selectedMetadata,
-			'select-metadata-id[]' : selectedMetadataId
-		},
-		headers : {
-			accept : "application/atom+xml"
-		},
-		error : function(xhr) {
-			console.log(xhr.responseXML);
 
-		},
-		success : function(data) {
-			$mdids = $(data).find("mdid");
-			var mdid, $cartButton;
-			$mdids.each(function(i, e) {
-				mdid = $(e).text();
-				$cartButton = $("#select-for-structure" + mdid);
-				if (!$cartButton.is(":checked"))
-					$cartButton.attr("checked", "checked").button("refresh");
-			})
-
-		}
-	});
+function updateCartButtons(data) {
+	$mdids = $(data).find("mdid");
+	var mdid, $cartButton;
+	$mdids.each(function(i, e) {
+		mdid = $(e).text();
+		$cartButton = $("#select-for-structure" + mdid);
+		if (!$cartButton.is(":checked"))
+			$cartButton.attr("checked", "checked").button("refresh");
+	})
 }
 function sendResourceToEditInStructureView(metadataId) {
 	$.ajax({

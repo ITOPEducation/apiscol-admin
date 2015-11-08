@@ -113,3 +113,22 @@ function displayTestInBlockingModal(html, erase) {
 	$("#blocking-modal-text").html(
 			$("#blocking-modal-text").html() + "<br/>" + html);
 }
+function sendSelectedResourcesList(selectedMetadataId, selectedMetadata,
+		callback) {
+	$.ajax({
+		type : "POST",
+		url : "/resources/structure/async",
+		data : {
+			'select-metadata[]' : selectedMetadata,
+			'select-metadata-id[]' : selectedMetadataId
+		},
+		headers : {
+			accept : "application/atom+xml"
+		},
+		error : function(xhr) {
+			console.log(xhr.responseXML);
+
+		},
+		success : callback
+	});
+}

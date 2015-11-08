@@ -31,7 +31,7 @@ class ServiceAccess {
 		if (count ( $staticFilters ) > 0)
 			$params ["static-filters"] = json_encode ( $staticFilters );
 		if (count ( $metadataIds ) > 0)
-			$params ["mdids"] = json_encode ( $metadataIds );
+			$params ["mdids"] = json_encode ( array_values ( $metadataIds ) );
 		$response = $this->client->setUrl ( $this->parameters ["services"] ["seek"] )->get ( $params );
 		return $response ["content"];
 	}
