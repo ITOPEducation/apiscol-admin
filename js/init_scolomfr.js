@@ -160,18 +160,7 @@ function addSubmitButton() {
 	activateSubmitButton(false);
 	putWaiterOnSubmitButton(false);
 }
-function activateSubmitButton(bool) {
-	$("span.submit-button").button(bool ? "enable" : "disable");
-	setDirty(bool);
-}
-function putWaiterOnSubmitButton(bool) {
-	if (bool)
-		$("span.submit-button").find("span.ui-icon")
-				.removeClass("ui-icon-save").addClass("ui-icon-wait");
-	else
-		$("span.submit-button").find("span.ui-icon")
-				.removeClass("ui-icon-wait").addClass("ui-icon-save");
-}
+
 function ajouterChampProgramme(program) {
 	var container = $(document.createElement("div")).addClass(
 			"ui-widget-content container-editeur");

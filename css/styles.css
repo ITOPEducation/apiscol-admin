@@ -1990,15 +1990,20 @@ ol.sortable li div.menuDiv  img {
 	float: left;
 }
 
-ol#selected-resources-for-structure.sortable {
+ol#selected-resources-for-structure.sortable,
+ol#resource-hierarchy.sortable {
 	padding-left: 0;
 }
+
 html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west h2.ui-state-highlight,
-#structure > div.pane.ui-layout-center.ui-layout-pane.ui-layout-pane-center > h2
+	#structure>div.pane.ui-layout-center.ui-layout-pane.ui-layout-pane-center>h2
 	{
 	margin: 0;
 }
-#structure > div.pane.ui-layout-center.ui-layout-pane.ui-layout-pane-center > div {
+
+#structure>div.pane.ui-layout-center.ui-layout-pane.ui-layout-pane-center>div,
+	html.js body div.content div#structure div.ui-layout-west div.selected-resources-container
+	{
 	margin-top: 10px;
 }
 

@@ -132,3 +132,15 @@ function sendSelectedResourcesList(selectedMetadataId, selectedMetadata,
 		success : callback
 	});
 }
+function activateSubmitButton(bool) {
+	$("span.submit-button").button(bool ? "enable" : "disable");
+	setDirty(bool);
+}
+function putWaiterOnSubmitButton(bool) {
+	if (bool)
+		$("span.submit-button").find("span.ui-icon")
+				.removeClass("ui-icon-save").addClass("ui-icon-wait");
+	else
+		$("span.submit-button").find("span.ui-icon")
+				.removeClass("ui-icon-wait").addClass("ui-icon-save");
+}

@@ -52,6 +52,7 @@ function secundaryInit() {
 						return false;
 					}
 					updateDiscloseIcon();
+					activateSubmitButton(true);
 				}
 
 			}).disableSelection();
@@ -67,12 +68,14 @@ function secundaryInit() {
 				var $element = $('#' + id);
 				if ($element.closest("ol#resource-hierarchy").length > 0) {
 					recursivelyReturnToSelectedResourcesRepository($element);
+					activateSubmitButton(true);
 				} else {
 					var selectedMetadata = [ false ];
 					var selectedMetadataId = [ id ];
 					sendSelectedResourcesList(selectedMetadataId,
 							selectedMetadata, function() {
 								$element.remove();
+								
 							});
 				}
 				updateDiscloseIcon();
@@ -111,7 +114,25 @@ function secundaryInit() {
 			- $title.height();
 	$editedResourcesContainer.height(editedResourcesContainerHeight)
 			.perfectScrollbar();
+	addSubmitButton();
 	updateDiscloseIcon();
+}
+function addSubmitButton() {
+	submitButton = $(document.createElement("span")).addClass("submit-button")
+			.attr("title", "enregistrer");
+	$("h2.submit-button-container", "div#structure.detail-pane").append(
+			submitButton);
+	$("span.submit-button").button({
+		icons : {
+			primary : "ui-icon-save"
+		},
+		text : false
+	}).click(function() {
+
+		return false;
+	});
+	activateSubmitButton(false);
+	putWaiterOnSubmitButton(false);
 }
 function recursivelyReturnToSelectedResourcesRepository($element) {
 	$element.find("li").each(function(index, elem) {
