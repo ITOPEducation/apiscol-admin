@@ -144,3 +144,14 @@ function putWaiterOnSubmitButton(bool) {
 		$("span.submit-button").find("span.ui-icon")
 				.removeClass("ui-icon-wait").addClass("ui-icon-save");
 }
+function setDirty(bool) {
+	if (bool)
+		$(window)
+				.bind(
+						'beforeunload',
+						function() {
+							return "Voulez vous réellement abandonner vos modifications non enregistrées ?";
+						});
+	else
+		$(window).unbind('beforeunload');
+}

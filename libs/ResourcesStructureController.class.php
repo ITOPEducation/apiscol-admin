@@ -31,6 +31,9 @@ class ResourcesStructureController extends AbstractResourcesController {
 			
 			echo MainController::xmlErrorMessage ( "Problème lors du choix de ressources pour la vue 'structure'", 500, "Erreur d'origine inconnue" );
 		}
+		if (isset ( Security::$_CLEAN ['hierarchy-data'] )) {
+			echo "ok hiérarchie reçue";
+		}
 	}
 	public function processSyncRequest() {
 		// List of selected resources

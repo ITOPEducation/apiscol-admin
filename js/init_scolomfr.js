@@ -89,17 +89,7 @@ function initScolomFr() {
 	initialization = false;
 
 }
-function setDirty(bool) {
-	if (bool)
-		$(window)
-				.bind(
-						'beforeunload',
-						function() {
-							return "Voulez vous réellement abandonner vos modifications non enregistrées ?";
-						});
-	else
-		$(window).unbind('beforeunload');
-}
+
 function initializeSelect(key, name) {
 	var tagitContainer = $("div#" + key
 			+ "-container.element div.entries-container div.elt_champ_form ul",

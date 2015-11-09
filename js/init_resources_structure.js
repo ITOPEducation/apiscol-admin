@@ -75,7 +75,7 @@ function secundaryInit() {
 					sendSelectedResourcesList(selectedMetadataId,
 							selectedMetadata, function() {
 								$element.remove();
-								
+
 							});
 				}
 				updateDiscloseIcon();
@@ -127,12 +127,37 @@ function addSubmitButton() {
 			primary : "ui-icon-save"
 		},
 		text : false
-	}).click(function() {
-
-		return false;
-	});
+	}).click(
+			function() {
+				var hierachyData = $("ol#resource-hierarchy").nestedSortable(
+						'toHierarchy', {
+							expression : /()(.+)/,
+							startDepthCount : 0
+						});
+				sendHierachyData(hierachyData);
+				return false;
+			});
 	activateSubmitButton(false);
 	putWaiterOnSubmitButton(false);
+}
+function sendHierachyData(hierachyData) {
+	$.ajax({
+		type : "POST",
+		url : "/resources/structure/async",
+		data : {
+			'hierarchy-data' : hierachyData,
+		},
+		headers : {
+			accept : "application/atom+xml"
+		},
+		error : function(xhr) {
+			console.log(xhr.responseXML);
+
+		},
+		success : function(data) {
+			console.log(data);
+		}
+	});
 }
 function recursivelyReturnToSelectedResourcesRepository($element) {
 	$element.find("li").each(function(index, elem) {

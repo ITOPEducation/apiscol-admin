@@ -70,7 +70,8 @@ class Security {
 			"nb-lines" => "integer",
 			"select-metadata-id" => "string-array",
 			"select-metadata" => "bool-array",
-			"edit-struture-metadata-id" => "string" 
+			"edit-struture-metadata-id" => "string",
+			"hierarchy-data" => "hierarchical-string-array" 
 	);
 	private static $DEFAULTS = array (
 			"page" => "home" 
@@ -144,6 +145,10 @@ class Security {
 						}
 					}
 					break;
+				case "hierarchical-string-array" :
+					$valid = self::validateHierarchicalStringArray ( $value );
+					self::$_BUFFER [$key] = self::cleanHierarchicalStringArray ( $value );
+					break;
 				case "bool-array" :
 					$valid = is_array ( $value );
 					if ($valid) {
@@ -162,6 +167,7 @@ class Security {
 						}
 					}
 					break;
+				
 				case "string" :
 					self::$_BUFFER [$key] = filter_var ( $value, FILTER_SANITIZE_STRING );
 					$valid = strlen ( self::$_BUFFER [$key] ) < self::$STRINGS_MAX_LENGTH;
@@ -329,6 +335,28 @@ class Security {
 	}
 	public static function display($rendu) {
 		echo $rendu;
+	}
+	private static function validateHierarchicalStringArray(array $hierarchicalStringArray) {
+		$valid = true;
+		foreach ( $hierarchicalStringArray as $key => $value ) {
+			if (is_array ( $value ))
+				$valid = $valid && self::validateHierarchicalStringArray ( $value );
+			else
+				$valid = $valid && is_string ( $value ) && strlen ( $value ) > 0 && strlen ( $value ) < self::$STRINGS_MAX_LENGTH;
+			if (! $valid)
+				return false;
+		}
+		return true;
+	}
+	private static function cleanHierarchicalStringArray(array $hierarchicalStringArray) {
+		$cleanArray = array ();
+		foreach ( $hierarchicalStringArray as $key => $value ) {
+			if (is_array ( $value ))
+				$cleanArray [$key] = self::cleanHierarchicalStringArray ( $value );
+			else
+				$cleanArray [$key] = filter_var ( $value, FILTER_SANITIZE_STRING );
+		}
+		return $cleanArray;
 	}
 }
 ?>
