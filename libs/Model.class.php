@@ -10,6 +10,7 @@ class Model {
 	private $metadataList;
 	private $selectedMetadataList;
 	private $resourceIdForStructureView;
+	private $resourceEtagForStructureView;
 	private $lomMetadata;
 	private $facetsSearchTest;
 	private $manifest;
@@ -41,7 +42,8 @@ class Model {
 				'displayDevice',
 				'metadataList',
 				'selectedMetadataList',
-				'resourceIdForStructureView' 
+				'resourceIdForStructureView',
+				'resourceEtagForStructureView' 
 		);
 	}
 	private function getServiceAccess() {
@@ -182,6 +184,9 @@ class Model {
 	public function createNewResource($metadataId, $resourceType) {
 		return $this->getServiceAccess ()->createNewResource ( $metadataId, $resourceType );
 	}
+	public function registerHierarchyData($metadataId, array $hierarchyData, $ifMatch) {
+		return $this->getServiceAccess ()->registerHierarchyData ( $metadataId, $hierarchyData, $ifMatch );
+	}
 	public function setDisplayMode($mode) {
 		$this->displayMode = $mode;
 	}
@@ -233,8 +238,6 @@ class Model {
 		return $this->getServiceAccess ()->handleMetadataImport ( $file );
 	}
 	public function setResultOfMetadataImport($result) {
-		if (strlen ( $result ) == 0)
-			debug_print_backtrace ();
 		$this->resultOfMetadataImport = new DOMDocument ();
 		$this->resultOfMetadataImport->loadXML ( $result );
 	}
@@ -314,6 +317,12 @@ class Model {
 	}
 	public function getResourceIdForStructureView() {
 		return $this->resourceIdForStructureView;
+	}
+	public function setResourceEtagForStructureView($ifMatch) {
+		$this->resourceEtagForStructureView = $ifMatch;
+	}
+	public function getResourceEtagForStructureView() {
+		return $this->resourceEtagForStructureView;
 	}
 }
 ?>

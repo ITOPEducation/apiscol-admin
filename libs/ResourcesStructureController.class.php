@@ -32,10 +32,35 @@ class ResourcesStructureController extends AbstractResourcesController {
 			echo MainController::xmlErrorMessage ( "Problème lors du choix de ressources pour la vue 'structure'", 500, "Erreur d'origine inconnue" );
 		}
 		if (isset ( Security::$_CLEAN ['hierarchy-data'] )) {
-			echo "ok hiérarchie reçue";
+			$resourceIdForStructureView = $this->model->getResourceIdForStructureView ();
+			if (empty ( $resourceIdForStructureView )) {
+				echo MainController::xmlErrorMessage ( "Aucune racine sélectionnée", 412, "Impossible d'enregistrer la hiérarchie" );
+				return;
+			}
+			$resourceEtagForStructureView = $this->model->getResourceEtagForStructureView ();
+			if (empty ( $resourceIdForStructureView )) {
+				echo MainController::xmlErrorMessage ( "Le jeton de fraicheur est vide", 500, "Impossible d'enregistrer la hiérarchie" );
+				return;
+			}
+			$response = $this->model->registerHierarchyData ( $resourceIdForStructureView, Security::$_CLEAN ['hierarchy-data'], $resourceEtagForStructureView );
+			if (false === $response) {
+				echo MainController::xmlErrorMessage ( "Envoi d'une hiérarchie invalide", 412, "Erreur d'origine inconnue" );
+			}
 		}
 	}
 	public function processSyncRequest() {
+		// Root resource to be edited
+		$resourceIdForStructureView = $this->model->getResourceIdForStructureView ();
+		if (empty ( $resourceIdForStructureView )) {
+			$this->mainController->setInError ( true );
+			$this->mainController->setErrorMessage ( "Veuillez sélectionner la ressource à éditer dans les listes de ressources." );
+			return;
+		}
+		$this->registerMetadataId ( $resourceIdForStructureView );
+		if ($this->mainController->isInError ())
+			return;
+			// optimistic concurrency : save the etag for freshness control
+		$this->model->setResourceEtagForStructureView ( $this->model->getMetadata ()->getEtag () );
 		// List of selected resources
 		$this->model->prepareSearchQuery ();
 		$this->model->addSelectedMetadataIdsToMetadataList ();
@@ -51,16 +76,6 @@ class ResourcesStructureController extends AbstractResourcesController {
 			$this->mainController->setInError ( true );
 			$this->mainController->setErrorMessage ( "Le service ApiScol Seek a renvoyé des données illisibles.", $e->getMessage () );
 		}
-		// Root resource to be edited
-		$resourceIdForStructureView = $this->model->getResourceIdForStructureView ();
-		if (empty ( $resourceIdForStructureView )) {
-			$this->mainController->setInError ( true );
-			$this->mainController->setErrorMessage ( "Veuillez sélectionner la ressource à éditer dans les listes de ressources." );
-			return;
-		}
-		$this->registerMetadataId ( $resourceIdForStructureView );
-		if ($this->mainController->isInError ())
-			return;
 		
 		if (isset ( Security::$_CLEAN ['active-tab'] )) {
 			$this->model->setDisplayParameter ( 'active-tab', Security::$_CLEAN ['active-tab'] );

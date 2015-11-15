@@ -27,6 +27,9 @@ class MetadataDAO extends AtomDAO {
 		assert($this->isBuilt);
 		return $this->serviceAccess->deleteMetadata($this->id, $this->getEtag());
 	}
+	public function registerHierarchyData(array $hierarchyData) {
+		return $this->serviceAccess->registerHierarchyData ( $this->id, $hierarchyData, $this->getEtag() );
+	}
 
 	public function sendRefreshRequest($target) {
 		return $this->serviceAccess->createMetadataRefreshRequest($target, $this->id, $this->getEtag());

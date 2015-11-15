@@ -191,5 +191,11 @@ class ServiceAccess {
 		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/maintenance/meta/optimization' )->post ( null, null, "application/xml", "application/x-www-form-urlencoded" );
 		return $response;
 	}
+	public function registerHierarchyData($metadataId, array $hierarchyData, $ifMatch) {
+		$params = array ();
+		$params ["hierarchy"] = json_encode ( $hierarchyData );
+		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/meta/'.$metadataId.'/hierarchy' )->put ( $params, array (), "application/xml", "application/x-www-form-urlencoded", $ifMatch, null );
+		return $response ["content"];
+	}
 }
 ?>
