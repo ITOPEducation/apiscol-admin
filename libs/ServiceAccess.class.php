@@ -193,9 +193,21 @@ class ServiceAccess {
 	}
 	public function registerHierarchyData($metadataId, array $hierarchyData, $ifMatch) {
 		$params = array ();
-		$params ["hierarchy"] = json_encode ( $hierarchyData );
-		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/meta/'.$metadataId.'/hierarchy' )->put ( $params, array (), "application/xml", "application/x-www-form-urlencoded", $ifMatch, null );
+		$this->addWebHostToMetadataId ( $hierarchyData );
+		$params ["hierarchy"] = json_encode ( $hierarchyData [0] );
+		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/meta/' . $metadataId . '/hierarchy' )->put ( $params, array (), "application/xml", "application/x-www-form-urlencoded", $ifMatch, null );
 		return $response ["content"];
+	}
+	private function addWebHostToMetadataId(array &$hierarchyData) {
+		for($i = 0; $i < count ( $hierarchyData ); $i ++) {
+			if (array_key_exists ( 'id', $hierarchyData [$i] )) {
+				$hierarchyData [$i] ['id'] = $this->parameters ["services"] ["meta"] . '/' . $hierarchyData [$i] ['id'];
+				if (array_key_exists ( 'children', $hierarchyData [$i] )) {
+					$this->addWebHostToMetadataId ( $hierarchyData [$i] ['children'] );
+				}
+			}
+		}
+		;
 	}
 }
 ?>
