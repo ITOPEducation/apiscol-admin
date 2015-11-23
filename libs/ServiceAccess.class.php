@@ -18,7 +18,10 @@ class ServiceAccess {
 	}
 	public function __wakeup() {
 	}
-	public function getMetadataList($query = null, $dynamicFilters = array(), $staticFilters = array(), $metadataIds = array(), $start, $rows) {
+	public function getMetadataList($query = null, $dynamicFilters = array(), $staticFilters = array(), $metadataIds = null, $start, $rows) {
+		if (! is_null ( $metadataIds )) {
+			$rows = count ( $metadataIds );
+		}
 		$params = array (
 				"desc" => "true",
 				"start" => $start,
@@ -30,7 +33,7 @@ class ServiceAccess {
 			$params ["dynamic-filters"] = json_encode ( $dynamicFilters );
 		if (count ( $staticFilters ) > 0)
 			$params ["static-filters"] = json_encode ( $staticFilters );
-		if (count ( $metadataIds ) > 0)
+		if (is_array ( $metadataIds ) && count ( $metadataIds ) > 0)
 			$params ["mdids"] = json_encode ( array_values ( $metadataIds ) );
 		$response = $this->client->setUrl ( $this->parameters ["services"] ["seek"] )->get ( $params );
 		return $response ["content"];
@@ -42,9 +45,10 @@ class ServiceAccess {
 		$response = $this->client->setUrl ( $this->parameters ["services"] ["seek"] )->get ( $params );
 		return $response ["content"];
 	}
-	public function getMetadata($metadataId) {
+	public function getMetadata($metadataId, $fetchChildren = false) {
 		$params = array (
-				"desc" => "true" 
+				"desc" => "true",
+				"tree" => true === $fetchChildren ? "true" : "false" 
 		);
 		$response = $this->client->setUrl ( $this->parameters ["services"] ["meta"] . '/' . $metadataId )->get ( $params );
 		return $response ["content"];

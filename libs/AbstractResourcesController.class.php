@@ -17,12 +17,12 @@ abstract class AbstractResourcesController implements IController {
 		$this->model = $model;
 		$this->prefix = $prefix;
 	}
-	public function registerMetadataId($metadataId = null) {
+	public function registerMetadataId($metadataId = null, $fetchChildren = false) {
 		if (is_null ( $metadataId ) && isset ( Security::$_CLEAN ['metadata-id'] ))
 			$metadataId = Security::$_CLEAN ['metadata-id'];
 		if (! empty ( $metadataId )) {
 			try {
-				$this->model->setMetadataId ( $metadataId );
+				$this->model->setMetadataId ( $metadataId, $fetchChildren );
 			} catch ( HttpRequestException $e ) {
 				$this->mainController->setInError ( true );
 				// TODO traduire

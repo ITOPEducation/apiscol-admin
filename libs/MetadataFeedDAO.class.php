@@ -7,6 +7,7 @@ class MetadataFeedDAO extends AtomFeedDAO {
 	private $staticFilters;
 	private $dynamicFilters;
 	private $metadataIds;
+	private $listOfMetadataIsForced;
 	public function __construct($serviceAccess) {
 		parent::__construct ( $serviceAccess );
 		$this->start = 0;
@@ -15,6 +16,7 @@ class MetadataFeedDAO extends AtomFeedDAO {
 		$this->staticFilters = array ();
 		$this->dynamicFilters = array ();
 		$this->metadataIds = array ();
+		$this->listOfMetadataIsForced = false;
 	}
 	public function __sleep() {
 		return array (
@@ -25,7 +27,11 @@ class MetadataFeedDAO extends AtomFeedDAO {
 		);
 	}
 	protected function acquireXMLString() {
-		return $this->serviceAccess->getMetadataList ( isset ( $this->query ) ? $this->query : null, $this->dynamicFilters, $this->staticFilters, $this->metadataIds, $this->start, $this->rows );
+		if ($this->listOfMetadataIsForced)
+			$forcedListOfMetadata = $this->metadataIds;
+		else
+			$forcedListOfMetadata = null;
+		return $this->serviceAccess->getMetadataList ( isset ( $this->query ) ? $this->query : null, $this->dynamicFilters, $this->staticFilters, $forcedListOfMetadata, $this->start, $this->rows );
 	}
 	public function getStaticFilters() {
 		$filters = array ();
@@ -51,6 +57,9 @@ class MetadataFeedDAO extends AtomFeedDAO {
 	}
 	public function setMetadataIds(array $metadataIds) {
 		$this->metadataIds = $metadataIds;
+	}
+	public function disableMetadataIds(array $metadataIdsToRemove) {
+		$this->metadataIds = array_diff ( $this->metadataIds, $metadataIdsToRemove );
 	}
 	public function clearFilters($filter) {
 		if ($filter == "all") {
@@ -109,6 +118,9 @@ class MetadataFeedDAO extends AtomFeedDAO {
 				}
 			}
 		}
+	}
+	public function setListOfMetadataIsForced($listOfMetadataIsForced) {
+		$this->listOfMetadataIsForced = $listOfMetadataIsForced;
 	}
 }
 

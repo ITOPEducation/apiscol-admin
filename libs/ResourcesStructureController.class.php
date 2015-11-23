@@ -56,7 +56,7 @@ class ResourcesStructureController extends AbstractResourcesController {
 			$this->mainController->setErrorMessage ( "Veuillez sélectionner la ressource à éditer dans les listes de ressources." );
 			return;
 		}
-		$this->registerMetadataId ( $resourceIdForStructureView );
+		$this->registerMetadataId ( $resourceIdForStructureView, true );
 		if ($this->mainController->isInError ())
 			return;
 			// optimistic concurrency : save the etag for freshness control
@@ -64,6 +64,9 @@ class ResourcesStructureController extends AbstractResourcesController {
 		// List of selected resources
 		$this->model->prepareSearchQuery ();
 		$this->model->addSelectedMetadataIdsToMetadataList ();
+		$this->model->getMetadataList ()->setListOfMetadataIsForced ( true );
+		$metadataInEditedResourceHierarchy = $this->model->getMetadata ()->getMetadataInResourceHierarchy ();
+		$this->model->getMetadataList ()->disableMetadataIds ( $metadataInEditedResourceHierarchy );
 		try {
 			$this->model->launchSearchQuery ();
 		} catch ( BadUrlRequestException $e ) {
@@ -101,7 +104,6 @@ class ResourcesStructureController extends AbstractResourcesController {
 			$this->model->setMetadataIdSelected ( $metadataId, $selecteds [$counter] );
 			$counter ++;
 		}
-		
 		return array (
 				"content" => $this->model->getSelectedMetadataList () 
 		);

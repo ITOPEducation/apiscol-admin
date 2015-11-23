@@ -9,6 +9,7 @@ class ResourcesStructureView extends AbstractView implements IView {
 	}
 	private function addContent() {
 		$this->render .= HTMLLoader::load ( 'resources-structure' );
+		$this->render = str_replace ( "[EDITED-RESOURCE]", $this->getEditedResourceHierarchy (), $this->render );
 		$availableResources = '';
 		if ($this->mainController->userIsAllowedToRead ()) {
 			if (! (is_null ( $this->model->getMetadataList () )) && $this->model->getMetadataList ()->isbuilt ())
@@ -17,8 +18,8 @@ class ResourcesStructureView extends AbstractView implements IView {
 			$this->mainController->setInError ( true );
 			$this->mainController->setErrorMessage ( "{RIGHTS-IMPOSSIBLE-BROWSE-RESOURCES}" );
 		}
+		
 		$this->render = str_replace ( "[AVAILABLE-RESOURCES]", $availableResources, $this->render );
-		$this->render = str_replace ( "[EDITED-RESOURCE]", $this->getEditedResourceHierarchy (), $this->render );
 	}
 	private function transformXMLResults() {
 		$this->proc = $this->getXSLTProcessor ( 'xsl/structureViewAvailableMetadataList.xsl' );
@@ -27,7 +28,6 @@ class ResourcesStructureView extends AbstractView implements IView {
 		try {
 			
 			$resourcesListXml = $this->model->getMetadataList ( false );
-			
 			$resourcesList = $resourcesListXml->getDocumentAsString ();
 			$doc = new DOMDocument ();
 			$doc->loadXML ( $resourcesList );
@@ -48,18 +48,30 @@ class ResourcesStructureView extends AbstractView implements IView {
 		if (null !== $this->model->getMetadata ()) {
 			$hierarchy = $this->getListTemplate ();
 			
-			$rootItem = $this->getListItemTemplate ();
-			
-			$title = $this->model->getMetadata ()->getTitle ();
-			$desc = $this->model->getMetadata ()->getSummary ();
-			$id = $this->model->getMetadata ()->getId ();
-			$rootItem = str_replace ( '[TITLE]', $title, $rootItem );
-			$rootItem = str_replace ( '[DESC]', $desc, $rootItem );
-			$rootItem = str_replace ( '[ID]', $id, $rootItem );
+			$rootItem = $this->getMetadataItem ( $this->model->getMetadata () );
 			$hierarchy = str_replace ( '[ITEMS]', $rootItem, $hierarchy );
 		}
 		
 		return $hierarchy;
+	}
+	private function getMetadataItem(MetadataDAO $metadata) {
+		$item = $this->getListItemTemplate ();
+		$title = $metadata->getTitle ();
+		$desc = $metadata->getSummary ();
+		$id = $metadata->getId ();
+		$item = str_replace ( '[TITLE]', $title, $item );
+		$item = str_replace ( '[DESC]', $desc, $item );
+		$item = str_replace ( '[ID]', $id, $item );
+		$children = $metadata->getChildren ();
+		$childItems = '';
+		if (! is_null ( $children ) && is_array ( $children )) {
+			$nbChildren = count ( $children );
+			for($i = 0; $i < $nbChildren; $i ++) {
+				$childItems .= $this->getMetadataItem ( $children [$i] );
+			}
+		}
+		$item = str_replace ( '[CHILDREN]', $childItems, $item );
+		return $item;
 	}
 	private function getListTemplate() {
 		return '<ol id="resource-hierarchy" class="sortable ui-sortable mjs-nestedSortable-branch mjs-nestedSortable-expanded">[ITEMS]</ol>';
@@ -93,7 +105,7 @@ class ResourcesStructureView extends AbstractView implements IView {
 							</p>
 						</div>
 					</div>
-				<ol></ol>
+				<ol>[CHILDREN]</ol>
 				</li>';
 	}
 }

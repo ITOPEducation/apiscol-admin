@@ -2,6 +2,11 @@
 abstract class AbstractDAO implements IDAO {
 	/**
 	 *
+	 * @var array
+	 */
+	private $options;
+	/**
+	 *
 	 * @var DOMDocument
 	 */
 	protected $document;
@@ -18,6 +23,7 @@ abstract class AbstractDAO implements IDAO {
 	public function __construct($serviceAccess) {
 		$this->serviceAccess = $serviceAccess;
 		$this->isBuilt = false;
+		$this->options = array ();
 	}
 	public function getDocument() {
 		return $this->document;
@@ -26,15 +32,19 @@ abstract class AbstractDAO implements IDAO {
 		return $this->xpath;
 	}
 	public function build() {
-		$this->document = new DOMDocument ();
+		$document = new DOMDocument ();
 		if (! isset ( $this->xmlString ))
 			$this->xmlString = $this->acquireXMLString ();
-		$this->document->preserveWhiteSpace = false;
-		$success = @$this->document->loadXML ( $this->xmlString );
+		$document->preserveWhiteSpace = false;
+		$success = @$document->loadXML ( $this->xmlString );
 		if (! $success) {
 			$error = error_get_last ();
 			throw new CorruptedXMLStringException ( $error ["message"] . " // Données brutes : " . strip_tags ( $this->xmlString ) );
 		}
+		$this->setDocument ( $document );
+	}
+	public function setDocument(DOMDocument $document) {
+		$this->document = $document;
 		$this->xpath = new DOMXpath ( $this->document );
 		$this->setXPathNameSpace ();
 		$this->isBuilt = true;
@@ -69,6 +79,14 @@ abstract class AbstractDAO implements IDAO {
 	}
 	public function isBuilt() {
 		return $this->isBuilt;
+	}
+	public function setOption($key, $value) {
+		$this->options [$key] = $value;
+	}
+	protected function getOption($key) {
+		if (array_key_exists ( $key, $this->options ))
+			return $this->options [$key];
+		return null;
 	}
 }
 ?>

@@ -85,6 +85,7 @@ class ResourcesListController extends AbstractResourcesController {
 		$this->model->getMetadataList ()->setRows ( $rows );
 		$this->model->setDisplayParameter ( 'start', $start );
 		$this->model->getMetadataList ()->setStart ( $start );
+		$this->model->getMetadataList()->setListOfMetadataIsForced(false);
 		try {
 			$this->model->launchSearchQuery ();
 		} catch ( BadUrlRequestException $e ) {

@@ -61,9 +61,10 @@ class Model {
 	public function getDisplayParameters() {
 		return $this->displayParameters;
 	}
-	public function setMetadataId($mdid) {
+	public function setMetadataId($mdid, $fetchChildren = false) {
 		$this->metadata = new MetadataDAO ( $this->getServiceAccess () );
 		$this->metadata->setId ( $mdid );
+		$this->metadata->setOption ( MetadataDAO::FETCH_CHILDREN, true );
 		$this->metadata->build ();
 	}
 	public function acquireScolomfrMetadata() {
