@@ -325,5 +325,15 @@ class Model {
 	public function getResourceEtagForStructureView() {
 		return $this->resourceEtagForStructureView;
 	}
+	public function renewMetadata($metadataWebServiceresponse) {
+		$document = new DOMDocument ();
+		$document->preserveWhiteSpace = false;
+		$success = @$document->loadXML ( $metadataWebServiceresponse );
+		if (! $success) {
+			$error = error_get_last ();
+			throw new CorruptedXMLStringException ( $error ["message"] . " // Données brutes : " . strip_tags ( $this->xmlString ) );
+		}
+		$this->metadata->setDocument ( $document );
+	}
 }
 ?>

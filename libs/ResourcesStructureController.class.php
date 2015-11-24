@@ -46,6 +46,13 @@ class ResourcesStructureController extends AbstractResourcesController {
 			if (false === $response) {
 				echo MainController::xmlErrorMessage ( "Envoi d'une hiérarchie invalide", 412, "Erreur d'origine inconnue" );
 			}
+			$this->registerMetadataId ( $resourceIdForStructureView, true );
+			if ($this->mainController->isInError ()) {
+				echo MainController::xmlErrorMessage ( "Erreur de relecture des données", 500, "Impossible de relire les données de la racine" );
+				return;
+			}
+			// optimistic concurrency : save the etag for freshness control
+			$this->model->setResourceEtagForStructureView ( $this->model->getMetadata ()->getEtag () );
 		}
 	}
 	public function processSyncRequest() {
