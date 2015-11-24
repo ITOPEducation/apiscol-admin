@@ -59,9 +59,16 @@ class ResourcesStructureView extends AbstractView implements IView {
 		$title = $metadata->getTitle ();
 		$desc = $metadata->getSummary ();
 		$id = $metadata->getId ();
+		$imgSrc = $metadata->getIconLink ();
 		$item = str_replace ( '[TITLE]', $title, $item );
 		$item = str_replace ( '[DESC]', $desc, $item );
 		$item = str_replace ( '[ID]', $id, $item );
+		$img = "";
+		if (! empty ( $imgSrc )) {
+			$img = $this->getIconTemplate ();
+			$img = str_replace ( '[IMG_SRC]', $imgSrc, $img );
+		}
+		$item = str_replace ( '[IMG]', $img, $item );
 		$children = $metadata->getChildren ();
 		$childItems = '';
 		if (! is_null ( $children ) && is_array ( $children )) {
@@ -76,6 +83,10 @@ class ResourcesStructureView extends AbstractView implements IView {
 	private function getListTemplate() {
 		return '<ol id="resource-hierarchy" class="sortable ui-sortable mjs-nestedSortable-branch mjs-nestedSortable-expanded">[ITEMS]</ol>';
 	}
+	private function getIconTemplate() {
+		return '<img class="ui-widget-content" src="[IMG_SRC]">
+						</img>';
+	}
 	private function getListItemTemplate() {
 		return '<li class="mjs-nestedSortable-leaf" id="[ID]">
 					<div class="menuDiv">
@@ -86,6 +97,7 @@ class ResourcesStructureView extends AbstractView implements IView {
 					<span title="Click to show/hide children" class="disclose ui-icon ui-icon-minusthick">
 						<span></span>
 					</span>
+				<span>
 					<span title="Click to delete item." data-id="[ID]" class="deleteMenu ui-icon ui-icon-closethick">
 						<span></span>
 					</span>
@@ -99,8 +111,9 @@ class ResourcesStructureView extends AbstractView implements IView {
 					</span>
 					
 					</span>
-						<div id="menuEdit[ID]" class="menuEdit hidden">
+				</span><div id="menuEdit[ID]" class="menuEdit hidden ui-helper-clearfix">
 							<p>
+						[IMG]
 							[DESC]
 							</p>
 						</div>

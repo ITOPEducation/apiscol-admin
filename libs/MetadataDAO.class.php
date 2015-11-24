@@ -20,6 +20,14 @@ class MetadataDAO extends AtomDAO {
 			return Model::NO_ANSWER;
 		return $link;
 	}
+	public function getIconLink() {
+		assert ( $this->isBuilt );
+		$iconLink = $this->xpath->query ( "atom:link[@rel='icon']/@href" );
+		if ($iconLink->length == 0)
+			return "";
+		$link = $iconLink->item ( 0 )->value;
+		return $link;
+	}
 	public function getScoLomFrLink() {
 		assert ( $this->isBuilt );
 		return $this->xpath->query ( "atom:link[@rel='describedby'][@type='application/lom+xml']/@href" )->item ( 0 )->value;
