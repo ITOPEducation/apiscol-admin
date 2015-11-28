@@ -9,7 +9,11 @@ class ResourcesStructureView extends AbstractView implements IView {
 	}
 	private function addContent() {
 		$this->render .= HTMLLoader::load ( 'resources-structure' );
-		$this->render = str_replace ( "[EDITED-RESOURCE]", $this->getEditedResourceHierarchy (), $this->render );
+		$validMetadata = $this->model->getMetadata ()->isBuilt ();
+		$editedResourceHierarchy = '';
+		if ($validMetadata)
+			$editedResourceHierarchy = $this->getEditedResourceHierarchy ();
+		$this->render = str_replace ( "[EDITED-RESOURCE]", $editedResourceHierarchy, $this->render );
 		$availableResources = '';
 		if ($this->mainController->userIsAllowedToRead ()) {
 			if (! (is_null ( $this->model->getMetadataList () )) && $this->model->getMetadataList ()->isbuilt ())

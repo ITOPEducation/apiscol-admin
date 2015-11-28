@@ -64,9 +64,11 @@ class ResourcesStructureController extends AbstractResourcesController {
 			return;
 		}
 		$this->registerMetadataId ( $resourceIdForStructureView, true );
-		if ($this->mainController->isInError ())
+		if ($this->mainController->isInError ()) {
 			return;
-			// optimistic concurrency : save the etag for freshness control
+		}
+		
+		// optimistic concurrency : save the etag for freshness control
 		$this->model->setResourceEtagForStructureView ( $this->model->getMetadata ()->getEtag () );
 		// List of selected resources
 		$this->model->prepareSearchQuery ();
