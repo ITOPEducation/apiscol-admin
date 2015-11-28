@@ -81,7 +81,7 @@ class ResourcesStructureView extends AbstractView implements IView {
 		return $item;
 	}
 	private function getListTemplate() {
-		return '<ol id="resource-hierarchy" class="sortable ui-sortable mjs-nestedSortable-branch mjs-nestedSortable-expanded">[ITEMS]</ol>';
+		return '<ol id="resource-hierarchy" class="sortable ui-sortable mjs-nestedSortable-branch">[ITEMS]</ol>';
 	}
 	private function getIconTemplate() {
 		return '<img class="ui-widget-content" src="[IMG_SRC]">
@@ -111,7 +111,7 @@ class ResourcesStructureView extends AbstractView implements IView {
 					</span>
 					
 					</span>
-				</span><div id="menuEdit[ID]" class="menuEdit hidden ui-helper-clearfix">
+				</span><div id="menuEdit[ID]" class="menuEdit ui-helper-hidden ui-helper-clearfix">
 							<p>
 						[IMG]
 							[DESC]

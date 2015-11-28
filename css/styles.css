@@ -1990,8 +1990,8 @@ ol.sortable li div.menuDiv  img {
 	float: left;
 }
 
-ol#selected-resources-for-structure.sortable,
-ol#resource-hierarchy.sortable {
+ol#selected-resources-for-structure.sortable, ol#resource-hierarchy.sortable
+	{
 	padding-left: 0;
 }
 
@@ -2010,4 +2010,8 @@ html.js body div.content div#structure.detail-pane.ui-layout-container div.pane.
 html.js body div.content div#structure ol.sortable li.mjs-nestedSortable-leaf>div.menuDiv>span.disclose
 	{
 	visibility: hidden;
+}
+
+.placeholder {
+	border: thin solid #cc0000;
 }

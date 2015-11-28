@@ -67,7 +67,7 @@
 					</span>
 
 				</span>
-				<div class="menuEdit hidden resource-selected ui-helper-clearfix"
+				<div class="menuEdit ui-helper-hidden resource-selected ui-helper-clearfix"
 					style="display: none;">
 					<xsl:attribute name="id">menuEdit<xsl:value-of
 						select="$mdid"></xsl:value-of></xsl:attribute>

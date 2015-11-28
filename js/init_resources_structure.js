@@ -91,7 +91,7 @@ function secundaryInit() {
 						'ui-icon-minusthick');
 			});
 
-	$('ol.sortable .expandEditor, ol.sortable .itemTitle').click(
+	$('ol.sortable .expandEditor').click(
 			function() {
 				var id = $(this).attr('data-id');
 				$('#menuEdit' + id).toggle();
@@ -141,6 +141,7 @@ function addSubmitButton() {
 	putWaiterOnSubmitButton(false);
 }
 function sendHierachyData(hierachyData) {
+	activateSubmitButton(false);
 	$.ajax({
 		type : "POST",
 		url : "/resources/structure/async",
@@ -151,11 +152,12 @@ function sendHierachyData(hierachyData) {
 			accept : "application/atom+xml"
 		},
 		error : function(xhr) {
+			activateSubmitButton(true);
 			console.log(xhr.responseXML);
 
 		},
 		success : function(data) {
-			console.log(data);
+			activateSubmitButton(false);
 		}
 	});
 }
