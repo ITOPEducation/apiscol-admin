@@ -111,6 +111,8 @@ class ResourcesListController extends AbstractResourcesController {
 				$this->mainController->setInError ( true );
 				$this->mainController->setErrorMessage ( "Le service ApiScol Meta n'a pas répondu ou a dysfonctionné (erreur " . $e->getCode () . ").", $e->getContent () );
 			}
+			if($this->mainController->isInError())
+				return;
 			try {
 				$this->acquireContent ( false );
 				if ($this->model->getContent ()->isBuilt ())
