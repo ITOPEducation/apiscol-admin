@@ -111,8 +111,18 @@ class ScoLOMfrDAO extends AbstractDAO {
 	public function getGeneralElement() {
 		return $this->document->getElementsByTagName ( "general" )->item ( 0 );
 	}
+	public function getLomElement() {
+		return $this->document->getElementsByTagName ( "lom" )->item ( 0 );
+	}
 	public function getEducationalElement() {
-		return $this->document->getElementsByTagName ( "educational" )->item ( 0 );
+		$educationalElements = $this->document->getElementsByTagName ( "educational" );
+		if ($educationalElements->length == 0) {
+			$educationalElement = $this->document->createElement ( "educational" );
+			$this->getLomElement ()->appendChild ( $educationalElement );
+		} else {
+			$educationalElement = $educationalElements->item ( 0 );
+		}
+		return $educationalElement;
 	}
 	public function getEducationalDescriptionElement() {
 		return $this->getEducationalElement ()->getElementsByTagName ( "description" )->item ( 0 );
