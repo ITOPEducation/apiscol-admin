@@ -34,18 +34,19 @@ abstract class AbstractResourcesController implements IController {
 			}
 		}
 	}
-	public function acquireContent($throwErrorIfNoContent = true) {
+	public function acquireContent($throwErrorIfNoContent = true, $acquireThumbs = false) {
 		try {
 			$this->model->acquireContentRepresentation ();
-			
-			try {
-				$this->model->acquireContentThumbRepresentation ();
-			} catch ( HttpRequestException $e ) {
-				$this->mainController->setInError ( true );
-				$this->mainController->setErrorMessage ( "Problèmes de connexion à ApiScol pour obtenir les suggestions de miniatures basées sur le contenu.", $e->getContent () );
-			} catch ( BadUrlRequestException $e ) {
-				$this->mainController->setInError ( true );
-				$this->mainController->setErrorMessage ( "Problèmes de connexion à ApiScol pour obtenir les suggestions de miniatures basées sur le contenu.", $e->getMessage () );
+			if (true === $acquireThumbs) {
+				try {
+					$this->model->acquireContentThumbRepresentation ();
+				} catch ( HttpRequestException $e ) {
+					$this->mainController->setInError ( true );
+					$this->mainController->setErrorMessage ( "Problèmes de connexion à ApiScol pour obtenir les suggestions de miniatures basées sur le contenu.", $e->getContent () );
+				} catch ( BadUrlRequestException $e ) {
+					$this->mainController->setInError ( true );
+					$this->mainController->setErrorMessage ( "Problèmes de connexion à ApiScol pour obtenir les suggestions de miniatures basées sur le contenu.", $e->getMessage () );
+				}
 			}
 		} catch ( HttpRequestException $e ) {
 			$this->mainController->setInError ( true );

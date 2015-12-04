@@ -85,7 +85,7 @@ class ResourcesListController extends AbstractResourcesController {
 		$this->model->getMetadataList ()->setRows ( $rows );
 		$this->model->setDisplayParameter ( 'start', $start );
 		$this->model->getMetadataList ()->setStart ( $start );
-		$this->model->getMetadataList()->setListOfMetadataIsForced(false);
+		$this->model->getMetadataList ()->setListOfMetadataIsForced ( false );
 		try {
 			$this->model->launchSearchQuery ();
 		} catch ( BadUrlRequestException $e ) {
@@ -102,6 +102,7 @@ class ResourcesListController extends AbstractResourcesController {
 	private function processDeleteRequest($secondTry) {
 		if (isset ( Security::$_CLEAN ['delete-resource'] )) {
 			Security::$_CLEAN ['metadata-id'] = Security::$_CLEAN ['delete-resource'];
+			
 			try {
 				$this->registerMetadataId ();
 			} catch ( InvalidXMLStringException $e ) {
@@ -111,10 +112,11 @@ class ResourcesListController extends AbstractResourcesController {
 				$this->mainController->setInError ( true );
 				$this->mainController->setErrorMessage ( "Le service ApiScol Meta n'a pas répondu ou a dysfonctionné (erreur " . $e->getCode () . ").", $e->getContent () );
 			}
-			if($this->mainController->isInError())
+			
+			if ($this->mainController->isInError ())
 				return;
 			try {
-				$this->acquireContent ( false );
+				$this->acquireContent ( false, false );				
 				if ($this->model->getContent ()->isBuilt ())
 					$this->model->getContent ()->delete ();
 			} catch ( InvalidXMLStringException $e ) {
@@ -125,7 +127,7 @@ class ResourcesListController extends AbstractResourcesController {
 				$this->mainController->setErrorMessage ( "Le service ApiScol Meta n'a pas répondu ou a dysfonctionné (erreur " . $e->getCode () . ").", $e->getContent () );
 			}
 			
-			try {
+			try {				
 				return $this->model->getMetadata ()->delete ();
 			} catch ( HttpRequestException $e ) {
 				if (! $secondTry) {
