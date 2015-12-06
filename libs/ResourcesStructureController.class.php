@@ -128,10 +128,13 @@ class ResourcesStructureController extends AbstractResourcesController {
 		if ($xml === false) {
 			$xml = new SimpleXMLElement ( '<data/>' );
 		}
-		foreach ( $array as $key => $value ) {
-			
-			$xml->addChild ( 'mdid', $value );
+		if (is_array ( $array )) {
+			foreach ( $array as $key => $value ) {
+				
+				$xml->addChild ( 'mdid', $value );
+			}
 		}
+		
 		return $xml->asXML ();
 	}
 }
