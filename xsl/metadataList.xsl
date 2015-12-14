@@ -196,7 +196,7 @@
 				<xsl:element name="input">
 
 					<xsl:choose>
-						<xsl:when test="$category='course' or $category='curriculum'">
+						<xsl:when test="$category='curriculum'">
 							<xsl:attribute name="type">checkbox</xsl:attribute>
 							<xsl:attribute name="class">edit-in-structure-view-control</xsl:attribute>
 						</xsl:when>
