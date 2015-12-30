@@ -27,7 +27,7 @@ class ResourcesDetailDisplayView extends AbstractResourceDetailView {
 			return '';
 		return '<a data-mode="' . $this->model->getDisplayMode () . '" data-style="inherit" href="' . $this->model->getMetadata ()->getLink () . '">' . $this->model->getMetadata ()->getTitle () . '</a>';
 	}
-	private function transformXMLThumbsSuggestions($XMLsuggestions) {
+	private function transformXMLThumbsSuggestions(DOMDocument $XMLsuggestions) {
 		$this->proc = $this->getXSLTProcessor ( 'xsl/thumbsSuggestionsList.xsl' );
 		$this->proc->setParameter ( '', 'prefix', $this->prefix );
 		$this->proc->setParameter ( '', 'random', rand ( 0, 1000 ) );
