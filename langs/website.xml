@@ -85,6 +85,10 @@
 		<translation lang="fr">Recherche</translation>
 		<translation lang="en-gb">Recherche</translation>
 	</xmldata>
+	<xmldata id="RESOURCES-LIST-VOID-TITLE">
+		<translation lang="fr">Sans titre</translation>
+		<translation lang="en-gb">No title</translation>
+	</xmldata>
 	<xmldata id="RESOURCES-LIST-AGGREGATION-LEVEL-LEARNING-OBJECT">
 		<translation lang="fr">Niveau d'agrégation : objet
 			d'apprentissage</translation>

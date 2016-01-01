@@ -143,7 +143,14 @@
   						<xsl:with-param name="delimiter" select="'/'" />
 					</xsl:call-template>/display
 				</xsl:attribute>
-						<xsl:value-of select="atom:title"></xsl:value-of>
+						<xsl:choose>
+							<xsl:when test="atom:title !=''">
+								<xsl:value-of select="atom:title " />
+							</xsl:when>
+							<xsl:otherwise>
+								{RESOURCES-LIST-VOID-TITLE}
+							</xsl:otherwise>
+						</xsl:choose>
 					</a>
 				</label>
 			</td>
