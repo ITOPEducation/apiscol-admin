@@ -182,6 +182,9 @@ class Model {
 	public function assignCustomThumbToMetadata($file) {
 		$this->getServiceAccess ()->assignCustomThumbToMetadata ( $file, $this->getMetadata ()->getLink (), $this->getThumbsSuggestions ()->getEtag () );
 	}
+	public function assignCustomPreviewToContent($file) {
+		$this->getServiceAccess ()->assignCustomPreviewToContent ( $file, $this->getContent ()->getId (), $this->getContent ()->getEtag () );
+	}
 	public function createNewResource($metadataId, $resourceType) {
 		return $this->getServiceAccess ()->createNewResource ( $metadataId, $resourceType );
 	}

@@ -85,6 +85,8 @@ class MainController {
 			$this->setUserLogin ( "" );
 		} else if (isset ( Security::$_CLEAN ['login'] ) && isset ( Security::$_CLEAN ['password'] )) {
 			$this->processAuthentication ( Security::$_CLEAN ['login'], Security::$_CLEAN ['password'] );
+			header("Location: " . $_SERVER['REQUEST_URI']);
+			exit();
 		}
 	}
 	public function processAuthentication($login, $password) {

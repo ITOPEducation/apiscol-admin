@@ -122,6 +122,10 @@ class ServiceAccess {
 		$params ["mdid"] = $metadataLink;
 		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/thumb' )->postMultipartWithFile ( $params, "image", $file, "application/xml", $ifMatch, null );
 	}
+	public function assignCustomPreviewToContent($file, $resourceId, $ifMatch) {
+		$params ["resid"] = $resourceId;
+		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/preview' )->postMultipartWithFile ( $params, "image", $file, "application/xml", $ifMatch, null );
+	}
 	public function sendFileForResource($file, $isArchive, $resourceId, $ifMatch) {
 		$params ["resid"] = $resourceId;
 		$params ["is_archive"] = $isArchive ? "true" : "false";

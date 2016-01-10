@@ -13,14 +13,14 @@ class ResourcesDetailDisplayView extends AbstractResourceDetailView {
 			$displaySnippet = $this->getDisplaySnippet ();
 		}
 		if ($this->mainController->userIsAllowedToWrite ()) {
-			//$thumbsChoiceArea = $this->getThumbsChoiceArea ();
-			$customThumbsArea = $this->getCustomThumbArea ();
+			$action = $this->getAction ();
 		}
+		$noContentIndicator = $this->getNoContentIndicator ();
 		$this->render = str_replace ( "[DISPLAY]", $displaySnippet, $this->render );
 		$this->render = str_replace ( "[DISPLAY-MODE-LABEL]", $this->model->getDisplayModeLabel (), $this->render );
 		$this->render = str_replace ( "[DISPLAY-DEVICE-LABEL]", $this->model->getDisplayDeviceLabel (), $this->render );
-		//$this->render = str_replace ( "[THUMBS]", $thumbsChoiceArea, $this->render );
-		$this->render = str_replace ( "[CUSTOM-THUMBS]", $customThumbsArea, $this->render );
+		$this->render = str_replace ( "[ACTION]", $action, $this->render );
+		$this->render = str_replace ( "[NO-CONTENT-INDICATOR]", $noContentIndicator, $this->render );
 	}
 	private function getDisplaySnippet() {
 		if ($this->mainController->isInError ())
@@ -55,16 +55,25 @@ class ResourcesDetailDisplayView extends AbstractResourceDetailView {
 		$area .= '</div>';
 		return $area;
 	}
+	public function getNoContentIndicator() {
+		$indicator = '';
+		if (! $this->mainController->isInError ()) {
+			$link = $this->model->getMetadata ()->getContentLink ();
+			if (empty ( $link ) || $link == Model::NO_ANSWER)
+				$indicator = 'data-no-content="true" disabled="disabled"';
+		}
+		
+		return $indicator;
+	}
 	private function getRefreshArea() {
 		$area = '';
 		return $area;
 	}
-	private function getCustomThumbArea() {
+	private function getAction() {
 		if ($this->mainController->isInError ())
 			return '';
 		$action = $this->prefix . '/resources/detail/' . $this->model->getMetadata ()->getId () . '/display';
-		$area = '<div class="custom-image-input-container"><form id="set_custom_thumb" enctype="multipart/form-data"	action="' . $action . '" method="POST"><input id="image_upload" type="file" name="custom-thumb" /><input id="image_submit" type="submit" value="Ou proposez votre propre image" />' . '</form>	<div class="progress">	<div class="bar"></div><div class="percent">0%</div><div id="status"></div></div>';
-		return $area;
+		return $action;
 	}
 }
 ?>

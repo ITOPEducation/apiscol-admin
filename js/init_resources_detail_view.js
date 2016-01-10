@@ -1,14 +1,13 @@
 var saveApiscolLinkHtml;
 var putBlocked;
-var buttonOriginalText;
-var submitButton;
+var thumbSubmitButton;
+var previewSubmitButton;
 var activeLabel;
 function secundaryInit() {
 	activeLabel = "second_menu_item_display";
 	displayActiveLabel();
 	buildInterface();
 	refreshTabsState();
-	
 
 }
 function refreshTabsState() {
@@ -112,28 +111,60 @@ function buildInterface() {
 			size : 390
 		}
 	});
-	
-	$.ajax({
-		dataType : 'html',
-		type : "GET",
-		url : $('form#set_custom_thumb').attr("action") + "/async",
-		error : function(msg) {
-			
-			console.log(msg);
-		},
-		success : function(result) {
-			
-			$(
-			"div#display.detail-pane div.pane div.refresh-area div.thumbs-container")
-			.removeClass("void-thumbs-container")
-			.empty()
-			.html(result);
-			createCarousel();
-		}
-	});
+
+	$
+			.ajax({
+				dataType : 'html',
+				type : "GET",
+				url : $('form#set_custom_thumb').attr("action") + "/async",
+				error : function(msg) {
+
+					console.log(msg);
+				},
+				success : function(result) {
+
+					$(
+							"div#display.detail-pane div.pane div.refresh-area div.thumbs-container")
+							.removeClass("void-thumbs-container").empty().html(
+									result);
+					createCarousel();
+				}
+			});
 
 	var bar = $('.bar');
 	var status = $('#status');
+	$('form#set_custom_preview').attr("action",
+			$('form#set_custom_preview').attr("action") + "/async").ajaxForm({
+		beforeSend : function() {
+			if (putBlocked)
+				return false;
+			showProgressBar(true);
+			$(this).find("input").attr("disabled", true);
+
+			freeze(true);
+
+			putBlocked = true;
+			status.empty();
+			var percentVal = '0%';
+			bar.width(percentVal)
+
+		},
+		uploadProgress : function(event, position, total, percentComplete) {
+			var percentVal = percentComplete + '%';
+			bar.width(percentVal)
+		},
+		success : function(result) {
+			var percentVal = '100%';
+			bar.width(percentVal)
+
+		},
+		complete : function(xhr) {
+			freeze(false);
+			putBlocked = false;
+			showProgressBar(false);
+			refreshPortlet();
+		}
+	});
 	$('form#set_custom_thumb')
 			.attr("action",
 					$('form#set_custom_thumb').attr("action") + "/async")
@@ -176,17 +207,32 @@ function buildInterface() {
 							reloadPortletThumb();
 						}
 					});
-	$('input#image_submit').button();
-	submitButton = $("input#image_submit.ui-button", "form#set_custom_thumb");
-	buttonOriginalText = submitButton.val();
-	$(
-			'div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_thumb #image_upload')
-			.change(function() {
-				if (!putBlocked)
-					$('form#set_custom_thumb').submit();
-			}).click(function() {
-				return !putBlocked;
-			});
+	$('input#thumb_submit').button();
+	$('input#preview_submit').button();
+	thumbSubmitButton = $("input#thumb_submit.ui-button",
+			"form#set_custom_thumb");
+	thumbSubmitButton.click(function() {
+		$('form#set_custom_thumb #thumb_upload').trigger("click");
+		return false;
+	});
+	previewSubmitButton = $("input#preview_submit.ui-button",
+			"form#set_custom_preview");
+	previewSubmitButton.click(function() {
+		$('form#set_custom_preview #preview_upload').trigger("click");
+		return false;
+	});
+	$('form#set_custom_thumb #thumb_upload').change(function() {
+		if (!putBlocked)
+			$('form#set_custom_thumb').submit();
+	}).click(function() {
+		return !putBlocked;
+	});
+	$('form#set_custom_preview #preview_upload').change(function() {
+		if (!putBlocked)
+			$('form#set_custom_preview').submit();
+	}).click(function() {
+		return !putBlocked;
+	});
 	showProgressBar(false);
 
 }
@@ -257,14 +303,21 @@ function createCarousel() {
 
 }
 function freeze(bool) {
+	var $target;
 	if (bool) {
-		submitButton.addClass("ui-state-disabled").attr("value",
-				"Veuillez patienter").attr("disabled", "disabled");
+		$target = thumbSubmitButton
+		if (!previewSubmitButton.attr("data-no-content")) {
+			$target = $target.add(previewSubmitButton)
+		}
+		$target.addClass("ui-state-disabled").attr("disabled", "disabled");
 		$("div#carousel.ui-carousel div.wrapper form.choose-thumb").fadeTo(400,
 				0.5);
 	} else {
-		submitButton.removeClass("ui-state-disabled").removeAttr("disabled")
-				.attr("value", buttonOriginalText);
+		$target = thumbSubmitButton
+		if (!previewSubmitButton.attr("data-no-content")) {
+			$target = $target.add(previewSubmitButton)
+		}
+		$target.removeClass("ui-state-disabled").removeAttr("disabled");
 
 	}
 }

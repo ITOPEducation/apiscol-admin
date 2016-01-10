@@ -647,12 +647,14 @@ html.js button#change-display-device.ui-button span.ui-button-icon-primary.ui-ic
 	background-image: url("../img/device.png");
 }
 
-html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_thumb
+html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_thumb,
+	html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_preview
 	{
 	cursor: pointer;
 	display: block;
 	overflow: hidden;
-	position: relative;
+	float: left;
+	margin-bottom: 1em;
 }
 /*
 uris
@@ -1379,7 +1381,8 @@ html.js body div.content div.add-metadata div.pane div.add-metadata-input-contai
 	width: 800px;
 }
 
-html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_thumb #image_upload,
+html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_thumb #thumb_upload,
+	html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_preview #preview_upload,
 	html.js body div.content div.add-metadata div.pane div.add-metadata-input-container form#import-metadata input#metadata_upload,
 	html.js body div.content div#edit.detail-pane div.pane div.file-input-container form#send_file input#file_upload
 	{
@@ -1398,6 +1401,12 @@ html.js div#display.detail-pane div.pane div.custom-image-input-container form#s
 	padding: 0.4em 1em;
 }
 
+html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_thumb #thumb_upload,
+	html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_preview #preview_upload
+	{
+	width: 0;
+}
+
 html.js body div.content div#edit.detail-pane div.pane div.file-input-container form#send_file input#file_upload
 	{
 	width: 200px;
@@ -1406,10 +1415,11 @@ html.js body div.content div#edit.detail-pane div.pane div.file-input-container 
 html.js div#display.detail-pane div.pane div.custom-image-input-container div.progress
 	{
 	position: relative;
-	width: 400px;
+	width: 200px;
 	border: 1px solid #ddd;
 	padding: 1px;
-	border-radius: 3px
+	border-radius: 3px;
+	clear: left;
 }
 
 html.js body div.content div.add-metadata div.pane div.add-metadata-input-container form#import-metadata input#metadata_submit.ui-button

@@ -24,6 +24,7 @@ class Security {
 			"query" => "string",
 			"choose-thumb" => "uri",
 			"custom-thumb" => "image",
+			"custom-preview" => "image",
 			"mode" => "mode",
 			"display-mode" => "display-mode",
 			"display-device" => "display-device",
