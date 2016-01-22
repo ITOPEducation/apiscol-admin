@@ -1,5 +1,7 @@
 <?php
 class GlobalView {
+	#const CDN_HOST='http://apiscol.crdp-versailles.fr';
+	const CDN_HOST='http://apiscol.cdn.local';
 	private $render;
 	private $css;
 	private $scripts;
@@ -39,54 +41,54 @@ class GlobalView {
 			'init_resources_detail_search' => '#/js/init_resources_detail_search.js',
 			'init_add_metadata' => '#/js/init_add_metadata.js',
 			'init_maintenance_recovery' => '#/js/init_maintenance_recovery.js',
-			'apiscol' => 'http://apiscol.crdp-versailles.fr/cdn/0.0.1/js/jquery.apiscol.js' 
+			'apiscol' => self::CDN_HOST.'/cdn/0.0.1/js/jquery.apiscol.js' 
 	);
 	private static $cssPaths = array (
-			'main' => '#/css/styles.css',
-			'normalize' => '#/css/normalize.css',
-			'jquery-ui' => '#/css/custom-theme/jquery-ui-1.10.3.custom.min.css',
-			'rcarousel' => '#/js/rcarousel/rcarousel.css',
-			'dynatree' => '#/js/dynatree/ui.dynatree.css',
-			'tagit' => '#/js/tagit/jquery.tagit.css',
-			'vocabnomen' => '#/css/vocabnomen.css',
-			'perfect_scrollbar' => '#/js/perfect-scrollbar/perfect-scrollbar.css' 
-	);
-	function GlobalView($prefix, $controller) {
-		$this->prefix = $prefix;
-		$this->mainController = $controller;
-		$this->render = HTMLLoader::load ( 'frame' );
-		$this->css = '';
-		$this->scripts = '';
-		$this->initalizeScripts ();
-		$this->initalizeStyles ();
-		$this->createLanguageSelector ();
-		$this->createMenu ();
+		'main' => '#/css/styles.css',
+		'normalize' => '#/css/normalize.css',
+		'jquery-ui' => '#/css/custom-theme/jquery-ui-1.10.3.custom.min.css',
+		'rcarousel' => '#/js/rcarousel/rcarousel.css',
+		'dynatree' => '#/js/dynatree/ui.dynatree.css',
+		'tagit' => '#/js/tagit/jquery.tagit.css',
+		'vocabnomen' => '#/css/vocabnomen.css',
+		'perfect_scrollbar' => '#/js/perfect-scrollbar/perfect-scrollbar.css' 
+);
+function GlobalView($prefix, $controller) {
+	$this->prefix = $prefix;
+	$this->mainController = $controller;
+	$this->render = HTMLLoader::load ( 'frame' );
+	$this->css = '';
+	$this->scripts = '';
+	$this->initalizeScripts ();
+	$this->initalizeStyles ();
+	$this->createLanguageSelector ();
+	$this->createMenu ();
+}
+function initalizeScripts() {
+	$this->addScript ( 'jquery' );
+	$this->addScript ( 'jquery-ui' );
+	$this->addScript ( 'popup' );
+	foreach ( $this->mainController->getScriptList () as $script ) {
+		$this->addScript ( $script );
 	}
-	function initalizeScripts() {
-		$this->addScript ( 'jquery' );
-		$this->addScript ( 'jquery-ui' );
-		$this->addScript ( 'popup' );
-		foreach ( $this->mainController->getScriptList () as $script ) {
-			$this->addScript ( $script );
-		}
+}
+function initalizeStyles() {
+	$this->addCss ( 'normalize' );
+	$this->addCss ( 'jquery-ui' );
+	$this->addCss ( 'main' );
+	foreach ( $this->mainController->getCssList () as $css ) {
+		$this->addCss ( $css );
 	}
-	function initalizeStyles() {
-		$this->addCss ( 'normalize' );
-		$this->addCss ( 'jquery-ui' );
-		$this->addCss ( 'main' );
-		foreach ( $this->mainController->getCssList () as $css ) {
-			$this->addCss ( $css );
-		}
-	}
-	function createLanguageSelector() {
-		$this->languageSelector = new LanguageSelector ();
-	}
-	function addCss($cssName) {
-		$this->css .= '<link rel="stylesheet" type="text/css" href="' . str_replace ( '#', $this->prefix, self::$cssPaths [$cssName] ) . '" />';
-	}
-	function addScript($scriptName) {
-		$this->scripts .= '<script src="' . str_replace ( '#', $this->prefix, self::$scriptPaths [$scriptName] ) . '" type="text/javascript"></script>';
-	}
+}
+function createLanguageSelector() {
+	$this->languageSelector = new LanguageSelector ();
+}
+function addCss($cssName) {
+	$this->css .= '<link rel="stylesheet" type="text/css" href="' . str_replace ( '#', $this->prefix, self::$cssPaths [$cssName] ) . '" />';
+}
+function addScript($scriptName) {
+	$this->scripts .= '<script src="' . str_replace ( '#', $this->prefix, self::$scriptPaths [$scriptName] ) . '" type="text/javascript"></script>';
+}
 	private function createMenu() {
 		$this->menu = new Menu ( $this->prefix );
 		$this->menu->addItem ( 'HOME', "home", $_SESSION ['page'], true );
