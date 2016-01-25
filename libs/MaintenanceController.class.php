@@ -42,6 +42,16 @@ class MaintenanceController implements IController {
 								echo MainController::xmlErrorMessage ( $e2->getMessage (), 404, "L'url appelée ne renvoie pas de réponse" );
 							}
 							break;
+						case 'content' :
+							try {
+								$response = $this->model->askForRecoveryMaintenance ( 'content' );
+								echo $response ['content'];
+							} catch ( HttpRequestException $e ) {
+								echo MainController::xmlErrorMessage ( $e->getMessage (), 500, "Le service ne semble pas répondre" );
+							} catch ( BadUrlRequestException $e2 ) {
+								echo MainController::xmlErrorMessage ( $e2->getMessage (), 404, "L'url appelée ne renvoie pas de réponse" );
+							}
+							break;
 					}
 				else if (isset ( Security::$_CLEAN ['maintenance-process-report'] )) {
 					$url = RequestUtils::restoreProtocole ( Security::$_CLEAN ['maintenance-process-report'] );
@@ -63,6 +73,18 @@ class MaintenanceController implements IController {
 						case 'metadata' :
 							try {
 								$response = $this->model->askForOptimizationMaintenance ( 'metadata' );
+								echo $response ['content'];
+							} catch ( HttpRequestException $e ) {
+								echo MainController::xmlErrorMessage ( $e->getMessage (), 500, "Le service ne semble pas répondre" );
+							} catch ( BadUrlRequestException $e2 ) {
+								echo MainController::xmlErrorMessage ( $e2->getMessage (), 404, "L'url appelée ne renvoie pas de réponse" );
+							} catch ( ConnexionFailureException $e3 ) {
+								echo MainController::xmlErrorMessage ( $e3->getMessage (), 500, "Impossible de se conencer à ApiScol" );
+							}
+							break;
+						case 'content' :
+							try {
+								$response = $this->model->askForOptimizationMaintenance ( 'content' );
 								echo $response ['content'];
 							} catch ( HttpRequestException $e ) {
 								echo MainController::xmlErrorMessage ( $e->getMessage (), 500, "Le service ne semble pas répondre" );

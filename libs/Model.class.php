@@ -293,15 +293,30 @@ class Model {
 	public function askForRecoveryMaintenance($target) {
 		assert ( in_array ( $target, array (
 				'metadata',
-				'resources' 
+				'content' 
 		) ) );
+		$target = str_replace ( array (
+				'metadata',
+				'content' 
+		), array (
+				'meta',
+				'content' 
+		), $target );
 		return $this->getServiceAccess ()->askForRecoveryMaintenance ( $target );
 	}
 	public function askForOptimizationMaintenance($target) {
 		assert ( in_array ( $target, array (
 				'metadata',
-				'resources' 
+				'content' 
 		) ) );
+		$target = str_replace ( array (
+				'metadata',
+				'content' 
+		), array (
+				'meta',
+				'content' 
+		), $target );
+		
 		return $this->getServiceAccess ()->askForOptimizationMaintenance ( $target );
 	}
 	public function setMetadataIdSelected($metadataId, $select) {

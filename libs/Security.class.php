@@ -303,7 +303,7 @@ class Security {
 				case "target-repository" :
 					$valid = in_array ( $value, array (
 							"metadata",
-							"resources" 
+							"content" 
 					) );
 					break;
 			}

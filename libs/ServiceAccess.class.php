@@ -192,11 +192,11 @@ class ServiceAccess {
 		return $response;
 	}
 	public function askForRecoveryMaintenance($target) {
-		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/maintenance/meta/recovery' )->post ( null, null, "application/xml", "application/x-www-form-urlencoded" );
+		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/maintenance/' . $target . '/recovery' )->post ( null, null, "application/xml", "application/x-www-form-urlencoded" );
 		return $response;
 	}
 	public function askForOptimizationMaintenance($target) {
-		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/maintenance/meta/optimization' )->post ( null, null, "application/xml", "application/x-www-form-urlencoded" );
+		$response = $this->client->setUrl ( $this->parameters ["services"] ["edit"] . '/maintenance/' . $target . '/optimization' )->post ( null, null, "application/xml", "application/x-www-form-urlencoded" );
 		return $response;
 	}
 	public function registerHierarchyData($metadataId, array $hierarchyData, $ifMatch) {

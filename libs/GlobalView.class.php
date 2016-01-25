@@ -1,7 +1,7 @@
 <?php
 class GlobalView {
-	#const CDN_HOST='http://apiscol.crdp-versailles.fr';
-	const CDN_HOST='http://apiscol.cdn.local';
+	// const CDN_HOST='http://apiscol.crdp-versailles.fr';
+	const CDN_HOST = 'http://apiscol.cdn.local';
 	private $render;
 	private $css;
 	private $scripts;

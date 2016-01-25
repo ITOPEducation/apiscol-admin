@@ -1736,12 +1736,14 @@ html.js body div.content div#maintenance-recovery.detail-pane div.pane h3.ui-sta
 	clear: left;
 }
 
-html.js body div.content div#maintenance-recovery.detail-pane div.pane div.recovery-control form#metadata-recovery.ui-button span.ui-button-icon-primary.ui-icon-wall
+html.js body div.content div#maintenance-recovery.detail-pane div.pane div.recovery-control form#metadata-recovery.ui-button span.ui-button-icon-primary.ui-icon-wall,
+	html.js body div.content div#maintenance-recovery.detail-pane div.pane div.recovery-control form#content-recovery.ui-button span.ui-button-icon-primary.ui-icon-wall
 	{
 	background-image: url("../img/wall.png");
 }
 
-html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west div.recovery-control.ui-helper-clearfix form#metadata-optimization.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icons span.ui-button-icon-primary.ui-icon.ui-icon-optimize
+html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west div.recovery-control.ui-helper-clearfix form#metadata-optimization.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icons span.ui-button-icon-primary.ui-icon.ui-icon-optimize,
+	html.js body div.content div#maintenance-recovery.detail-pane.ui-layout-container div.pane.ui-layout-west.ui-layout-pane.ui-layout-pane-west div.recovery-control.ui-helper-clearfix form#content-optimization.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icons span.ui-button-icon-primary.ui-icon.ui-icon-optimize
 	{
 	background-image: url("../img/optimize.png");
 }

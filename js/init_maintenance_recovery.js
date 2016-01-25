@@ -30,6 +30,7 @@ function secundaryInit() {
 	$('div.console-area-container').css('margin-top',
 			$('div.console-header').outerHeight())
 	initMetadataRecoveryControls();
+	initContentRecoveryControls();
 	scanForMaintenanceProcessReports();
 
 }
@@ -102,6 +103,72 @@ function initMetadataRecoveryControls() {
 		$metadataOptimizationForm.submit();
 	});
 }
+function initContentRecoveryControls() {
+	var $contentRecoveryForm = $("form#content-recovery",
+			"div#maintenance-recovery");
+	$contentRecoveryForm.find("input[type=submit]").remove();
+	var $contentOptimizationForm = $("form#content-optimization",
+			"div#maintenance-recovery");
+	$contentOptimizationForm.find("input[type=submit]").remove();
+
+	$contentRecoveryForm.attr("action",
+			$contentRecoveryForm.attr("action") + "/async").ajaxForm(
+			{
+				dataType : 'xml',
+				cache : true,
+				beforeSend : function() {
+					setRunningMaintenanceProcess($contentRecoveryForm
+							.attr("id"));
+					setRunningMaintenanceProcessState("running");
+					updateButtonState();
+					displayResult("Veuillez patienter",
+							"La requête de maintenance a été envoyée.");
+
+				},
+				complete : function(xhr) {
+					handleContentRecoveryFirstResponse(xhr.responseXML);
+				}
+			});
+	$contentOptimizationForm
+			.attr("action", $contentOptimizationForm.attr("action") + "/async")
+			.ajaxForm(
+					{
+						dataType : 'xml',
+						cache : true,
+						beforeSend : function() {
+							setRunningMaintenanceProcess($contentOptimizationForm
+									.attr("id"));
+							setRunningMaintenanceProcessState("running");
+							updateButtonState();
+							displayResult("Veuillez patienter",
+									"La requête d'optimisation de l'index a été envoyée.");
+
+						},
+						complete : function(xhr) {
+							handleContentOptimizationResponse(xhr.responseXML);
+						}
+					});
+	$contentRecoveryForm.button({
+		icons : {
+			primary : "ui-icon-wall",
+			secondary : "ui-icon-refresh-state"
+		}
+	}).click(function() {
+		if ($contentRecoveryForm.hasClass("ui-state-disabled"))
+			return false;
+		$contentRecoveryForm.submit();
+	});
+	$contentOptimizationForm.button({
+		icons : {
+			primary : "ui-icon-optimize",
+			secondary : "ui-icon-refresh-state"
+		}
+	}).click(function() {
+		if ($contentOptimizationForm.hasClass("ui-state-disabled"))
+			return false;
+		$contentOptimizationForm.submit();
+	});
+}
 function maintenanceReportUrl() {
 	return $.cookie('maintenance-report-url');
 }
@@ -121,9 +188,38 @@ function setRunningMaintenanceProcessState(identifier) {
 	$.cookie('running-maintenance-process-state', identifier);
 }
 function handleMetadataOptimizationResponse(data) {
-	if (!data)
+	if (!data) {
 		displayResult("Problème inconnu", "Pas de réponse du serveur");
-	else if (data.firstChild.tagName == "error") {
+		setRunningMaintenanceProcessState("error");
+		updateButtonState();
+	} else if (data.firstChild.tagName == "error") {
+
+		displayResult($(data).find("intro").text(), $(data).find("message")
+				.text());
+		setRunningMaintenanceProcessState("error");
+		updateButtonState();
+
+	} else {
+		var message = $(data).find("apiscol\\:message, message").text();
+		var state = $(data).find("apiscol\\:state, state").text();
+		displayResult("Requête traitée", message);
+		if (state == "done") {
+			{
+				setRunningMaintenanceProcessState("success");
+				updateButtonState();
+			}
+		} else {
+			setRunningMaintenanceProcessState("error");
+			updateButtonState();
+		}
+	}
+}
+function handleContentOptimizationResponse(data) {
+	if (!data) {
+		displayResult("Problème inconnu", "Pas de réponse du serveur");
+		setRunningMaintenanceProcessState("error");
+		updateButtonState();
+	} else if (data.firstChild.tagName == "error") {
 
 		displayResult($(data).find("intro").text(), $(data).find("message")
 				.text());
@@ -146,9 +242,38 @@ function handleMetadataOptimizationResponse(data) {
 	}
 }
 function handleMetadataRecoveryFirstResponse(data) {
-	if (!data)
+	if (!data) {
 		displayResult("Problème inconnu", "Pas de réponse du serveur");
-	else if (data.firstChild.tagName == "error") {
+		setRunningMaintenanceProcessState("error");
+		updateButtonState();
+	} else if (data.firstChild.tagName == "error") {
+		displayResult($(data).find("intro").text(), $(data).find("message")
+				.text());
+		setRunningMaintenanceProcessState("error");
+		updateButtonState();
+
+	} else {
+		var messages = getMessagesAsText(data);
+		var state = $(data).find("apiscol\\:state, state").text();
+		displayResult(state, messages);
+		var linkElement = $(data).find("link[rel='self']");
+		setMaintenanceReportUrl(linkElement.attr("href"));
+		if (!scanIsRunning)
+			scanForMaintenanceProcessReports();
+		if (state == "done") {
+			{
+				setRunningMaintenanceProcessState("success");
+				updateButtonState();
+			}
+		}
+	}
+}
+function handleContentRecoveryFirstResponse(data) {
+	if (!data) {
+		displayResult("Problème inconnu", "Pas de réponse du serveur");
+		setRunningMaintenanceProcessState("error");
+		updateButtonState();
+	} else if (data.firstChild.tagName == "error") {
 
 		displayResult($(data).find("intro").text(), $(data).find("message")
 				.text());
@@ -175,7 +300,6 @@ function getMessagesAsText(data) {
 	$messages = $(data).find("apiscol\\:message, message");
 	$messagesText = "";
 	$messages.each(function(index, elem) {
-		console.log(elem);
 		$messagesText += "<div class=\"" + $(elem).attr("type") + "\">"
 				+ $(elem).text() + "</div>";
 	});
@@ -221,7 +345,7 @@ function handleMaintenanceProcessReport(data) {
 	$progressBar.progressbar("option", "value", progress);
 	var messages = getMessagesAsText(data);
 	var link = $(data).find("link[rel='self']").attr("href");
-	if (state == "done") {
+	if (state == "done" || state == "inactive") {
 		displayResult("Processus terminé", messages);
 		setRunningMaintenanceProcessState("success");
 		displayProgressBar(false);
