@@ -8,11 +8,11 @@
 			<entry />
 		</identifier>
 		<title>
-			<string language="fr"> </string>
+			<string language="http://id.loc.gov/vocabulary/iso639-2/fre"> </string>
 		</title>
-		<language>fr</language>
+		<language>http://id.loc.gov/vocabulary/iso639-2/fre</language>
 		<description>
-			<string language="fr"> </string>
+			<string language="http://id.loc.gov/vocabulary/iso639-2/fre"> </string>
 		</description>
 	</general>
 	<lifeCycle>
@@ -23,23 +23,27 @@
 			<entry />
 		</identifier>
 		<metadataSchema>SCOLOMFRv1.0</metadataSchema>
-		<language>fr</language>
+		<language>http://id.loc.gov/vocabulary/iso639-2/fre</language>
 	</metaMetadata>
 	<technical>
-		<location></location>
+		<location />
 		<size>0</size>
-		<format></format>
+		<!--Attention ! 4.1 Format (technique) : valeur "" non trouvée dans le 
+			vocabulaire scolomfr-voc-006. Élément inchangé. -->
+		<format />
 	</technical>
 	<educational>
 	</educational>
 	<rights>
 		<cost>
-			<source>LOMv1.0</source>
-			<value>no</value>
+			<source>SCOLOMFRv2.1</source>
+			<value>http://data.education.fr/voc/scolomfr/concept/no</value>
+			<label>non</label>
 		</cost>
 		<copyrightAndOtherRestrictions>
-			<source>LOMv1.0</source>
-			<value>no</value>
+			<source>SCOLOMFRv2.1</source>
+			<value>http://data.education.fr/voc/scolomfr/concept/no_2</value>
+			<label>non</label>
 		</copyrightAndOtherRestrictions>
 	</rights>
 </lom>

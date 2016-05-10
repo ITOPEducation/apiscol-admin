@@ -95,15 +95,26 @@ function initializeSelect(key, name) {
 			+ "-container.element div.entries-container div.elt_champ_form ul",
 			"form#formulaire_scolomfr");
 	$("div#" + key + "-container.element span.register-entry",
-			"form#formulaire_scolomfr").button({
-		icons : {
-			primary : "ui-icon-add"
-		},
-		text : true
-	}).click(function() {
-		var value = $("div#" + key + "-container.element div select").val();
-		addEntryListInput(tagitContainer, value, key, name);
-	});
+			"form#formulaire_scolomfr")
+			.button({
+				icons : {
+					primary : "ui-icon-add"
+				},
+				text : true
+			})
+			.click(
+					function() {
+						var value = $(
+								"div#" + key + "-container.element div select")
+								.val();
+						var label = $(
+								"div#"
+										+ key
+										+ "-container.element div select option[value='"
+										+ value + "']").text()
+						addEntryListInput(tagitContainer, value, label, key,
+								name);
+					});
 	tagitContainer.tagit({
 		itemName : name,
 		fieldName : name + '[]',
@@ -116,11 +127,11 @@ function initializeSelect(key, name) {
 	tagitContainer.find("input.ui-widget-content").attr("disabled", "disabled");
 }
 
-function addEntryListInput(tagitContainer, value, key, name) {
-	var yetPresent = tagitContainer.tagit("assignedTags").indexOf(value) > -1;
+function addEntryListInput(tagitContainer, value, label, key, name) {
+	var yetPresent = false;
 	$("div#" + key + "-container.element span.tagit-label").each(
 			function(i, e) {
-				if ($(e).text() == value)
+				if ($(e).closest("li").hasClass(value))
 					yetPresent = true;
 			});
 	$("span.ui-state-error.duplicate-alert", "div#" + key + "-container")
@@ -128,7 +139,7 @@ function addEntryListInput(tagitContainer, value, key, name) {
 	if (yetPresent) {
 		return;
 	}
-	tagitContainer.tagit("createTag", value);
+	tagitContainer.tagit("createTag", label + " (" + value + ") ", value);
 	activateSubmitButton(true);
 }
 
@@ -366,10 +377,13 @@ function handleContributors() {
 							vcard = vcard.replace("[FN]", "");
 							vcard = vcard.replace("[N]", "");
 						}
-						var role = $(this).closest("tr").find("select").val();
-						var line = '<tr class="role"><th class="role-label">[ROLE]</th><td class="vcard-string">[VCARD]</td><td class="date-label">[DATE]</td><td><span class="delete-button"></span></td></tr>';
-						line = line.replace("[ROLE]", role).replace("[VCARD]",
-								vcard).replace("[DATE]", inverseDate(date));
+						var roleId = $(this).closest("tr").find("select").val();
+						var roleLabel = $(this).closest("tr").find(
+								"select option[value='" + roleId + "']").text()
+						var line = '<tr class="role" id="[ROLE-ID]"><th class="role-label">[ROLE-LABEL]</th><td class="vcard-string">[VCARD]</td><td class="date-label">[DATE]</td><td><span class="delete-button"></span></td></tr>';
+						line = line.replace("[ROLE-LABEL]", roleLabel).replace(
+								"[ROLE-ID]", roleId).replace("[VCARD]", vcard)
+								.replace("[DATE]", inverseDate(date));
 						$(line).insertBefore($(this).closest("tr"));
 						displayVcards();
 						addButton.button("disable");

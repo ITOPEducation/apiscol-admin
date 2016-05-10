@@ -1,13 +1,5 @@
-<xs:schema targetNamespace="http://ltsc.ieee.org/xsd/LOM"
-           xmlns="http://ltsc.ieee.org/xsd/LOM"
-           xmlns:lomfr="http://www.lom-fr.fr/xsd/LOMFR"
-           xmlns:scolomfr="http://www.lom-fr.fr/xsd/SCOLOMFR"
-           xmlns:ag="http://ltsc.ieee.org/xsd/LOM/unique"
-           xmlns:ex="http://ltsc.ieee.org/xsd/LOM/extend"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           elementFormDefault="qualified"
-           version="LOMFR NF Z 76-040 12/2006">
-
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:lomfr="http://www.lom-fr.fr/xsd/LOMFR" xmlns:scolomfr="http://www.lom-fr.fr/xsd/SCOLOMFR" xmlns:ag="http://ltsc.ieee.org/xsd/LOM/unique" xmlns:ex="http://ltsc.ieee.org/xsd/LOM/extend" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ltsc.ieee.org/xsd/LOM" elementFormDefault="qualified" version="LOMFR NF Z 76-040 12/2006">
   <xs:annotation>
     <xs:documentation>
        This work is licensed under the Creative Commons Attribution-ShareAlike
@@ -15,7 +7,6 @@
        visit http://creativecommons.org/licenses/by-sa/2.0 or send a letter to
        Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
     </xs:documentation>
-
     <xs:documentation>
        This component schema defintion defines global schema data type declarations
        for data elements defined in the LOMv1.0 base schema.  This component XSD
@@ -29,7 +20,7 @@
     </xs:documentation>
     <xs:documentation>
         *****************************************************************************
-        **                                                                         ** 
+        **                                                                         **
         ** NOTE THIS CHANGE HISTORY IS USED TO DOCUMENT CHANGES TO THE XML SCHEMA  **
         ** DEFINITION DURING THE BALLOTING PROCESS.  THIS CHANGE HISTORY WILL BE   **
         ** REMOVED ONCE THE FINAL VERSION OF THE STANDARD IS PUBLISHED.  A NEW     **
@@ -41,23 +32,23 @@
         *****************************************************************************
         ** 08/24/2004:  1) Updated those complexTypes that referenced exteding the **
         **              LangString complexType to map to the new name for that     **
-        **              complexType - LanguageString:                              **       
-        **                 1.2 Title                                               **       
-        **                 1.4 Description                                         **       
-        **                 1.5 Keyword                                             **       
-        **                 1.6 Coverage                                            **       
-        **                 2.1 Version                                             **       
-        **                 4.5 Installation Remarks                                **       
-        **                 4.6 Other Platform Requirements                         **       
-        **                 5.7 Typical Age Range                                   **       
-        **                 5.10 Description                                        **       
-        **                 6.3 Description                                         **       
-        **                 7.2.2 Description                                       **       
-        **                 8.3 Description                                         **       
-        **                 9.2.1 Source                                            **       
-        **                 9.2.2.2 Entry                                           **       
-        **                 9.3 Description                                         **       
-        **                 9.4 Keyword                                             **       
+        **              complexType - LanguageString:                              **
+        **                 1.2 Title                                               **
+        **                 1.4 Description                                         **
+        **                 1.5 Keyword                                             **
+        **                 1.6 Coverage                                            **
+        **                 2.1 Version                                             **
+        **                 4.5 Installation Remarks                                **
+        **                 4.6 Other Platform Requirements                         **
+        **                 5.7 Typical Age Range                                   **
+        **                 5.10 Description                                        **
+        **                 6.3 Description                                         **
+        **                 7.2.2 Description                                       **
+        **                 8.3 Description                                         **
+        **                 9.2.1 Source                                            **
+        **                 9.2.2.2 Entry                                           **
+        **                 9.3 Description                                         **
+        **                 9.4 Keyword                                             **
         **              2)Updated the Creative Commons Licensing agreement to      **
         **                reference the Attribution-ShareAlike 2.0                 **
         **              3)Updated annotation describing file to include language   **
@@ -65,20 +56,20 @@
         **                                                                         **
         ** 09/27/2004   1)Updated file documentation to correspond with working    **
         **                draft 3.                                                 **
-        **              2)Updated all complexTypes (non-Vocabulary data typed)     ** 
+        **              2)Updated all complexTypes (non-Vocabulary data typed)     **
         **                elements to reference the customAttribute attributeGroup **
         **                to support attribute extensions.                         **
         *****************************************************************************
       </xs:documentation>
+    <xs:documentation>
+        14/01/2016 - Adaptations ScoLOMFRv2.0 : Ajout de la balise 4.3.1 - extendedLocation
+    </xs:documentation>
   </xs:annotation>
-
   <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/unique"/>
   <xs:import namespace="http://ltsc.ieee.org/xsd/LOM/extend"/>
   <xs:import namespace="http://www.lom-fr.fr/xsd/LOMFR"/>
   <xs:import namespace="http://www.lom-fr.fr/xsd/SCOLOMFR"/>
-
   <!-- Element type declarations -->
-
   <!-- Learning Object Metadata -->
   <xs:complexType name="lom">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -96,7 +87,6 @@
     <xs:attributeGroup ref="ag:lom"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 1 General -->
   <xs:complexType name="general">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -115,7 +105,6 @@
     <xs:attributeGroup ref="ag:general"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 1.1 Identifier -->
   <xs:complexType name="identifier">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -126,7 +115,6 @@
     <xs:attributeGroup ref="ag:identifier"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 1.1.1 Catalog -->
   <xs:complexType name="catalog">
     <xs:simpleContent>
@@ -135,8 +123,7 @@
         <xs:attributeGroup ref="ex:customAttributes"/>
       </xs:extension>
     </xs:simpleContent>
-  </xs:complexType> 
-
+  </xs:complexType>
   <!-- 1.1.2 Entry -->
   <xs:complexType name="entry">
     <xs:simpleContent>
@@ -146,7 +133,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-
   <!-- 1.2 Title -->
   <xs:complexType name="title">
     <xs:complexContent>
@@ -156,8 +142,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
-
   <!-- 1.3 Language -->
   <xs:complexType name="language">
     <xs:simpleContent>
@@ -167,7 +151,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-
   <!-- 1.4 Description
   <xs:complexType name="description">
     <xs:complexContent>
@@ -177,7 +160,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType> -->
-
   <!-- 1.5 Keyword -->
   <xs:complexType name="keyword">
     <xs:complexContent>
@@ -187,7 +169,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 1.6 Coverage -->
   <xs:complexType name="coverage">
     <xs:complexContent>
@@ -197,7 +178,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 1.7 Structure -->
   <xs:complexType name="structure">
     <xs:complexContent>
@@ -206,7 +186,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 1.8 Aggregation Level -->
   <xs:complexType name="aggregationLevel">
     <xs:complexContent>
@@ -215,7 +194,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 2 Life Cycle -->
   <xs:complexType name="lifeCycle">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -227,7 +205,6 @@
     <xs:attributeGroup ref="ag:lifeCycle"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 2.1 Version -->
   <xs:complexType name="version">
     <xs:complexContent>
@@ -237,7 +214,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 2.2 Status -->
   <xs:complexType name="status">
     <xs:complexContent>
@@ -246,7 +222,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 2.3 Contribute -->
   <xs:complexType name="contribute">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -258,7 +233,6 @@
     <xs:attributeGroup ref="ag:contribute"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 2.3.1 Role -->
   <xs:complexType name="role">
     <xs:complexContent>
@@ -267,7 +241,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 2.3.2 Entity
   <xs:complexType name="entity">
     <xs:simpleContent>
@@ -277,7 +250,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType> -->
-
   <!-- 2.3.3 Date -->
   <xs:complexType name="date">
     <xs:complexContent>
@@ -287,7 +259,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 3 Meta-Metadata -->
   <xs:complexType name="metaMetadata">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -300,7 +271,6 @@
     <xs:attributeGroup ref="ag:metaMetadata"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 3.1 Identifier
   <xs:complexType name="identifier">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -311,7 +281,6 @@
     <xs:attributeGroup ref="ag:identifier"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType> -->
-
   <!-- 3.1.1 Catalog
   <xs:complexType name="catalog">
     <xs:simpleContent>
@@ -321,7 +290,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType> -->
-
   <!-- 3.1.2 Entry
   <xs:complexType name="entry">
     <xs:simpleContent>
@@ -331,7 +299,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType> -->
-
   <!-- 3.2 Contribute -->
   <xs:complexType name="contributeMeta">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -343,7 +310,6 @@
     <xs:attributeGroup ref="ag:contribute"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 3.2.1 Role -->
   <xs:complexType name="roleMeta">
     <xs:complexContent>
@@ -352,7 +318,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 3.2.2 Entity
   <xs:complexType name="entity">
     <xs:simpleContent>
@@ -362,7 +327,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType> -->
-
   <!-- 3.2.3 Date
   <xs:complexType name="date">
     <xs:complexContent>
@@ -372,7 +336,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType> -->
-
   <!-- 3.3 Metadata Schema -->
   <xs:complexType name="metadataSchema">
     <xs:simpleContent>
@@ -382,8 +345,7 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-
-  <!-- 3.4 Language 
+  <!-- 3.4 Language
   <xs:complexType name="language">
     <xs:simpleContent>
       <xs:extension base="LanguageId">
@@ -392,13 +354,15 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>-->
-
   <!-- 4 Technical -->
   <xs:complexType name="technical">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:group ref="format"/>
       <xs:group ref="size"/>
       <xs:group ref="location"/>
+      <!--4.3.1 extension scolom V2 -->
+      <xs:group ref="scolomfr:extendedLocation"/>
+      <!-- 4.3.1 extension fin -->
       <xs:group ref="requirement"/>
       <xs:group ref="installationRemarks"/>
       <xs:group ref="otherPlatformRequirements"/>
@@ -408,17 +372,15 @@
     <xs:attributeGroup ref="ag:technical"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 4.1 Format -->
   <xs:complexType name="format">
     <xs:simpleContent>
-      <xs:extension base="MimeType">
+      <xs:extension base="MimeTypeOrUri">
         <xs:attributeGroup ref="ag:format"/>
         <xs:attributeGroup ref="ex:customAttributes"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-
   <!-- 4.2 Size -->
   <xs:complexType name="size">
     <xs:simpleContent>
@@ -428,7 +390,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-
   <!-- 4.3 Location -->
   <xs:complexType name="location">
     <xs:simpleContent>
@@ -438,7 +399,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-
   <!-- 4.4 Requirement -->
   <xs:complexType name="requirement">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -448,7 +408,6 @@
     <xs:attributeGroup ref="ag:requirement"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 4.4.1 OrComposite -->
   <xs:complexType name="orComposite">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -461,7 +420,6 @@
     <xs:attributeGroup ref="ag:orComposite"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 4.4.1.1 Type -->
   <xs:complexType name="type">
     <xs:complexContent>
@@ -471,7 +429,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 4.4.1.2 Name -->
   <xs:complexType name="name">
     <xs:complexContent>
@@ -481,7 +438,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 4.4.1.3 Minimum Version -->
   <xs:complexType name="minimumVersion">
     <xs:simpleContent>
@@ -491,7 +447,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-
   <!-- 4.4.1.4 Maximum Version -->
   <xs:complexType name="maximumVersion">
     <xs:simpleContent>
@@ -501,7 +456,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-
   <!-- 4.5 Installation Remarks -->
   <xs:complexType name="installationRemarks">
     <xs:complexContent>
@@ -511,7 +465,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 4.6 Other Platform Requirements -->
   <xs:complexType name="otherPlatformRequirements">
     <xs:complexContent>
@@ -521,7 +474,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 4.7 Duration -->
   <xs:complexType name="duration">
     <xs:complexContent>
@@ -531,7 +483,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 5 Educational -->
   <xs:complexType name="educational">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -556,7 +507,6 @@
     <xs:attributeGroup ref="ag:educational"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 5.1 Interactivity Type -->
   <xs:complexType name="interactivityType">
     <xs:complexContent>
@@ -565,7 +515,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 5.2 Learning Resource Type -->
   <xs:complexType name="learningResourceType">
     <xs:complexContent>
@@ -574,7 +523,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 5.3 Interactivity Level -->
   <xs:complexType name="interactivityLevel">
     <xs:complexContent>
@@ -583,7 +531,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 5.4 Semantic Density -->
   <xs:complexType name="semanticDensity">
     <xs:complexContent>
@@ -592,7 +539,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 5.5 Intended End User Role -->
   <xs:complexType name="intendedEndUserRole">
     <xs:complexContent>
@@ -601,7 +547,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 5.6 Context -->
   <xs:complexType name="context">
     <xs:complexContent>
@@ -610,7 +555,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 5.7 Typical Age Range -->
   <xs:complexType name="typicalAgeRange">
     <xs:complexContent>
@@ -620,7 +564,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 5.8 Difficulty -->
   <xs:complexType name="difficulty">
     <xs:complexContent>
@@ -629,7 +572,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 5.9 Typical Learning Time -->
   <xs:complexType name="typicalLearningTime">
     <xs:complexContent>
@@ -639,7 +581,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 5.10 Description
   <xs:complexType name="description">
     <xs:complexContent>
@@ -649,7 +590,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType> -->
-
   <!-- 5.11 Language
   <xs:complexType name="language">
     <xs:simpleContent>
@@ -659,19 +599,17 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType> -->
-
   <!-- 6 Rights -->
   <xs:complexType name="rights">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
       <xs:group ref="cost"/>
       <xs:group ref="copyrightAndOtherRestrictions"/>
-      <xs:group ref="description"/>
+      <xs:group ref="descriptionUnbounded"/>
       <xs:group ref="ex:customElements"/>
     </xs:choice>
     <xs:attributeGroup ref="ag:rights"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 6.1 Cost -->
   <xs:complexType name="cost">
     <xs:complexContent>
@@ -680,7 +618,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 6.2 Copyright and Other Restrictions -->
   <xs:complexType name="copyrightAndOtherRestrictions">
     <xs:complexContent>
@@ -689,7 +626,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 6.3 Description -->
   <xs:complexType name="description">
     <xs:complexContent>
@@ -699,7 +635,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 7 Relation -->
   <xs:complexType name="relation">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -710,7 +645,6 @@
     <xs:attributeGroup ref="ag:relation"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 7.1 Kind -->
   <xs:complexType name="kind">
     <xs:complexContent>
@@ -719,7 +653,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 7.2 Resource -->
   <xs:complexType name="resource">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -730,7 +663,6 @@
     <xs:attributeGroup ref="ag:resource"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 7.2.1 Identifier
   <xs:complexType name="identifier">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -741,7 +673,6 @@
     <xs:attributeGroup ref="ag:identifier"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType> -->
-
   <!-- 7.2.1.1 Catalog
   <xs:complexType name="catalog">
     <xs:simpleContent>
@@ -751,7 +682,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType> -->
-
   <!-- 7.2.1.2 Entry
   <xs:complexType name="entry">
     <xs:simpleContent>
@@ -761,7 +691,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType> -->
-
   <!-- 7.2.2 Description
   <xs:complexType name="description">
     <xs:complexContent>
@@ -771,7 +700,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType> -->
-
   <!-- 8 Annotation -->
   <xs:complexType name="annotation">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -783,7 +711,6 @@
     <xs:attributeGroup ref="ag:annotation"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 8.1 Entity -->
   <xs:complexType name="entity">
     <xs:simpleContent>
@@ -793,7 +720,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-
   <!-- 8.2 Date
   <xs:complexType name="date">
     <xs:complexContent>
@@ -803,7 +729,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType> -->
-
   <!-- 8.3 Description
   <xs:complexType name="description">
     <xs:complexContent>
@@ -813,7 +738,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType> -->
-
   <!-- 9 Classification -->
   <xs:complexType name="classification">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -826,7 +750,6 @@
     <xs:attributeGroup ref="ag:classification"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 9.1 Purpose -->
   <xs:complexType name="purpose">
     <xs:complexContent>
@@ -835,7 +758,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 9.2 Taxon Path -->
   <xs:complexType name="taxonPath">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -846,7 +768,6 @@
     <xs:attributeGroup ref="ag:taxonPath"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 9.2.1 Source -->
   <xs:complexType name="source">
     <xs:complexContent>
@@ -856,7 +777,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 9.2.2 Taxon -->
   <xs:complexType name="taxon">
     <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -867,7 +787,6 @@
     <xs:attributeGroup ref="ag:taxon"/>
     <xs:attributeGroup ref="ex:customAttributes"/>
   </xs:complexType>
-
   <!-- 9.2.2.1 Id -->
   <xs:complexType name="id">
     <xs:simpleContent>
@@ -877,7 +796,6 @@
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
-
   <!-- 9.2.2.2 Entry -->
   <xs:complexType name="entryTaxon">
     <xs:complexContent>
@@ -887,7 +805,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-
   <!-- 9.3 Description
   <xs:complexType name="description">
     <xs:complexContent>
@@ -897,7 +814,6 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType> -->
-
   <!-- 9.4 Keyword
   <xs:complexType name="keyword">
     <xs:complexContent>
@@ -907,5 +823,4 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType> -->
-
 </xs:schema>

@@ -1,9 +1,5 @@
-<xs:schema targetNamespace="http://ltsc.ieee.org/xsd/LOM/extend"
-           xmlns="http://ltsc.ieee.org/xsd/LOM/extend"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           elementFormDefault="qualified"
-           version="LOMFR NF Z 76-040 12/2006">
-
+<?xml version="1.0"?>
+<xs:schema xmlns="http://ltsc.ieee.org/xsd/LOM/extend" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ltsc.ieee.org/xsd/LOM/extend" elementFormDefault="qualified" version="LOMFR NF Z 76-040 12/2006">
   <xs:annotation>
     <xs:documentation>
        This work is licensed under the Creative Commons Attribution-ShareAlike
@@ -11,8 +7,7 @@
        visit http://creativecommons.org/licenses/by-sa/2.0 or send a letter to
        Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
     </xs:documentation>
-
-    <xs:documentation> 
+    <xs:documentation>
        This component schema definition defines the XML Schema content model groups 
        customElements and customAttributes. The content model groups are defined as 
        empty groups and are used in conjunction with other component XSDs to support 
@@ -46,13 +41,9 @@
         *****************************************************************************
     </xs:documentation>
   </xs:annotation>
-
   <!-- Model group declarations -->
-
   <xs:group name="customElements">
     <xs:choice/>
   </xs:group>
-
   <xs:attributeGroup name="customAttributes"/>
-
 </xs:schema>

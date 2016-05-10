@@ -1,753 +1,201 @@
-<xs:schema targetNamespace="http://www.lom-fr.fr/xsd/SCOLOMFR"
-	xmlns="http://www.lom-fr.fr/xsd/SCOLOMFR" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	elementFormDefault="qualified">
+<?xml version="1.0"?>
+<xs:schema xmlns="http://www.lom-fr.fr/xsd/SCOLOMFR" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.lom-fr.fr/xsd/SCOLOMFR" elementFormDefault="qualified">
+  <xs:annotation>
+	<xs:documentation>
+		Licence
+		Ce travail est placé sous licence Creative commons Attribution Partage à l'Identique 3.0 France.
+		Pour plus d'information, consulter le fichier "licence_scolomfr.txt" à la racine de ce package, ou le site http://creativecommons.org/licenses/by-sa/3.0/fr/
+	</xs:documentation>
+    <xs:documentation>
+	  Copyright
+      ScoLOMFRv2.0, schémas XSD (février 2016)
+      © 2015 Direction du Numérique pour l’Éducation - Ministère de l'Éducation nationale, de l'enseignement supérieur et de la Recherche / Réseau Canopé
+	</xs:documentation>
+	<xs:documentation>
+	  Nature
+		Ce fichier est un élément de l'ensemble des schémas XSD nécessaires à la mise en œuvre de ScoLOMFR 2.0 (février 2016).
+		ScoLOMFR est un profil d'application de LOM et LOMFR.
+		La version 2.0 des schémas intègre la validation de l'ensemble des vocabulaires définis à cette date, et comprend les ajouts suivants :
+		- intégration d'un élément complexe 4.3.1 "localisation étendue", destiné à fournir les éléments nécessaires pour un accès à la ressource via des plates-formes de gestion des accès ;
+		- intégration des URI comme identifiants de tous les concepts utilisés, dans une évolution vers le web sémantique ;
+		- ajout d'un élément "label" à tous les éléments déclinés du lom, et définis comme des paires (source, value).
+		           - Le champ "source" devient SCOLOMv2.0 ;
+		           - le champ "value" porte l'URI du concept, tel que défini dans les vocabulaires publiés ;
+		           - le champ "label" permet de saisir un libellé (par défaut le libellé du terme préférentiel du concept).
+		  Les présents schémas XSD présentent une compatibilité ascendante avec les fichiers conformes à LOMv1.0, LOMFR et ScoLOMFRv1.x.
+		  Toutes les valeurs de termes ayant été valides dans les schémas et vocabulaires publiés pour ces différentes version sont valides au sens des schémas ScoLOMFRv2.0.
+		 Toutefois, le présent package propose aussi un outil de migration permettant de migrer les fichiers LOM, LOMFR et ScoLOMFRv1.x en un format "strict" ScoLOMFRv2.0, dans lequel tous les éléments liés à des vocabulaires sont identifiés par leurs URI de concepts.
+		 Une version ultérieure des schémas permettra de passer dans une version ScoLOMFR dans laquelle tous les éléments liés à des vocabulaires seront identifiés par les URI de concepts.
+		 L'ensemble des vocabulaires, de la documentation et des éléments de cyce de vie de ScoLOMFR sont publiés sur le site http://www.lom-fr.fr/scolomfr/.
+	  </xs:documentation>
+	  <xs:documentation>
+	    Ce composant est appelé par scolomfrCustom.xsd (include)
+		Ce fichier associe les valeurs possibles des différents vocabulaires avec les fichiers corresponsants du répertoire scolomfr/vocab.
+		Les  fichiers de scolomfr/vocab  énumèrent, pour chaque vocabulaire, les valeurs valides du champ correspondant.
+		Afin de pouvoir valider toutes notices réalisées antérieurement, ce schéma définit un format dit "ScoLOMFRv2.0_lax", qui permet l'utilisation de toutes les valeurs ayant été utilisées dans les versions antérieures.
+		Les valeurs valides au sens des schémas ScoLOMFRv2.0 comportent :
+		- les URI nominaux des concepts du vocabulaire
+		- tous les ID ayant été utilisés dans une des versions antérieurement publiées
+		- dans un souci de compatibilité maximale, il comporte également tous les libellés correspondants.
+		Il est vivement conseillé de procéder à la migration des anciens fichiers, afin que les éléments relevant de vocabulaires contrôlés portent tous des identifiants URI nominaux des concepts. Ce format, dit "Scolomfrv2.0_strict", sera rendu obligatoire dans la version 3.0.
+	  </xs:documentation>
 
-	<!-- New vocabularies -->
+      <xs:documentation>
+          14/01/2016 - Adaptations ScoLOMFRv2.0 : inclusion des valeurs de vocabulaires situés dans le dossier scolomfr/vocab
+      </xs:documentation>
+   </xs:annotation>
 
-	<!-- 1.10 GeneralResourceType -->
-	<xs:simpleType name="generalResourceTypeValues">
-		<xs:restriction base="xs:token">
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0161"
-				value="actes de conférence" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-001"
-				value="annuaire" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-002"
-				value="archives" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-003"
-				value="article" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-004"
-				value="atlas" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0101"
-				value="autobiographie" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0331"
-				value="baladodiffusion" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-005"
-				value="bande dessinée" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-007"
-				value="banque d'images" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0141"
-				value="banque de documents" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-006"
-				value="banque de vidéos" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-008"
-				value="base de données" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0091"
-				value="bibliographie" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-009"
-				value="bibliographie / sitographie" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-010"
-				value="biographie" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0392"
-				value="bloc-notes" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0391"
-				value="blog" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0367"
-				value="étude" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0361"
-				value="étude comparative" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0332"
-				value="captation audiovisuelle" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0051"
-				value="caricature" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-011"
-				value="carte" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0121"
-				value="carte conceptuelle" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0111"
-				value="carte géographique" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-012"
-				value="carte heuristique et conceptuelle" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0122"
-				value="carte mentale" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-013"
-				value="chronologie" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-014"
-				value="collection de documents" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0092"
-				value="collection de références" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0162"
-				value="communication de conférence" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-015"
-				value="compte rendu" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-016"
-				value="conférence" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0381"
-				value="croquis" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0382"
-				value="dessin" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0383"
-				value="diagramme" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-017"
-				value="diaporama" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0261"
-				value="document de norme" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0021"
-				value="document historique" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0262"
-				value="document normatif" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0192"
-				value="dossier administratif" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0191"
-				value="dossier artistique" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-018"
-				value="dossier documentaire" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-019"
-				value="dossier technique" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0263"
-				value="e-book" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0163"
-				value="enregistrement audiovisuel d'une conférence" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0333"
-				value="enregistrement sonore" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0164"
-				value="enregistrement sonore d'une conférence" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-020"
-				value="exposition" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0201"
-				value="exposition virtuelle" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-021"
-				value="feuille de calcul" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0384"
-				value="figure" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-022"
-				value="film" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0221"
-				value="film d'animation" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0222"
-				value="film documentaire" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0071"
-				value="fonds photographique" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0061"
-				value="fonds vidéo" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0393"
-				value="forum" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0385"
-				value="graphique" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0231"
-				value="image de synthèse" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0232"
-				value="image de télédétection" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-023"
-				value="image numérique" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0233"
-				value="image satellitaire" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0234"
-				value="image scientifique" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0292"
-				value="livre" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-024"
-				value="livre numérique" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0223"
-				value="long-métrage" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0312"
-				value="magazine" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0251"
-				value="maquette" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-025"
-				value="maquette / prototype" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0281"
-				value="maquette virtuelle" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0291"
-				value="monographie" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0171"
-				value="montage sonorisé" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-026"
-				value="norme" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0362"
-				value="note" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-028"
-				value="objet 3D" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-027"
-				value="objet physique" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0282"
-				value="objet tridimensionnel" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0386"
-				value="organigramme" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-029"
-				value="ouvrage" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-030"
-				value="partition musicale" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-031"
-				value="périodique" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-032"
-				value="photographie" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-033"
-				value="podcast" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-034"
-				value="présentation multimédia" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0264"
-				value="profil d'application" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0352"
-				value="programme éducatif" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0351"
-				value="programme d'enseignement" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-035"
-				value="programme scolaire" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0252"
-				value="prototype" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-036"
-				value="rapport" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0363"
-				value="rapport de jury" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0364"
-				value="rapport de recherche" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0365"
-				value="rapport officiel" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-037"
-				value="référentiel de compétences" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0011"
-				value="répertoire" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0151"
-				value="résumé" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0311"
-				value="revue" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0181"
-				value="revue de presse" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-038"
-				value="schéma / graphique" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-039"
-				value="site Web" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0093"
-				value="sitographie" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0265"
-				value="standard" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0152"
-				value="synthèse" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-040"
-				value="tableau (art)" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0224"
-				value="téléfilm" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-041"
-				value="web média" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0411"
-				value="web radio" />
-			<xs:enumeration xml:id="scolomfr-voc-005-num-0412"
-				value="web TV" />
-		</xs:restriction>
-	</xs:simpleType>
+  <!-- Import de tous les vocabulaires -->
+  <xs:include schemaLocation="vocab/SourceValues.xsd"/>
 
-	<!-- 5.12 Activity -->
-	<xs:simpleType name="activityValues">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="expérimenter" />
-		</xs:restriction>
-	</xs:simpleType>
+  <!-- <xs:include schemaLocation="vocab/voc_001.xsd"/> -->
+  <xs:include schemaLocation="vocab/voc_002.xsd"/>
+  <xs:include schemaLocation="vocab/voc_003.xsd"/>
+  <xs:include schemaLocation="vocab/voc_004.xsd"/>
+  <xs:include schemaLocation="vocab/voc_005.xsd"/>
+  <xs:include schemaLocation="vocab/voc_006.xsd"/>
+  <xs:include schemaLocation="vocab/voc_007.xsd"/>
+  <xs:include schemaLocation="vocab/voc_008.xsd"/>
+  <xs:include schemaLocation="vocab/voc_009.xsd"/>
+  <xs:include schemaLocation="vocab/voc_010.xsd"/>
+  <xs:include schemaLocation="vocab/voc_011.xsd"/>
+  <xs:include schemaLocation="vocab/voc_012.xsd"/>
+  <xs:include schemaLocation="vocab/voc_013.xsd"/>
+  <!-- <xs:include schemaLocation="vocab/voc_014.xsd"/> -->
+  <!-- <xs:include schemaLocation="vocab/voc_015.xsd"/> -->
+  <!-- <xs:include schemaLocation="vocab/voc_016.xsd"/> -->
+  <xs:include schemaLocation="vocab/voc_017.xsd"/>
+  <xs:include schemaLocation="vocab/voc_018.xsd"/>
+  <xs:include schemaLocation="vocab/voc_019.xsd"/>
+  <xs:include schemaLocation="vocab/voc_020.xsd"/>
+  <!-- <xs:include schemaLocation="vocab/voc_021.xsd"/> -->
+  <!-- <xs:include schemaLocation="vocab/voc_022.xsd"/> -->
+  <xs:include schemaLocation="vocab/voc_023.xsd"/>
+  <xs:include schemaLocation="vocab/voc_024.xsd"/>
+  <xs:include schemaLocation="vocab/voc_025.xsd"/>
+  <xs:include schemaLocation="vocab/voc_026.xsd"/>
+  <xs:include schemaLocation="vocab/voc_027.xsd"/>
+  <xs:include schemaLocation="vocab/voc_028.xsd"/>
+  <!-- <xs:include schemaLocation="vocab/voc_029.xsd"/> -->
+  <!-- <xs:include schemaLocation="vocab/voc_031.xsd"/> -->
+  <!-- <xs:include schemaLocation="vocab/voc_040.xsd"/> -->
+  <!-- <xs:include schemaLocation="vocab/voc_041.xsd"/> -->
+  <!-- <xs:include schemaLocation="vocab/voc_042.xsd"/> -->
+  <!-- <xs:include schemaLocation="vocab/voc_043.xsd"/> -->
+  <xs:include schemaLocation="vocab/voc_044.xsd"/>
+  <!-- <xs:include schemaLocation="vocab/voc_045.xsd"/> -->
 
+  <!-- Source -->
+  <xs:simpleType name="sourceValues">
+    <xs:union memberTypes="sourceValuesList"/>
+  </xs:simpleType>
+  <!-- 1.7 Structure -->
+  <xs:simpleType name="structureValues">
+    <xs:union memberTypes="voc007Values"/>
+  </xs:simpleType>
+  <!-- 1.8 Aggregation Level -->
+  <xs:simpleType name="aggregationLevelValues">
+    <xs:union memberTypes="voc008Values"/>
+  </xs:simpleType>
+  <!-- 1.9 Document type -->
+  <xs:simpleType name="documentTypeValues">
+    <xs:union memberTypes="voc004Values"/>
+  </xs:simpleType>
+  <!-- 1.10 GeneralResourceType -->
+  <xs:simpleType name="generalResourceTypeValues">
+    <xs:union memberTypes="voc005Values"/>
+  </xs:simpleType>
+  <!-- 2.2 Status -->
+  <xs:simpleType name="statusValues">
+    <xs:union memberTypes="voc002Values"/>
+  </xs:simpleType>
+  <!-- 2.3.1 Role -->
+  <xs:simpleType name="roleValues">
+    <xs:union memberTypes="voc003Values"/>
+  </xs:simpleType>
+  <!-- 3.2.1 Role -->
+  <xs:simpleType name="roleMetaValues">
+    <xs:union memberTypes="voc013Values"/>
+  </xs:simpleType>
+  <!-- 4.1 format -->
+  <xs:simpleType name="formatValues">
+    <xs:union memberTypes="voc006Values"/>
+  </xs:simpleType>
 
-	<!-- 5.14 Place -->
-	<xs:simpleType name="placeValues">
-		<xs:restriction base="xs:token">
-			<!-- SCOLOMFR v1.0 -->
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0082"
-				value="au cinéma" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0083"
-				value="au théâtre" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0081"
-				value="à l'opéra" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-001"
-				value="en amphithéâtre" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-002"
-				value="en atelier" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-003"
-				value="en atelier de pédagogie personnalisée" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-009"
-				value="en bibliothèque, médiathèque" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-006"
-				value="en établissement" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0061"
-				value="en établissement scolaire" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-008"
-				value="en établissement socioculturel" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-004"
-				value="en CDI (Centre de documentation et d'information)" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0018"
-				value="en entreprise" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0012"
-				value="en installation de loisirs" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0013"
-				value="en installation sportive" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0014"
-				value="en laboratoire" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0015"
-				value="en laboratoire de langues" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-00141"
-				value="en laboratoire scientifique" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0016"
-				value="en milieu familial" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0017"
-				value="en milieu professionnel" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0010"
-				value="en musée" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-005"
-				value="en salle de classe" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0020"
-				value="en salle informatique" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0021"
-				value="en salle multimédia" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-007"
-				value="espace dédié à une pratique spécifique" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0011"
-				value="hors établissement" />
-			<xs:enumeration xml:id="scolomfr-voc-017-num-0019"
-				value="non précisé" />
-			<!-- SCOLOMFR v1.1 -->
-			<xs:enumeration value="en mobilité" />
-		</xs:restriction>
-	</xs:simpleType>
+  <!-- 4.3.1.3 personalDataProcessType-->
+  <xs:simpleType name="personalDataProcessTypeValues">
+    <xs:union memberTypes="voc044Values"/>
+  </xs:simpleType>
 
-	<!-- 5.15 EducationalMethod -->
-	<xs:simpleType name="educationalMethodValues">
-		<xs:restriction base="xs:token">
-			<!-- SCOLOMFR v1.0 -->
-			<xs:enumeration xml:id="scolomfr-voc-018-num-001"
-				value="à distance" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-002"
-				value="en alternance" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-003"
-				value="en autonomie" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-004"
-				value="en classe entière" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-005"
-				value="en collaboration" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-007"
-				value="en entreprise" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-012"
-				value="en groupe" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-013"
-				value="en groupe de compétences" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-014"
-				value="en ligne" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-015"
-				value="en tutorat" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-016"
-				value="modalité mixte" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-010"
-				value="PFE (période de formation en entreprise)" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-009"
-				value="PFMP (période de formation en entreprise)" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-017"
-				value="séjour pédagogique" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-018"
-				value="sortie culturelle" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-019"
-				value="sortie pédagogique" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-020"
-				value="spectacle" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-021"
-				value="travail de recherche" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-022"
-				value="travail en interdisciplinarité" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-023"
-				value="travaux dirigés" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-024"
-				value="travaux pratiques" />
-			<xs:enumeration xml:id="scolomfr-voc-018-num-008"
-				value="visite d'entreprise" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- 5.16 Tool -->
-	<xs:simpleType name="toolValues">
-		<xs:restriction base="xs:token">
-			<!-- SCOLOMFR v1.0 -->
-			<xs:enumeration value="logiciels RIP" />
-			<xs:enumeration value="logiciel système et de programmation" />
-			<xs:enumeration value="système d'exploitation" />
-			<xs:enumeration value="logiciel de développement d'application" />
-			<xs:enumeration value="navigateurs Web" />
-			<xs:enumeration value="logiciel d'application" />
-			<xs:enumeration value="didacticiel" />
-			<xs:enumeration value="exerciseur" />
-			<xs:enumeration value="suite bureautique" />
-			<xs:enumeration value="logiciel d'aide à l'orientation" />
-			<xs:enumeration value="logiciel d'animation 2D" />
-			<xs:enumeration value="logiciel d'animation 3D" />
-			<xs:enumeration value="logiciel de communication et d'échange" />
-			<xs:enumeration value="logiciel de dessin assisté par ordinateur" />
-			<xs:enumeration value="logiciel de gestion de contenu" />
-			<xs:enumeration value="logiciel de gestion de projet" />
-			<xs:enumeration value="logiciel de messagerie" />
-			<xs:enumeration value="logiciel de montage vidéo" />
-			<xs:enumeration value="logiciel de présentation" />
-			<xs:enumeration value="logiciel de recherche documentaire" />
-			<xs:enumeration value="logiciel de traitement de son" />
-			<xs:enumeration value="logiciel de traitement de tableaux et calculs" />
-			<xs:enumeration value="logiciel de traitement de texte" />
-			<xs:enumeration value="logiciel de traitement d'enquête" />
-			<xs:enumeration value="logiciel de traitement d'image fixe" />
-			<xs:enumeration value="logiciel de traitement vidéo" />
-			<xs:enumeration value="logiciel de travail collaboratif" />
-			<xs:enumeration value="logiciel d'édition Web" />
-			<xs:enumeration value="logiciel d'image de synthèse" />
-			<xs:enumeration value="logiciel organisateur des idées" />
-			<xs:enumeration value="logiciel ou application de lecture" />
-			<xs:enumeration value="logiciel PAO" />
-			<xs:enumeration value="logiciel d’édition et de gestion d’exercices" />
-			<xs:enumeration value="logiciel text-to-speech" />
-			<xs:enumeration value="moteur de recherche" />
-			<xs:enumeration value="outil blogue" />
-			<xs:enumeration value="outil de mise en ligne" />
-			<xs:enumeration value="outil de modélisation" />
-			<xs:enumeration value="outil d'encodage" />
-			<xs:enumeration value="SGBD" />
-			<xs:enumeration value="SIG" />
-			<xs:enumeration value="matériel" />
-			<xs:enumeration value="appareil photographique" />
-			<xs:enumeration value="baladeur" />
-			<xs:enumeration value="borne informatique" />
-			<xs:enumeration value="calculatrice" />
-			<xs:enumeration value="camescope" />
-			<xs:enumeration value="classe mobile" />
-			<xs:enumeration value="écran tactile" />
-			<xs:enumeration value="machine à commande numérique" />
-			<xs:enumeration value="matériel de lecture livre numérique" />
-			<xs:enumeration value="ordinateur" />
-			<xs:enumeration value="outil de microscopie" />
-			<xs:enumeration value="PDA" />
-			<xs:enumeration value="rétroprojecteur" />
-			<xs:enumeration value="tablette informatique" />
-			<xs:enumeration value="TBI" />
-			<xs:enumeration value="vidéoprojecteur" />
-			<xs:enumeration value="outil de compensation" />
-			<xs:enumeration value="ressource d'information" />
-			<xs:enumeration value="atlas" />
-			<xs:enumeration value="base de données" />
-			<xs:enumeration value="carte heuristique" />
-			<xs:enumeration value="cédérom" />
-			<xs:enumeration value="dictionnaire, glossaire" />
-			<xs:enumeration value="documentation technique" />
-			<xs:enumeration value="encyclopédie" />
-			<xs:enumeration value="ENT" />
-			<xs:enumeration value="podcast" />
-		</xs:restriction>
-	</xs:simpleType>
-
-
-	<!-- Extended vocabularies -->
-
-	<!-- Source -->
-	<xs:simpleType name="sourceValues">
-		<xs:restriction base="xs:token">
-			<!-- SCOLOMFR v1.0 -->
-			<xs:enumeration value="SCOLOMFRv1.0" />
-			<!-- SCOLOMFR v1.1 -->
-			<xs:enumeration value="SCOLOMFRv1.1" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- 2.3.1 Role -->
-	<xs:simpleType name="roleValues">
-		<xs:restriction base="xs:token">
-			<!-- SCOLOMFR v1.0 -->
-			<xs:enumeration xml:id="scolomfr-voc-003-num-001"
-				value="auteur" />
-			<xs:enumeration xml:id="lom-author" value="author" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-002"
-				value="éditeur" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-003"
-				value="concepteur graphique" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-004"
-				value="concepteur pédagogique" />
-			<xs:enumeration xml:id="lom-contentprovider" value="content provider" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-005"
-				value="contributeur" />
-			<xs:enumeration xml:id="lom-contributor" value="contributor" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-017"
-				value="diffuseur / distributeur" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-016"
-				value="directeur de la publication" />
-			<xs:enumeration xml:id="lom-editor" value="editor" />
-			<xs:enumeration xml:id="lom-educavalidator" value="educational validator" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-006"
-				value="expert du domaine" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-007"
-				value="fournisseur de contenu" />
-			<xs:enumeration xml:id="lom-graphdesigner" value="graphical designer" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-010"
-				value="implémenteur technique" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-008"
-				value="inconnu" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-009"
-				value="initiateur" />
-			<xs:enumeration xml:id="lom-initiator" value="initiator" />
-			<xs:enumeration xml:id="lom-instrdesigner" value="instructional designer" />
-			<xs:enumeration xml:id="lom-publisher" value="publisher" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-011"
-				value="rédacteur de scenario" />
-			<xs:enumeration xml:id="lom-scriptwriter" value="script writer" />
-			<xs:enumeration xml:id="lom-subjectmatterexpert"
-				value="subject matter expert" />
-			<xs:enumeration xml:id="lom-technimplementer" value="technical implementer" />
-			<xs:enumeration xml:id="lom-technvalidator" value="technical validator" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-012"
-				value="terminateur" />
-			<xs:enumeration xml:id="lom-terminator" value="terminator" />
-			<xs:enumeration xml:id="lom-unknown" value="unknown" />
-			<xs:enumeration xml:id="lom-validator" value="validator" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-013"
-				value="valideur" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-0131"
-				value="valideur juridique" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-015"
-				value="valideur pédagogique" />
-			<xs:enumeration xml:id="scolomfr-voc-003-num-014"
-				value="valideur technique" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- 5.2 Learning Resource Type -->
-	<xs:simpleType name="learningResourceTypeValues">
-		<xs:restriction base="xs:token">
-			<xs:enumeration xml:id="scolomfr-voc-010-num-001"
-				value="animation" />
-			<xs:enumeration xml:id="lomfr-anim" value="animation" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-023"
-				value="annales" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-002"
-				value="autoévaluation" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0092"
-				value="énoncé d'exercice" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0051"
-				value="énoncé d'une problématique" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-005"
-				value="énoncé de problème" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-006"
-				value="étude de cas" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-007"
-				value="évaluation" />
-			<xs:enumeration xml:id="lomfr-eval" value="évaluation" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0181"
-				value="carnet de bord" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0182"
-				value="compte rendu de lecture" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0091"
-				value="corrigé d'exercice" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-003"
-				value="cours / présentation" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-024"
-				value="cyberquête" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0203"
-				value="cycle d'activités pédagogiques" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-004"
-				value="démonstration" />
-			<xs:enumeration xml:id="lomfr-demo" value="démonstration" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0072"
-				value="diagnostic de rentrée scolaire" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0152"
-				value="dictionnaire" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0221"
-				value="didacticiel" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0151"
-				value="document de référence" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0153"
-				value="encyclopédie" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0193"
-				value="enquête" />
-			<xs:enumeration xml:id="exam" value="exam" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-008"
-				value="examen" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-009"
-				value="exercice" />
-			<xs:enumeration xml:id="exercise" value="exercise" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-010"
-				value="expérience" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0101"
-				value="expérimentation" />
-			<xs:enumeration xml:id="experiment" value="experiment" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0183"
-				value="exposé d'élève" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0093"
-				value="fiche d'exercice" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-011"
-				value="glossaire" />
-			<xs:enumeration xml:id="lomfr-glossaire" value="glossaire" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-012"
-				value="guide" />
-			<xs:enumeration xml:id="lomfr-guide" value="guide" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-013"
-				value="jeu éducatif" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0131"
-				value="jeu sérieux" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0194"
-				value="journal scolaire" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0032"
-				value="leçon" />
-			<xs:enumeration xml:id="lecture" value="lecture" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0033"
-				value="lecture / présentation" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-014"
-				value="manuel d'enseignement" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0141"
-				value="manuel scolaire" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-015"
-				value="matériel de référence" />
-			<xs:enumeration xml:id="lomfr-matref" value="matériel de référence" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0161"
-				value="méthode d'apprentissage" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-025"
-				value="méthode de langues" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-016"
-				value="méthodologie" />
-			<xs:enumeration xml:id="lomfr-methodo" value="méthodologie" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-017"
-				value="outil" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0171"
-				value="outil de production pédagogique" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0082"
-				value="préparation à l'examen" />
-			<xs:enumeration xml:id="problemstatement" value="problem statement" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-018"
-				value="production d'élève" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0191"
-				value="QCM (question à choix multiples)" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0192"
-				value="QROC (question à réponse ouverte et courte)" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-019"
-				value="questionnaire" />
-			<xs:enumeration xml:id="questionnaire" value="questionnaire" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0094"
-				value="recueil d'exercices" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0202"
-				value="séance pédagogique" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0201"
-				value="séquence pédagogique" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-020"
-				value="scénario pédagogique" />
-			<xs:enumeration xml:id="lomfr-scenar" value="scénario pédagogique" />
-			<xs:enumeration xml:id="selfassessment" value="self assessment" />
-			<xs:enumeration xml:id="lom-seriousgame" value="serious game" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-021"
-				value="simulation" />
-			<xs:enumeration xml:id="simulation" value="simulation" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0081"
-				value="sujet d'examen et de concours" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0031"
-				value="support de cours" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0162"
-				value="support méthodologique" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-026"
-				value="témoignage pédagogique" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0071"
-				value="test de niveau" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-0154"
-				value="texte officiel" />
-			<xs:enumeration xml:id="scolomfr-voc-010-num-022"
-				value="tutoriel" />
-			<xs:enumeration xml:id="lomfr-tuto" value="tutoriel" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- 7.1 Kind -->
-	<xs:simpleType name="kindValues">
-		<xs:restriction base="xs:token">
-			<xs:enumeration xml:id="scolomfr-voc-009-num-023"
-				value="a pour aperçu" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-022"
-				value="a pour logo" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-021"
-				value="a pour vignette" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-020"
-				value="conforme à" />
-			<xs:enumeration xml:id="conformsTo" value="conformsTo" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-011"
-				value="contient" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-013"
-				value="contient une référence à" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-001"
-				value="est associé à" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-019"
-				value="est basé sur" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-024"
-				value="est l'aperçu de" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-018"
-				value="est la base de" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-002"
-				value="est la localisation de" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-016"
-				value="est la traduction de" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-012"
-				value="est référencé par" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-006"
-				value="est remplacé par" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-008"
-				value="est requis par" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-014"
-				value="est un format de" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-010"
-				value="est une partie de" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-004"
-				value="est une version de" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-015"
-				value="existe dans un format" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-005"
-				value="existe en une autre version" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-003"
-				value="fait l'objet d'une localisation" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-017"
-				value="fait l'objet d'une traduction" />
-			<xs:enumeration xml:id="hasformat" value="has format" />
-			<xs:enumeration xml:id="haspart" value="has part" />
-			<xs:enumeration xml:id="hasversion" value="has version" />
-			<xs:enumeration xml:id="isbasedon" value="is based on" />
-			<xs:enumeration xml:id="isbasisfor" value="is basis for" />
-			<xs:enumeration xml:id="isformatof" value="is format of" />
-			<xs:enumeration xml:id="ispartof" value="is part of" />
-			<xs:enumeration xml:id="isreferencedby" value="is referenced by" />
-			<xs:enumeration xml:id="isrequiredby" value="is required by" />
-			<xs:enumeration xml:id="isversionof" value="is version of" />
-			<xs:enumeration xml:id="isReplacedBy" value="isReplacedBy" />
-			<xs:enumeration xml:id="references" value="references" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-007"
-				value="remplace" />
-			<xs:enumeration xml:id="replaces" value="replaces" />
-			<xs:enumeration xml:id="scolomfr-voc-009-num-009"
-				value="requiert" />
-			<xs:enumeration xml:id="requires" value="requires" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<!-- 9.1 Purpose -->
-	<xs:simpleType name="purposeValues">
-		<xs:restriction base="xs:token">
-			<xs:enumeration xml:id="lom-accessrestrictions" value="accessibility restrictions" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-001"
-				value="champ disciplinaire" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-002"
-				value="compétence" />
-			<xs:enumeration xml:id="lom-competency" value="competency" />
-			<xs:enumeration xml:id="LOM-discipline" value="discipline" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-003"
-				value="domaine d'enseignement" />
-			<xs:enumeration xml:id="lom-educlevel" value="educational level" />
-			<xs:enumeration xml:id="lom-educobjective" value="educational objective" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-004"
-				value="enseignement" />
-			<xs:enumeration xml:id="lom-idea" value="idea" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-013"
-				value="label" />
-			<xs:enumeration xml:id="lomfr-niveaueduc" value="niveau éducatif" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-007"
-				value="niveau éducatif détaillé" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-005"
-				value="niveau de compétence" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-006"
-				value="niveau de sécurité" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-008"
-				value="notion" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-009"
-				value="objectif pédagogique" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-010"
-				value="pré-requis" />
-			<xs:enumeration xml:id="lom-prerequisite" value="prerequisite" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-011"
-				value="public cible détaillé" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-012"
-				value="restriction d'accessibilité" />
-			<xs:enumeration xml:id="lom-securitylevel" value="security level" />
-			<xs:enumeration xml:id="lom-skilllevel" value="skill level" />
-			<xs:enumeration xml:id="scolomfr-voc-028-num-014"
-				value="type de diffusion" />
-		</xs:restriction>
-	</xs:simpleType>
-
+  <!-- 4.4.1.1 Type -->
+  <xs:simpleType name="typeValues">
+    <xs:union memberTypes="voc023Values"/>
+  </xs:simpleType>
+  <!-- 4.4.1.2 Name -->
+  <xs:simpleType name="nameValues">
+    <xs:union memberTypes="voc024Values"/>
+  </xs:simpleType>
+  <!-- 5.1 Interactivity Type -->
+  <!-- Non utilisé en ScoLOMFR -->
+  <xs:simpleType name="interactivityTypeValues">
+    <xs:restriction base="xs:token"/>
+  </xs:simpleType>
+  <!-- 5.2 Learning Resource Type -->
+  <xs:simpleType name="learningResourceTypeValues">
+    <xs:union memberTypes="voc010Values"/>
+  </xs:simpleType>
+  <!-- 5.3 Interactivity Level -->
+  <!-- Non utilisé en ScoLOMFR -->
+  <xs:simpleType name="interactivityLevelValues">
+    <xs:restriction base="xs:token"/>
+  </xs:simpleType>
+  <!-- 5.4 Semantic Density -->
+  <!-- Non utilisé en ScoLOMFR -->
+  <xs:simpleType name="semanticDensityValues">
+    <xs:restriction base="xs:token"/>
+  </xs:simpleType>
+  <!-- 5.5 Intended End User Role -->
+  <xs:simpleType name="intendedEndUserRoleValues">
+    <xs:union memberTypes="voc011Values"/>
+  </xs:simpleType>
+  <!-- 5.6 Context -->
+  <xs:simpleType name="contextValues">
+    <xs:union memberTypes="voc012Values"/>
+  </xs:simpleType>
+  <!-- 5.8 Difficulty -->
+  <xs:simpleType name="difficultyValues">
+    <xs:union memberTypes="voc025Values"/>
+  </xs:simpleType>
+  <!-- 5.12 Activity -->
+  <xs:simpleType name="activityValues">
+    <xs:union memberTypes="voc019Values"/>
+  </xs:simpleType>
+  <!-- 5.14 Place -->
+  <xs:simpleType name="placeValues">
+    <xs:union memberTypes="voc017Values"/>
+  </xs:simpleType>
+  <!-- 5.15 educationalMethod -->
+  <xs:simpleType name="educationalMethodValues">
+    <xs:union memberTypes="voc018Values"/>
+  </xs:simpleType>
+  <!-- 5.16 tool -->
+  <xs:simpleType name="toolValues">
+    <xs:union memberTypes="voc020Values"/>
+  </xs:simpleType>
+  <!-- 6.1 Cost -->
+  <xs:simpleType name="costValues">
+    <xs:union memberTypes="voc026Values"/>
+  </xs:simpleType>
+  <!-- 6.2 Copyright and Other Restrictions -->
+  <xs:simpleType name="copyrightAndOtherRestrictionsValues">
+    <xs:union memberTypes="voc027Values"/>
+  </xs:simpleType>
+  <!-- 7.1 Kind -->
+  <xs:simpleType name="kindValues">
+    <xs:union memberTypes="voc009Values"/>
+  </xs:simpleType>
+  <!-- 9.1 Purpose -->
+  <xs:simpleType name="purposeValues">
+    <xs:union memberTypes="voc028Values"/>
+  </xs:simpleType>
 </xs:schema>

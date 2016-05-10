@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vocabs xmlns="http://apiscol.crdp.ac-versailles.fr/2016" xmlns:apiscol="http://apiscol.crdp.ac-versailles.fr/2016" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+  <vocab uri="http://data.education.fr/voc/scolomfr/scolomfr-voc-003">
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/author</id>
+      <label>auteur</label>
+      <comment>Entité responsable de la création du contenu de la ressource.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/content_provider</id>
+      <label>fournisseur de contenu</label>
+      <comment>Entité qui est secondairement responsable du contenu de la ressource. Elle peut avoir assuré des activités liées à la création, la structuration ou l'agrégation du contenu de la ressource. Dans le cas où la fourniture relève d'une expertise du domaine, utiliser alors "expert du domaine".</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/editor</id>
+      <label>directeur de la publication</label>
+      <comment>Entité qui coordonne les différentes contributions éditoriales à la ressource.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/educational_validator</id>
+      <label>valideur pédagogique</label>
+      <comment>"Entité responsable de confirmer l'intégrité pédagogique de la ressource" (Source : Normetic v1.1).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/graphical_designer</id>
+      <label>concepteur graphique</label>
+      <comment>Entité responsable de la création des éléments graphiques et visuels d'une ressource.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/initiator</id>
+      <label>initiateur</label>
+      <comment>"Entité à l'origine du processus de développement de la ressource" (Source : Normetic v1.1). Cette valeur peut être utilisée pour des responsables d'appel à projet qui ne peuvent être cités comme éditeur.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/instructional_designer</id>
+      <label>concepteur pédagogique</label>
+      <comment>Entité responsable d'appliquer les principes pédagogiques soutenant la conception de la ressource" (Source : Normetic v1.1).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/publisher</id>
+      <label>éditeur</label>
+      <comment>Entité responsable de la mise à disposition de la ressource : un établissement, une académie, une maison d'édition.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-003-num-005</id>
+      <label>contributeur</label>
+      <comment>Entité ayant contribuée au contenu de la ressource, sans que la nature de sa contribution soit spécifiée.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-003-num-017</id>
+      <label>diffuseur / distributeur</label>
+      <comment>Entité responsable du stockage puis de la mise à disposition de la ressource.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-003-num-019</id>
+      <label>logiciel de conversion</label>
+      <comment>Programme permettant la conversion de métadonnées. A ne pas confondre "logiciel de saisie".</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-003-num-021</id>
+      <label>logiciel de saisie</label>
+      <comment>Programme permettant la saisie manuelle de métadonnées. A ne pas confondre avec "logiciel de conversion".</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/script_writer</id>
+      <label>rédacteur de scénario</label>
+      <comment>Entité responsable de la création du déroulement d'une action ou de la trame pédagogique d'une ressource. On utilisera "auteur" si le rédacteur de scénario est le principal responsable du contenu d'une ressource.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/subject_matter_expert</id>
+      <label>expert du domaine</label>
+      <comment>Entité qualifiée pour juger de la pertinence du contenu de la ressource. Dans le cas où un expert du domaine fournit l'information, il est alors également "fournisseur de contenu".</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/technical_implementer</id>
+      <label>implémenteur technique</label>
+      <comment>Entité qui effectue l'ensemble des opérations techniques nécessaires pour élaborer la ressource. Par exemple : une cellule TICE, un développeur informatique...</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/technical_validator</id>
+      <label>valideur technique</label>
+      <comment>"Entité responsable de confirmer l'intégrité pédagogique de la ressource" (Source : Normetic v1.1).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/terminator</id>
+      <label>terminateur</label>
+      <comment>Entité qui peut refuser la diffusion de la ressource.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/unknown</id>
+      <label>inconnu</label>
+      <comment>"Utiliser ce terme pour toute entité dont la contribution ou le rôle est incertain" (Source : Normetic v1.1). Lui préférer "contributeur".</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/validator_2</id>
+      <label>valideur</label>
+      <comment>"Entité responsable de confirmer l'intégrité de la ressource" (Source : Normetic v1.1). S'emploie aussi pour d'autres types de valideur comme un valideur juridique.</comment>
+    </term>
+  </vocab>
+  <vocab uri="http://data.education.fr/voc/scolomfr/scolomfr-voc-005">
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-047</id>
+      <label>œuvre picturale</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-001</id>
+      <label>annuaire</label>
+      <comment>"Ensemble d'adresses (d'une personne, d'un organisme, d'une source d'information, d'un site Web,...) pouvant être complétées par d'autres informations associées (chiffre d'affaire d'un organisme, rôle et fonction d'une personne, nom du dirigeant d'un organisme,...). Sous une forme papier, il peut paraître annuellement." (Source : Vocabulaire de la documentation, ADBS, 2004) Exemple : annuaire des établissements scolaires, annuaires de sites web disciplinaires...</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-002</id>
+      <label>archives</label>
+      <comment>Ensemble de documents d'archives, documents historiques, montages d'archives, quels que soient leur date, leur forme et leur support matériel (imprimé, audiovisuel, sonore ou électronique).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-003</id>
+      <label>article</label>
+      <comment>"Texte indépendant constituant une partie d'une publication périodique, d'un blog, d'un dictionnaire, d'une encyclopédie" (Source : Vocabulaire de la documentation, ADBS, 2004).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-004</id>
+      <label>atlas</label>
+      <comment>"Recueil ordonné de cartes conçu pour représenter un espace donné et/ou exposer un ou plusieurs thèmes." (Source : Vocabulaire de la documentation, ADBS, 2004).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-005</id>
+      <label>bande dessinée</label>
+      <comment>Succession de dessins organisés en séquences, qui suggère le déroulement d'une histoire, les caricatures, les dessins de presse et également les recueils de dessins humoristiques.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-006</id>
+      <label>banque de vidéos</label>
+      <comment>Base de données contenant spécifiquement des vidéos.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-007</id>
+      <label>banque d'images</label>
+      <comment>Base de données contenant spécifiquement des images (dessins, photos, illustrations).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-008</id>
+      <label>base de données</label>
+      <comment>Ensemble de données organisées et structurées de façon homogène.&#13;
+Ne pas confondre avec le logiciel servant à construire des bases de données.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-009</id>
+      <label>bibliographie / sitographie</label>
+      <comment>Liste de description de documents bibliographiques ou de sites, organisés selon certains critères pour en permettre le repérage.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-010</id>
+      <label>biographie</label>
+      <comment>Écrit portant sur la vie d'une personne.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-011</id>
+      <label>carte</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-012</id>
+      <label>carte heuristique et conceptuelle</label>
+      <comment>Représentation graphique d'idées, de concepts ou d'informations...</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-013</id>
+      <label>chronologie</label>
+      <comment>Ensemble de faits présentés dans un ordre croissant. Exemple : la chronologie des rois de France.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-014</id>
+      <label>collection de documents</label>
+      <comment>Une banque de documents, un dossier regroupant des documents, un entrepôt de documents sont des collections de documents regroupés à des fins et selon des caractéristiques différentes.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-015</id>
+      <label>compte rendu</label>
+      <comment>Compte rendu de réunion, de visite...</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-016</id>
+      <label>conférence</label>
+      <comment>Y compris les enregistrements sonore et/ou audiovisuel d'une conférence.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-017</id>
+      <label>diaporama</label>
+      <comment>"Un diaporama est un spectacle de projection de diapositives ; par extension on entend par ce terme toute suite d'images ou de documents reliés par des effets et sur lesquels il est possible de mettre du son" (Source : Wikipédia).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-018</id>
+      <label>dossier documentaire</label>
+      <comment>Produit documentaire constitué d'un ensemble de documents de sources diverses, choisis et réunis sur une question donnée, et organisé de façon à faciliter l'accès à l'information rassemblée.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-019</id>
+      <label>dossier technique</label>
+      <comment>Désigne un ensemble de documents contenant des informations techniques (tels que des nomenclatures, des schémas, des plans, etc.).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-020</id>
+      <label>exposition</label>
+      <comment>Ensemble de documents sélectionnés selon une thématique précise pour être montrée au public.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-021</id>
+      <label>feuille de calcul</label>
+      <comment>Document principal utilisé dans un tableur pour gérer et stocker des données. Une feuille de calcul est composée de cellules organisées en lignes et en colonnes. Certaines données sont issues de calcul.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-022</id>
+      <label>film</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-023</id>
+      <label>image numérique</label>
+      <comment>Toute image (dessin, icône, photographie...) acquise, créée, traitée ou stockée sous forme binaire.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-024</id>
+      <label>livre numérique</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-025</id>
+      <label>maquette / prototype</label>
+      <comment>Reproduction en grandeur naturelle (prototype) ou à l'échelle réduite (maquette) d'une machine, d'un processus, d'un bâtiment...</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-026</id>
+      <label>norme</label>
+      <comment>Document, établi par consensus et approuvé par un organisme reconnu, qui fournit, pour des usages communs et répétés, des règles, des lignes directrices ou des caractéristiques, pour des activités ou leurs résultats, garantissant un niveau d'ordre optimal dans un contexte donné." (définition de l'ISO/CEI).
+Utilisé non seulement pour des documents de normes élaborés par des organismes officiels, mais également pour des standards.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-027</id>
+      <label>objet physique</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-028</id>
+      <label>objet 3D</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-029</id>
+      <label>ouvrage</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-030</id>
+      <label>partition musicale</label>
+      <comment>Support de transcription des caractéristiques du son musical.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-031</id>
+      <label>périodique</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-032</id>
+      <label>photographie</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-033</id>
+      <label>podcast</label>
+      <comment>Ressource audio ou vidéo diffusée en série via Internet.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-034</id>
+      <label>présentation multimédia</label>
+      <comment>Une présentation multimédia désigne une présentation synchrone ou asynchrone dont le support peut être tout type de média.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-035</id>
+      <label>programme scolaire</label>
+      <comment>"Ensemble des thèmes abordés par un enseignement dans un laps de temps donné" (Source : Wikipédia).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-036</id>
+      <label>rapport</label>
+      <comment>"Document (écrit) qui décrit les résultats de recherches, d'enquêtes, d'observation ou d'autres études" (Source : Vocabulaire de la documentation, ADBS, 2004). Un scénario ou une séquence pédagogiques s'expose - en fonction de son ampleur - dans une note ou dans un rapport.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-037</id>
+      <label>référentiel de compétences</label>
+      <comment>Répertoire établi sous une forme organisée, de compétences et/ou aptitudes requises pour remplir une tâche, exercer une fonction, un métier, etc.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-038</id>
+      <label>schéma / graphique</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-039</id>
+      <label>site Web</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-040</id>
+      <label>tableau (art)</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-041</id>
+      <label>web média</label>
+      <comment>Tout média au format spécifique pour le Web. Ex : web TV, web radio.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-042</id>
+      <label>chanson</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-043</id>
+      <label>conte</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-044</id>
+      <label>image interactive</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-045</id>
+      <label>image, animation 3D</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-046</id>
+      <label>nouvelle</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-048</id>
+      <label>anthologie</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-049</id>
+      <label>poème</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-050</id>
+      <label>catalogue</label>
+      <comment>Ensemble de ressources rassemblées en fonction de critères (éditeur, thématique, niveau). A ne pas confondre avec base de données.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-051</id>
+      <label>banque de sons</label>
+      <comment>Base de données contenant spécifiquement des sons.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-055</id>
+      <label>traitement de données</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-056</id>
+      <label>vidéo interactive</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-058</id>
+      <label>pièce de théâtre</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-059</id>
+      <label>publicité</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-060</id>
+      <label>recueil de contes</label>
+      <comment>Contient plusieurs contes.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-061</id>
+      <label>recueil de nouvelles</label>
+      <comment>Contient plusieurs nouvelles.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-062</id>
+      <label>roman</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-005-num-063</id>
+      <label>saynète</label>
+      <comment/>
+    </term>
+  </vocab>
+  <vocab uri="http://data.education.fr/voc/scolomfr/scolomfr-voc-008">
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-008-num-01</id>
+      <label>1 - Granule</label>
+      <comment>Ressource indivisible. Fait référence à une ressource que l'on estime ne pouvant pas être fragmentée et qui pourra être exploitée dans des ressources pédagogiques de granularité plus élevée (2, 3 ou 4). Par exemple, une photo ou une fiche technique, un exercice unique, le support d'une leçon...</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-008-num-02</id>
+      <label>2 - Leçon</label>
+      <comment>Ensemble d'objets d'apprentissage de niveau 1. Fait référence à une ressource pédagogique regroupant un ensemble d'objets pédagogiques ou fragments. Par exemple : une ressource présentant une leçon incluant une vidéo numérique et un exercice ; une ressource présentant un travail d'évaluation et composée des consignes et support d'exercices, ainsi que des corrections.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-008-num-03</id>
+      <label>3 - Cours</label>
+      <comment>Ensemble d'objets d'apprentissage de niveau 2. Fait référence à une ressource rassemblant un ensemble d'objets de niveau d'agrégation supérieur. Par exemple : une ressource décrivant un cours composé de plusieurs leçons.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-008-num-04</id>
+      <label>4 - Module</label>
+      <comment>Ensemble d'objets d'apprentissage de niveau 3 (granularité la plus élevée dans ce modèle). Fait référence à une ressource rassemblant un ensemble d'objets de niveau d'agrégation la plus élevée. Par exemple : une ressource décrivant le programme d'enseignement menant à un diplôme ou certificat.</comment>
+    </term>
+  </vocab>
+</vocabs>

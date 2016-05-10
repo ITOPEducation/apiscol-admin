@@ -33,13 +33,15 @@ class ScoLOMfrDAO extends AbstractDAO {
 	public function updateGeneralResourceType($generalResourceTypes) {
 		$this->cleanGeneralResourceTypes ();
 		foreach ( $generalResourceTypes as $generalResourceType ) {
-			$this->addGeneralResourceType ( $generalResourceType );
+			if (is_array ( $generalResourceType ) && isset ( $generalResourceType ['label'] ) && isset ( $generalResourceType ['value'] ))
+				$this->addGeneralResourceType ( $generalResourceType ['value'], $generalResourceType ['label'] );
 		}
 	}
 	public function updateAggregationLevel($aggregationLevel) {
 		$this->cleanAggregationLevel ();
-		if ($aggregationLevel != "none")
-			$this->addAggregationLevel ( $aggregationLevel );
+		if (is_array ( $aggregationLevel ) && isset ( $aggregationLevel ['label'] ) && isset ( $aggregationLevel ['value'] )) {
+			$this->addAggregationLevel ( $aggregationLevel ['value'], $aggregationLevel ['label'] );
+		}
 	}
 	public function updateLearningResourceType($learningResourceTypes) {
 		$this->cleanLearningResourceTypes ();
@@ -202,20 +204,24 @@ class ScoLOMfrDAO extends AbstractDAO {
 		$keywordElem->appendChild ( $string );
 		$this->getGeneralElement ()->appendChild ( $keywordElem );
 	}
-	private function addGeneralResourceType($resourceType) {
+	private function addGeneralResourceType($resourceTypeValue, $resourceTypeLabel) {
 		$generalResourceTypeElem = $this->document->createElement ( "scolomfr:generalResourceType" );
-		$source = $this->document->createElement ( "scolomfr:source", "SCOLOMFRv1.0" );
-		$value = $this->document->createElement ( "scolomfr:value", $resourceType );
+		$source = $this->document->createElement ( "scolomfr:source", "SCOLOMFRv2.0" );
+		$value = $this->document->createElement ( "scolomfr:value", $resourceTypeValue );
+		$label = $this->document->createElement ( "scolomfr:label", $resourceTypeLabel );
 		$generalResourceTypeElem->appendChild ( $source );
 		$generalResourceTypeElem->appendChild ( $value );
+		$generalResourceTypeElem->appendChild ( $label );
 		$this->getGeneralElement ()->appendChild ( $generalResourceTypeElem );
 	}
-	private function addAggregationLevel($aggregationLevel) {
+	private function addAggregationLevel($aggregationLevelValue, $aggregationLevelLabel) {
 		$aggregationLevelElem = $this->document->createElement ( "aggregationLevel" );
 		$source = $this->document->createElement ( "source", "LOMv1.0" );
-		$value = $this->document->createElement ( "value", $aggregationLevel );
+		$value = $this->document->createElement ( "value", $aggregationLevelValue );
+		$label = $this->document->createElement ( "label", $aggregationLevelLabel );
 		$aggregationLevelElem->appendChild ( $source );
 		$aggregationLevelElem->appendChild ( $value );
+		$aggregationLevelElem->appendChild ( $label );
 		$this->getGeneralElement ()->appendChild ( $aggregationLevelElem );
 	}
 	private function addLearningResourceType($resourceType) {
@@ -277,7 +283,6 @@ class ScoLOMfrDAO extends AbstractDAO {
 		}
 	}
 	private function createContribute($vcard, $role, $date) {
-		echo ($role . '\n');
 		$contribute = $this->document->createElement ( "contribute" );
 		$roleElem = $this->document->createElement ( "role" );
 		$entity = $this->document->createElement ( "entity" );
