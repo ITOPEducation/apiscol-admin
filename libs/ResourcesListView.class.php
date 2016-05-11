@@ -65,7 +65,9 @@ class ResourcesListView extends AbstractView implements IView {
 		$this->render = str_replace ( "[CONTROLS]", $controls, $this->render );
 	}
 	public function encode($pathSegment) {
-		return preg_replace ( '/\?/', '%3F', $pathSegment );
+		$pathSegment= preg_replace ( '/\?/', '%3F', $pathSegment );
+		$pathSegment= preg_replace ( '|/|', '%2F', $pathSegment );
+		return $pathSegment;
 	}
 }
 ?>

@@ -1,7 +1,6 @@
 RewriteEngine on
 RewriteRule ^query-suggest/([^/]+)$ .?mode=async&autocomplete=true&query=$1 [L]
 RewriteRule ^resources/detail/([^/]+)/search$ .?page=resources&action=detail&panel=search&metadata-id=$1 [L,QSA]
-
 RewriteRule ^resources/detail/[^/]+/refresh/refresh-process-report/([a-z.0-9/:_-]+)/async$ .?page=resources&action=detail&panel=refresh&refresh-process-report=$1&mode=async [L]
 RewriteRule ^resources/detail/([^/]+)/display/display-mode/([^/]+)$ .?page=resources&action=detail&panel=display&metadata-id=$1&display-mode=$2 [L]
 RewriteRule ^resources/detail/([^/]+)/display/display-device/([^/]+)$ .?page=resources&action=detail&panel=display&metadata-id=$1&display-device=$2 [L]

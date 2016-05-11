@@ -390,6 +390,13 @@
 	</xsl:template>
 	<xsl:template match="apiscol:facet">
 		<xsl:param name="name"></xsl:param>
+		<xsl:variable name="facetcontent">
+			<xsl:call-template name="string-replace-all">
+				<xsl:with-param name="text" select="." />
+				<xsl:with-param name="replace" select="'/'" />
+				<xsl:with-param name="by" select="'%2f'" />
+			</xsl:call-template>
+		</xsl:variable>
 		<li>
 			<xsl:element name="a">
 				<xsl:attribute name="href">
@@ -397,7 +404,7 @@
 				<xsl:text>/resources/list/static-filter/[</xsl:text>
 				<xsl:value-of select="$name"></xsl:value-of>
 					<xsl:text>::</xsl:text>
-					<xsl:value-of select="."></xsl:value-of>
+					<xsl:value-of select="$facetcontent"></xsl:value-of>
 					<xsl:text>]</xsl:text>
 				</xsl:attribute>
 				<xsl:value-of select="."></xsl:value-of>
