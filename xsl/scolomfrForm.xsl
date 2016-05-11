@@ -305,7 +305,10 @@
 				<ul>
 					<xsl:for-each select="/lom:lom/lom:general/scolomfr:generalResourceType">
 						<li>
-							<xsl:value-of select="scolomfr:label"></xsl:value-of> (<xsl:value-of select="scolomfr:value"></xsl:value-of>)
+							<xsl:value-of select="scolomfr:label"></xsl:value-of>
+							(
+							<xsl:value-of select="scolomfr:value"></xsl:value-of>
+							)
 						</li>
 					</xsl:for-each>
 				</ul>
@@ -339,6 +342,9 @@
 						<xsl:attribute name="title">
 				<xsl:value-of select="$comment"></xsl:value-of>
 				</xsl:attribute>
+						<xsl:if test="$value=$registredValue">
+							<xsl:attribute name="selected">selected</xsl:attribute>
+						</xsl:if>
 						<xsl:value-of select="$label"></xsl:value-of>
 					</option>
 				</xsl:for-each>
