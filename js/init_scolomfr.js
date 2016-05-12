@@ -318,16 +318,20 @@ function displayVcards() {
 			.each(
 					function(index, elem) {
 						var vcardString = $(elem).text();
-						var role = $(elem).prev("th.role-label").text();
+						var roleLabel = $(elem).prev("th.role-label").text();
 						var date = $(elem).next("td.date-label").text();
 						var tr = $(elem).closest("tr");
+						var roleId = tr.attr("id");
 						tr
 								.append(
 										$('<input type="hidden" name="lifeCycle-contributor-vcard[]" value="'
 												+ vcardString + '"/>'))
 								.append(
-										$('<input type="hidden" name="lifeCycle-contributor-role[]" value="'
-												+ role + '"/>'))
+										$('<input type="hidden" name="lifeCycle-contributor-role-label[]" value="'
+												+ roleLabel + '"/>'))
+								.append(
+										$('<input type="hidden" name="lifeCycle-contributor-role-id[]" value="'
+												+ roleId + '"/>'))
 								.append(
 										$('<input type="hidden" name="lifeCycle-contributor-date[]" value="'
 												+ date + '"/>'));

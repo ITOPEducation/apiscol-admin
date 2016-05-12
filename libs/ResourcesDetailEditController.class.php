@@ -185,7 +185,7 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 				$this->separateLabelAndValueInArray ( Security::$_CLEAN ['general-generalResourceType'] );
 				$this->model->getLomMetadata ()->updateGeneralResourceType ( Security::$_CLEAN ['general-generalResourceType'] );
 			}
-			if (array_key_exists ( 'general-aggregationLevel', Security::$_CLEAN ) && !empty(Security::$_CLEAN ['general-aggregationLevel'] )) {
+			if (array_key_exists ( 'general-aggregationLevel', Security::$_CLEAN ) && ! empty ( Security::$_CLEAN ['general-aggregationLevel'] )) {
 				Security::$_CLEAN ['general-aggregationLevel'] = $this->separateLabelAndValue ( Security::$_CLEAN ['general-aggregationLevel'] );
 				$this->model->getLomMetadata ()->updateAggregationLevel ( Security::$_CLEAN ['general-aggregationLevel'] );
 			}
@@ -205,8 +205,9 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 				$this->model->getLomMetadata ()->updateDifficulty ( Security::$_CLEAN ['educational-difficulty'] );
 			if (array_key_exists ( 'classifications', Security::$_CLEAN ))
 				$this->model->getLomMetadata ()->updateClassifications ( Security::$_CLEAN ['classifications'] );
-			if (array_key_exists ( 'lifeCycle-contributor-vcard', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-date', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-role', Security::$_CLEAN ))
-				$this->model->getLomMetadata ()->updateContributors ( Security::$_CLEAN ['lifeCycle-contributor-vcard'], Security::$_CLEAN ['lifeCycle-contributor-role'], Security::$_CLEAN ['lifeCycle-contributor-date'] );
+			if (array_key_exists ( 'lifeCycle-contributor-vcard', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-date', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-role-label', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-role-id', Security::$_CLEAN ))
+				
+				$this->model->getLomMetadata ()->updateContributors ( Security::$_CLEAN ['lifeCycle-contributor-vcard'], Security::$_CLEAN ['lifeCycle-contributor-role-id'], Security::$_CLEAN ['lifeCycle-contributor-role-label'], Security::$_CLEAN ['lifeCycle-contributor-date'] );
 			try {
 // 				echo ($this->model->getLomMetadata ()->getDocumentAsString ());
 // 				die ();

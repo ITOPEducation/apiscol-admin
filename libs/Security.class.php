@@ -64,7 +64,9 @@ class Security {
 			"educational-intendedEndUserRole" => "string-array",
 			"lifeCycle-contributor-date" => "string-array",
 			"lifeCycle-contributor-vcard" => "string-array",
-			"lifeCycle-contributor-role" => "string-array",
+			"lifeCycle-contributor-role-label" => "string-array",
+			// TODO type uri-array
+			"lifeCycle-contributor-role-id" => "string-array",
 			"educational-difficulty" => "string",
 			"classifications" => "json",
 			"target-repository" => "target-repository",

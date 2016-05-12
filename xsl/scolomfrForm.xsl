@@ -578,9 +578,13 @@
 	</xsl:template>
 	<xsl:template match="lom:lom/lom:lifeCycle/lom:contribute">
 		<xsl:param name="mode"></xsl:param>
-		<xsl:variable name="role">
+		<xsl:variable name="rolevalue">
 
 			<xsl:value-of select="lom:role/lom:value"></xsl:value-of>
+		</xsl:variable>
+		<xsl:variable name="rolelabel">
+
+			<xsl:value-of select="lom:role/lom:label"></xsl:value-of>
 		</xsl:variable>
 		<xsl:variable name="date">
 			<xsl:value-of select="lom:date/lom:dateTime"></xsl:value-of>
@@ -590,11 +594,14 @@
 			<xsl:attribute name="class">
 								<xsl:value-of select="'role'"></xsl:value-of>
 							</xsl:attribute>
+			<xsl:attribute name="id">
+			<xsl:value-of select="$rolevalue"></xsl:value-of>
+			</xsl:attribute>
 			<xsl:element name="th" namespace="">
 				<xsl:attribute name="class">
 								<xsl:value-of select="'role-label'"></xsl:value-of>
 							</xsl:attribute>
-				<xsl:value-of select="$role"></xsl:value-of>
+				<xsl:value-of select="$rolelabel"></xsl:value-of>
 
 			</xsl:element>
 			<xsl:element name="td" namespace="">

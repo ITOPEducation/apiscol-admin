@@ -99,10 +99,10 @@ class ScoLOMfrDAO extends AbstractDAO {
 		}
 		$this->removeVoidClassifications ();
 	}
-	public function updateContributors($vcards, $roles, $dates) {
+	public function updateContributors($vcards, $roleIds, $roleLabels, $dates) {
 		$this->cleanContributes ();
 		for($i = 0; $i < count ( $vcards ); $i ++) {
-			$this->createContribute ( $vcards [$i], $roles [$i], $dates [$i] );
+			$this->createContribute ( $vcards [$i], $roleIds [$i], $roleLabels [$i], $dates [$i] );
 		}
 	}
 	private function cleanContributes() {
@@ -282,22 +282,26 @@ class ScoLOMfrDAO extends AbstractDAO {
 				$classification->parentNode->removeChild ( $classification );
 		}
 	}
-	private function createContribute($vcard, $role, $date) {
+	private function createContribute($vcard, $roleId, $roleLabel, $date) {
 		$contribute = $this->document->createElement ( "contribute" );
 		$roleElem = $this->document->createElement ( "role" );
 		$entity = $this->document->createElement ( "entity" );
 		$dateElem = $this->document->createElement ( "date" );
 		$source = $this->document->createElement ( "source" );
 		$value = $this->document->createElement ( "value" );
+		$label = $this->document->createElement ( "label" );
 		$dateTime = $this->document->createElement ( "dateTime" );
 		$sourceValue = $this->document->createTextNode ( "LOMv1.0" );
-		$valueValue = $this->document->createTextNode ( $role );
+		$valueValue = $this->document->createTextNode ( $roleId );
+		$labelValue = $this->document->createTextNode ( $roleLabel );
 		$entityValue = $this->document->createTextNode ( $vcard );
 		$dateTimeValue = $this->document->createTextNode ( $date );
 		$source->appendChild ( $sourceValue );
 		$value->appendChild ( $valueValue );
+		$label->appendChild ( $labelValue );
 		$roleElem->appendChild ( $source );
 		$roleElem->appendChild ( $value );
+		$roleElem->appendChild ( $label );
 		$contribute->appendChild ( $roleElem );
 		$entity->appendChild ( $entityValue );
 		$contribute->appendChild ( $entity );
