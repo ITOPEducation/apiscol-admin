@@ -73,7 +73,8 @@ class ScoLOMfrDAO extends AbstractDAO {
 	public function updateIntendedEndUserRole($intendedEndUserRoles) {
 		$this->cleanIntendedEndUserRoles ();
 		foreach ( $intendedEndUserRoles as $intendedEndUserRole ) {
-			$this->addIntendedEndUserRole ( $intendedEndUserRole );
+			if (is_array ( $intendedEndUserRole ) && isset ( $intendedEndUserRole ['label'] ) && isset ( $intendedEndUserRole ['value'] ))
+				$this->addIntendedEndUserRole ( $intendedEndUserRole ['value'], $intendedEndUserRole ['label'] );
 		}
 	}
 	public function updateDifficulty($difficulty) {
@@ -256,12 +257,14 @@ class ScoLOMfrDAO extends AbstractDAO {
 		$activityElem->appendChild ( $value );
 		$this->getEducationalElement ()->appendChild ( $activityElem );
 	}
-	private function addIntendedEndUserRole($intendedEndUserRole) {
+	private function addIntendedEndUserRole($intendedEndUserRoleValue, $intendedEndUserRoleLabel) {
 		$intendedEndUserRoleElem = $this->document->createElement ( "intendedEndUserRole" );
 		$source = $this->document->createElement ( "source", "LOMv1.0" );
-		$value = $this->document->createElement ( "value", $intendedEndUserRole );
+		$value = $this->document->createElement ( "value", $intendedEndUserRoleValue );
+		$label = $this->document->createElement ( "label", $intendedEndUserRoleLabel );
 		$intendedEndUserRoleElem->appendChild ( $source );
 		$intendedEndUserRoleElem->appendChild ( $value );
+		$intendedEndUserRoleElem->appendChild ( $label );
 		$this->getEducationalElement ()->appendChild ( $intendedEndUserRoleElem );
 	}
 	private function addDifficulty($difficulty) {

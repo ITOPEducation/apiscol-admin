@@ -20,6 +20,9 @@
 			<xsl:call-template name="findvocablist">
 				<xsl:with-param name="number" select="'008'" />
 			</xsl:call-template>
+			<xsl:call-template name="findvocablist">
+				<xsl:with-param name="number" select="'011'" />
+			</xsl:call-template>
 		</vocabs>
 
 	</xsl:template>

@@ -165,10 +165,12 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 				'value' => $value 
 		);
 	}
-	private function separateLabelAndValueInArray(array &$arrayOfTexts) {
+	private function separateLabelAndValueInArray(array $arrayOfTexts) {
+		$result = array ();
 		foreach ( $arrayOfTexts as $key => $text ) {
-			$arrayOfTexts [$key] = $this->separateLabelAndValue ( $text );
+			$result [$key] = $this->separateLabelAndValue ( $text );
 		}
+		return $result;
 	}
 	public function processUpdateMetadataAction($secondTry = false) {
 		if (isset ( Security::$_CLEAN ['update-metadata'] )) {
@@ -181,13 +183,12 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 			if (array_key_exists ( 'general-keyword', Security::$_CLEAN ))
 				$this->model->getLomMetadata ()->updateKeywords ( Security::$_CLEAN ['general-keyword'] );
 			if (array_key_exists ( 'general-generalResourceType', Security::$_CLEAN )) {
-				
-				$this->separateLabelAndValueInArray ( Security::$_CLEAN ['general-generalResourceType'] );
-				$this->model->getLomMetadata ()->updateGeneralResourceType ( Security::$_CLEAN ['general-generalResourceType'] );
+				$separatedvalues = $this->separateLabelAndValueInArray ( Security::$_CLEAN ['general-generalResourceType'] );
+				$this->model->getLomMetadata ()->updateGeneralResourceType ( $separatedvalues );
 			}
 			if (array_key_exists ( 'general-aggregationLevel', Security::$_CLEAN ) && ! empty ( Security::$_CLEAN ['general-aggregationLevel'] )) {
-				Security::$_CLEAN ['general-aggregationLevel'] = $this->separateLabelAndValue ( Security::$_CLEAN ['general-aggregationLevel'] );
-				$this->model->getLomMetadata ()->updateAggregationLevel ( Security::$_CLEAN ['general-aggregationLevel'] );
+				$separatedvalues = $this->separateLabelAndValue ( Security::$_CLEAN ['general-aggregationLevel'] );
+				$this->model->getLomMetadata ()->updateAggregationLevel ( $separatedvalues );
 			}
 			if (array_key_exists ( 'educational-description', Security::$_CLEAN ))
 				$this->model->getLomMetadata ()->updateEducationalDescription ( Security::$_CLEAN ['educational-description'] );
@@ -199,8 +200,10 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 				$this->model->getLomMetadata ()->updateEducationalMethod ( Security::$_CLEAN ['educational-educationalMethod'] );
 			if (array_key_exists ( 'educational-activity', Security::$_CLEAN ))
 				$this->model->getLomMetadata ()->updateActivity ( Security::$_CLEAN ['educational-activity'] );
-			if (array_key_exists ( 'educational-intendedEndUserRole', Security::$_CLEAN ))
-				$this->model->getLomMetadata ()->updateIntendedEndUserRole ( Security::$_CLEAN ['educational-intendedEndUserRole'] );
+			if (array_key_exists ( 'educational-intendedEndUserRole', Security::$_CLEAN )) {
+				$separatedvalues = $this->separateLabelAndValueInArray ( Security::$_CLEAN ['educational-intendedEndUserRole'] );
+				$this->model->getLomMetadata ()->updateIntendedEndUserRole ( $separatedvalues );
+			}
 			if (array_key_exists ( 'educational-difficulty', Security::$_CLEAN ))
 				$this->model->getLomMetadata ()->updateDifficulty ( Security::$_CLEAN ['educational-difficulty'] );
 			if (array_key_exists ( 'classifications', Security::$_CLEAN ))
@@ -209,8 +212,8 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 				
 				$this->model->getLomMetadata ()->updateContributors ( Security::$_CLEAN ['lifeCycle-contributor-vcard'], Security::$_CLEAN ['lifeCycle-contributor-role-id'], Security::$_CLEAN ['lifeCycle-contributor-role-label'], Security::$_CLEAN ['lifeCycle-contributor-date'] );
 			try {
-// 				echo ($this->model->getLomMetadata ()->getDocumentAsString ());
-// 				die ();
+				// echo ($this->model->getLomMetadata ()->getDocumentAsString ());
+				// die ();
 				$this->model->getLomMetadata ()->send ( $this->model->getMetadata ()->getId (), $this->model->getMetadata ()->getEtag () );
 			} catch ( HttpRequestException $e ) {
 				if (! $secondTry) {

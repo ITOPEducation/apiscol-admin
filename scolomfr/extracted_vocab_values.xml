@@ -418,4 +418,26 @@ Utilisé non seulement pour des documents de normes élaborés par des organisme
       <comment>Ensemble d'objets d'apprentissage de niveau 3 (granularité la plus élevée dans ce modèle). Fait référence à une ressource rassemblant un ensemble d'objets de niveau d'agrégation la plus élevée. Par exemple : une ressource décrivant le programme d'enseignement menant à un diplôme ou certificat.</comment>
     </term>
   </vocab>
+  <vocab uri="http://data.education.fr/voc/scolomfr/scolomfr-voc-011">
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/author_2</id>
+      <label>auteur</label>
+      <comment>Personne qui utilise ou réutilise une ressource à des fins de production.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/learner</id>
+      <label>apprenant</label>
+      <comment>Personne qui exploite, travaille avec la ressource afin d'apprendre quelque chose.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/manager</id>
+      <label>gestionnaire</label>
+      <comment>Personne qui gère ou déploie des ressources.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/teacher</id>
+      <label>enseignant</label>
+      <comment>Personne responsable par les activités de transmission des connaissances et compétences dans le cadre de la "formation tout au long de la vie". Inclut les tuteurs.</comment>
+    </term>
+  </vocab>
 </vocabs>
