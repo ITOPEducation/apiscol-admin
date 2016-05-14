@@ -352,17 +352,18 @@
 		<div class="elt_label">
 			Type pédagogique de la ressource
 		</div>
-		<xsl:variable name="lrt-vocabvalues"
-			select="document('../scolomfr/xsd/scolomfr/scolomfrVocabValues.xsd')/xs:schema" />
 		<div>
 			<select size="1">
 				<xsl:for-each
-					select="$lrt-vocabvalues/*[@name='learningResourceTypeValues']/xs:restriction/xs:enumeration">
+					select="$extractedvocabvalues/apiscol:vocabs/apiscol:vocab[@uri='http://data.education.fr/voc/scolomfr/scolomfr-voc-010']/apiscol:term">
 					<option>
 						<xsl:attribute name="value">
-				<xsl:value-of select="@value"></xsl:value-of>
+				<xsl:value-of select="./apiscol:id"></xsl:value-of>
 				</xsl:attribute>
-						<xsl:value-of select="@value"></xsl:value-of>
+						<xsl:attribute name="title">
+				<xsl:value-of select="./apiscol:comment"></xsl:value-of>
+				</xsl:attribute>
+						<xsl:value-of select="./apiscol:label"></xsl:value-of>
 					</option>
 				</xsl:for-each>
 			</select>
@@ -376,7 +377,7 @@
 				<ul>
 					<xsl:for-each select="/lom:lom/lom:educational/lom:learningResourceType">
 						<li>
-							<xsl:value-of select="lom:value"></xsl:value-of>
+							<xsl:value-of select="lom:label"></xsl:value-of> (<xsl:value-of select="lom:value"></xsl:value-of>)
 						</li>
 					</xsl:for-each>
 				</ul>
@@ -388,17 +389,18 @@
 		<div class="elt_label">
 			Lieu
 		</div>
-		<xsl:variable name="place-vocabvalues"
-			select="document('../scolomfr/xsd/scolomfr/scolomfrVocabValues.xsd')/xs:schema" />
 		<div>
 			<select size="1">
 				<xsl:for-each
-					select="$place-vocabvalues/*[@name='placeValues']/xs:restriction/xs:enumeration">
+					select="$extractedvocabvalues/apiscol:vocabs/apiscol:vocab[@uri='http://data.education.fr/voc/scolomfr/scolomfr-voc-017']/apiscol:term">
 					<option>
 						<xsl:attribute name="value">
-				<xsl:value-of select="@value"></xsl:value-of>
+				<xsl:value-of select="./apiscol:id"></xsl:value-of>
 				</xsl:attribute>
-						<xsl:value-of select="@value"></xsl:value-of>
+						<xsl:attribute name="title">
+				<xsl:value-of select="./apiscol:comment"></xsl:value-of>
+				</xsl:attribute>
+						<xsl:value-of select="./apiscol:label"></xsl:value-of>
 					</option>
 				</xsl:for-each>
 			</select>
@@ -412,7 +414,7 @@
 				<ul>
 					<xsl:for-each select="/lom:lom/lom:educational/scolomfr:place">
 						<li>
-							<xsl:value-of select="scolomfr:value"></xsl:value-of>
+							<xsl:value-of select="scolomfr:label"></xsl:value-of> (<xsl:value-of select="scolomfr:value"></xsl:value-of>)
 						</li>
 					</xsl:for-each>
 				</ul>
@@ -460,20 +462,19 @@
 		<div class="elt_label">
 			Modalité pédagogique
 		</div>
-		<xsl:variable name="educationalMethod-vocabvalues"
-			select="document('../scolomfr/xsd/scolomfr/scolomfrVocabValues.xsd')/xs:schema" />
 		<div>
 			<select size="1">
 				<xsl:for-each
-					select="$educationalMethod-vocabvalues/*[@name='educationalMethodValues']/xs:restriction/xs:enumeration">
+					select="$extractedvocabvalues/apiscol:vocabs/apiscol:vocab[@uri='http://data.education.fr/voc/scolomfr/scolomfr-voc-018']/apiscol:term">
 					<option>
 						<xsl:attribute name="value">
-				<xsl:value-of select="@value"></xsl:value-of>
+				<xsl:value-of select="./apiscol:id"></xsl:value-of>
 				</xsl:attribute>
-						<xsl:value-of select="@value"></xsl:value-of>
-					</option>
-				</xsl:for-each>
-			</select>
+						<xsl:attribute name="title">
+				<xsl:value-of select="./apiscol:comment"></xsl:value-of>
+				</xsl:attribute>
+						<xsl:value-of select="./apiscol:label"></xsl:value-of>
+					</option>				</xsl:for-each>			</select>
 			<span class="register-entry">
 				Ajouter
 			</span>
@@ -484,7 +485,7 @@
 				<ul>
 					<xsl:for-each select="/lom:lom/lom:educational/scolomfr:educationalMethod">
 						<li>
-							<xsl:value-of select="scolomfr:value"></xsl:value-of>
+							<xsl:value-of select="scolomfr:label"></xsl:value-of> (<xsl:value-of select="scolomfr:value"></xsl:value-of>)
 						</li>
 					</xsl:for-each>
 				</ul>
@@ -503,23 +504,16 @@
 		<div>
 			<select size="1">
 				<xsl:for-each
-					select="$lomfr-activity-vocabvalues/*[@name='activityValues']/xs:restriction/xs:enumeration">
+					select="$extractedvocabvalues/apiscol:vocabs/apiscol:vocab[@uri='http://data.education.fr/voc/scolomfr/scolomfr-voc-019']/apiscol:term">
 					<option>
 						<xsl:attribute name="value">
-				<xsl:value-of select="@value"></xsl:value-of>
+				<xsl:value-of select="./apiscol:id"></xsl:value-of>
 				</xsl:attribute>
-						<xsl:value-of select="@value"></xsl:value-of>
-					</option>
-				</xsl:for-each>
-				<xsl:for-each
-					select="$activity-vocabvalues/*[@name='activityValues']/xs:restriction/xs:enumeration">
-					<option>
-						<xsl:attribute name="value">
-				<xsl:value-of select="@value"></xsl:value-of>
+						<xsl:attribute name="title">
+				<xsl:value-of select="./apiscol:comment"></xsl:value-of>
 				</xsl:attribute>
-						<xsl:value-of select="@value"></xsl:value-of>
-					</option>
-				</xsl:for-each>
+						<xsl:value-of select="./apiscol:label"></xsl:value-of>
+					</option>				</xsl:for-each>
 			</select>
 			<span class="register-entry">
 				Ajouter
@@ -531,7 +525,7 @@
 				<ul>
 					<xsl:for-each select="/lom:lom/lom:educational/lomfr:activity">
 						<li>
-							<xsl:value-of select="lomfr:value"></xsl:value-of>
+							<xsl:value-of select="lomfr:label"></xsl:value-of> (<xsl:value-of select="lomfr:value"></xsl:value-of>)
 						</li>
 					</xsl:for-each>
 				</ul>
@@ -543,26 +537,30 @@
 		<div class="elt_label">
 			Difficulté
 		</div>
-		<xsl:variable name="difficulty-vocabvalues"
-			select="document('../scolomfr/xsd/common/vocabValues.xsd')/xs:schema" />
 		<xsl:variable name="registredValue"
 			select="/lom:lom/lom:educational/lom:difficulty/lom:value" />
+			
 		<div>
 			<select size="1" name="educational-difficulty">
 				<option value="none">
 
 					Non renseigné</option>
 				<xsl:for-each
-					select="$difficulty-vocabvalues/*[@name='difficultyValues']/xs:restriction/xs:enumeration">
-
+					select="$extractedvocabvalues/apiscol:vocabs/apiscol:vocab[@uri='http://data.education.fr/voc/scolomfr/scolomfr-voc-025']/apiscol:term">
 					<option>
+						<xsl:variable name="label" select="./apiscol:label" />
+						<xsl:variable name="value" select="./apiscol:id" />
+						<xsl:variable name="comment" select="./apiscol:comment" />
 						<xsl:attribute name="value">
-				<xsl:value-of select="@value"></xsl:value-of>
+				<xsl:value-of select="concat($label,'(',$value,')')"></xsl:value-of>
 				</xsl:attribute>
-						<xsl:if test="@value=$registredValue">
+						<xsl:attribute name="title">
+				<xsl:value-of select="$comment"></xsl:value-of>
+				</xsl:attribute>
+						<xsl:if test="$value=$registredValue">
 							<xsl:attribute name="selected">selected</xsl:attribute>
 						</xsl:if>
-						<xsl:value-of select="@value"></xsl:value-of>
+						<xsl:value-of select="$label"></xsl:value-of>
 					</option>
 				</xsl:for-each>
 			</select>

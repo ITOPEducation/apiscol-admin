@@ -21,7 +21,22 @@
 				<xsl:with-param name="number" select="'008'" />
 			</xsl:call-template>
 			<xsl:call-template name="findvocablist">
+				<xsl:with-param name="number" select="'010'" />
+			</xsl:call-template>
+			<xsl:call-template name="findvocablist">
 				<xsl:with-param name="number" select="'011'" />
+			</xsl:call-template>
+			<xsl:call-template name="findvocablist">
+				<xsl:with-param name="number" select="'017'" />
+			</xsl:call-template>
+			<xsl:call-template name="findvocablist">
+				<xsl:with-param name="number" select="'018'" />
+			</xsl:call-template>
+			<xsl:call-template name="findvocablist">
+				<xsl:with-param name="number" select="'019'" />
+			</xsl:call-template>
+			<xsl:call-template name="findvocablist">
+				<xsl:with-param name="number" select="'025'" />
 			</xsl:call-template>
 		</vocabs>
 

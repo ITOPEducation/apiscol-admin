@@ -46,7 +46,8 @@ class ScoLOMfrDAO extends AbstractDAO {
 	public function updateLearningResourceType($learningResourceTypes) {
 		$this->cleanLearningResourceTypes ();
 		foreach ( $learningResourceTypes as $learningResourceType ) {
-			$this->addLearningResourceType ( $learningResourceType );
+			if (is_array ( $learningResourceType ) && isset ( $learningResourceType ['label'] ) && isset ( $learningResourceType ['value'] ))
+				$this->addLearningResourceType ( $learningResourceType ['value'], $learningResourceType ['label'] );
 		}
 	}
 	public function updateEducationalDescription($title) {
@@ -55,19 +56,22 @@ class ScoLOMfrDAO extends AbstractDAO {
 	public function updatePlace($places) {
 		$this->cleanPlaces ();
 		foreach ( $places as $place ) {
-			$this->addPlace ( $place );
+			if (is_array ( $place ) && isset ( $place ['label'] ) && isset ( $place ['value'] ))
+				$this->addPlace ( $place ['value'], $place ['label'] );
 		}
 	}
 	public function updateEducationalMethod($educationalMethods) {
 		$this->cleanEducationalMethods ();
 		foreach ( $educationalMethods as $educationalMethod ) {
-			$this->addEducationalMethod ( $educationalMethod );
+			if (is_array ( $educationalMethod ) && isset ( $educationalMethod ['label'] ) && isset ( $educationalMethod ['value'] ))
+				$this->addEducationalMethod ( $educationalMethod ['value'], $educationalMethod ['label'] );
 		}
 	}
 	public function updateActivity($activities) {
 		$this->cleanActivities ();
 		foreach ( $activities as $activity ) {
-			$this->addActivity ( $activity );
+			if (is_array ( $activity ) && isset ( $activity ['label'] ) && isset ( $activity ['value'] ))
+				$this->addActivity ( $activity ['value'], $activity ['label'] );
 		}
 	}
 	public function updateIntendedEndUserRole($intendedEndUserRoles) {
@@ -79,8 +83,9 @@ class ScoLOMfrDAO extends AbstractDAO {
 	}
 	public function updateDifficulty($difficulty) {
 		$this->cleanDifficulty ();
-		if ($difficulty != "none")
-			$this->addDifficulty ( $difficulty );
+		if (is_array ( $difficulty ) && isset ( $difficulty ['label'] ) && isset ( $difficulty ['value'] )) {
+			$this->addDifficulty ( $difficulty ['value'], $difficulty ['label'] );
+		}
 	}
 	public function updateClassifications($classifications) {
 		foreach ( $classifications as $key => $value ) {
@@ -225,36 +230,44 @@ class ScoLOMfrDAO extends AbstractDAO {
 		$aggregationLevelElem->appendChild ( $label );
 		$this->getGeneralElement ()->appendChild ( $aggregationLevelElem );
 	}
-	private function addLearningResourceType($resourceType) {
+	private function addLearningResourceType($resourceTypeValue, $resourceTypeLabel) {
 		$learningResourceTypeElem = $this->document->createElement ( "learningResourceType" );
 		$source = $this->document->createElement ( "source", "LOMFRv1.0" );
-		$value = $this->document->createElement ( "value", $resourceType );
+		$value = $this->document->createElement ( "value", $resourceTypeValue );
+		$label = $this->document->createElement ( "label", $resourceTypeLabel );
 		$learningResourceTypeElem->appendChild ( $source );
 		$learningResourceTypeElem->appendChild ( $value );
+		$learningResourceTypeElem->appendChild ( $label );
 		$this->getEducationalElement ()->appendChild ( $learningResourceTypeElem );
 	}
-	private function addPlace($place) {
+	private function addPlace($placeValue, $placeLabel) {
 		$placeElem = $this->document->createElement ( "scolomfr:place" );
 		$source = $this->document->createElement ( "scolomfr:source", "SCOLOMFRv1.0" );
-		$value = $this->document->createElement ( "scolomfr:value", $place );
+		$value = $this->document->createElement ( "scolomfr:value", $placeValue );
+		$label = $this->document->createElement ( "scolomfr:label", $placeLabel );
 		$placeElem->appendChild ( $source );
 		$placeElem->appendChild ( $value );
+		$placeElem->appendChild ( $label );
 		$this->getEducationalElement ()->appendChild ( $placeElem );
 	}
-	private function addEducationalMethod($educationalMethod) {
+	private function addEducationalMethod($educationalMethodValue, $educationalMethodLabel) {
 		$educationalMethodElem = $this->document->createElement ( "scolomfr:educationalMethod" );
 		$source = $this->document->createElement ( "scolomfr:source", "SCOLOMFRv1.0" );
-		$value = $this->document->createElement ( "scolomfr:value", $educationalMethod );
+		$value = $this->document->createElement ( "scolomfr:value", $educationalMethodValue );
+		$label = $this->document->createElement ( "scolomfr:label", $educationalMethodLabel );
 		$educationalMethodElem->appendChild ( $source );
 		$educationalMethodElem->appendChild ( $value );
+		$educationalMethodElem->appendChild ( $label );
 		$this->getEducationalElement ()->appendChild ( $educationalMethodElem );
 	}
-	private function addActivity($activity) {
+	private function addActivity($activityValue, $activityLabel) {
 		$activityElem = $this->document->createElement ( "lomfr:activity" );
 		$source = $this->document->createElement ( "lomfr:source", "LOMFRv1.0" );
-		$value = $this->document->createElement ( "lomfr:value", $activity );
+		$value = $this->document->createElement ( "lomfr:value", $activityValue );
+		$label = $this->document->createElement ( "lomfr:label", $activityLabel );
 		$activityElem->appendChild ( $source );
 		$activityElem->appendChild ( $value );
+		$activityElem->appendChild ( $label );
 		$this->getEducationalElement ()->appendChild ( $activityElem );
 	}
 	private function addIntendedEndUserRole($intendedEndUserRoleValue, $intendedEndUserRoleLabel) {
@@ -267,12 +280,14 @@ class ScoLOMfrDAO extends AbstractDAO {
 		$intendedEndUserRoleElem->appendChild ( $label );
 		$this->getEducationalElement ()->appendChild ( $intendedEndUserRoleElem );
 	}
-	private function addDifficulty($difficulty) {
+	private function addDifficulty($difficultyValue, $difficultyLabel) {
 		$difficultyElem = $this->document->createElement ( "difficulty" );
 		$source = $this->document->createElement ( "source", "LOMv1.0" );
-		$value = $this->document->createElement ( "value", $difficulty );
+		$value = $this->document->createElement ( "value", $difficultyValue );
+		$label = $this->document->createElement ( "label", $difficultyLabel );
 		$difficultyElem->appendChild ( $source );
 		$difficultyElem->appendChild ( $value );
+		$difficultyElem->appendChild ( $label );
 		$this->getEducationalElement ()->appendChild ( $difficultyElem );
 	}
 	public function removeVoidClassifications() {

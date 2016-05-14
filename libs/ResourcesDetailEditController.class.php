@@ -183,29 +183,39 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 			if (array_key_exists ( 'general-keyword', Security::$_CLEAN ))
 				$this->model->getLomMetadata ()->updateKeywords ( Security::$_CLEAN ['general-keyword'] );
 			if (array_key_exists ( 'general-generalResourceType', Security::$_CLEAN )) {
-				$separatedvalues = $this->separateLabelAndValueInArray ( Security::$_CLEAN ['general-generalResourceType'] );
-				$this->model->getLomMetadata ()->updateGeneralResourceType ( $separatedvalues );
+				$separatedValues = $this->separateLabelAndValueInArray ( Security::$_CLEAN ['general-generalResourceType'] );
+				$this->model->getLomMetadata ()->updateGeneralResourceType ( $separatedValues );
 			}
 			if (array_key_exists ( 'general-aggregationLevel', Security::$_CLEAN ) && ! empty ( Security::$_CLEAN ['general-aggregationLevel'] )) {
-				$separatedvalues = $this->separateLabelAndValue ( Security::$_CLEAN ['general-aggregationLevel'] );
-				$this->model->getLomMetadata ()->updateAggregationLevel ( $separatedvalues );
+				$separatedValues = $this->separateLabelAndValue ( Security::$_CLEAN ['general-aggregationLevel'] );
+				$this->model->getLomMetadata ()->updateAggregationLevel ( $separatedValues );
 			}
 			if (array_key_exists ( 'educational-description', Security::$_CLEAN ))
 				$this->model->getLomMetadata ()->updateEducationalDescription ( Security::$_CLEAN ['educational-description'] );
-			if (array_key_exists ( 'educational-learningResourceType', Security::$_CLEAN ))
-				$this->model->getLomMetadata ()->updateLearningResourceType ( Security::$_CLEAN ['educational-learningResourceType'] );
-			if (array_key_exists ( 'educational-place', Security::$_CLEAN ))
-				$this->model->getLomMetadata ()->updatePlace ( Security::$_CLEAN ['educational-place'] );
-			if (array_key_exists ( 'educational-educationalMethod', Security::$_CLEAN ))
-				$this->model->getLomMetadata ()->updateEducationalMethod ( Security::$_CLEAN ['educational-educationalMethod'] );
-			if (array_key_exists ( 'educational-activity', Security::$_CLEAN ))
-				$this->model->getLomMetadata ()->updateActivity ( Security::$_CLEAN ['educational-activity'] );
-			if (array_key_exists ( 'educational-intendedEndUserRole', Security::$_CLEAN )) {
-				$separatedvalues = $this->separateLabelAndValueInArray ( Security::$_CLEAN ['educational-intendedEndUserRole'] );
-				$this->model->getLomMetadata ()->updateIntendedEndUserRole ( $separatedvalues );
+			if (array_key_exists ( 'educational-learningResourceType', Security::$_CLEAN )) {
+				$separatedValues = $this->separateLabelAndValueInArray ( Security::$_CLEAN ['educational-learningResourceType'] );
+				$this->model->getLomMetadata ()->updateLearningResourceType ( $separatedValues );
 			}
-			if (array_key_exists ( 'educational-difficulty', Security::$_CLEAN ))
-				$this->model->getLomMetadata ()->updateDifficulty ( Security::$_CLEAN ['educational-difficulty'] );
+			if (array_key_exists ( 'educational-place', Security::$_CLEAN )) {
+				$separatedValues = $this->separateLabelAndValueInArray ( Security::$_CLEAN ['educational-place'] );
+				$this->model->getLomMetadata ()->updatePlace ( $separatedValues );
+			}
+			if (array_key_exists ( 'educational-educationalMethod', Security::$_CLEAN )) {
+				$separatedValues = $this->separateLabelAndValueInArray ( Security::$_CLEAN ['educational-educationalMethod'] );
+				$this->model->getLomMetadata ()->updateEducationalMethod ( $separatedValues );
+			}
+			if (array_key_exists ( 'educational-activity', Security::$_CLEAN )) {
+				$separatedValues = $this->separateLabelAndValueInArray ( Security::$_CLEAN ['educational-activity'] );
+				$this->model->getLomMetadata ()->updateActivity ( $separatedValues );
+			}
+			if (array_key_exists ( 'educational-intendedEndUserRole', Security::$_CLEAN )) {
+				$separatedValues = $this->separateLabelAndValueInArray ( Security::$_CLEAN ['educational-intendedEndUserRole'] );
+				$this->model->getLomMetadata ()->updateIntendedEndUserRole ( $separatedValues );
+			}
+			if (array_key_exists ( 'educational-difficulty', Security::$_CLEAN )) {
+				$separatedValues = $this->separateLabelAndValue ( Security::$_CLEAN ['educational-difficulty'] );
+				$this->model->getLomMetadata ()->updateDifficulty ( $separatedValues );
+			}
 			if (array_key_exists ( 'classifications', Security::$_CLEAN ))
 				$this->model->getLomMetadata ()->updateClassifications ( Security::$_CLEAN ['classifications'] );
 			if (array_key_exists ( 'lifeCycle-contributor-vcard', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-date', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-role-label', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-role-id', Security::$_CLEAN ))

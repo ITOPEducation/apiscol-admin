@@ -418,6 +418,163 @@ Utilisé non seulement pour des documents de normes élaborés par des organisme
       <comment>Ensemble d'objets d'apprentissage de niveau 3 (granularité la plus élevée dans ce modèle). Fait référence à une ressource rassemblant un ensemble d'objets de niveau d'agrégation la plus élevée. Par exemple : une ressource décrivant le programme d'enseignement menant à un diplôme ou certificat.</comment>
     </term>
   </vocab>
+  <vocab uri="http://data.education.fr/voc/scolomfr/scolomfr-voc-010">
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/exam</id>
+      <label>examen</label>
+      <comment>Support d'une épreuve synthétique et à caractère normatif qui porte sur un ensemble de connaissances, permettant de valider une étape d'obtention d'une unité d'enseignement, d'un diplôme ou d'une certification.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/exercise</id>
+      <label>exercice</label>
+      <comment>Support d'une activité réalisée par l'apprenant et visant le développement d'une compétence ou l'atteinte d'un objectif.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/experiment</id>
+      <label>expérience</label>
+      <comment>Support d'une activité réalisée par l'apprenant en général dans des espaces spécialisés du type laboratoires ou ateliers.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/lecture</id>
+      <label>cours / présentation</label>
+      <comment>Document servant de base à l'enseignant pour réaliser une leçon sur un point de programme particulier.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/problem_statement</id>
+      <label>énoncé de problème</label>
+      <comment>Enoncé à/ d'une problématique. Ne pas utiliser pour les corrigés des exercices, préférer "exercice".</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/questionnaire</id>
+      <label>questionnaire</label>
+      <comment>Série de questions. Type particulier d'exercice incluant les QCM (questions à choix multiples) ou les QROC (questions à réponse ouverte et courte), les enquêtes...</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-001</id>
+      <label>animation</label>
+      <comment>Support d'une activité d'un groupe conduite par un animateur.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-004</id>
+      <label>démonstration</label>
+      <comment>Information de nature explicative sur une donnée, un outil, un logiciel, une méthode, un fait, etc. Exemple : démonstration illustrant comment procéder pour la mise en œuvre d'une chromatographie, démonstration de l'utilisation d'une application en ligne...</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-006</id>
+      <label>étude de cas</label>
+      <comment>Exposé analytique et systématique d'une situation dans le but de trouver des solutions, de résoudre un problème.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-007</id>
+      <label>évaluation</label>
+      <comment>Support permettant la mesure d'un apprentissage et la vérification d'une étape d'acquisition de connaissances au cours d'une action de formation ou à la fin d'une séquence.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-0082</id>
+      <label>préparation à l'examen</label>
+      <comment>Ressource permettant de préparer un examen, une partie d'examen ou un concours.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-011</id>
+      <label>glossaire</label>
+      <comment>Ensemble de mots définis, appartenant à un domaine spécifique.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-012</id>
+      <label>guide</label>
+      <comment>Support à caractère didactique présentant les notions essentielles d'un art, d'une science ou d'une technique, ou présentant des règles d'utilisation d'une ressource pédagogique ou d'un instrument.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-013</id>
+      <label>jeu éducatif</label>
+      <comment>Jeu sur support physique ou numérique destiné à faire comprendre une notion, acquérir des connaissances, des compétences de façon ludique.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-014</id>
+      <label>manuel d'enseignement</label>
+      <comment>Document didactique qui renferme les notions essentielles d'un domaine ou d'une discipline d'enseignement.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-015</id>
+      <label>matériel de référence</label>
+      <comment>Tout document de type "usuel". Pour des documents officiels précis utiliser "norme" ou des termes plus précis tels "programme scolaire" ou "référentiel de compétences" du vocabulaire "Typologie générale" (ScoLOMFR 005).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-016</id>
+      <label>méthodologie</label>
+      <comment>Ensemble de règles et de démarches adoptées pour atteindre un but de nature pédagogique : pour le calcul d'une intégrale, pour la réalisation d'une recherche, pour la gestion d'un projet...</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-017</id>
+      <label>outil</label>
+      <comment>Ressource servant à instrumenter l'utilisateur pour la réalisation d'une tâche précise se situant à l'intérieur d'un processus pédagogique plus vaste. Utilisé pour désigner un outil de production pédagogique tel qu'un générateur d'exercices, une chaîne éditoriale, etc. ; un outil de diffusion ou un équipement pédagogique. Exemple : tableau interactif, calculatrice, CMS, correcteur orthographique...</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-018</id>
+      <label>production d'élève</label>
+      <comment>Document réalisé par un ou plusieurs élèves, une classe, dans le cadre scolaire ou périscolaire.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-020</id>
+      <label>scénario pédagogique</label>
+      <comment>Document descriptif, structuré et transférable, présentant de façon plus ou moins exhaustive une action de formation et d'apprentissage, les acteurs (élèves, enseignants), les objectifs, l'enchaînement d'unités ou de séquences pédagogiques, les ressources utilisées, le dispositif d'évaluation choisi. Suivant le niveau de description et/ou le périmètre de l'action pédagogique, les dénominations peuvent varier (séquence, séance, cycle d'activités pédagogiques).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-022</id>
+      <label>tutoriel</label>
+      <comment>Guide de présentation et d'initiation, utilisable de façon autonome à l'utilisation d'un ensemble de notions, d'un logiciel, d'un matériel, etc." (Source : http://fr.wiktionary.org/wiki/tutoriel).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-023</id>
+      <label>annales</label>
+      <comment>Recueil de documents par thématique et par année. Exemple : Annales des sujets d'examen de mathématiques en bac S, 2013.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-024</id>
+      <label>cyberquête</label>
+      <comment>Une cyberquête est une activité "coopérative d'investigation, de communication et de production, permettant de réaliser et de synthétiser des activités de recherche dont les informations sont en partie ou intégralement disponibles sur Internet". (http://www.didaquest.org/wiki/Webquest)</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-025</id>
+      <label>méthode de langues</label>
+      <comment>Document ou ensemble de documents permettant l'apprentissage d'une langue étrangère.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-026</id>
+      <label>témoignage pédagogique</label>
+      <comment>Déclaration à caractère pédagogique d'une personne sur un sujet précis et vécu. Ces témoignages peuvent être écrit, audio ou vidéo. Exemple : les témoignages de l'Agence des usages des TICE concernant l'utilisation du TBI en classe.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-027</id>
+      <label>activité pédagogique</label>
+      <comment>Toute activité en vue d'un apprentissage.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-028</id>
+      <label>fiche pédagogique</label>
+      <comment>Guide de l'enseignant pour réaliser une activité pédagogique (contient le thème choisi, les objectifs pédagogiques, le descriptif et l'organisation des différentes séances de travail).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-010-num-029</id>
+      <label>diagnostic</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/self_assessment</id>
+      <label>autoévaluation</label>
+      <comment>Support d'une activité d'évaluation personnelle.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/simulation</id>
+      <label>simulation</label>
+      <comment>Représentation artificielle de la réalité, paramétrable et basée sur un modèle, exploitée à des fins de compréhension et d'étude, de démonstration ou d'explication. Exemple : simulation de décroissance radioactive ou d'une onde mécanique (phénomène physique), conduite d'engins (gestes professionnels), etc.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/table</id>
+      <label>tableau</label>
+      <comment/>
+    </term>
+  </vocab>
   <vocab uri="http://data.education.fr/voc/scolomfr/scolomfr-voc-011">
     <term>
       <id>http://data.education.fr/voc/scolomfr/concept/author_2</id>
@@ -438,6 +595,609 @@ Utilisé non seulement pour des documents de normes élaborés par des organisme
       <id>http://data.education.fr/voc/scolomfr/concept/teacher</id>
       <label>enseignant</label>
       <comment>Personne responsable par les activités de transmission des connaissances et compétences dans le cadre de la "formation tout au long de la vie". Inclut les tuteurs.</comment>
+    </term>
+  </vocab>
+  <vocab uri="http://data.education.fr/voc/scolomfr/scolomfr-voc-017">
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-001</id>
+      <label>en amphithéâtre</label>
+      <comment>Désigne un lieu dont les sièges sont disposés en gradins. S'applique à une ressource dont le contexte d'utilisation est un amphithéâtre. Un cours en amphithéâtre donne généralement lieu à un cours magistral.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0010</id>
+      <label>en musée</label>
+      <comment>Désigne tout type de musée. La ressource est utilisée en complément ou en illustration des expositions du musée. S'applique à une ressource dont le contexte d'utilisation est un musée.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0011</id>
+      <label>hors établissement</label>
+      <comment>Désigne un lieu hors de l'établissement scolaire. Ex : un parc, un commerce. S'applique à une ressource dont le contexte d'utilisation se situe hors établissement.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0012</id>
+      <label>en installation de loisirs</label>
+      <comment>Désigne un lieu où se pratique une activité ludique. S'applique à une ressource dont le contexte d'utilisation est une installation de loisirs où se pratique une activité de loisirs. Ex : aire de jeux, base de loisirs, minigolf.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0013</id>
+      <label>en installation sportive</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est une installation sportive où se pratique un sport. Ex : un dojo, un gymnase.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0014</id>
+      <label>en laboratoire</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est un laboratoire, autrement dit un « local disposé pour faire des recherches, des analyses, des expériences dans un domaine scientifique quelconque ». [Le Thésaurus de l'activité gouvernementale québécois]</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0015</id>
+      <label>en laboratoire de langues</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est un laboratoire de langues, un lieu qui privilégie une pratique orale des langues par la mise à disposition d'un matériel adapté (postes d'écoute, supports multimédia, etc).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0016</id>
+      <label>en milieu familial</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est le milieu familial.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0017</id>
+      <label>en milieu professionnel</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est le milieu professionnel.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0018</id>
+      <label>en entreprise</label>
+      <comment>Désigne un lieu en entreprise. S'applique à une ressource dont le contexte d'utilisation est le lieu de l'entreprise.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0019</id>
+      <label>non précisé</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation n'a pas été précisé ou ne figure pas dans la liste proposée ci-dessus.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-002</id>
+      <label>en atelier</label>
+      <comment>Désigne un lieu où se déroulent des travaux manuels, des activités manuelles telles que la sculpture, l'ébénisterie, etc. S'applique à une ressource dont le contexte d'utilisation est un atelier.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0020</id>
+      <label>en salle informatique</label>
+      <comment>Désigne un lieu dans lequel les élèves peuvent travailler et suivre un cours qui nécessite du matériel informatique. S'applique à une ressource dont le contexte d'utilisation est une salle informatique.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0021</id>
+      <label>en salle multimédia</label>
+      <comment>Désigne un lieu équipé de matériel multimédia dans lequel les élèves peuvent travailler et suivre un cours. S'applique à une ressource dont le contexte d'utilisation est une salle multimédia.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0022</id>
+      <label>en terrain d'observation</label>
+      <comment>Désigne un lieu pour observer, en dehors de l'établissement scolaire. S'applique à une ressource dont le contexte d'utilisation est un terrain d'observation.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-003</id>
+      <label>en atelier de pédagogie personnalisée</label>
+      <comment>Désigne un lieu de formation dont l'activité pédagogique est organisée autour d'un centre de ressources pédagogiques, conçu et animé par des professionnels de la formation individualisée.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-004</id>
+      <label>en CDI (Centre de documentation et d'information)</label>
+      <comment>Désigne les CDI d'établissements scolaires.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-005</id>
+      <label>en salle de classe</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est une salle de classe, le lieu privilégié de dispense de l'enseignement. A ne pas confondre avec la modalité pédagogique "en groupe de classe" ou à un groupe de personnes.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-006</id>
+      <label>en établissement</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est réservé à un établissement d'enseignement scolaire.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-007</id>
+      <label>espace dédié à une pratique spécifique</label>
+      <comment>Désigne un lieu permettant une pratique spécifique. Ex : un lieu où l'on pratique le skateboard, un lieu où l'on pratique le marteau. S'applique à une ressource dont le contexte d'utilisation est un espace dédié à une pratique spécifique.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-008</id>
+      <label>en établissement socioculturel</label>
+      <comment>Désigne les établissements donnant accès à la culture. S'applique à une ressource dont le contexte d'utilisation est un établissement socioculturel, un établissement à l'initiative d'un large panel d'animations, de loisirs et d'événements culturels et sportifs qui s'adressent aux habitants d'un quartier, tous publics confondus.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-009</id>
+      <label>en bibliothèque, médiathèque</label>
+      <comment>Désigne les bibliothèques et/ou médiathèques de lecture publique. S'applique à une ressource dont le contexte d'utilisation est une bibliothèque, une médiathèque.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-026</id>
+      <label>en mobilité</label>
+      <comment>La ressource est utilisée de façon non fixe. S'applique à une ressource dont le contexte d'utilisation est nomade.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-041</id>
+      <label>en accueil de loisirs</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0411</id>
+      <label>en accueil de loisirs sans hébergement</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-0412</id>
+      <label>en accueil de mineurs avec hébergement</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-017-num-042</id>
+      <label>en restauration scolaire</label>
+      <comment/>
+    </term>
+  </vocab>
+  <vocab uri="http://data.education.fr/voc/scolomfr/scolomfr-voc-018">
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-001</id>
+      <label>à distance</label>
+      <comment>S'applique à une ressource qui se destine à un usage à distance (module de formation à distance, cours en ligne, et tous les dispositifs qui relèvent de la FOAD, des MOOCS, etc).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-002</id>
+      <label>en alternance</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est la formation en alternance. La formation en alternance est partagée entre l'établissement de formation et des stages en milieu professionnel, pour faire découvrir aux élèves un environnement professionnel correspondant à un projet d'entrée en apprentissage.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-003</id>
+      <label>en autonomie</label>
+      <comment>S'applique à une ressource qui se destine à un usage en autonomie, i.e que l'apprenant n'est pas en présence du formateur.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-004</id>
+      <label>en classe entière</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est la classe entière (par opposition à une configuration en groupe(s) d'apprenants, ou en individuel), en présentiel plutôt qu'à distance et dans une même temporalité.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-005</id>
+      <label>en collaboration</label>
+      <comment>S'applique à une ressource qui se destine à un usage collaboratif entre plusieurs pairs, ce qui sous-entend que plusieurs individus prennent part ensemble à une même tâche (réalisation d'une œuvre, d'un document, d'un site web, mise en place d'un projet, etc...).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-006</id>
+      <label>étude dirigée</label>
+      <comment>Temps d'apprentissage du travail autonome avec recours ponctuel à un adulte ressource pour aider l'élève à intégrer diverses méthodes et à les utiliser à bon escient.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-007</id>
+      <label>en entreprise</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est le milieu de l'entreprise, par opposition au milieu scolaire ou au milieu familial.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-008</id>
+      <label>en visite d'entreprise</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est une visite d'entreprise, en dehors du cadre scolaire ou familial.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-009</id>
+      <label>PFMP (période de formation en milieu professionnel)</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est une période de formation en milieu professionnel. Ce dispositif s'adresse aux filières de type CAP, Bac Pro et MC (post BEP ou Bac Pro).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-010</id>
+      <label>PFE (période de formation en entreprise)</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est une période de formation en entreprise. Ce dispositif s'adresse aux filières de type BEP et FCIL (post CAP-BEP-Bac Pro).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-011</id>
+      <label>échange pédagogique de classes</label>
+      <comment>Dispositif de partenariat entre deux classes, qui séjournent à tour de rôle l'une chez l'autre pour une durée plus ou moins longue.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-012</id>
+      <label>en groupe</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est un groupe d'apprenants (par opposition à la classe entière, par exemple).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-013</id>
+      <label>en groupe de compétences</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est un groupe d'apprenants identifiés et regroupés selon leur(s) niveau(x) de compétence.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-014</id>
+      <label>en ligne</label>
+      <comment>S'applique à une ressource qui se destine à un usage « en ligne », c'est-à-dire par le biais d'une connexion à internet (rédaction d'un mail, participation à un réseau social, recherche d'information sur le web, jeu ou exercice  « en ligne », etc).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-015</id>
+      <label>en tutorat</label>
+      <comment>S'applique à une ressource qui se destine à un usage en tutorat. Il s'agit d'une forme d'aide en enseignement individualisée, qui est offerte soit pour accompagner un apprenant qui éprouve des difficultés, soit pour donner une formation particulière, complémentaire ou à distance.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-016</id>
+      <label>modalité mixte</label>
+      <comment>Dispositif d'apprentissage ou de formation qui combine des modalités pédagogiques diversifiées</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-017</id>
+      <label>séjour pédagogique</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est un séjour pédagogique. Le séjour pédagogique se distingue de la sortie pédagogique par sa durée (plus d'une journée) et sous-entend un déplacement des apprenants vers le lieu du séjour ainsi qu'un hébergement pour chacun d'entre eux.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-019</id>
+      <label>sortie pédagogique</label>
+      <comment>Renvoie à une finalité essentiellement pédagogique de l'évènement</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-021</id>
+      <label>travail de recherche</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est un travail de recherche (résolution de problèmes, recherche d'information, etc.).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-022</id>
+      <label>travail en interdisciplinarité</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est un travail en interdisciplinarité ; i.e. une modalité de travail qui permet d'aborder une même thématique de manière transversale, autrement dit en faisant appel à deux ou plusieurs disciplines différentes (exemple : des perspectives d'interdisciplinarité entre EPS et arts, français et histoire, histoire et sciences, etc.). Elle suppose dans l'idéal une collaboration étroite et harmonieuse entre formateurs de différentes disciplines.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-023</id>
+      <label>travaux dirigés</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation relève d'une séance de travaux dirigés (TD). Les Travaux dirigés ou TD sont une forme d'enseignement qui permet d'appliquer les connaissances apprises pendant les cours théoriques ou d'introduire des notions nouvelles. Les élèves ou les étudiants travaillent individuellement sur des exercices d'application ou de découverte, en présence du professeur, qui intervient pour aider et pour corriger les exercices. Les travaux dirigés se font dans un groupe d'effectif réduit, pour que le professeur puisse aider plus facilement les élèves ou étudiants et adapter ses interventions à leurs difficultés (Source : Wikipédia).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-024</id>
+      <label>travaux pratiques</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation relève d'une séance de travaux pratiques (TP). Les travaux pratiques concernent généralement les sciences expérimentales. Contrairement aux autres types de cours qui se passent exclusivement à l'oral ou à l'écrit, les séances de travaux pratiques nécessitent souvent un matériel spécifique (verrerie et produits chimiques, circuits électriques, ordinateurs...). La salle de classe, de type laboratoire, affectée à ces travaux est généralement appelé salle de travaux pratiques ou salle de TP (Source : Wikipédia).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-028</id>
+      <label>aide didactique</label>
+      <comment>Dispositif de soutien scolaire</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-030</id>
+      <label>en activité de projet</label>
+      <comment>L'activité de projet permet à l'élève de vivre une expérience de créativité sur un thème concret d'une complexité adaptée à la situation d'apprentissage. Elle intervient en fin d'année de seconde, après les études de cas.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-032</id>
+      <label>atelier théorique</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-033</id>
+      <label>séquence en atelier</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-035</id>
+      <label>en atelier</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est un atelier (dirigé ou en autonomie, théorique, expérimental). Le travail en atelier s'articule autour de quelques principes simples : un groupe de travail constitué autour d'un objectif précis, un objectif décliné en activité(s), une activité mise en place dans un espace délimité et/ou avec un aménagement matériel particulier.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-039</id>
+      <label>en stage</label>
+      <comment>S'applique à une ressource dont le contexte d'utilisation est un stage ; le stage est pour l'apprenant un temps d'information et de formation visant à découvrir le milieu professionnel et un moyen concret d'approfondir et de mettre en pratique des compétences techniques et professionnelles hors les murs de l'établissement de formation.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-018-num-040</id>
+      <label>en compétition</label>
+      <comment/>
+    </term>
+  </vocab>
+  <vocab uri="http://data.education.fr/voc/scolomfr/scolomfr-voc-019">
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-001</id>
+      <label>animer</label>
+      <comment>Organiser un groupe de personnes, conduire une réunion, gérer un groupe projet...</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-002</id>
+      <label>apprendre</label>
+      <comment>Acquérir des connaissances.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-003</id>
+      <label>collaborer</label>
+      <comment>Créer ensemble une œuvre commune.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-004</id>
+      <label>communiquer</label>
+      <comment>Transmettre une information.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-005</id>
+      <label>coopérer</label>
+      <comment>Participer à une partie d'une œuvre commune.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-006</id>
+      <label>créer</label>
+      <comment>Réaliser quelque chose qui n'existe pas encore.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-007</id>
+      <label>échanger</label>
+      <comment>Communiquer à plusieurs, partager.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-008</id>
+      <label>lire</label>
+      <comment>Identifier des suites d'éléments graphiques comme étant des mots.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-009</id>
+      <label>observer</label>
+      <comment>"Examiner (un objet de connaissance scientifique) pour (en) tirer des conclusions scientifiques". [Dictionnaire en ligne CNRTL - http://www.cnrtl.fr/definition/]</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-010</id>
+      <label>organiser</label>
+      <comment>"Aménager, disposer d'une certaine manière, arranger harmonieusement". [Dictionnaire en ligne CNRTL - http://www.cnrtl.fr/definition/]</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-011</id>
+      <label>produire</label>
+      <comment>Assurer la réalisation matérielle.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-012</id>
+      <label>publier</label>
+      <comment>Communiquer officiellement une production.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-013</id>
+      <label>rechercher</label>
+      <comment>Etre en quête d'un élément (matériel ou immatériel). Trouver des arguments dans les différentes annexes proposées et dans les connaissances. Exemple : « Recherchez les conséquences de la stratégie mise en place » implique de relever tous les arguments dans le cours et dans les annexes pour les regrouper et les exposer.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-015</id>
+      <label>s'évaluer</label>
+      <comment>Identifier ses forces et ses faiblesses.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-016</id>
+      <label>s'exercer</label>
+      <comment>Aborder pratiquement et de manière récurrente une notion théorique.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-017</id>
+      <label>se former</label>
+      <comment>Acquérir des compétences, se mettre dans une posture didactique.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-018</id>
+      <label>simuler</label>
+      <comment>Créer ou participer à une activité de simulation, d'expérimentation, de modélisation...</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-019</id>
+      <label>expérimenter</label>
+      <comment>Tester, explorer un champ de possibilités.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-021</id>
+      <label>écouter</label>
+      <comment>Écouter un support sonore.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-024</id>
+      <label>jouer</label>
+      <comment>Faire un jeu. A noter que ce jeu peut être pédagogique.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-027</id>
+      <label>s'informer</label>
+      <comment>Prendre des renseignements, des informations sur un sujet précis. Ex : s'informer sur l'orientation possible après le collège.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-028</id>
+      <label>tester</label>
+      <comment>Soumettre quelque chose (ou quelqu'un) à un test.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-029</id>
+      <label>visionner</label>
+      <comment>Regarder un film, une séquence de film, un documentaire.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-030</id>
+      <label>analyser</label>
+      <comment>Examiner, étudier, observer les faits, établir les causes et les conséquences de cette observation. Exemple : « Analyser les ressources humaines dans cette entreprise » suppose d'en établir le potentiel d'après les annexes proposées et les théories connues (par exemple : analyse des compétences  de Hamel et Prahalad), mais aussi d'examiner les causes et les conséquences de ce potentiel humain.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-031</id>
+      <label>argumenter</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-032</id>
+      <label>calculer</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-033</id>
+      <label>caractériser</label>
+      <comment>Spécifier et préciser. Exemple : «Caractérisez cette stratégie » nécessite d'identifier l'option stratégique choisie grâce à des critères pertinents.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-034</id>
+      <label>citer</label>
+      <comment>Énumérer d'après une documentation ou des connaissances. Exemple : « Citez les modes de croissance utilisés par cette entreprise » suppose de relever ces différents modes à travers les informations fournies dans le cas  en les identifiant et en trouvant au besoin un critère de classement.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-035</id>
+      <label>classer</label>
+      <comment>Cataloguer, ordonner, placer, trier. Exemple : « Classez les critères d'évaluation retenus » implique de regrouper les critères selon le type, l'utilisation ou l'ordre d'importance.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-036</id>
+      <label>comparer</label>
+      <comment>Mettre en évidence les similitudes et les différences. Exemple : « Comparez ces deux stratégies » nécessite de retrouver dans les annexes  les points communs et les différences essentielles mais implique aussi de mobiliser les cours concernés pour compléter l'analyse.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-037</id>
+      <label>comprendre</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-038</id>
+      <label>compter</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-039</id>
+      <label>construire des savoirs</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-040</id>
+      <label>découvrir</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-041</id>
+      <label>décrire</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-042</id>
+      <label>dénombrer</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-043</id>
+      <label>dessiner</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-044</id>
+      <label>discuter</label>
+      <comment>Apprécier, estimer, juger, au besoin critiquer. Exemple : « Discutez la position prise par le dirigeant de cette entreprise » impose de présenter cette décision, de l'expliquer, mais aussi d'en montrer l'intérêt et les limites.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-045</id>
+      <label>écrire</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-046</id>
+      <label>exposer</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-047</id>
+      <label>expliquer</label>
+      <comment>Commenter, éclaircir, interpréter. Exemple : « Expliquer pourquoi l'entreprise utilise un tableau de bord prospectif » exige une définition claire du mot tableau de bord prospectif  et une justification des indicateurs choisis  dans le contexte proposé.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-048</id>
+      <label>identifier</label>
+      <comment>Reconnaître, désigner.  Exemple : « Identifiez la nature de la décision prise par cette entreprise » nécessite de repérer la décision (stratégique ou opérationnelle) et de la qualifier en justifiant son choix par l'application des critères traditionnels (terme, répétitivité, niveau hiérarchique, réversibilité…).</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-049</id>
+      <label>illustrer</label>
+      <comment>Trouver des exemples dans la documentation ou sur l'objet de celle-ci. Exemple : « Illustrez la démarche RSE dans cette entreprise » nécessite de relever les exemples ou les faits qui justifient ce phénomène.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-050</id>
+      <label>justifier</label>
+      <comment>Montrer avec des arguments que quelque chose est juste, bien fondé,  vérifier, motiver une démarche, une décision. Exemple : « Justifiez le recours à la sous-traitance » implique de connaître les avantages de la sous-traitance pour expliquer la décision prise tout en s'appuyant sur le cas et sur le contexte.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-051</id>
+      <label>montrer</label>
+      <comment>Établir, prouver, faire une démonstration avec des arguments. Exemple : « Montrez que l'entreprise utilise l'analyse de Porter » suppose d'énumérer les 5 forces concurrentielles en les illustrant d'exemples pris dans le cas  pour prouver par la démonstration qu'elles sont bien utilisées par l'entreprise pour analyser son environnement.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-052</id>
+      <label>parler</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-053</id>
+      <label>présenter</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-054</id>
+      <label>programmer</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-055</id>
+      <label>réaliser</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-056</id>
+      <label>repérer</label>
+      <comment>Retrouver, situer, positionner. Exemple : « Repérez les différents segments du marché » nécessite de connaître la notion de segment, de retrouver à travers les annexes les critères de segmentation retenus et de les exposer.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-057</id>
+      <label>réprimer</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-058</id>
+      <label>résumer</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-059</id>
+      <label>réviser</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-060</id>
+      <label>s'exprimer</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-061</id>
+      <label>structurer</label>
+      <comment>Ordonner, classer les arguments du cours et de la documentation. Exemple : « Structurez les objectifs de cette entreprise » implique la recherche de critères de classement pour regrouper les différents objectifs par thèmes semblables.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-062</id>
+      <label>synthétiser</label>
+      <comment>Rassembler les éléments contenus dans les différentes annexes pour les ordonner de façon plus cohérente. Exemple : « Synthétisez la documentation sur le diagnostic stratégique » demande de rassembler les différentes données et de les classer de façon appropriée en forces et faiblesses, contraintes et opportunités.</comment>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-063</id>
+      <label>tracer</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-019-num-064</id>
+      <label>trier</label>
+      <comment/>
+    </term>
+  </vocab>
+  <vocab uri="http://data.education.fr/voc/scolomfr/scolomfr-voc-025">
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/difficult</id>
+      <label>difficile</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/easy</id>
+      <label>facile</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/medium</id>
+      <label>moyen</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/very_difficult</id>
+      <label>très difficile</label>
+      <comment/>
+    </term>
+    <term>
+      <id>http://data.education.fr/voc/scolomfr/concept/very_easy</id>
+      <label>très facile</label>
+      <comment/>
     </term>
   </vocab>
 </vocabs>
