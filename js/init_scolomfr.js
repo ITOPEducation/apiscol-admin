@@ -1,8 +1,8 @@
 var ned = {
 	key : "ned",
 	title : "Niveau éducatif détaillé",
-	standard : "LOMFRv1.0",
-	purpose : "educational level",
+	standard : "SCOLOMFRv2.0",
+	purpose : "http://data.education.fr/voc/scolomfr/concept/educational_level",
 	source : "scolomfr-voc-022",
 	help : "Précisez à quel(s) niveau(x) de classes la séquence se destine.",
 	mandatory : true
@@ -10,8 +10,8 @@ var ned = {
 var ens = {
 	key : "ens",
 	title : "Domaines d'enseignement",
-	standard : "SCOLOMFRv1.0",
-	purpose : "domaine d'enseignement",
+	standard : "SCOLOMFRv2.0",
+	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-003",
 	source : "scolomfr-voc-015",
 	help : "Précisez la discipline pour laquelle la séquence est adaptée.",
 	mandatory : true
@@ -19,10 +19,64 @@ var ens = {
 var scc = {
 	key : "scc",
 	title : "Compétences du socle commun",
-	standard : "LOMFRv1.0",
-	purpose : "competency",
+	standard : "SCOLOMFRv2.0",
+	purpose : "http://data.education.fr/voc/scolomfr/concept/competency",
 	source : "scolomfr-voc-016",
-	help : "Précisez les compétences du socle commun.",
+	help : "Précisez les compétences du socle commun." ,
+	mandatory : true
+};
+var dip = {
+	key : "dip",
+	title : "Diplomes",
+	standard : "SCOLOMFRv2.0",
+	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-016",
+	source : "scolomfr-voc-029",
+	help : "Précisez le diplôme.",
+	mandatory : true
+};
+var pcd = {
+	key : "pcd",
+	title : "Public cible détaillé",
+	standard : "SCOLOMFRv2.0",
+	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-011",
+	source : "scolomfr-voc-021",
+	help : "Précisez le public cible détaillé.",
+	mandatory : true
+};
+var cap = {
+	key : "cap",
+	title : "Cadre pédagogique.",
+	standard : "SCOLOMFRv2.0",
+	purpose : "http://data.education.fr/voc/scolomfr/concept/competency",
+	source : "scolomfr-voc-040",
+	help : "Précisez le cadre pédagogique.",
+	mandatory : true
+};
+var cecrl = {
+	key : "cecrl",
+	title : "Cadre européen commun de référence pour les langues",
+	standard : "SCOLOMFRv2.0",
+	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-019",
+	source : "scolomfr-voc-042",
+	help : "Précisez le cadre européen commun de référence pour les langues.",
+	mandatory : true
+};
+var sup = {
+	key : "sup",
+	title : "Support",
+	standard : "SCOLOMFRv2.0",
+	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-023",
+	source : "scolomfr-voc-043",
+	help : "Précisez le Support.",
+	mandatory : true
+};
+var def = {
+	key : "def",
+	title : "Support",
+	standard : "SCOLOMFRv2.0",
+	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-017",
+	source : "scolomfr-voc-041",
+	help : "Précisez le type de déficience.",
 	mandatory : true
 };
 var classifications;
@@ -38,6 +92,12 @@ function initScolomFr() {
 	$("#ned_tree").append(ajouterChampProgramme(ned));
 	$("#ens_tree").append(ajouterChampProgramme(ens));
 	$("#scc_tree").append(ajouterChampProgramme(scc));
+	$("#dip_tree").append(ajouterChampProgramme(dip));
+	$("#pcd_tree").append(ajouterChampProgramme(pcd));
+	$("#cap_tree").append(ajouterChampProgramme(cap));
+	$("#cecrl_tree").append(ajouterChampProgramme(cecrl));
+	$("#sup_tree").append(ajouterChampProgramme(sup));
+	$("#def_tree").append(ajouterChampProgramme(def));
 	addSubmitButton();
 
 	$("form#formulaire_scolomfr").attr("action",

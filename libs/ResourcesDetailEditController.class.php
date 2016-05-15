@@ -217,7 +217,9 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 				$this->model->getLomMetadata ()->updateDifficulty ( $separatedValues );
 			}
 			if (array_key_exists ( 'classifications', Security::$_CLEAN ))
+			{
 				$this->model->getLomMetadata ()->updateClassifications ( Security::$_CLEAN ['classifications'] );
+			}
 			if (array_key_exists ( 'lifeCycle-contributor-vcard', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-date', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-role-label', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-role-id', Security::$_CLEAN ))
 				
 				$this->model->getLomMetadata ()->updateContributors ( Security::$_CLEAN ['lifeCycle-contributor-vcard'], Security::$_CLEAN ['lifeCycle-contributor-role-id'], Security::$_CLEAN ['lifeCycle-contributor-role-label'], Security::$_CLEAN ['lifeCycle-contributor-date'] );

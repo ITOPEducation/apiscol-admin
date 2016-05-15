@@ -1,0 +1,46 @@
+[ {
+		"title" : "Support",
+		"isFolder" : true,
+		"hideCheckbox" : true,
+		"children" : [{"title" :"carte à puce",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-043-num-002",
+			"icon" : false,
+			"children" : []
+			},{"title" :"carte mémoire",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-043-num-003",
+			"icon" : false,
+			"children" : []
+			},{"title" :"clé USB",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-043-num-004",
+			"icon" : false,
+			"children" : []
+			},{"title" :"cédérom",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-043-num-005",
+			"icon" : false,
+			"children" : []
+			},{"title" :"diapositive",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-043-num-006",
+			"icon" : false,
+			"children" : []
+			},{"title" :"document imprimé",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-043-num-007",
+			"icon" : false,
+			"children" : []
+			},{"title" :"dévédérom",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-043-num-008",
+			"icon" : false,
+			"children" : []
+			},{"title" :"kit pédagogique",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-043-num-009",
+			"icon" : false,
+			"children" : []
+			},{"title" :"support magnétique",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-043-num-010",
+			"icon" : false,
+			"children" : []
+			},{"title" :"support numérique en ligne",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-043-num-011",
+			"icon" : false,
+			"children" : []
+			}]
+		}]

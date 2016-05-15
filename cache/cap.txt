@@ -1,0 +1,286 @@
+[ {
+		"title" : "Cadre pédagogique",
+		"isFolder" : true,
+		"hideCheckbox" : true,
+		"children" : [{"title" :"3e insertion",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-001",
+			"icon" : false,
+			"children" : []
+			},{"title" :"4e aide et soutien",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-002",
+			"icon" : false,
+			"children" : []
+			},{"title" :"accompagnement à l'orientation",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-003",
+			"icon" : false,
+			"children" : []
+			},{"title" :"accompagnement éducatif",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-004",
+			"icon" : false,
+			"children" : []
+			},{"title" :"accompagnement personnalisé",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-006",
+			"icon" : false,
+			"children" : []
+			},{"title" :"accueil des primo-arrivants",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-008",
+			"icon" : false,
+			"children" : []
+			},{"title" :"actions internationales",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-009",
+			"icon" : false,
+			"children" : []
+			},{"title" :"adaptation scolaire et scolarisation des élèves à besoins spécifiques",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-010",
+			"icon" : false,
+			"children" : []
+			},{"title" :"aide individualisée",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-011",
+			"icon" : false,
+			"children" : []
+			},{"title" :"CLIN classe d'initiation",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-012",
+			"icon" : false,
+			"children" : []
+			},{"title" :"CLIS classe d'intégration scolaire",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-013",
+			"icon" : false,
+			"children" : []
+			},{"title" :"culture scientifique et technologique",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-014",
+			"icon" : false,
+			"children" : []
+			},{"title" :"dispositif de scolarisation des élèves handicapés",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-016",
+			"icon" : false,
+			"children" : []
+			},{"title" :"dispositif ECLAIR",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-017",
+			"icon" : false,
+			"children" : []
+			},{"title" :"dispositif école ouverte",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-018",
+			"icon" : false,
+			"children" : []
+			},{"title" :"dispositifs de soutien et de remédiation scolaire",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-019",
+			"icon" : false,
+			"children" : []
+			},{"title" :"dispositifs relais",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-020",
+			"icon" : false,
+			"children" : []
+			},{"title" :"échange pédagogique de classes",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-021",
+			"icon" : false,
+			"children" : []
+			},{"title" :"éducation à l'image, au cinéma et à l'audiovisuel",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-022",
+			"icon" : false,
+			"children" : []
+			},{"title" :"éducation à la citoyenneté - valeurs républicaines",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-023",
+			"icon" : false,
+			"children" : []
+			},{"title" :"éducation à la santé",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-024",
+			"icon" : false,
+			"children" : []
+			},{"title" :"éducation à la sécurité",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-025",
+			"icon" : false,
+			"children" : []
+			},{"title" :"éducation à la sécurité routière",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-026",
+			"icon" : false,
+			"children" : []
+			},{"title" :"éducation à l'orientation et au choix",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-027",
+			"icon" : false,
+			"children" : []
+			},{"title" :"éducation artistique et culturelle",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-028",
+			"icon" : false,
+			"children" : []
+			},{"title" :"éducation au développement et à la solidarité",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-029",
+			"icon" : false,
+			"children" : []
+			},{"title" :"éducation aux médias et à l'information",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-030",
+			"icon" : false,
+			"children" : []
+			},{"title" :"enseignement de la défense et de la sécurité nationale",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-031",
+			"icon" : false,
+			"children" : []
+			},{"title" :"enseignement renforcé des langues",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-032",
+			"icon" : false,
+			"children" : []
+			},{"title" :"école régionale d'enseignement adapté",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-033",
+			"icon" : false,
+			"children" : []
+			},{"title" :"formation à l'information et à la communication",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-034",
+			"icon" : false,
+			"children" : []
+			},{"title" :"gestion financière et matérielle des établissements",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-035",
+			"icon" : false,
+			"children" : []
+			},{"title" :"itinéraire de découverte",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-036",
+			"icon" : false,
+			"children" : []
+			},{"title" :"internat d'excellence",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-037",
+			"icon" : false,
+			"children" : []
+			},{"title" :"liaison collège - lycée",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-038",
+			"icon" : false,
+			"children" : []
+			},{"title" :"liaison inter-degrés",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-039",
+			"icon" : false,
+			"children" : []
+			},{"title" :"liaison lycée - enseignement supérieur",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-040",
+			"icon" : false,
+			"children" : []
+			},{"title" :"liaison primaire - collège",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-041",
+			"icon" : false,
+			"children" : []
+			},{"title" :"LSF (langue des signes française)",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-042",
+			"icon" : false,
+			"children" : []
+			},{"title" :"mémoire et histoire",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-043",
+			"icon" : false,
+			"children" : []
+			},{"title" :"organisation pédagogique des établissements d'enseignement",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-044",
+			"icon" : false,
+			"children" : []
+			},{"title" :"projet artistique et culturel",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-045",
+			"icon" : false,
+			"children" : []
+			},{"title" :"partenariat électronique inter-écoles",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-046",
+			"icon" : false,
+			"children" : []
+			},{"title" :"parcours découverte des métiers et des formations",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-047",
+			"icon" : false,
+			"children" : []
+			},{"title" :"pilotage et gestion du système éducatif",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-048",
+			"icon" : false,
+			"children" : []
+			},{"title" :"projet pluridisciplinaire à caractère professionnel",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-049",
+			"icon" : false,
+			"children" : []
+			},{"title" :"pratique sportive",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-050",
+			"icon" : false,
+			"children" : []
+			},{"title" :"prévention du décrochage scolaire",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-051",
+			"icon" : false,
+			"children" : []
+			},{"title" :"prévention et lutte contre la violence",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-052",
+			"icon" : false,
+			"children" : []
+			},{"title" :"projet inter-établissement",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-053",
+			"icon" : false,
+			"children" : []
+			},{"title" :"réseau ambition réussite",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-054",
+			"icon" : false,
+			"children" : []
+			},{"title" :"relation école-entreprise",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-055",
+			"icon" : false,
+			"children" : []
+			},{"title" :"relations extérieures et partenariats",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-056",
+			"icon" : false,
+			"children" : []
+			},{"title" :"section européenne ou internationale",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-057",
+			"icon" : false,
+			"children" : []
+			},{"title" :"section d'enseignement général et professionnel adapté",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-058",
+			"icon" : false,
+			"children" : []
+			},{"title" :"séjour et classe de découvertes",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-059",
+			"icon" : false,
+			"children" : []
+			},{"title" :"système d'évaluation",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-060",
+			"icon" : false,
+			"children" : []
+			},{"title" :"travaux d'initiative personnelle encadrés",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-061",
+			"icon" : false,
+			"children" : []
+			},{"title" :"TPE (travaux personnels encadrés)",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-062",
+			"icon" : false,
+			"children" : []
+			},{"title" :"ULIS unité localisée pour l'inclusion scolaire",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-063",
+			"icon" : false,
+			"children" : []
+			},{"title" :"vie de l'établissement",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-065",
+			"icon" : false,
+			"children" : []
+			},{"title" :"section européenne",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-070",
+			"icon" : false,
+			"children" : []
+			},{"title" :"section internationale",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-071",
+			"icon" : false,
+			"children" : []
+			},{"title" :"section orientale",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-072",
+			"icon" : false,
+			"children" : []
+			},{"title" :"section binationale",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-073",
+			"icon" : false,
+			"children" : []
+			},{"title" :"dispositif d'initiation aux métiers de l'alternance",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-078",
+			"icon" : false,
+			"children" : []
+			},{"title" :"dispositif de scolarisation des élèves à besoins éducatifs particuliers",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-102",
+			"icon" : false,
+			"children" : []
+			},{"title" :"stage",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-119",
+			"icon" : false,
+			"children" : []
+			},{"title" :"PFMP (période de formation en milieu professionnel)",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-120",
+			"icon" : false,
+			"children" : []
+			},{"title" :"séjour pédagogique",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-122",
+			"icon" : false,
+			"children" : []
+			}]
+		}]

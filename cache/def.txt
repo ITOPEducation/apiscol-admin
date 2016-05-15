@@ -1,0 +1,34 @@
+[ {
+		"title" : "Type de déficience",
+		"isFolder" : true,
+		"hideCheckbox" : true,
+		"children" : [{"title" :"déficience auditive",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-003",
+			"icon" : false,
+			"children" : []
+			},{"title" :"déficience visuelle",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-004",
+			"icon" : false,
+			"children" : []
+			},{"title" :"polyhandicapés",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-005",
+			"icon" : false,
+			"children" : []
+			},{"title" :"troubles cognitifs",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-006",
+			"icon" : false,
+			"children" : []
+			},{"title" :"troubles moteurs",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-007",
+			"icon" : false,
+			"children" : []
+			},{"title" :"troubles psychiques",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-008",
+			"icon" : false,
+			"children" : []
+			},{"title" :"troubles spécifiques des apprentissages",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-009",
+			"icon" : false,
+			"children" : []
+			}]
+		}]

@@ -33,20 +33,20 @@ class ScoLOMfrDAO extends AbstractDAO {
 	public function updateGeneralResourceType($generalResourceTypes) {
 		$this->cleanGeneralResourceTypes ();
 		foreach ( $generalResourceTypes as $generalResourceType ) {
-			if (is_array ( $generalResourceType ) && isset ( $generalResourceType ['label'] ) && isset ( $generalResourceType ['value'] ))
+			if (is_array ( $generalResourceType ) && !empty ( $generalResourceType ['label'] ) && !empty ( $generalResourceType ['value'] ))
 				$this->addGeneralResourceType ( $generalResourceType ['value'], $generalResourceType ['label'] );
 		}
 	}
 	public function updateAggregationLevel($aggregationLevel) {
 		$this->cleanAggregationLevel ();
-		if (is_array ( $aggregationLevel ) && isset ( $aggregationLevel ['label'] ) && isset ( $aggregationLevel ['value'] )) {
+		if (is_array ( $aggregationLevel ) && !empty ( $aggregationLevel ['label'] ) && !empty ( $aggregationLevel ['value'] )) {
 			$this->addAggregationLevel ( $aggregationLevel ['value'], $aggregationLevel ['label'] );
 		}
 	}
 	public function updateLearningResourceType($learningResourceTypes) {
 		$this->cleanLearningResourceTypes ();
 		foreach ( $learningResourceTypes as $learningResourceType ) {
-			if (is_array ( $learningResourceType ) && isset ( $learningResourceType ['label'] ) && isset ( $learningResourceType ['value'] ))
+			if (is_array ( $learningResourceType ) && !empty ( $learningResourceType ['label'] ) && !empty ( $learningResourceType ['value'] ))
 				$this->addLearningResourceType ( $learningResourceType ['value'], $learningResourceType ['label'] );
 		}
 	}
@@ -56,34 +56,34 @@ class ScoLOMfrDAO extends AbstractDAO {
 	public function updatePlace($places) {
 		$this->cleanPlaces ();
 		foreach ( $places as $place ) {
-			if (is_array ( $place ) && isset ( $place ['label'] ) && isset ( $place ['value'] ))
+			if (is_array ( $place ) && !empty ( $place ['label'] ) && !empty ( $place ['value'] ))
 				$this->addPlace ( $place ['value'], $place ['label'] );
 		}
 	}
 	public function updateEducationalMethod($educationalMethods) {
 		$this->cleanEducationalMethods ();
 		foreach ( $educationalMethods as $educationalMethod ) {
-			if (is_array ( $educationalMethod ) && isset ( $educationalMethod ['label'] ) && isset ( $educationalMethod ['value'] ))
+			if (is_array ( $educationalMethod ) && !empty ( $educationalMethod ['label'] ) && !empty ( $educationalMethod ['value'] ))
 				$this->addEducationalMethod ( $educationalMethod ['value'], $educationalMethod ['label'] );
 		}
 	}
 	public function updateActivity($activities) {
 		$this->cleanActivities ();
 		foreach ( $activities as $activity ) {
-			if (is_array ( $activity ) && isset ( $activity ['label'] ) && isset ( $activity ['value'] ))
+			if (is_array ( $activity ) && !empty ( $activity ['label'] ) && !empty ( $activity ['value'] ))
 				$this->addActivity ( $activity ['value'], $activity ['label'] );
 		}
 	}
 	public function updateIntendedEndUserRole($intendedEndUserRoles) {
 		$this->cleanIntendedEndUserRoles ();
 		foreach ( $intendedEndUserRoles as $intendedEndUserRole ) {
-			if (is_array ( $intendedEndUserRole ) && isset ( $intendedEndUserRole ['label'] ) && isset ( $intendedEndUserRole ['value'] ))
+			if (is_array ( $intendedEndUserRole ) && !empty ( $intendedEndUserRole ['label'] ) && !empty ( $intendedEndUserRole ['value'] ))
 				$this->addIntendedEndUserRole ( $intendedEndUserRole ['value'], $intendedEndUserRole ['label'] );
 		}
 	}
 	public function updateDifficulty($difficulty) {
 		$this->cleanDifficulty ();
-		if (is_array ( $difficulty ) && isset ( $difficulty ['label'] ) && isset ( $difficulty ['value'] )) {
+		if (is_array ( $difficulty ) && !empty ( $difficulty ['label'] ) && !empty( $difficulty ['value'] )) {
 			$this->addDifficulty ( $difficulty ['value'], $difficulty ['label'] );
 		}
 	}

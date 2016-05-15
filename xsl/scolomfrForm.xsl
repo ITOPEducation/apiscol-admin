@@ -104,12 +104,16 @@
 							<xsl:apply-templates select="/lom:lom/lom:educational/lom:description"></xsl:apply-templates>
 							<div name="element" class="element">
 								<div class="elt_champ_form">
+									<xsl:variable name="dataPurposeId"
+										select="'http://data.education.fr/voc/scolomfr/concept/educational_level'" />
 									<div id="ned_tree">
 
 									</div>
-									<div class="purpose" data-purpose="educational-level">
+									<div class="purpose" data-purpose-value="educational-level">
+										<xsl:attribute name="data-purpose-id"><xsl:value-of
+											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
 										<xsl:apply-templates
-											select="/lom:lom/lom:classification[lom:purpose/lom:value='educational level']">
+											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
 											<xsl:with-param name="source" select="'scolomfr-voc-022'"></xsl:with-param>
 										</xsl:apply-templates>
 									</div>
@@ -130,15 +134,15 @@
 
 							<div name="element" class="element">
 								<div class="elt_champ_form">
+									<xsl:variable name="dataPurposeId"
+										select="'http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-003'" />
 									<div id="ens_tree">
-
 									</div>
-									<div class="purpose" data-purpose="domaine d'enseignement">
-										<xsl:variable name="apos">
-											<xsl:text>'</xsl:text>
-										</xsl:variable>
+									<div class="purpose" data-purpose-value="domaine d'enseignement">
+										<xsl:attribute name="data-purpose-id"><xsl:value-of
+											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
 										<xsl:apply-templates
-											select="/lom:lom/lom:classification[lom:purpose/lom:value=concat('domaine d',$apos,'enseignement')]">
+											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
 											<xsl:with-param name="source" select="'scolomfr-voc-015'"></xsl:with-param>
 										</xsl:apply-templates>
 									</div>
@@ -148,18 +152,133 @@
 
 							<div name="element" class="element">
 								<div class="elt_champ_form">
+									<xsl:variable name="dataPurposeId"
+										select="'http://data.education.fr/voc/scolomfr/concept/competency'" />
 									<div id="scc_tree">
 
 									</div>
-									<div class="purpose" data-purpose="competency">
+									<div class="purpose" data-purpose-value="socle commun">
+										<xsl:attribute name="data-purpose-id"><xsl:value-of
+											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
 										<xsl:apply-templates
-											select="/lom:lom/lom:classification[lom:purpose/lom:value='competency']">
+											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
 											<xsl:with-param name="source" select="'scolomfr-voc-016'"></xsl:with-param>
 										</xsl:apply-templates>
 									</div>
 
 								</div>
 							</div>
+
+							<div name="element" class="element">
+								<div class="elt_champ_form">
+									<xsl:variable name="dataPurposeId"
+										select="'http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-016'" />
+									<div id="dip_tree">
+
+									</div>
+									<div class="purpose" data-purpose-value="diplôme">
+										<xsl:attribute name="data-purpose-id"><xsl:value-of
+											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
+										<xsl:apply-templates
+											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
+											<xsl:with-param name="source" select="'scolomfr-voc-029'"></xsl:with-param>
+										</xsl:apply-templates>
+									</div>
+
+								</div>
+							</div>
+							<div name="element" class="element">
+								<div class="elt_champ_form">
+									<xsl:variable name="dataPurposeId"
+										select="'http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-011'" />
+									<div id="pcd_tree">
+
+									</div>
+									<div class="purpose" data-purpose-value="public cible détaillé">
+										<xsl:attribute name="data-purpose-id"><xsl:value-of
+											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
+										<xsl:apply-templates
+											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
+											<xsl:with-param name="source" select="'scolomfr-voc-021'"></xsl:with-param>
+										</xsl:apply-templates>
+									</div>
+
+								</div>
+							</div>
+							<div name="element" class="element">
+								<div class="elt_champ_form">
+									<xsl:variable name="dataPurposeId"
+										select="'http://data.education.fr/voc/scolomfr/concept/competency'" />
+									<div id="cap_tree">
+
+									</div>
+									<div class="purpose" data-purpose-value="competency">
+										<xsl:attribute name="data-purpose-id"><xsl:value-of
+											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
+										<xsl:apply-templates
+											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
+											<xsl:with-param name="source" select="'scolomfr-voc-040'"></xsl:with-param>
+										</xsl:apply-templates>
+									</div>
+
+								</div>
+							</div>
+							<div name="element" class="element">
+								<div class="elt_champ_form">
+									<xsl:variable name="dataPurposeId"
+										select="'http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-019'" />
+									<div id="cecrl_tree">
+
+									</div>
+									<div class="purpose"
+										data-purpose-value="cadre européen commun de référence pour les langues">
+										<xsl:attribute name="data-purpose-id"><xsl:value-of
+											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
+										<xsl:apply-templates
+											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
+											<xsl:with-param name="source" select="'scolomfr-voc-042'"></xsl:with-param>
+										</xsl:apply-templates>
+									</div>
+
+								</div>
+							</div>
+							<div name="element" class="element">
+								<div class="elt_champ_form">
+									<div id="sup_tree">
+
+									</div>
+									<xsl:variable name="dataPurposeId"
+										select="'http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-023'" />
+									<div class="purpose" data-purpose-value="support">
+										<xsl:attribute name="data-purpose-id"><xsl:value-of
+											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
+										<xsl:apply-templates
+											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
+											<xsl:with-param name="source" select="'scolomfr-voc-043'"></xsl:with-param>
+										</xsl:apply-templates>
+									</div>
+
+								</div>
+							</div>
+							<div name="element" class="element">
+								<div class="elt_champ_form">
+									<xsl:variable name="dataPurposeId"
+										select="'http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-017'" />
+									<div id="def_tree">
+
+									</div>
+									<div class="purpose" data-purpose-value="type de déficience">
+										<xsl:attribute name="data-purpose-id"><xsl:value-of
+											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
+										<xsl:apply-templates
+											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
+											<xsl:with-param name="source" select="'scolomfr-voc-041'"></xsl:with-param>
+										</xsl:apply-templates>
+									</div>
+
+								</div>
+							</div>
+
 							<div class="element ui-helper-clearfix entry-list-container"
 								id="place-container">
 								<xsl:call-template name="place"></xsl:call-template>
@@ -305,7 +424,10 @@
 				<ul>
 					<xsl:for-each select="/lom:lom/lom:general/scolomfr:generalResourceType">
 						<li>
-							<xsl:value-of select="scolomfr:label"></xsl:value-of> (<xsl:value-of select="scolomfr:value"></xsl:value-of>)
+							<xsl:value-of select="scolomfr:label"></xsl:value-of>
+							(
+							<xsl:value-of select="scolomfr:value"></xsl:value-of>
+							)
 						</li>
 					</xsl:for-each>
 				</ul>
@@ -377,7 +499,10 @@
 				<ul>
 					<xsl:for-each select="/lom:lom/lom:educational/lom:learningResourceType">
 						<li>
-							<xsl:value-of select="lom:label"></xsl:value-of> (<xsl:value-of select="lom:value"></xsl:value-of>)
+							<xsl:value-of select="lom:label"></xsl:value-of>
+							(
+							<xsl:value-of select="lom:value"></xsl:value-of>
+							)
 						</li>
 					</xsl:for-each>
 				</ul>
@@ -414,7 +539,10 @@
 				<ul>
 					<xsl:for-each select="/lom:lom/lom:educational/scolomfr:place">
 						<li>
-							<xsl:value-of select="scolomfr:label"></xsl:value-of> (<xsl:value-of select="scolomfr:value"></xsl:value-of>)
+							<xsl:value-of select="scolomfr:label"></xsl:value-of>
+							(
+							<xsl:value-of select="scolomfr:value"></xsl:value-of>
+							)
 						</li>
 					</xsl:for-each>
 				</ul>
@@ -438,7 +566,8 @@
 				<xsl:value-of select="./apiscol:comment"></xsl:value-of>
 				</xsl:attribute>
 						<xsl:value-of select="./apiscol:label"></xsl:value-of>
-					</option>				</xsl:for-each>
+					</option>
+				</xsl:for-each>
 			</select>
 			<span class="register-entry">
 				Ajouter
@@ -450,7 +579,10 @@
 				<ul>
 					<xsl:for-each select="/lom:lom/lom:educational/lom:intendedEndUserRole">
 						<li>
-							<xsl:value-of select="lom:label"></xsl:value-of> (<xsl:value-of select="lom:value"></xsl:value-of>)
+							<xsl:value-of select="lom:label"></xsl:value-of>
+							(
+							<xsl:value-of select="lom:value"></xsl:value-of>
+							)
 						</li>
 					</xsl:for-each>
 				</ul>
@@ -474,7 +606,9 @@
 				<xsl:value-of select="./apiscol:comment"></xsl:value-of>
 				</xsl:attribute>
 						<xsl:value-of select="./apiscol:label"></xsl:value-of>
-					</option>				</xsl:for-each>			</select>
+					</option>
+				</xsl:for-each>
+			</select>
 			<span class="register-entry">
 				Ajouter
 			</span>
@@ -485,7 +619,10 @@
 				<ul>
 					<xsl:for-each select="/lom:lom/lom:educational/scolomfr:educationalMethod">
 						<li>
-							<xsl:value-of select="scolomfr:label"></xsl:value-of> (<xsl:value-of select="scolomfr:value"></xsl:value-of>)
+							<xsl:value-of select="scolomfr:label"></xsl:value-of>
+							(
+							<xsl:value-of select="scolomfr:value"></xsl:value-of>
+							)
 						</li>
 					</xsl:for-each>
 				</ul>
@@ -513,7 +650,8 @@
 				<xsl:value-of select="./apiscol:comment"></xsl:value-of>
 				</xsl:attribute>
 						<xsl:value-of select="./apiscol:label"></xsl:value-of>
-					</option>				</xsl:for-each>
+					</option>
+				</xsl:for-each>
 			</select>
 			<span class="register-entry">
 				Ajouter
@@ -525,7 +663,10 @@
 				<ul>
 					<xsl:for-each select="/lom:lom/lom:educational/lomfr:activity">
 						<li>
-							<xsl:value-of select="lomfr:label"></xsl:value-of> (<xsl:value-of select="lomfr:value"></xsl:value-of>)
+							<xsl:value-of select="lomfr:label"></xsl:value-of>
+							(
+							<xsl:value-of select="lomfr:value"></xsl:value-of>
+							)
 						</li>
 					</xsl:for-each>
 				</ul>
@@ -539,7 +680,7 @@
 		</div>
 		<xsl:variable name="registredValue"
 			select="/lom:lom/lom:educational/lom:difficulty/lom:value" />
-			
+
 		<div>
 			<select size="1" name="educational-difficulty">
 				<option value="none">
