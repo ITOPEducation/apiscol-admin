@@ -330,14 +330,35 @@
 	<xsl:template name="taxon-entry">
 		<xsl:param name="identifier"></xsl:param>
 		<xsl:param name="name"></xsl:param>
+		<xsl:variable name="encodedname">
+			<xsl:call-template name="string-replace-all">
+				<xsl:with-param name="text" select="$name" />
+				<xsl:with-param name="replace" select="'/'" />
+				<xsl:with-param name="by" select="'%2f'" />
+			</xsl:call-template>
+		</xsl:variable>
+		<xsl:variable name="encodedidentifier">
+			<xsl:call-template name="string-replace-all">
+				<xsl:with-param name="text" select="$identifier" />
+				<xsl:with-param name="replace" select="'/'" />
+				<xsl:with-param name="by" select="'%2f'" />
+			</xsl:call-template>
+		</xsl:variable>
+		<xsl:variable name="encodedidentifierattr">
+			<xsl:call-template name="string-replace-all">
+				<xsl:with-param name="text" select="@identifier" />
+				<xsl:with-param name="replace" select="'/'" />
+				<xsl:with-param name="by" select="'%2f'" />
+			</xsl:call-template>
+		</xsl:variable>
 		<xsl:variable name="href">
 			<xsl:value-of select="$prefix"></xsl:value-of>
 			<xsl:text>/resources/list/dynamic-filter/[</xsl:text>
-			<xsl:value-of select="$name"></xsl:value-of>
+			<xsl:value-of select="$encodedname"></xsl:value-of>
 			<xsl:text>::</xsl:text>
-			<xsl:value-of select="$identifier"></xsl:value-of>
+			<xsl:value-of select="$encodedidentifier"></xsl:value-of>
 			<xsl:text>::</xsl:text>
-			<xsl:value-of select="@identifier"></xsl:value-of>
+			<xsl:value-of select="$encodedidentifierattr"></xsl:value-of>
 			<xsl:text>::</xsl:text>
 			<xsl:value-of select="@label"></xsl:value-of>
 			<xsl:text>]</xsl:text>
