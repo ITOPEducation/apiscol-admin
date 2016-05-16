@@ -2,6 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:apiscol="http://www.crdp.ac-versailles.fr/2012/apiscol"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	exclude-result-prefixes="#default apiscol atom">
 	<xsl:param name="prefix" select="/" />
 	<xsl:param name="currentPage" select="0" />
@@ -15,6 +16,8 @@
 	<xsl:template match="/">
 		<xsl:apply-templates select="atom:feed"></xsl:apply-templates>
 	</xsl:template>
+	<xsl:variable name="skos"
+		select="document('../scolomfr/skos/scolomfr.skos')" />
 	<xsl:template match="atom:feed">
 		<div class="pane ui-layout-center">
 			<div class="inner-layout">
@@ -300,11 +303,9 @@
 	</xsl:template>
 	<xsl:template match="apiscol:facets/apiscol:dynamic-facets">
 		<xsl:apply-templates select="apiscol:taxon">
-			<xsl:with-param name="purpose" select="@name"></xsl:with-param>
 		</xsl:apply-templates>
 	</xsl:template>
 	<xsl:template match="apiscol:taxon">
-		<xsl:param name="purpose"></xsl:param>
 		<xsl:variable name="identifier">
 			<xsl:value-of select="@identifier"></xsl:value-of>
 		</xsl:variable>
@@ -313,7 +314,7 @@
 		</xsl:variable>
 		<h3>
 			<a href="#">
-				<xsl:value-of select="concat($purpose,' : ',$identifier  )"></xsl:value-of>
+				<xsl:value-of select="$identifier"></xsl:value-of>
 			</a>
 		</h3>
 		<div>
