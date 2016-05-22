@@ -204,7 +204,7 @@ class ScoLOMfrDAO extends AbstractDAO {
 	private function addKeyWord($keyword) {
 		$keywordElem = $this->document->createElement ( "keyword" );
 		$string = $this->document->createElement ( "string" );
-		$string->setAttribute ( 'language', 'fr' );
+		$string->setAttribute ( 'language', 'http://id.loc.gov/vocabulary/iso639-1/fr' );
 		$value = $this->document->createTextNode ( $keyword );
 		$string->appendChild ( $value );
 		$keywordElem->appendChild ( $string );
@@ -347,7 +347,7 @@ class ScoLOMfrDAO extends AbstractDAO {
 		$taxonPath = $this->document->createElement ( "taxonPath" );
 		$sourceElem = $this->document->createElement ( "source" );
 		$string = $this->document->createElement ( "string" );
-		$string->setAttribute ( 'language', 'fr' );
+		$string->setAttribute ( 'language', 'http://id.loc.gov/vocabulary/iso639-1/fr' );
 		$stringValue = $this->document->createTextNode ( $source );
 		$string->appendChild ( $stringValue );
 		$sourceElem->appendChild ( $string );
@@ -362,7 +362,7 @@ class ScoLOMfrDAO extends AbstractDAO {
 		$idElem->appendChild ( $idValue );
 		$entryElem = $this->document->createElement ( "entry" );
 		$string = $this->document->createElement ( "string" );
-		$string->setAttribute ( 'language', 'fr' );
+		$string->setAttribute ( 'language', 'http://id.loc.gov/vocabulary/iso639-1/fr' );
 		$stringValue = $this->document->createTextNode ( $entry );
 		$string->appendChild ( $stringValue );
 		$entryElem->appendChild ( $string );

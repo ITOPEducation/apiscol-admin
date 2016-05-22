@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lom xmlns="http://ltsc.ieee.org/xsd/LOM" xmlns:lomfr="http://www.lom-fr.fr/xsd/LOMFR"
 	xmlns:scolomfr="http://www.lom-fr.fr/xsd/SCOLOMFR" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM http://lom-fr.fr/scolomfr/xsd/scolomfrv1.0/scolomfr.xsd">
+	xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM http://www.lom-fr.fr/scolomfr/outils/xsd/scolomfrv20/scolomfr.xsd">
 	<general>
 		<identifier>
 			<catalog />
 			<entry />
 		</identifier>
 		<title>
-			<string language="http://id.loc.gov/vocabulary/iso639-2/fre"> </string>
+			<string language="http://id.loc.gov/vocabulary/iso639-1/fr">
+			</string>
 		</title>
-		<language>http://id.loc.gov/vocabulary/iso639-2/fre</language>
+		<language>http://id.loc.gov/vocabulary/iso639-1/fr</language>
 		<description>
-			<string language="http://id.loc.gov/vocabulary/iso639-2/fre"> </string>
+			<string language="http://id.loc.gov/vocabulary/iso639-1/fr">
+			</string>
 		</description>
 	</general>
 	<lifeCycle>
@@ -22,14 +24,12 @@
 			<catalog />
 			<entry />
 		</identifier>
-		<metadataSchema>SCOLOMFRv1.0</metadataSchema>
-		<language>http://id.loc.gov/vocabulary/iso639-2/fre</language>
+		<metadataSchema>SCOLOMFRv2.1</metadataSchema>
+		<language>http://id.loc.gov/vocabulary/iso639-1/fr</language>
 	</metaMetadata>
 	<technical>
 		<location />
 		<size>0</size>
-		<!--Attention ! 4.1 Format (technique) : valeur "" non trouvée dans le 
-			vocabulaire scolomfr-voc-006. Élément inchangé. -->
 		<format />
 	</technical>
 	<educational>
@@ -37,8 +37,8 @@
 	<rights>
 		<cost>
 			<source>SCOLOMFRv2.1</source>
-			<value>http://data.education.fr/voc/scolomfr/concept/no</value>
-			<label>non</label>
+			<value>http://data.education.fr/voc/scolomfr/concept/yes</value>
+			<label>yes</label>
 		</cost>
 		<copyrightAndOtherRestrictions>
 			<source>SCOLOMFRv2.1</source>
