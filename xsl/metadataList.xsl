@@ -166,16 +166,16 @@
 					<xsl:value-of select="$prefix"></xsl:value-of>
 					<xsl:text>/img/</xsl:text>
 					<xsl:choose>
-					<xsl:when test="$category='learning object'">
+					<xsl:when test="$category='1 - Granule'">
 					<xsl:text>aggregation_level_learning_object.png</xsl:text>
 					</xsl:when>
-					<xsl:when test="$category='lesson'">
+					<xsl:when test="$category='2 - Leçon'">
 					<xsl:text>aggregation_level_lesson.png</xsl:text>
 					</xsl:when>
-					<xsl:when test="$category='course'">
+					<xsl:when test="$category='3 - Cours'">
 					<xsl:text>aggregation_level_course.png</xsl:text>
 					</xsl:when>
-					<xsl:when test="$category='curriculum'">
+					<xsl:when test="$category='4 - Module'">
 					<xsl:text>aggregation_level_curriculum.png</xsl:text>
 					</xsl:when>
 					<xsl:otherwise><xsl:text>aggregation_level_unknown.png</xsl:text></xsl:otherwise>
@@ -206,7 +206,7 @@
 				<xsl:element name="input">
 
 					<xsl:choose>
-						<xsl:when test="$category='curriculum'">
+						<xsl:when test="$category='4 - Module'">
 							<xsl:attribute name="type">checkbox</xsl:attribute>
 							<xsl:attribute name="class">edit-in-structure-view-control</xsl:attribute>
 						</xsl:when>
