@@ -1,5 +1,6 @@
 <?php
 class ScoLOMfrDAO extends AbstractDAO {
+	const SCOLOMFR_VERSION = "SCOLOMFRv2.1";
 	const VOID_RESOURCE = "Contenu non disponible";
 	public function ScoLOMfrDAO($serviceAccess) {
 		parent::__construct ( $serviceAccess );
@@ -33,20 +34,20 @@ class ScoLOMfrDAO extends AbstractDAO {
 	public function updateGeneralResourceType($generalResourceTypes) {
 		$this->cleanGeneralResourceTypes ();
 		foreach ( $generalResourceTypes as $generalResourceType ) {
-			if (is_array ( $generalResourceType ) && !empty ( $generalResourceType ['label'] ) && !empty ( $generalResourceType ['value'] ))
+			if (is_array ( $generalResourceType ) && ! empty ( $generalResourceType ['label'] ) && ! empty ( $generalResourceType ['value'] ))
 				$this->addGeneralResourceType ( $generalResourceType ['value'], $generalResourceType ['label'] );
 		}
 	}
 	public function updateAggregationLevel($aggregationLevel) {
 		$this->cleanAggregationLevel ();
-		if (is_array ( $aggregationLevel ) && !empty ( $aggregationLevel ['label'] ) && !empty ( $aggregationLevel ['value'] )) {
+		if (is_array ( $aggregationLevel ) && ! empty ( $aggregationLevel ['label'] ) && ! empty ( $aggregationLevel ['value'] )) {
 			$this->addAggregationLevel ( $aggregationLevel ['value'], $aggregationLevel ['label'] );
 		}
 	}
 	public function updateLearningResourceType($learningResourceTypes) {
 		$this->cleanLearningResourceTypes ();
 		foreach ( $learningResourceTypes as $learningResourceType ) {
-			if (is_array ( $learningResourceType ) && !empty ( $learningResourceType ['label'] ) && !empty ( $learningResourceType ['value'] ))
+			if (is_array ( $learningResourceType ) && ! empty ( $learningResourceType ['label'] ) && ! empty ( $learningResourceType ['value'] ))
 				$this->addLearningResourceType ( $learningResourceType ['value'], $learningResourceType ['label'] );
 		}
 	}
@@ -56,34 +57,34 @@ class ScoLOMfrDAO extends AbstractDAO {
 	public function updatePlace($places) {
 		$this->cleanPlaces ();
 		foreach ( $places as $place ) {
-			if (is_array ( $place ) && !empty ( $place ['label'] ) && !empty ( $place ['value'] ))
+			if (is_array ( $place ) && ! empty ( $place ['label'] ) && ! empty ( $place ['value'] ))
 				$this->addPlace ( $place ['value'], $place ['label'] );
 		}
 	}
 	public function updateEducationalMethod($educationalMethods) {
 		$this->cleanEducationalMethods ();
 		foreach ( $educationalMethods as $educationalMethod ) {
-			if (is_array ( $educationalMethod ) && !empty ( $educationalMethod ['label'] ) && !empty ( $educationalMethod ['value'] ))
+			if (is_array ( $educationalMethod ) && ! empty ( $educationalMethod ['label'] ) && ! empty ( $educationalMethod ['value'] ))
 				$this->addEducationalMethod ( $educationalMethod ['value'], $educationalMethod ['label'] );
 		}
 	}
 	public function updateActivity($activities) {
 		$this->cleanActivities ();
 		foreach ( $activities as $activity ) {
-			if (is_array ( $activity ) && !empty ( $activity ['label'] ) && !empty ( $activity ['value'] ))
+			if (is_array ( $activity ) && ! empty ( $activity ['label'] ) && ! empty ( $activity ['value'] ))
 				$this->addActivity ( $activity ['value'], $activity ['label'] );
 		}
 	}
 	public function updateIntendedEndUserRole($intendedEndUserRoles) {
 		$this->cleanIntendedEndUserRoles ();
 		foreach ( $intendedEndUserRoles as $intendedEndUserRole ) {
-			if (is_array ( $intendedEndUserRole ) && !empty ( $intendedEndUserRole ['label'] ) && !empty ( $intendedEndUserRole ['value'] ))
+			if (is_array ( $intendedEndUserRole ) && ! empty ( $intendedEndUserRole ['label'] ) && ! empty ( $intendedEndUserRole ['value'] ))
 				$this->addIntendedEndUserRole ( $intendedEndUserRole ['value'], $intendedEndUserRole ['label'] );
 		}
 	}
 	public function updateDifficulty($difficulty) {
 		$this->cleanDifficulty ();
-		if (is_array ( $difficulty ) && !empty ( $difficulty ['label'] ) && !empty( $difficulty ['value'] )) {
+		if (is_array ( $difficulty ) && ! empty ( $difficulty ['label'] ) && ! empty ( $difficulty ['value'] )) {
 			$this->addDifficulty ( $difficulty ['value'], $difficulty ['label'] );
 		}
 	}
@@ -212,7 +213,7 @@ class ScoLOMfrDAO extends AbstractDAO {
 	}
 	private function addGeneralResourceType($resourceTypeValue, $resourceTypeLabel) {
 		$generalResourceTypeElem = $this->document->createElement ( "scolomfr:generalResourceType" );
-		$source = $this->document->createElement ( "scolomfr:source", "SCOLOMFRv2.0" );
+		$source = $this->document->createElement ( "scolomfr:source", self::SCOLOMFR_VERSION );
 		$value = $this->document->createElement ( "scolomfr:value", $resourceTypeValue );
 		$label = $this->document->createElement ( "scolomfr:label", $resourceTypeLabel );
 		$generalResourceTypeElem->appendChild ( $source );
@@ -242,7 +243,7 @@ class ScoLOMfrDAO extends AbstractDAO {
 	}
 	private function addPlace($placeValue, $placeLabel) {
 		$placeElem = $this->document->createElement ( "scolomfr:place" );
-		$source = $this->document->createElement ( "scolomfr:source", "SCOLOMFRv1.0" );
+		$source = $this->document->createElement ( "scolomfr:source", self::SCOLOMFR_VERSION );
 		$value = $this->document->createElement ( "scolomfr:value", $placeValue );
 		$label = $this->document->createElement ( "scolomfr:label", $placeLabel );
 		$placeElem->appendChild ( $source );
@@ -252,7 +253,7 @@ class ScoLOMfrDAO extends AbstractDAO {
 	}
 	private function addEducationalMethod($educationalMethodValue, $educationalMethodLabel) {
 		$educationalMethodElem = $this->document->createElement ( "scolomfr:educationalMethod" );
-		$source = $this->document->createElement ( "scolomfr:source", "SCOLOMFRv1.0" );
+		$source = $this->document->createElement ( "scolomfr:source", self::SCOLOMFR_VERSION );
 		$value = $this->document->createElement ( "scolomfr:value", $educationalMethodValue );
 		$label = $this->document->createElement ( "scolomfr:label", $educationalMethodLabel );
 		$educationalMethodElem->appendChild ( $source );
