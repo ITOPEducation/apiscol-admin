@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://ltsc.ieee.org/xsd/LOM http://www.lom-fr.fr/scolomfr/outils/xsd/scolomfrv20/scolomfr.xsd">
 	<general>
 		<identifier>
-			<catalog />
+			<catalog>URI</catalog>
 			<entry />
 		</identifier>
 		<title>

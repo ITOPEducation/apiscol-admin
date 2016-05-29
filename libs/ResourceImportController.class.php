@@ -141,9 +141,21 @@ class ResourceImportController extends AbstractResourcesController {
 		$domXPath = new DOMXpath ( $doc );
 		$rootNamespace = $doc->lookupNamespaceUri ( $doc->namespaceURI );
 		$domXPath->registerNamespace ( 'lom', $rootNamespace );
-		$entry = $domXPath->query ( "lom:general/lom:identifier/lom:entry" );
-		if ($entry->length > 0)
-			$locations ["general.identifier.entry"] = $entry->item ( 0 )->textContent;
+		$entries = $domXPath->query ( "lom:general/lom:identifier/lom:entry" );
+		if ($entries->length > 0) {
+			for($i = 0; $i < $entries->length; $i ++) {
+				$entry = $entries->item ( $i );
+				if ($entry instanceof DOMElement) {
+					$catalog = $entry->getElementsByTagName ( 'catalog' );
+					if (! empty ( $catalog )) {
+						$catalog = $catalog->item ( 0 );
+						if (! empty ( $catalog ) && $catalog->textContent == 'URI') {
+							$locations ["general.identifier.entry"] = $entry->textContent;
+						}
+					}
+				}
+			}
+		}
 		$location = $domXPath->query ( "lom:technical/lom:location" );
 		if ($location->length > 0)
 			$locations ["technical.location"] = $location->item ( 0 )->textContent;
