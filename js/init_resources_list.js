@@ -3,7 +3,7 @@ var innerLayout;
 var queryBox;
 var DEFAULTS = {
 	NORTH_PANE : 45,
-	WEST_PANE : 350,
+	WEST_PANE : 250,
 	SOUTH_PANE : 45,
 	START_PAGE : 0,
 	ROWS : 20

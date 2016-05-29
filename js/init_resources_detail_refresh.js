@@ -20,7 +20,7 @@ function secundaryInit() {
 		},
 		west : {
 			resizable : true,
-			size : "50%"
+			size : 300
 		}
 	});
 	initRefreshPreviewControls();

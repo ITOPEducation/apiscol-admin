@@ -27,7 +27,7 @@ function refreshTabsState() {
 		},
 		west : {
 			resizable : true,
-			size : "50%"
+			size : "55%"
 		}
 	});
 	$(

@@ -108,7 +108,7 @@ function buildInterface() {
 		},
 		west : {
 			resizable : true,
-			size : 390
+			size : 300
 		}
 	});
 
@@ -285,12 +285,12 @@ function createCarousel() {
 					});
 	if (children > 2)
 		$("#carousel").rcarousel({
-			visible : 2,
+			visible : 1,
 			auto : {
 				enabled : false
 			},
 			orientation : "horizontal",
-			step : 2,
+			step : 1,
 			width : 96,
 			height : 96,
 			margin : 20,

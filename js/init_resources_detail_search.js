@@ -16,7 +16,7 @@ function secundaryInit() {
 		},
 		west : {
 			resizable : true,
-			size : "200px"
+			size : 300
 		}
 	});
 	displayActiveLabel();

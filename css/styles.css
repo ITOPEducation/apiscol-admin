@@ -81,7 +81,9 @@ html.js body header.ui-helper-clearfix div.status-bar span.status.ui-button.ui-b
 	width: 1.5em;
 	height: 1.5em;
 }
-
+html.js body header.ui-helper-clearfix div.status-bar  span.ui-state-highlight.error-message {
+	font-size: 12px;
+}
 html.js body header.ui-helper-clearfix div.status-bar span.private-error-message-button
 	{
 	width: 1.1em;
@@ -112,14 +114,14 @@ body>header h1 img.logo {
 
 body>header h1>span.title-text {
 	float: left;
-	white-space: nowrap;
-	max-width: 80%;
+	max-width: 70%;
 	overflow: hidden;
+	margin-top: 7px;
 }
 
 html.js body>header h1 {
 	margin: 0 0 0.3em 0;
-	font-size: 32px;
+	font-size: 24px;
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -226,7 +228,6 @@ html.js header.ui-helper-clearfix>nav ul.menu li.menu-item ul.ui-state-active
 }
 
 html.js .menu-item {
-	width: 110px;
 	text-align: center;
 }
 
@@ -261,9 +262,10 @@ html.js .menu li a, html.js .menu li span {
 	text-decoration: none;
 	border-left: 1px solid #726d53;
 	border-right: 1px solid #4f5058;
+	padding: 0 10px;
 	font-family: Helvetica, Arial, sans-serif;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 14px;
 	color: #4F5058;
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -532,9 +534,11 @@ html.js body div.content div.pane div.filters-list {
 }
 
 html.js body div.content div.pane button#rows-per-page-open.ui-button {
-	width: 280px;
+	width: 240px;
 	float: right;
 	z-index: 100;
+	margin-top: -5px;
+	font-size: 0.8em;
 }
 
 html.js body div.content div.pane ul#rows-per-page.ui-popup {
@@ -545,10 +549,6 @@ html.js body div.content div.pane ul#rows-per-page.ui-popup {
 
 html.js body div.content div.ui-layout-resizer {
 	z-index: 0 !important;
-}
-
-html.js body div.content div.pane button#rows-per-page-open.ui-button {
-	margin-top: -5px;
 }
 
 html.js body div.content div.pane.ui-layout-north {
@@ -564,7 +564,7 @@ html.js div.content div.pane div.inner-layout div.ui-layout-center table thead t
 display
 */
 html.js div.content div#display.detail-pane div.display-wrapper {
-	width: 800px;
+	width: 700px;
 	top: 5em;
 	left: 2em;
 	position: absolute;
@@ -578,7 +578,11 @@ html.js body div.content div.detail-pane {
 html.js div.content div#display.detail-pane div.display-options button#change-display-mode.ui-button,
 	html.js div.content div#display.detail-pane div.display-options ul#display-mode.ui-popup
 	{
-	width: 200px;
+	width: 160px;
+}
+
+html.js div.content div#display.detail-pane div.display-options button {
+	font-size: 0.8em;
 }
 
 html.js div.content div#display.detail-pane div.display-options button#change-display-device.ui-button
@@ -603,7 +607,7 @@ html.js div.content div#display.detail-pane div.display-options button#change-di
 html.js div.content div#display.detail-pane div.display-options button#change-display-device.ui-button,
 	html.js div.content div#display.detail-pane div.display-options ul#display-device.ui-popup
 	{
-	width: 260px;
+	width: 190px;
 }
 
 html.js div.content div#display.detail-pane div.display-options ul#display-mode.ui-popup li,
@@ -635,6 +639,7 @@ html.js div.content div#display.detail-pane div.pane h2 {
 	padding-right: 20px;
 	margin-top: 0;
 	float: left;
+	font-size: 18px;
 }
 
 html.js button#change-display-mode.ui-button span.ui-button-icon-primary.ui-icon-eye
@@ -647,6 +652,11 @@ html.js button#change-display-device.ui-button span.ui-button-icon-primary.ui-ic
 	background-image: url("../img/device.png");
 }
 
+html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_thumb
+	{
+	clear: left;
+}
+
 html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_thumb,
 	html.js div#display.detail-pane div.pane div.custom-image-input-container form#set_custom_preview
 	{
@@ -655,6 +665,7 @@ html.js div#display.detail-pane div.pane div.custom-image-input-container form#s
 	overflow: hidden;
 	float: left;
 	margin-bottom: 1em;
+	font-size: 14px;
 }
 /*
 uris
@@ -710,7 +721,6 @@ html.js .badge.badge-success {
 html.js body div.content div#uris.detail-pane div.uris-bloc h3 span.server-origin span.badge
 	{
 	display: inline-block;
-	width: 200px;
 	text-align: center;
 }
 
@@ -752,6 +762,8 @@ html.js div.content div#uris.detail-pane div.uris-bloc h3 span.server-origin
 	background-color: #fff;
 	z-index: 999;
 	position: relative;
+	margin-top: -16px;
+	margin-bottom: 8px;
 }
 
 html.js body div.content div#uris.detail-pane div.uris-bloc h3 {
@@ -777,6 +789,7 @@ html.js body div.content div#refresh.detail-pane div.pane h2.ui-state-highlight
 	display: inline-block;
 	padding-right: 20px;
 	margin-top: 0;
+	font-size: 16px;
 }
 
 html.js div.content div#display.detail-pane div.pane div#carousel img {
@@ -804,9 +817,10 @@ edit
 */
 html.js body div.content div#edit.detail-pane div.pane form.add-content input.ui-button
 	{
-	width: 400px;
-	margin: 1em auto;
+	width: 300px;
+	font-size: 16px; margin : 1em auto;
 	display: block;
+	margin: 1em auto;
 }
 
 html.js body div#edit.detail-pane div.pane h2.ui-state-highlight img {
@@ -818,7 +832,7 @@ html.js body div#edit.detail-pane div.pane h2.ui-state-highlight img {
 html.js div#edit.detail-pane div.pane div.progress div#upload-result-status,
 	html.js div#add-metadata-result div.content-suggestion-wrapper div#upload-result-status
 	{
-	margin: 5px 50px;
+	margin: 5px 10px;
 	padding: 10px;
 	font-weight: bold;
 }
@@ -849,7 +863,7 @@ html.js body div.content div#edit.detail-pane div.pane ul.files-list li
 	padding: 3px 10px 5px 10px;
 	border-bottom: 1px solid #ccc;
 	color: #666;
-	height: 20px;
+	min-height: 20px;
 }
 
 html.js body div.content div#edit.detail-pane div.pane ul.files-list li img
@@ -915,12 +929,13 @@ html.js body div.content div#refresh.detail-pane div.pane div.refresh-control
 	clear: left;
 	margin-top: 1em;
 	width: 600px;
+	font-size: 14px;
 }
 
 html.js body div.content div#refresh.detail-pane div.pane div.refresh-control form.ui-button
 	{
 	float: left;
-	width: 400px;
+	width: 210px;
 }
 
 html.js body div.content div#refresh.detail-pane div.pane div.refresh-control div.ui-corner-all
@@ -957,14 +972,15 @@ html.js body div.content div#edit.detail-pane div.pane ul.files-list li.main-fil
 
 html.js body div.content div#edit.detail-pane div.pane div.file-input-container form#send_file span.checkbox-wrapper
 	{
-	margin-left: 3em;
+	display:block;
+	margin-top: 1em;
 	z-index: 9999;
 	position: relative;
 }
 
 html.js body div.content div#edit.detail-pane div.pane div.progress {
 	margin: auto auto;
-	width: 400px;
+	width: 300px;
 	padding: 1px;
 	border-radius: 3px;
 }
@@ -987,12 +1003,20 @@ html.js body div.content div#edit.detail-pane div.pane ul.files-list li span.del
 	display: inline-block;
 }
 
+html.js body div.content div#edit.detail-pane div.pane h2 {
+	font-size: 18px;
+}
+
+html.js body div.content div#edit.detail-pane div.pane  form {
+	font-size: 12px;
+}
+
 html.js body div.content div#edit.detail-pane div.pane div.ui-state-error
 	{
-	padding: 0.7em;
-	font-size: 18px;
+	padding: 0.5em;
+	font-size: 16px;
 	font-weight: bold;
-	width: 400px;
+	width: 300px;
 	margin: 2em auto 0 auto;
 	text-align: center;
 }
@@ -1017,8 +1041,8 @@ html.js form#formulaire_scolomfr {
 html.js body div.content div#edit.detail-pane div.pane.ui-layout-west h2.ui-state-highlight
 	{
 	position: fixed;
-	width: 500px;
 	margin-top: 29px;
+	font-size: 1.2em;
 }
 
 html.js body div.content div#edit.detail-pane div.pane.ui-layout-west div.fixed-title-wrapper
@@ -1353,7 +1377,7 @@ html.js body div.content div#display.detail-pane div.pane div.present-thumb
 	{
 	margin: 1em 1em 2em 1em;
 	padding: 14px;
-	width: 290px;
+	width: 240px;
 	height: 128px;
 	clear: both;
 }
@@ -1538,6 +1562,11 @@ html.js details, html.js  div.content div#uris.detail-pane div.uris-bloc p
 	{
 	border: 1px solid #666;
 	margin-top: 0.5em;
+	font-size: 12px;
+}
+
+html.js  div.content div#uris.detail-pane div.uris-bloc b {
+	font-size: 14px;
 }
 /* Apply a pointer cursor and style the background upon hover to indicate <summary> is a clickable element. */
 /* These styles can be applied regardless of whether the fallback is needed */
@@ -1547,6 +1576,11 @@ html.js summary {
 
 html.js summary:hover, html.js summary:focus {
 	
+}
+
+html.js.no-details body div.content div#uris.detail-pane div.uris-bloc.ui-widget-content details.open div pre.prettyprint.prettyprinted code.language-xml
+	{
+	font-size: 14px;
 }
 
 /* The following styles are not really needed, since the jQuery script takes care of hiding/displaying the elements. */

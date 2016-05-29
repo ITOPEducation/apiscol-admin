@@ -20,8 +20,7 @@
 				<div class="cadre ui-helper-clearfix">
 					<span class="cadre_icones_droite" name="cadre_icones"></span>
 					<details>
-						<summary class="cadre_label">Description documentaire de la
-							ressource</summary>
+						<summary class="cadre_label">Description documentaire</summary>
 						<div>
 							<xsl:apply-templates select="/lom:lom/lom:general/lom:title"></xsl:apply-templates>
 							<xsl:apply-templates select="/lom:lom/lom:general/lom:description"></xsl:apply-templates>
@@ -78,8 +77,6 @@
 											<td>
 												<input type="text" placeholder="Nom, prenom" class="name-input"></input>
 												<input type="text" placeholder="Organisation" class="org-input"></input>
-											</td>
-											<td>
 												<input type="text" placeholder="Date" class="date-input"></input>
 											</td>
 											<td>
@@ -98,8 +95,7 @@
 				<div class="cadre ui-helper-clearfix">
 					<span class="cadre_icones_droite" name="cadre_icones"></span>
 					<details>
-						<summary class="cadre_label">Description pédagogique de la
-							ressource</summary>
+						<summary class="cadre_label">Description pédagogique</summary>
 						<div>
 							<xsl:apply-templates select="/lom:lom/lom:educational/lom:description"></xsl:apply-templates>
 							<div name="element" class="element">
@@ -328,7 +324,7 @@
 			</div>
 			<div class="elt_champ_form">
 				<textarea name="general-description" id="general-description"
-					cols="100" rows="7">
+					cols="45" rows="7">
 					<xsl:attribute name="placeholder">
 					 <xsl:value-of select="'Non renseigné'"></xsl:value-of>
 					 </xsl:attribute>
@@ -344,7 +340,7 @@
 			</div>
 			<div class="elt_champ_form">
 				<textarea name="general-coverage" id="general-coverage"
-					cols="100" rows="7">
+					cols="45" rows="7">
 					<xsl:attribute name="placeholder">
 					 <xsl:value-of select="'Non renseigné'"></xsl:value-of>
 					 </xsl:attribute>
@@ -360,7 +356,7 @@
 			</div>
 			<div class="elt_champ_form">
 				<textarea name="educational-description" id="educational-description"
-					cols="100" rows="7">
+					cols="45" rows="7">
 					<xsl:attribute name="placeholder">
 					 <xsl:value-of select="'Non renseigné'"></xsl:value-of>
 					 </xsl:attribute>
