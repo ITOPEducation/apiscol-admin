@@ -159,7 +159,7 @@
 			</td>
 			<td>
 				<xsl:variable name="category">
-					<xsl:value-of select="atom:category/@term"></xsl:value-of>
+					<xsl:value-of select="atom:category/@label"></xsl:value-of>
 				</xsl:variable>
 				<xsl:element name="img">
 					<xsl:attribute name="src">
@@ -197,7 +197,7 @@
 			</td>
 			<td>
 				<xsl:variable name="category">
-					<xsl:value-of select="atom:category/@term"></xsl:value-of>
+					<xsl:value-of select="atom:category/@label"></xsl:value-of>
 				</xsl:variable>
 
 
