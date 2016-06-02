@@ -13,7 +13,7 @@ class ContentDAO extends AtomDAO {
 	}
 	public function isUrl() {
 		assert ( $this->isBuilt );
-		$labels = $this->xpath->query ( "/atom:entry/atom:category/@label" );
+		$labels = $this->xpath->query ( "/atom:entry/atom:category/@term" );
 		return $labels->length > 0 && $labels->item ( 0 )->value == 'url';
 	}
 	public function getDownloadLink() {
