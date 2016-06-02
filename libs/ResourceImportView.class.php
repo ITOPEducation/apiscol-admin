@@ -54,9 +54,13 @@ class ResourceImportView extends AbstractView implements IView {
 			$area .= $this->getContentLinkSuggestionArea ( $technicalLocation );
 		else {
 			if (! is_null ( $technicalLocation ) && strlen ( $technicalLocation ) > 0)
-				$area .= $this->getContentLinkSuggestionArea ( $technicalLocation, 'general.identifier.entry' );
+			{
+				$area .= $this->getContentLinkSuggestionArea ( $technicalLocation, 'technical.location' );
+			}
 			if (! is_null ( $identifierEntry ) && strlen ( $identifierEntry ) > 0)
-				$area .= $this->getContentLinkSuggestionArea ( $identifierEntry, 'technical.location' );
+			{
+				$area .= $this->getContentLinkSuggestionArea ( $identifierEntry, 'general.identifier.entry' );
+			}
 		}
 		$area .= '</div>';
 		$adminLink = $this->prefix . '/resources/detail/' . RequestUtils::extractIdFromRestUri ( $uri ) . '/edit';

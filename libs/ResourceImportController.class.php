@@ -150,7 +150,7 @@ class ResourceImportController extends AbstractResourcesController {
 					if (! empty ( $catalog )) {
 						$catalog = $catalog->item ( 0 );
 						if (! empty ( $catalog ) && $catalog->textContent == 'URI') {
-							$locations ["general.identifier.entry"] = $entry->textContent;
+							$locations ["general.identifier.entry"] = trim ( $entry->textContent );
 						}
 					}
 				}
@@ -158,7 +158,7 @@ class ResourceImportController extends AbstractResourcesController {
 		}
 		$location = $domXPath->query ( "lom:technical/lom:location" );
 		if ($location->length > 0)
-			$locations ["technical.location"] = $location->item ( 0 )->textContent;
+			$locations ["technical.location"] = trim ( $location->item ( 0 )->textContent );
 	}
 	public function getView() {
 		return $this->view;
