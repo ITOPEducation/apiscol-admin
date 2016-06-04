@@ -1,7 +1,7 @@
 <?php
 class GlobalView {
 	// const CDN_HOST='http://apiscol.crdp-versailles.fr';
-	const CDN_HOST = 'http://apiscol.cdn.local';
+	const CDN_HOST = 'https://rawgit.com/ITOPEducation/apiscol-cdn/master';
 	private $render;
 	private $css;
 	private $scripts;
@@ -41,7 +41,7 @@ class GlobalView {
 			'init_resources_detail_search' => '#/js/init_resources_detail_search.js',
 			'init_add_metadata' => '#/js/init_add_metadata.js',
 			'init_maintenance_recovery' => '#/js/init_maintenance_recovery.js',
-			'apiscol' => self::CDN_HOST.'/cdn/0.0.1/js/jquery.apiscol.js' 
+			'apiscol' => self::CDN_HOST.'/0.0.1/js/jquery.apiscol.js' 
 	);
 	private static $cssPaths = array (
 		'main' => '#/css/styles.css',
