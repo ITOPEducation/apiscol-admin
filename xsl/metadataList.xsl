@@ -310,7 +310,7 @@
 			<xsl:value-of select="@identifier"></xsl:value-of>
 		</xsl:variable>
 		<xsl:variable name="name">
-			<xsl:value-of select="../@name"></xsl:value-of>
+			<xsl:value-of select="../@value"></xsl:value-of>
 		</xsl:variable>
 		<h3>
 			<a href="#">

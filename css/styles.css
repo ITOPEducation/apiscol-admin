@@ -81,9 +81,12 @@ html.js body header.ui-helper-clearfix div.status-bar span.status.ui-button.ui-b
 	width: 1.5em;
 	height: 1.5em;
 }
-html.js body header.ui-helper-clearfix div.status-bar  span.ui-state-highlight.error-message {
+
+html.js body header.ui-helper-clearfix div.status-bar  span.ui-state-highlight.error-message
+	{
 	font-size: 12px;
 }
+
 html.js body header.ui-helper-clearfix div.status-bar span.private-error-message-button
 	{
 	width: 1.1em;
@@ -818,7 +821,8 @@ edit
 html.js body div.content div#edit.detail-pane div.pane form.add-content input.ui-button
 	{
 	width: 300px;
-	font-size: 16px; margin : 1em auto;
+	font-size: 16px;
+	margin: 1em auto;
 	display: block;
 	margin: 1em auto;
 }
@@ -972,7 +976,7 @@ html.js body div.content div#edit.detail-pane div.pane ul.files-list li.main-fil
 
 html.js body div.content div#edit.detail-pane div.pane div.file-input-container form#send_file span.checkbox-wrapper
 	{
-	display:block;
+	display: block;
 	margin-top: 1em;
 	z-index: 9999;
 	position: relative;
@@ -1366,6 +1370,13 @@ html.js div#display.detail-pane div.pane div.present-thumb span {
 	font-size: 20px;
 	font-weight: bold;
 	width: 100px;
+}
+
+html.js div#display.detail-pane div.pane div.present-thumb img.missing-thumb
+	{
+	display: block;
+	margin: auto auto;
+	width: 50px;
 }
 
 html.js body div.content div#display.detail-pane div.pane div.refresh-area h4

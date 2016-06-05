@@ -46,11 +46,9 @@
 		<xsl:variable name="href" select="apiscol:link/@href"></xsl:variable>
 		<xsl:variable name="error-message" select="'Pas de miniature actuellement'"></xsl:variable>
 		<xsl:choose>
-			<xsl:when test="string-length($href)=0">
+			<xsl:when test="string-length($href)=0 or not($href)">
 				<xsl:value-of select="$error-message"></xsl:value-of>
-			</xsl:when>
-			<xsl:when test="not($href)">
-				<xsl:value-of select="$error-message"></xsl:value-of>
+				<img src="/img/unknown.png" class="missing-thumb"></img>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:element name="img">

@@ -179,6 +179,7 @@ function buildInterface() {
 							freeze(true);
 							$(
 									"div#display.detail-pane div.pane div.refresh-area div.thumbs-container div.present-thumb img")
+									.removeClass("missing-thumb")
 									.attr("src", $("input#waiter-url").val())
 							putBlocked = true;
 							status.empty();
@@ -262,6 +263,7 @@ function createCarousel() {
 												freeze(true);
 												$(
 														"div#display.detail-pane div.pane div.refresh-area div.thumbs-container div.present-thumb img")
+														.removeClass("missing-thumb")
 														.attr(
 																"src",
 																$(
