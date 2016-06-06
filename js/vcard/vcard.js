@@ -8,7 +8,7 @@
 if (!Array.prototype.forEach) {
 	Array.prototype.forEach = function(d, c) {
 		c = c || this;
-		for ( var b = 0, a = this.length; b < a; b++) {
+		for (var b = 0, a = this.length; b < a; b++) {
 			d.call(c, this[b], b, this)
 		}
 	}
@@ -17,7 +17,7 @@ if (typeof Prototype != "undefined" || !Array.prototype.map) {
 	Array.prototype.map = function(d, c) {
 		c = c || this;
 		var e = [];
-		for ( var b = 0, a = this.length; b < a; b++) {
+		for (var b = 0, a = this.length; b < a; b++) {
 			e.push(d.call(c, this[b], b, this))
 		}
 		return e
@@ -27,7 +27,7 @@ if (typeof Prototype != "undefined" || !Array.prototype.filter) {
 	Array.prototype.filter = function(d, c) {
 		c = c || this;
 		var e = [];
-		for ( var b = 0, a = this.length; b < a; b++) {
+		for (var b = 0, a = this.length; b < a; b++) {
 			if (d.call(c, this[b], b, this)) {
 				e.push(this[b])
 			}
@@ -93,7 +93,7 @@ vCard = {
 			properties : /((type=)?(.+);?)+/
 		}
 		var markers = /(version|n|fn|title|org|end)\:/ig;
-		_input = _input.replace(markers, "\n$1:");
+		_input = _input.replace(/§/g, "\n");
 		var lines = _input.split(/\r?\n/);
 		for (n in lines) {
 			line = lines[n];
@@ -134,8 +134,10 @@ vCard = {
 		to_html : function() {
 			var output = '';
 			var output = '<td class="vcard">';
-			if (this.fn) {
-				output += this.fn; // Required
+			if (this.fn && this.fn["language=fr-fr"]) {
+				output += this.fn["language=fr-fr"]; 
+			} else if (this.fn && this.fn) {
+				output += this.fn; 
 			}
 			if (this.org) {
 				if (this.fn)

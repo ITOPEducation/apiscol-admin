@@ -385,7 +385,7 @@ function displayVcards() {
 						tr
 								.append(
 										$('<input type="hidden" name="lifeCycle-contributor-vcard[]" value="'
-												+ vcardString + '"/>'))
+												+ vcardString.replace(/§/g, "\n") + '"/>'))
 								.append(
 										$('<input type="hidden" name="lifeCycle-contributor-role-label[]" value="'
 												+ roleLabel + '"/>'))
@@ -395,8 +395,8 @@ function displayVcards() {
 								.append(
 										$('<input type="hidden" name="lifeCycle-contributor-date[]" value="'
 												+ date + '"/>'));
-						$(elem).replaceWith(
-								vCard.initialize(vcardString).to_html());
+						var vcardParsed=vCard.initialize(vcardString);
+						$(elem).replaceWith(vcardParsed.to_html());
 						tr.find("span.delete-button").button({
 							icons : {
 								primary : "ui-icon-close"
@@ -422,7 +422,7 @@ function handleContributors() {
 			})
 			.click(
 					function() {
-						var vcard = "BEGIN:VCARD VERSION:3.0[FN][N][ORG]\nEND:VCARD";
+						var vcard = "BEGIN:VCARD§VERSION:3.0[FN][N][ORG]§END:VCARD";
 						var tr = $(this).closest("tr");
 						var org = tr.find("input.org-input").val();
 						tr.find("input.org-input").val("");
@@ -431,12 +431,12 @@ function handleContributors() {
 						var fn = tr.find("input.name-input").val();
 						tr.find("input.name-input").val("");
 						if (!org.match(/^\s*$/))
-							vcard = vcard.replace("[ORG]", "\nORG:" + org);
+							vcard = vcard.replace("[ORG]", "§ORG:" + org);
 						else
 							vcard = vcard.replace("[ORG]", "");
 						if (!fn.match(/^\s*$/)) {
-							vcard = vcard.replace("[FN]", "\nFN:" + fn);
-							vcard = vcard.replace("[N]", "\nN:" + fn);
+							vcard = vcard.replace("[FN]", "§FN:" + fn);
+							vcard = vcard.replace("[N]", "§N:" + fn);
 						} else {
 							vcard = vcard.replace("[FN]", "");
 							vcard = vcard.replace("[N]", "");
