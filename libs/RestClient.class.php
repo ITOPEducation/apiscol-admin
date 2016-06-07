@@ -65,6 +65,10 @@ class RestClient {
 						'header' => $headers,
 						'content' => $data,
 						'ignore_errors' => true 
+				),
+				"ssl" => array (
+						"verify_peer" => false,
+						"verify_peer_name" => false 
 				) 
 		);
 		$response = $this->_launch ( $this->_makeUrl ( array () ), stream_context_create ( $params ) );
@@ -97,6 +101,10 @@ class RestClient {
 						'header' => $headers,
 						'content' => $data,
 						'ignore_errors' => true 
+				),
+				"ssl" => array (
+						"verify_peer" => false,
+						"verify_peer_name" => false 
 				) 
 		);
 		$response = $this->_launch ( $this->_makeUrl ( array () ), stream_context_create ( $params ) );
@@ -130,6 +138,10 @@ class RestClient {
 						'method' => $pMethod,
 						'header' => $headers,
 						'ignore_errors' => true 
+				),
+				"ssl" => array (
+						"verify_peer" => false,
+						"verify_peer_name" => false 
 				) 
 		);
 		if ($pContent !== null) {
