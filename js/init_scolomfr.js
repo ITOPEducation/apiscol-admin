@@ -116,7 +116,7 @@ function initScolomFr() {
 	});
 	$("textarea#general-description").add($("input#general-title")).add(
 			$("textarea#educational-description")).add(
-			$("textarea#general-coverage")).bind("keyup change", function() {
+			$("textarea.general-coverage")).bind("keyup change", function() {
 		activateSubmitButton(true);
 	});
 	$("ul", "#keyword-container").tagit({

@@ -339,7 +339,7 @@
 				couverture :
 			</div>
 			<div class="elt_champ_form">
-				<textarea name="general-coverage" id="general-coverage"
+				<textarea name="general-coverage" class="general-coverage"
 					cols="45" rows="7">
 					<xsl:attribute name="placeholder">
 					 <xsl:value-of select="'Non renseigné'"></xsl:value-of>
