@@ -3,7 +3,7 @@ var ned = {
 	title : "Niveau éducatif détaillé",
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/educational_level",
-	source : "scolomfr-voc-022",
+	source : "ScoLomFr Vocabulaire22",
 	help : "Précisez à quel(s) niveau(x) de classes la séquence se destine.",
 	mandatory : true
 };
@@ -12,7 +12,7 @@ var ens = {
 	title : "Domaines d'enseignement",
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-003",
-	source : "scolomfr-voc-015",
+	source : "ScoLomFr Vocabulaire15",
 	help : "Précisez la discipline pour laquelle la séquence est adaptée.",
 	mandatory : true
 };
@@ -21,7 +21,7 @@ var scc = {
 	title : "Compétences du socle commun",
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/competency",
-	source : "scolomfr-voc-016",
+	source : "ScoLomFr Vocabulaire16",
 	help : "Précisez les compétences du socle commun." ,
 	mandatory : true
 };
@@ -30,7 +30,7 @@ var dip = {
 	title : "Diplomes",
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-016",
-	source : "scolomfr-voc-029",
+	source : "ScoLomFr Vocabulaire29",
 	help : "Précisez le diplôme.",
 	mandatory : true
 };
@@ -39,7 +39,7 @@ var pcd = {
 	title : "Public cible détaillé",
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-011",
-	source : "scolomfr-voc-021",
+	source : "ScoLomFr Vocabulaire21",
 	help : "Précisez le public cible détaillé.",
 	mandatory : true
 };
@@ -48,7 +48,7 @@ var cap = {
 	title : "Cadre pédagogique.",
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/competency",
-	source : "scolomfr-voc-040",
+	source : "ScoLomFr Vocabulaire40",
 	help : "Précisez le cadre pédagogique.",
 	mandatory : true
 };
@@ -57,7 +57,7 @@ var cecrl = {
 	title : "Cadre européen commun de référence pour les langues",
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-019",
-	source : "scolomfr-voc-042",
+	source : "ScoLomFr Vocabulaire42",
 	help : "Précisez le cadre européen commun de référence pour les langues.",
 	mandatory : true
 };
@@ -66,7 +66,7 @@ var sup = {
 	title : "Support",
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-023",
-	source : "scolomfr-voc-043",
+	source : "ScoLomFr Vocabulaire43",
 	help : "Précisez le Support.",
 	mandatory : true
 };
@@ -75,7 +75,7 @@ var def = {
 	title : "Support",
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-017",
-	source : "scolomfr-voc-041",
+	source : "ScoLomFr Vocabulaire41",
 	help : "Précisez le type de déficience.",
 	mandatory : true
 };
