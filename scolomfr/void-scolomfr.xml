@@ -21,7 +21,7 @@
 	</lifeCycle>
 	<metaMetadata>
 		<identifier>
-			<catalog />
+			<catalog>URI</catalog>
 			<entry />
 		</identifier>
 		<metadataSchema>SCOLOMFRv2.1</metadataSchema>
