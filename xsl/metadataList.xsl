@@ -429,7 +429,7 @@
 					<xsl:value-of select="$facetcontent"></xsl:value-of>
 					<xsl:text>]</xsl:text>
 				</xsl:attribute>
-				<xsl:value-of select="."></xsl:value-of>
+				<xsl:value-of select="@title"></xsl:value-of>
 				<xsl:text>(</xsl:text>
 				<xsl:value-of select="@count"></xsl:value-of>
 				<xsl:text>)</xsl:text>
