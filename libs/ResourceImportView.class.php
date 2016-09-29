@@ -43,6 +43,15 @@ class ResourceImportView extends AbstractView implements IView {
 			return '';
 		
 		$area .= '<div><div class="badge badge-info">Import réussi</div>';
+		$messages = $result->query ( '/atom:entry/apiscol:warnings/apiscol:message' );
+		if ($messages) {
+			$area .= '<br/><div><div class="badge badge-warning">Avertissements</div><ul>';
+			for($i = 0; $i < $messages->length; $i ++) {
+				$message = $messages->item ( $i )->textContent;
+				$area .= '<li>' . $message . '</li>';
+			}
+			$area .= '</ul></div>';
+		}
 		$area .= '<div class="ui-widget-content"><h3>' . $result->query ( "/atom:entry/atom:title" )->item ( 0 )->textContent . '</h3>';
 		$area .= '<p>' . $result->query ( "/atom:entry/atom:summary" )->item ( 0 )->textContent . '</p>';
 		$uri = $result->query ( '/atom:entry/atom:link[@rel="self"][@type="text/html"]/@href' )->item ( 0 )->value;
@@ -53,12 +62,10 @@ class ResourceImportView extends AbstractView implements IView {
 		if (! is_null ( $technicalLocation ) && ! is_null ( $identifierEntry ) && $technicalLocation == $identifierEntry)
 			$area .= $this->getContentLinkSuggestionArea ( $technicalLocation );
 		else {
-			if (! is_null ( $technicalLocation ) && strlen ( $technicalLocation ) > 0)
-			{
+			if (! is_null ( $technicalLocation ) && strlen ( $technicalLocation ) > 0) {
 				$area .= $this->getContentLinkSuggestionArea ( $technicalLocation, 'technical.location' );
 			}
-			if (! is_null ( $identifierEntry ) && strlen ( $identifierEntry ) > 0)
-			{
+			if (! is_null ( $identifierEntry ) && strlen ( $identifierEntry ) > 0) {
 				$area .= $this->getContentLinkSuggestionArea ( $identifierEntry, 'general.identifier.entry' );
 			}
 		}
