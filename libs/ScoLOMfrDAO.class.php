@@ -386,7 +386,7 @@ class ScoLOMfrDAO extends AbstractDAO {
 	}
 	public function send($mdid, $ifMatch) {
 		$this->document->formatOutput = false;
-		$this->serviceAccess->sendMetadataFile ( $this->document->saveXML (), $mdid, $ifMatch );
+		return $this->serviceAccess->sendMetadataFile ( $this->document->saveXML (), $mdid, $ifMatch );
 	}
 }
 

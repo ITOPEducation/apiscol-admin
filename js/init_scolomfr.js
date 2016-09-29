@@ -22,7 +22,7 @@ var scc = {
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/competency",
 	source : "ScoLomFr Vocabulaire16",
-	help : "Précisez les compétences du socle commun." ,
+	help : "Précisez les compétences du socle commun.",
 	mandatory : true
 };
 var dip = {
@@ -101,19 +101,26 @@ function initScolomFr() {
 	addSubmitButton();
 
 	$("form#formulaire_scolomfr").attr("action",
-			$("form#formulaire_scolomfr").attr("action") + "/async").ajaxForm({
-		dataType : 'xml',
-		cache : true,
-		beforeSend : function() {
-			activateSubmitButton(false);
-			putWaiterOnSubmitButton(true);
-		},
-		complete : function(xhr) {
-			activateSubmitButton(false);
-			putWaiterOnSubmitButton(false);
-			console.log(xhr.responseXML);
-		}
-	});
+			$("form#formulaire_scolomfr").attr("action") + "/async").ajaxForm(
+			{
+				dataType : 'xml',
+				cache : true,
+				beforeSend : function() {
+					activateSubmitButton(false);
+					putWaiterOnSubmitButton(true);
+				},
+				complete : function(xhr) {
+					activateSubmitButton(false);
+					putWaiterOnSubmitButton(false);
+					if (xhr.responseXML) {
+						$(xhr.responseXML).find("apiscol\\:message, message")
+								.each(function(i, e) {
+									console.log($(e).text());
+								});
+
+					}
+				}
+			});
 	$("textarea#general-description").add($("input#general-title")).add(
 			$("textarea#educational-description")).add(
 			$("textarea.general-coverage")).bind("keyup change", function() {
@@ -385,7 +392,8 @@ function displayVcards() {
 						tr
 								.append(
 										$('<input type="hidden" name="lifeCycle-contributor-vcard[]" value="'
-												+ vcardString.replace(/§/g, "\n") + '"/>'))
+												+ vcardString.replace(/§/g,
+														"\n") + '"/>'))
 								.append(
 										$('<input type="hidden" name="lifeCycle-contributor-role-label[]" value="'
 												+ roleLabel + '"/>'))
@@ -395,7 +403,7 @@ function displayVcards() {
 								.append(
 										$('<input type="hidden" name="lifeCycle-contributor-date[]" value="'
 												+ date + '"/>'));
-						var vcardParsed=vCard.initialize(vcardString);
+						var vcardParsed = vCard.initialize(vcardString);
 						$(elem).replaceWith(vcardParsed.to_html());
 						tr.find("span.delete-button").button({
 							icons : {

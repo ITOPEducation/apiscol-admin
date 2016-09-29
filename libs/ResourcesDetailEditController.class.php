@@ -47,7 +47,8 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 		if (isset ( Security::$_CLEAN ['update-metadata'] )) {
 			$this->registerMetadataId ();
 			$this->acquireScolomfr ();
-			$this->processUpdateMetadataAction ();
+			$result = $this->processUpdateMetadataAction ();
+			echo $result;
 		} else if (isset ( Security::$_CLEAN ['file-for-resource'] )) {
 			$this->registerMetadataId ();
 			if (! $this->mainController->isInError ())
@@ -173,6 +174,7 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 		return $result;
 	}
 	public function processUpdateMetadataAction($secondTry = false) {
+		$result = '';
 		if (isset ( Security::$_CLEAN ['update-metadata'] )) {
 			if (array_key_exists ( 'general-title', Security::$_CLEAN ))
 				$this->model->getLomMetadata ()->updateTitle ( Security::$_CLEAN ['general-title'] );
@@ -216,17 +218,14 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 				$separatedValues = $this->separateLabelAndValue ( Security::$_CLEAN ['educational-difficulty'] );
 				$this->model->getLomMetadata ()->updateDifficulty ( $separatedValues );
 			}
-			if (array_key_exists ( 'classifications', Security::$_CLEAN ))
-			{
+			if (array_key_exists ( 'classifications', Security::$_CLEAN )) {
 				$this->model->getLomMetadata ()->updateClassifications ( Security::$_CLEAN ['classifications'] );
 			}
 			if (array_key_exists ( 'lifeCycle-contributor-vcard', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-date', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-role-label', Security::$_CLEAN ) && array_key_exists ( 'lifeCycle-contributor-role-id', Security::$_CLEAN ))
 				
 				$this->model->getLomMetadata ()->updateContributors ( Security::$_CLEAN ['lifeCycle-contributor-vcard'], Security::$_CLEAN ['lifeCycle-contributor-role-id'], Security::$_CLEAN ['lifeCycle-contributor-role-label'], Security::$_CLEAN ['lifeCycle-contributor-date'] );
 			try {
-				// echo ($this->model->getLomMetadata ()->getDocumentAsString ());
-				// die ();
-				$this->model->getLomMetadata ()->send ( $this->model->getMetadata ()->getId (), $this->model->getMetadata ()->getEtag () );
+				$result = $this->model->getLomMetadata ()->send ( $this->model->getMetadata ()->getId (), $this->model->getMetadata ()->getEtag () );
 			} catch ( HttpRequestException $e ) {
 				if (! $secondTry) {
 					
@@ -246,6 +245,7 @@ class ResourcesDetailEditController extends AbstractResourcesDetailController {
 				}
 			}
 		}
+		return $result;
 	}
 	public function processAddContentAction($secondTry = false) {
 		if (isset ( Security::$_CLEAN ['add-content'] )) {
