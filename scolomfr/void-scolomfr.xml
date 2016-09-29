@@ -38,7 +38,7 @@
 		<cost>
 			<source>SCOLOMFRv2.1</source>
 			<value>http://data.education.fr/voc/scolomfr/concept/yes</value>
-			<label>yes</label>
+			<label>oui</label>
 		</cost>
 		<copyrightAndOtherRestrictions>
 			<source>SCOLOMFRv2.1</source>
