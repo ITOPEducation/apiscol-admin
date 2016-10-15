@@ -2,32 +2,44 @@
 		"title" : "Type de déficience",
 		"isFolder" : true,
 		"hideCheckbox" : true,
-		"children" : [{"title" :"déficience auditive",
+		"children" : [{"title" :"trouble auditif",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-003",
 			"icon" : false,
 			"children" : []
-			},{"title" :"déficience visuelle",
+			},{"title" :"trouble visuel",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-004",
 			"icon" : false,
 			"children" : []
-			},{"title" :"polyhandicapés",
+			},{"title" :"polyhandicap",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-005",
 			"icon" : false,
 			"children" : []
-			},{"title" :"troubles cognitifs",
+			},{"title" :"trouble intellectuel et cognitif",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-006",
 			"icon" : false,
 			"children" : []
-			},{"title" :"troubles moteurs",
+			},{"title" :"trouble moteur",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-007",
 			"icon" : false,
 			"children" : []
-			},{"title" :"troubles psychiques",
+			},{"title" :"trouble psychique",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-008",
 			"icon" : false,
 			"children" : []
-			},{"title" :"troubles spécifiques des apprentissages",
+			},{"title" :"trouble spécifique du langage et des apprentissages",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-009",
+			"icon" : false,
+			"children" : []
+			},{"title" :"trouble viscéral",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-036",
+			"icon" : false,
+			"children" : []
+			},{"title" :"trouble envahissant du développement et autisme",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-037",
+			"icon" : false,
+			"children" : []
+			},{"title" :"plusieurs troubles associés",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-041-num-038",
 			"icon" : false,
 			"children" : []
 			}]

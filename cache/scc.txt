@@ -9,26 +9,10 @@
 			"title" : "socle commun de connaissances, de compétences et de culture","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00714",
 			"icon" : false,
 			"children" : [{
-			"title" : "domaine 5 : les représentations du monde et l'activité humaine","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00734",
-			"icon" : false,
-			"children" : [{
-			"title" : "domaine 5.2 : organisation et représentations du monde","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00736",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "domaine 5.1 : l'espace et le temps","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00735",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "domaine 5.3 : invention, élaboration, production d'objets culturels","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00737",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
 			"title" : "domaine 1 : les langages pour penser et communiquer","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00715",
 			"icon" : false,
 			"children" : [{
-			"title" : "domaine 1.3 : comprendre, s'exprimer en utilisant les langages mathématiques, scientifiques et informatiques","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00718",
+			"title" : "domaine 1.1 : comprendre, s'exprimer en utilisant la langue française à l'oral et à l'écrit","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00716",
 			"icon" : false,
 			"children" : []
 			},{
@@ -36,7 +20,7 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "domaine 1.1 : comprendre, s'exprimer en utilisant la langue française à l'oral et à l'écrit","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00716",
+			"title" : "domaine 1.3 : comprendre, s'exprimer en utilisant les langages mathématiques, scientifiques et informatiques","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00718",
 			"icon" : false,
 			"children" : []
 			},{
@@ -45,22 +29,18 @@
 			"children" : []
 			}]
 			},{
-			"title" : "domaine 2 : les méthodes et outils pour apprendre","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00720",
+			"title" : "domaine 5 : les représentations du monde et l'activité humaine","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00734",
 			"icon" : false,
 			"children" : [{
-			"title" : "domaine 2.1 : organisation du travail personnel","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00721",
+			"title" : "domaine 5.2 : organisation et représentations du monde","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00736",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "domaine 2.4 : outils numériques pour échanger et communiquer","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00724",
+			"title" : "domaine 5.3 : invention, élaboration, production d'objets culturels","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00737",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "domaine 2.2 : coopération et réalisation de projets","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00722",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "domaine 2.3 : médias, démarches de recherche et de traitement de l'information","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00723",
+			"title" : "domaine 5.1 : l'espace et le temps","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00735",
 			"icon" : false,
 			"children" : []
 			}]
@@ -68,19 +48,39 @@
 			"title" : "domaine 3 : la formation de la personne et du citoyen","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00725",
 			"icon" : false,
 			"children" : [{
+			"title" : "domaine 3.3 : réflexion et discernement","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00728",
+			"icon" : false,
+			"children" : []
+			},{
 			"title" : "domaine 3.2 : la règle et le droit","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00727",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "domaine 3.3 : réflexion et discernement","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00728",
+			"title" : "domaine 3.4 : responsabilité, sens de l'engagement et de l'initiative","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00729",
 			"icon" : false,
 			"children" : []
 			},{
 			"title" : "domaine 3.1 : expression de la sensibilité et des opinions, respect des autres","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00726",
 			"icon" : false,
 			"children" : []
+			}]
 			},{
-			"title" : "domaine 3.4 : responsabilité, sens de l'engagement et de l'initiative","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00729",
+			"title" : "domaine 2 : les méthodes et outils pour apprendre","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00720",
+			"icon" : false,
+			"children" : [{
+			"title" : "domaine 2.4 : outils numériques pour échanger et communiquer","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00724",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "domaine 2.1 : organisation du travail personnel","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00721",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "domaine 2.3 : médias, démarches de recherche et de traitement de l'information","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00723",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "domaine 2.2 : coopération et réalisation de projets","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00722",
 			"icon" : false,
 			"children" : []
 			}]
@@ -88,7 +88,7 @@
 			"title" : "domaine 4 : les systèmes naturels et les systèmes techniques","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00730",
 			"icon" : false,
 			"children" : [{
-			"title" : "domaine 4.1 : démarches scientifiques","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00731",
+			"title" : "domaine 4.3 : responsabilités individuelles et collectives","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00733",
 			"icon" : false,
 			"children" : []
 			},{
@@ -96,7 +96,7 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "domaine 4.3 : responsabilités individuelles et collectives","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00733",
+			"title" : "domaine 4.1 : démarches scientifiques","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-016-num-00731",
 			"icon" : false,
 			"children" : []
 			}]

@@ -26,6 +26,10 @@
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-021-num-0012",
 			"icon" : false,
 			"children" : []
+			},{"title" :"personnel de direction",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-021-num-0019",
+			"icon" : false,
+			"children" : []
 			},{"title" :"professeur des écoles",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-021-num-0023",
 			"icon" : false,
@@ -72,10 +76,6 @@
 			"children" : []
 			},{"title" :"personnel de bibliothèque et de documentation",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-021-num-0018",
-			"icon" : false,
-			"children" : []
-			},{"title" :"personnel de direction",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-021-num-0019",
 			"icon" : false,
 			"children" : []
 			},{"title" :"personnel de laboratoire",
