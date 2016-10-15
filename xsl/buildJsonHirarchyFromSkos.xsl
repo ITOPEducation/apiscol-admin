@@ -22,15 +22,13 @@
 		<xsl:param name="number"></xsl:param>
 		<xsl:param name="title"></xsl:param>
 		<xsl:variable name="vocaburi"
-			select="concat('http://data.education.fr/voc/scolomfr/scolomfr-voc-',$number)">
-		</xsl:variable>[ {
+			select="concat('http://data.education.fr/voc/scolomfr/scolomfr-voc-',$number)"/>[ {
 		"title" : "<xsl:value-of select="$title"></xsl:value-of>",
 		"isFolder" : true,
 		"hideCheckbox" : true,
 		"children" : [<xsl:for-each
 			select="//rdf:RDF/rdf:Description[@rdf:about=$vocaburi]/skos:member">
-			<xsl:variable name="termuri" select="@rdf:resource">
-			</xsl:variable>
+			<xsl:variable name="termuri" select="@rdf:resource"/>
 			<xsl:call-template name="findtopconcept">
 				<xsl:with-param name="termuri" select="$termuri" />
 			</xsl:call-template>
