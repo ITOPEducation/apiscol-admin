@@ -6,178 +6,6 @@
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-087",
 			"icon" : false,
 			"children" : [{
-			"title" : "enseignement supérieur en lycée","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-162",
-			"icon" : false,
-			"children" : [{
-			"title" : "voie CPGE","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-226",
-			"icon" : false,
-			"children" : [{
-			"title" : "CPGE - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-109",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "CPGE - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-110",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "section BTS","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-195",
-			"icon" : false,
-			"children" : [{
-			"title" : "BTS - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-101",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "BTS - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-102",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "section DUT","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-198",
-			"icon" : false,
-			"children" : [{
-			"title" : "DUT - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-112",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "DUT - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-111",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "licence professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-185",
-			"icon" : false,
-			"children" : [{
-			"title" : "diplôme de comptabilité et gestion","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-187",
-			"icon" : false,
-			"children" : []
-			}]
-			}]
-			},{
-			"title" : "lycée professionnel","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-165",
-			"icon" : false,
-			"children" : [{
-			"title" : "2de professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-027",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "1re professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-127",
-			"icon" : false,
-			"children" : [{
-			"title" : "1re pro domaine de la production","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-125",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "1re pro domaine des services","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-126",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "terminale professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-050",
-			"icon" : false,
-			"children" : [{
-			"title" : "terminale pro domaine de la production","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-089",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "terminale pro domaine des services","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-090",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "voie BT","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-221",
-			"icon" : false,
-			"children" : [{
-			"title" : "BT - première","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-153",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "BT - terminale","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-154",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "voie BEP","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-213",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "voie FC","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-227",
-			"icon" : false,
-			"children" : [{
-			"title" : "FC post niveau V","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-298",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "FC post niveau IV","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-288",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "voie CAP","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-223",
-			"icon" : false,
-			"children" : [{
-			"title" : "CAP - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-103",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "CAP - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-104",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "voie MC","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-231",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "voie BP","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-215",
-			"icon" : false,
-			"children" : [{
-			"title" : "BP - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-097",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "BP - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-098",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "voie BTM","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-222",
-			"icon" : false,
-			"children" : [{
-			"title" : "BTM - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-099",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "BTM - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-100",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "voie BMA","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-214",
-			"icon" : false,
-			"children" : [{
-			"title" : "BMA - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-095",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "BMA - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-096",
-			"icon" : false,
-			"children" : []
-			}]
-			}]
-			},{
-			"title" : "adaptation scolaire et scolarisation des élèves handicapés","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-140",
-			"icon" : false,
-			"children" : [{
-			"title" : "ASSEH - 1er degré","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-150",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "ASSEH - 2d degré","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-151",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
 			"title" : "lycée général et technologique","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-142",
 			"icon" : false,
 			"children" : [{
@@ -301,26 +129,122 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "3-6 ans","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-241",
+			"title" : "6-11 ans","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-242",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "6-11 ans","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-242",
+			"title" : "3-6 ans","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-241",
 			"icon" : false,
 			"children" : []
 			}]
 			},{
-			"title" : "formation professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-284",
+			"title" : "lycée professionnel","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-165",
 			"icon" : false,
 			"children" : [{
-			"title" : "formation des personnels de l'éducation nationale","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-163",
+			"title" : "2de professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-027",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "formation professionnelle continue des adultes","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-164",
+			"title" : "1re professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-127",
 			"icon" : false,
 			"children" : [{
-			"title" : "formation continue des personnels de l'éducation nationale","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-063",
+			"title" : "1re pro domaine de la production","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-125",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "1re pro domaine des services","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-126",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "terminale professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-050",
+			"icon" : false,
+			"children" : [{
+			"title" : "terminale pro domaine de la production","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-089",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "terminale pro domaine des services","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-090",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "voie BTM","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-222",
+			"icon" : false,
+			"children" : [{
+			"title" : "BTM - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-099",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "BTM - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-100",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "voie BP","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-215",
+			"icon" : false,
+			"children" : [{
+			"title" : "BP - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-097",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "BP - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-098",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "voie BT","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-221",
+			"icon" : false,
+			"children" : [{
+			"title" : "BT - première","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-153",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "BT - terminale","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-154",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "voie BEP","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-213",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "voie FC","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-227",
+			"icon" : false,
+			"children" : [{
+			"title" : "FC post niveau V","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-298",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "FC post niveau IV","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-288",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "voie MC","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-231",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "voie CAP","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-223",
+			"icon" : false,
+			"children" : [{
+			"title" : "CAP - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-103",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "CAP - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-104",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "voie BMA","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-214",
+			"icon" : false,
+			"children" : [{
+			"title" : "BMA - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-095",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "BMA - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-096",
 			"icon" : false,
 			"children" : []
 			}]
@@ -350,70 +274,70 @@
 			}]
 			}]
 			},{
-			"title" : "collège professionnel","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-141",
+			"title" : "enseignement supérieur en lycée","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-162",
 			"icon" : false,
 			"children" : [{
-			"title" : "3e professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-138",
+			"title" : "voie CPGE","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-226",
+			"icon" : false,
+			"children" : [{
+			"title" : "CPGE - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-109",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "4e professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-139",
+			"title" : "CPGE - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-110",
 			"icon" : false,
 			"children" : []
 			}]
 			},{
-			"title" : "voies générale, technologique, professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-234",
+			"title" : "section BTS","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-195",
 			"icon" : false,
 			"children" : [{
-			"title" : "voie générale et technologique","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-066",
-			"icon" : false,
-			"children" : [{
-			"title" : "voie générale","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-230",
+			"title" : "BTS - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-101",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "voie technologique","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-233",
+			"title" : "BTS - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-102",
 			"icon" : false,
 			"children" : []
 			}]
 			},{
-			"title" : "voie professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-065",
+			"title" : "section DUT","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-198",
+			"icon" : false,
+			"children" : [{
+			"title" : "DUT - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-112",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "DUT - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-111",
 			"icon" : false,
 			"children" : []
 			}]
 			},{
-			"title" : "cycles de l'enseignement scolaire","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-094",
+			"title" : "licence professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-185",
 			"icon" : false,
 			"children" : [{
-			"title" : "cycle d'adaptation","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-017",
+			"title" : "diplôme de comptabilité et gestion","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-187",
+			"icon" : false,
+			"children" : []
+			}]
+			}]
+			},{
+			"title" : "école maternelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-002",
+			"icon" : false,
+			"children" : [{
+			"title" : "moyenne section","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-006",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "cycle d'orientation","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-022",
+			"title" : "toute petite section","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-004",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "cycle central","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-019",
+			"title" : "petite section","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-005",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "cycle 3","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-012",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "cycle 2","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-009",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "cycle terminal","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-085",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "classe de détermination","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-084",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "cycle 1","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-003",
+			"title" : "grande section","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-007",
 			"icon" : false,
 			"children" : []
 			}]
@@ -442,24 +366,100 @@
 			"children" : []
 			}]
 			},{
-			"title" : "école maternelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-002",
+			"title" : "cycles de l'enseignement scolaire","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-094",
 			"icon" : false,
 			"children" : [{
-			"title" : "moyenne section","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-006",
+			"title" : "cycle terminal","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-085",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "toute petite section","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-004",
+			"title" : "classe de détermination","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-084",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "petite section","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-005",
+			"title" : "cycle d'adaptation","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-017",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "grande section","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-007",
+			"title" : "cycle 2","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-009",
 			"icon" : false,
 			"children" : []
+			},{
+			"title" : "cycle 3","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-012",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "cycle d'orientation","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-022",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "cycle central","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-019",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "cycle 1","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-003",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "adaptation scolaire et scolarisation des élèves handicapés","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-140",
+			"icon" : false,
+			"children" : [{
+			"title" : "ASSEH - 1er degré","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-150",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "ASSEH - 2d degré","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-151",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "voies générale, technologique, professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-234",
+			"icon" : false,
+			"children" : [{
+			"title" : "voie générale et technologique","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-066",
+			"icon" : false,
+			"children" : [{
+			"title" : "voie générale","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-230",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "voie technologique","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-233",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "voie professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-065",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "collège professionnel","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-141",
+			"icon" : false,
+			"children" : [{
+			"title" : "3e professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-138",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "4e professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-139",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "formation professionnelle","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-284",
+			"icon" : false,
+			"children" : [{
+			"title" : "formation des personnels de l'éducation nationale","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-163",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "formation professionnelle continue des adultes","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-164",
+			"icon" : false,
+			"children" : [{
+			"title" : "formation continue des personnels de l'éducation nationale","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-063",
+			"icon" : false,
+			"children" : []
+			}]
 			}]
 			}]
 			},{"title" :"Niveau éducatif détaillé (2015-)",
@@ -641,6 +641,30 @@
 			"children" : []
 			}]
 			},{
+			"title" : "voie BTM","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-222",
+			"icon" : false,
+			"children" : [{
+			"title" : "BTM - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-099",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "BTM - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-100",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "voie BP","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-215",
+			"icon" : false,
+			"children" : [{
+			"title" : "BP - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-097",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "BP - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-098",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
 			"title" : "voie BT","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-221",
 			"icon" : false,
 			"children" : [{
@@ -669,6 +693,10 @@
 			"children" : []
 			}]
 			},{
+			"title" : "voie MC","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-231",
+			"icon" : false,
+			"children" : []
+			},{
 			"title" : "voie CAP","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-223",
 			"icon" : false,
 			"children" : [{
@@ -677,34 +705,6 @@
 			"children" : []
 			},{
 			"title" : "CAP - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-104",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "voie MC","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-231",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "voie BP","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-215",
-			"icon" : false,
-			"children" : [{
-			"title" : "BP - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-097",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "BP - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-098",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "voie BTM","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-222",
-			"icon" : false,
-			"children" : [{
-			"title" : "BTM - 1re année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-099",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "BTM - 2e année","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-100",
 			"icon" : false,
 			"children" : []
 			}]
@@ -757,11 +757,11 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "3-6 ans","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-241",
+			"title" : "6-11 ans","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-242",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "6-11 ans","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-242",
+			"title" : "3-6 ans","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-022-num-241",
 			"icon" : false,
 			"children" : []
 			}]

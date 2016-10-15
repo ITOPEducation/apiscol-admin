@@ -2,7 +2,51 @@
 		"title" : "Cadre pédagogique",
 		"isFolder" : true,
 		"hideCheckbox" : true,
-		"children" : [{"title" :"3e insertion",
+		"children" : [{"title" :"gestion financière et matérielle des établissements",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-035",
+			"icon" : false,
+			"children" : []
+			},{"title" :"liaison lycée - enseignement supérieur",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-040",
+			"icon" : false,
+			"children" : []
+			},{"title" :"liaison primaire - collège",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-041",
+			"icon" : false,
+			"children" : []
+			},{"title" :"accompagnement à l'orientation",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-003",
+			"icon" : false,
+			"children" : []
+			},{"title" :"éducation à la santé",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-024",
+			"icon" : false,
+			"children" : []
+			},{"title" :"éducation à la sécurité",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-025",
+			"icon" : false,
+			"children" : []
+			},{"title" :"enseignement de la défense et de la sécurité nationale",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-031",
+			"icon" : false,
+			"children" : []
+			},{"title" :"stage",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-119",
+			"icon" : false,
+			"children" : []
+			},{"title" :"séjour pédagogique",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-122",
+			"icon" : false,
+			"children" : []
+			},{"title" :"adaptation scolaire et scolarisation des élèves à besoins spécifiques",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-010",
+			"icon" : false,
+			"children" : []
+			},{"title" :"dispositif de scolarisation des élèves à besoins éducatifs particuliers",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-102",
+			"icon" : false,
+			"children" : []
+			},{"title" :"3e insertion",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-001",
 			"icon" : false,
 			"children" : []
@@ -10,8 +54,12 @@
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-002",
 			"icon" : false,
 			"children" : []
-			},{"title" :"accompagnement à l'orientation",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-003",
+			},{"title" :"dispositif de scolarisation des élèves handicapés",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-016",
+			"icon" : false,
+			"children" : []
+			},{"title" :"liaison collège - lycée",
+			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-038",
 			"icon" : false,
 			"children" : []
 			},{"title" :"accompagnement éducatif",
@@ -30,10 +78,6 @@
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-009",
 			"icon" : false,
 			"children" : []
-			},{"title" :"adaptation scolaire et scolarisation des élèves à besoins spécifiques",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-010",
-			"icon" : false,
-			"children" : []
 			},{"title" :"aide individualisée",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-011",
 			"icon" : false,
@@ -48,10 +92,6 @@
 			"children" : []
 			},{"title" :"culture scientifique et technologique",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-014",
-			"icon" : false,
-			"children" : []
-			},{"title" :"dispositif de scolarisation des élèves handicapés",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-016",
 			"icon" : false,
 			"children" : []
 			},{"title" :"dispositif ECLAIR",
@@ -82,14 +122,6 @@
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-023",
 			"icon" : false,
 			"children" : []
-			},{"title" :"éducation à la santé",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-024",
-			"icon" : false,
-			"children" : []
-			},{"title" :"éducation à la sécurité",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-025",
-			"icon" : false,
-			"children" : []
 			},{"title" :"éducation à la sécurité routière",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-026",
 			"icon" : false,
@@ -110,10 +142,6 @@
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-030",
 			"icon" : false,
 			"children" : []
-			},{"title" :"enseignement de la défense et de la sécurité nationale",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-031",
-			"icon" : false,
-			"children" : []
 			},{"title" :"enseignement renforcé des langues",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-032",
 			"icon" : false,
@@ -126,10 +154,6 @@
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-034",
 			"icon" : false,
 			"children" : []
-			},{"title" :"gestion financière et matérielle des établissements",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-035",
-			"icon" : false,
-			"children" : []
 			},{"title" :"itinéraire de découverte",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-036",
 			"icon" : false,
@@ -138,20 +162,8 @@
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-037",
 			"icon" : false,
 			"children" : []
-			},{"title" :"liaison collège - lycée",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-038",
-			"icon" : false,
-			"children" : []
 			},{"title" :"liaison inter-degrés",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-039",
-			"icon" : false,
-			"children" : []
-			},{"title" :"liaison lycée - enseignement supérieur",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-040",
-			"icon" : false,
-			"children" : []
-			},{"title" :"liaison primaire - collège",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-041",
 			"icon" : false,
 			"children" : []
 			},{"title" :"LSF (langue des signes française)",
@@ -266,20 +278,8 @@
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-078",
 			"icon" : false,
 			"children" : []
-			},{"title" :"dispositif de scolarisation des élèves à besoins éducatifs particuliers",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-102",
-			"icon" : false,
-			"children" : []
-			},{"title" :"stage",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-119",
-			"icon" : false,
-			"children" : []
 			},{"title" :"PFMP (période de formation en milieu professionnel)",
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-120",
-			"icon" : false,
-			"children" : []
-			},{"title" :"séjour pédagogique",
-			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-040-num-122",
 			"icon" : false,
 			"children" : []
 			}]

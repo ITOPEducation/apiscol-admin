@@ -9,49 +9,9 @@
 			"title" : "parler","key" : "http://purl.org/net/inloc/cefr/cefr-speaking",
 			"icon" : false,
 			"children" : [{
-			"title" : "s'exprimer oralement en continu","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production",
-			"icon" : false,
-			"children" : [{
-			"title" : "parler (s'exprimer oralement en continu) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-A1",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "parler (s'exprimer oralement en continu) - B1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-B1",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "parler (s'exprimer oralement en continu) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-A2",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "parler (s'exprimer oralement en continu) - B2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-B2",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "parler (s'exprimer oralement en continu) - C1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-C1",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "parler (s'exprimer oralement en continu) - C2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-C2",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
 			"title" : "prendre part à une conversation","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction",
 			"icon" : false,
 			"children" : [{
-			"title" : "parler (prendre part à une conversation) - B1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-B1",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "parler (prendre part à une conversation) - B2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-B2",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "parler (prendre part à une conversation) - C1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-C1",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "parler (prendre part à une conversation) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-A1",
 			"icon" : false,
 			"children" : []
@@ -60,7 +20,47 @@
 			"icon" : false,
 			"children" : []
 			},{
+			"title" : "parler (prendre part à une conversation) - C1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-C1",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "parler (prendre part à une conversation) - B2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-B2",
+			"icon" : false,
+			"children" : []
+			},{
 			"title" : "parler (prendre part à une conversation) - C2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-C2",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "parler (prendre part à une conversation) - B1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-B1",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "s'exprimer oralement en continu","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production",
+			"icon" : false,
+			"children" : [{
+			"title" : "parler (s'exprimer oralement en continu) - C1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-C1",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "parler (s'exprimer oralement en continu) - C2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-C2",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "parler (s'exprimer oralement en continu) - B1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-B1",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "parler (s'exprimer oralement en continu) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-A1",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "parler (s'exprimer oralement en continu) - B2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-B2",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "parler (s'exprimer oralement en continu) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-A2",
 			"icon" : false,
 			"children" : []
 			}]
@@ -72,19 +72,11 @@
 			"title" : "lire","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading",
 			"icon" : false,
 			"children" : [{
-			"title" : "comprendre (lire) - B1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-B1",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "comprendre (lire) - B2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-B2",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "comprendre (lire) - C1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-C1",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "comprendre (lire) - C2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-C2",
+			"title" : "comprendre (lire) - B1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-B1",
 			"icon" : false,
 			"children" : []
 			},{
@@ -92,7 +84,15 @@
 			"icon" : false,
 			"children" : []
 			},{
+			"title" : "comprendre (lire) - C2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-C2",
+			"icon" : false,
+			"children" : []
+			},{
 			"title" : "comprendre (lire) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-A2",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "comprendre (lire) - C1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-C1",
 			"icon" : false,
 			"children" : []
 			}]
@@ -100,7 +100,7 @@
 			"title" : "écouter","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening",
 			"icon" : false,
 			"children" : [{
-			"title" : "comprendre (écouter) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-A2",
+			"title" : "comprendre (écouter) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-A1",
 			"icon" : false,
 			"children" : []
 			},{
@@ -108,11 +108,11 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "comprendre (écouter) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-A1",
+			"title" : "comprendre (écouter) - C1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-C1",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "comprendre (écouter) - C1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-C1",
+			"title" : "comprendre (écouter) - B2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-B2",
 			"icon" : false,
 			"children" : []
 			},{
@@ -120,7 +120,7 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "comprendre (écouter) - B2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-B2",
+			"title" : "comprendre (écouter) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-A2",
 			"icon" : false,
 			"children" : []
 			}]
@@ -129,19 +129,19 @@
 			"title" : "écrire","key" : "http://purl.org/net/inloc/cefr/cefr-writing",
 			"icon" : false,
 			"children" : [{
-			"title" : "écrire - B2","key" : "http://purl.org/net/inloc/cefr/cefr-writing-B2",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "écrire - C2","key" : "http://purl.org/net/inloc/cefr/cefr-writing-C2",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "écrire - C1","key" : "http://purl.org/net/inloc/cefr/cefr-writing-C1",
 			"icon" : false,
 			"children" : []
 			},{
 			"title" : "écrire - A2","key" : "http://purl.org/net/inloc/cefr/cefr-writing-A2",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "écrire - B2","key" : "http://purl.org/net/inloc/cefr/cefr-writing-B2",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "écrire - C2","key" : "http://purl.org/net/inloc/cefr/cefr-writing-C2",
 			"icon" : false,
 			"children" : []
 			},{
@@ -158,58 +158,6 @@
 			"key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-042-num-015",
 			"icon" : false,
 			"children" : [{
-			"title" : "A","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-042-num-001",
-			"icon" : false,
-			"children" : [{
-			"title" : "A1","key" : "http://purl.org/net/inloc/cefr/cefr-A1",
-			"icon" : false,
-			"children" : [{
-			"title" : "écrire - A1","key" : "http://purl.org/net/inloc/cefr/cefr-writing-A1",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "comprendre (écouter) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-A1",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "parler (prendre part à une conversation) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-A1",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "parler (s'exprimer oralement en continu) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-A1",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "comprendre (lire) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-A1",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "A2","key" : "http://purl.org/net/inloc/cefr/cefr-A2",
-			"icon" : false,
-			"children" : [{
-			"title" : "comprendre (écouter) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-A2",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "parler (prendre part à une conversation) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-A2",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "comprendre (lire) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-A2",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "écrire - A2","key" : "http://purl.org/net/inloc/cefr/cefr-writing-A2",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "parler (s'exprimer oralement en continu) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-A2",
-			"icon" : false,
-			"children" : []
-			}]
-			}]
-			},{
 			"title" : "B","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-042-num-004",
 			"icon" : false,
 			"children" : [{
@@ -268,15 +216,15 @@
 			"title" : "C1","key" : "http://purl.org/net/inloc/cefr/cefr-C1",
 			"icon" : false,
 			"children" : [{
+			"title" : "parler (prendre part à une conversation) - C1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-C1",
+			"icon" : false,
+			"children" : []
+			},{
 			"title" : "comprendre (lire) - C1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-C1",
 			"icon" : false,
 			"children" : []
 			},{
 			"title" : "comprendre (écouter) - C1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-C1",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "parler (prendre part à une conversation) - C1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-C1",
 			"icon" : false,
 			"children" : []
 			},{
@@ -296,6 +244,10 @@
 			"icon" : false,
 			"children" : []
 			},{
+			"title" : "parler (prendre part à une conversation) - C2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-C2",
+			"icon" : false,
+			"children" : []
+			},{
 			"title" : "comprendre (écouter) - C2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-C2",
 			"icon" : false,
 			"children" : []
@@ -304,11 +256,59 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "parler (prendre part à une conversation) - C2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-C2",
+			"title" : "parler (s'exprimer oralement en continu) - C2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-C2",
+			"icon" : false,
+			"children" : []
+			}]
+			}]
+			},{
+			"title" : "A","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-042-num-001",
+			"icon" : false,
+			"children" : [{
+			"title" : "A1","key" : "http://purl.org/net/inloc/cefr/cefr-A1",
+			"icon" : false,
+			"children" : [{
+			"title" : "comprendre (lire) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-A1",
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "parler (s'exprimer oralement en continu) - C2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-C2",
+			"title" : "parler (s'exprimer oralement en continu) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-A1",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "comprendre (écouter) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-A1",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "écrire - A1","key" : "http://purl.org/net/inloc/cefr/cefr-writing-A1",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "parler (prendre part à une conversation) - A1","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-A1",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "A2","key" : "http://purl.org/net/inloc/cefr/cefr-A2",
+			"icon" : false,
+			"children" : [{
+			"title" : "comprendre (lire) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-reading-A2",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "comprendre (écouter) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-understanding-listening-A2",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "parler (prendre part à une conversation) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-interaction-A2",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "écrire - A2","key" : "http://purl.org/net/inloc/cefr/cefr-writing-A2",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "parler (s'exprimer oralement en continu) - A2","key" : "http://purl.org/net/inloc/cefr/cefr-speaking-production-A2",
 			"icon" : false,
 			"children" : []
 			}]

@@ -49,6 +49,10 @@
 			"icon" : false,
 			"children" : []
 			},{
+			"title" : "Arts du bois, option c : marqueteur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0421",
+			"icon" : false,
+			"children" : []
+			},{
 			"title" : "Métiers d'art - art de la pierre (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0213",
 			"icon" : false,
 			"children" : []
@@ -158,6 +162,10 @@
 			"children" : []
 			},{
 			"title" : "Décor architectural, option arts du verre et du cristal (DMA)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0569",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Bronzier, option b : ciseleur sur bronze (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0593",
 			"icon" : false,
 			"children" : []
 			},{
@@ -289,10 +297,6 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "Arts du bois, option c : marqueteur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0421",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Encadreur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0544",
 			"icon" : false,
 			"children" : []
@@ -318,10 +322,6 @@
 			"children" : []
 			},{
 			"title" : "Décors textiles permanents et éphémères (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0548",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Bronzier, option b : ciseleur sur bronze (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0593",
 			"icon" : false,
 			"children" : []
 			},{
@@ -817,10 +817,6 @@
 			"title" : "Services administratifs et financiers","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0031",
 			"icon" : false,
 			"children" : [{
-			"title" : "STG communication et gestion des ressources humaines (BAC TECHNO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0683",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "STG gestion des systèmes d'information (BAC TECHNO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0685",
 			"icon" : false,
 			"children" : []
@@ -858,6 +854,10 @@
 			"children" : []
 			},{
 			"title" : "Bureautique (BP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0682",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "STG communication et gestion des ressources humaines (BAC TECHNO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0683",
 			"icon" : false,
 			"children" : []
 			},{
@@ -901,10 +901,6 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "Gestion - administration (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0686",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Services financiers (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0689",
 			"icon" : false,
 			"children" : []
@@ -926,6 +922,10 @@
 			"children" : []
 			},{
 			"title" : "STG comptabilité et finance d'entreprises (BAC TECHNO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0684",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Gestion - administration (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0686",
 			"icon" : false,
 			"children" : []
 			}]
@@ -997,10 +997,6 @@
 			"title" : "Commercialisation et distribution","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0028",
 			"icon" : false,
 			"children" : [{
-			"title" : "Négociation et relation client (BTS)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0673",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Commerce international à référentiel commun européen (BTS)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0674",
 			"icon" : false,
 			"children" : []
@@ -1022,6 +1018,10 @@
 			"children" : []
 			},{
 			"title" : "Assistance, conseil, vente à distance (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0669",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Négociation et relation client (BTS)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0673",
 			"icon" : false,
 			"children" : []
 			},{
@@ -1237,10 +1237,6 @@
 			"title" : "Bois et dérivés","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0016",
 			"icon" : false,
 			"children" : [{
-			"title" : "Parqueteur (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0430",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Menuisier (BP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0432",
 			"icon" : false,
 			"children" : []
@@ -1250,10 +1246,6 @@
 			"children" : []
 			},{
 			"title" : "Agencement de l'environnement architectural (BTS)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0447",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Technicien de fabrication bois et matériaux associés (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0443",
 			"icon" : false,
 			"children" : []
 			},{
@@ -1285,6 +1277,10 @@
 			"icon" : false,
 			"children" : []
 			},{
+			"title" : "Technicien de fabrication bois et matériaux associés (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0443",
+			"icon" : false,
+			"children" : []
+			},{
 			"title" : "Menuisier en sièges (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0417",
 			"icon" : false,
 			"children" : []
@@ -1313,6 +1309,10 @@
 			"icon" : false,
 			"children" : []
 			},{
+			"title" : "Parqueteur (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0430",
+			"icon" : false,
+			"children" : []
+			},{
 			"title" : "charpentier bois (BP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0801",
 			"icon" : false,
 			"children" : []
@@ -1326,10 +1326,6 @@
 			"children" : []
 			},{
 			"title" : "Cannage et paillage en ameublement (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0543",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Bois, option scierie (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0411",
 			"icon" : false,
 			"children" : []
 			},{
@@ -1365,6 +1361,10 @@
 			"icon" : false,
 			"children" : []
 			},{
+			"title" : "Bois, option scierie (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0411",
+			"icon" : false,
+			"children" : []
+			},{
 			"title" : "Bois, option fabrication bois et matériaux associés (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0412",
 			"icon" : false,
 			"children" : []
@@ -1389,10 +1389,6 @@
 			"title" : "Alimentation","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0010",
 			"icon" : false,
 			"children" : [{
-			"title" : "Boucher charcutier (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0340",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Mareyage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0341",
 			"icon" : false,
 			"children" : []
@@ -1441,7 +1437,7 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "Charcutier traiteur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0343",
+			"title" : "Boucher charcutier (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0340",
 			"icon" : false,
 			"children" : []
 			},{
@@ -1466,6 +1462,10 @@
 			"children" : []
 			},{
 			"title" : "Glacier fabricant (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0342",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Charcutier traiteur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0343",
 			"icon" : false,
 			"children" : []
 			}]
@@ -1621,6 +1621,10 @@
 			"icon" : false,
 			"children" : []
 			},{
+			"title" : "Hygiène - propreté environnement (BTS)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0338",
+			"icon" : false,
+			"children" : []
+			},{
 			"title" : "agent de propreté et d'hygiène (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0822",
 			"icon" : false,
 			"children" : []
@@ -1652,10 +1656,6 @@
 			"title" : "Modèles et moules céramiques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0090",
 			"icon" : false,
 			"children" : []
-			},{
-			"title" : "Hygiène - propreté environnement (BTS)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0338",
-			"icon" : false,
-			"children" : []
 			}]
 			},{
 			"title" : "métallurgie - aviation","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0001",
@@ -1670,10 +1670,6 @@
 			"children" : []
 			},{
 			"title" : "Aéronautique, option avionique (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0201",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Construction des carrosseries (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0153",
 			"icon" : false,
 			"children" : []
 			},{
@@ -1694,6 +1690,10 @@
 			"children" : []
 			},{
 			"title" : "Électrotechnique énergie équipements communicants (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0164",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Réalisation de circuits oléohydrauliques et pneumatiques (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0169",
 			"icon" : false,
 			"children" : []
 			},{
@@ -2005,10 +2005,6 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "Réalisation de circuits oléohydrauliques et pneumatiques (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0169",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Installations et équipements électriques (BP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0170",
 			"icon" : false,
 			"children" : []
@@ -2018,6 +2014,10 @@
 			"children" : []
 			},{
 			"title" : "Électrotechnique énergie équipements communicants (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0176",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Systèmes électroniques numériques (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0177",
 			"icon" : false,
 			"children" : []
 			},{
@@ -2046,10 +2046,6 @@
 			"children" : []
 			},{
 			"title" : "Aéronautique (BTS)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0206",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Systèmes électroniques numériques (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0177",
 			"icon" : false,
 			"children" : []
 			},{
@@ -2180,6 +2176,10 @@
 			"title" : "Réparation des carrosseries (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0152",
 			"icon" : false,
 			"children" : []
+			},{
+			"title" : "Construction des carrosseries (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0153",
+			"icon" : false,
+			"children" : []
 			}]
 			},{
 			"title" : "Bâtiment, travaux publics, matériaux de construction","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0004",
@@ -2233,10 +2233,6 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "Maintenance des systèmes énergétiques et climatiques (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0244",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Installation des systèmes énergétiques et climatiques (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0245",
 			"icon" : false,
 			"children" : []
@@ -2258,6 +2254,10 @@
 			"children" : []
 			},{
 			"title" : "Graveur sur pierre (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0218",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maçon (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0220",
 			"icon" : false,
 			"children" : []
 			},{
@@ -2385,6 +2385,10 @@
 			"icon" : false,
 			"children" : []
 			},{
+			"title" : "Maintenance en équipement thermique individuel (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0264",
+			"icon" : false,
+			"children" : []
+			},{
 			"title" : "STI2D architecture et construction (BAC TECHNO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0208",
 			"icon" : false,
 			"children" : []
@@ -2445,10 +2449,6 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "Maintenance en équipement thermique individuel (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0264",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Plaquiste (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0266",
 			"icon" : false,
 			"children" : []
@@ -2501,10 +2501,6 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "Maçon (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0220",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Maçon (BP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0226",
 			"icon" : false,
 			"children" : []
@@ -2534,6 +2530,10 @@
 			"children" : []
 			},{
 			"title" : "Métiers d'art - verre, option métiers de l'enseigne et de la signalétique (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0243",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance des systèmes énergétiques et climatiques (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0244",
 			"icon" : false,
 			"children" : []
 			},{
@@ -2765,10 +2765,6 @@
 			"title" : "Communication graphique et audiovisuel","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0022",
 			"icon" : false,
 			"children" : [{
-			"title" : "Opérateur projectionniste de cinéma (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0485",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Dessinateur maquettiste, option a : arts graphiques (BT)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0487",
 			"icon" : false,
 			"children" : []
@@ -2825,10 +2821,6 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "Arts graphiques, option illustration (DMA)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0499",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Édition (BTS)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0501",
 			"icon" : false,
 			"children" : []
@@ -2854,6 +2846,10 @@
 			"children" : []
 			},{
 			"title" : "Signalétique, enseigne et décor (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0483",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Opérateur projectionniste de cinéma (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0485",
 			"icon" : false,
 			"children" : []
 			},{
@@ -2906,6 +2902,10 @@
 			"children" : []
 			},{
 			"title" : "Arts graphiques, option gravure (DMA)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0498",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Arts graphiques, option illustration (DMA)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0499",
 			"icon" : false,
 			"children" : []
 			}]
@@ -3151,10 +3151,6 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "Travaux publics (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0232",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Métiers de la mode - vêtement (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0397",
 			"icon" : false,
 			"children" : []
@@ -3188,6 +3184,10 @@
 			"children" : []
 			},{
 			"title" : "Technicien du froid et du conditionnement d'air (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0178",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Travaux publics (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0232",
 			"icon" : false,
 			"children" : []
 			},{
@@ -3838,1194 +3838,6 @@
 			"children" : []
 			}]
 			},{
-			"title" : "Niveau V","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0066",
-			"icon" : false,
-			"children" : [{
-			"title" : "CEP (Certificat d'études primaires) (ancien)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0058",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "CAP (Certificat d'aptitude professionnelle)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0059",
-			"icon" : false,
-			"children" : [{
-			"title" : "Mouleur noyauteur - cuivre et bronze (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0585",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Arts du bois, option a : sculpteur ornemaniste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0419",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Arts du tapis et de la tapisserie de lisse (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0576",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Arts et techniques du verre, option vitrailliste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0555",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Assistant technique en instruments de musique, option instruments à vents (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0626",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Boucher (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0346",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Bronzier, option b : ciseleur sur bronze (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0593",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Cannage et paillage en ameublement (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0543",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Charpentier bois (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0424",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Chocolatier confiseur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0345",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Décolletage, opérateur régleur en décolletage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0093",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Décoration en céramique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0554",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Distribution d'objets et services à la clientèle (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0677",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Doreur à la feuille ornemaniste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0586",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Électricien systèmes d'aéronefs (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0197",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Émailleur d'art sur métaux (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0595",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Employé de commerce multi-spécialités (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0653",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Charpentier de marine (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0429",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Composites, plastiques chaudronnés (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0302",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Conducteur d'installations de production (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0068",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Conducteur routier marchandises (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0456",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Constructeur en ouvrages d'art (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0216",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Agent de sécurité (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0461",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Armurerie (fabrication et réparation) (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0096",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Art et techniques de la bijouterie joaillerie, option polissage finition (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0599",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Arts de la dentelle, option fuseaux (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0574",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Arts du bois, option b : tourneur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0420",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Arts et techniques du verre, option décorateur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0556",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Assistant technique en instruments de musique, option guitare (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0628",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "assistant(e) technique en milieux familial et collectif (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0750",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Bronzier, option a : monteur en bronze (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0592",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Carreleur mosaïste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0257",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance de véhicules automobiles, option véhicules industriels (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0146",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Accessoiriste réalisateur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0641",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Accordeur de piano (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0624",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Agent de la qualité de l'eau (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0314",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Conducteur d'engins de travaux publics et carrières (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0217",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Conducteur - opérateur de scierie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0428",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Constructeur d'ouvrages du bâtiment en aluminium, verre et matériaux de synthèse (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0260",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Réalisation en chaudronnerie industrielle  (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0099",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Agent d'entreposage et de messagerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0455",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Agent de prévention et de médiation (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0751",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Art et techniques de la bijouterie joaillerie, option bijouterie joaillerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0597",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Art et techniques de la bijouterie joaillerie, option bijouterie sertissage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0598",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Arts de la dentelle, option aiguille (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0575",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Employé de vente spécialisé, option a : produits alimentaires (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0654",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Employé de vente spécialisé, option b : produits d'équipement courant (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0655",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Employé de vente spécialisé, option c : service à la clientèle (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0658",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Encadreur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0544",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Esthétique cosmétique parfumerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0735",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Étancheur du bâtiment et des travaux publics (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0222",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Facteur d'orgues (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0620",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Ferronnier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0601",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Fleuriste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0657",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Fourrure (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0378",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Gardien d'immeuble (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0752",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Gestion des déchets et propreté urbaine (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0460",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Glacier fabricant (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0342",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Graveur sur pierre (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0218",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Horlogerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0600",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Installateur sanitaire (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0256",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Installateur thermique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0251",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Lapidaire, option b : pierres de couleur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0591",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Lutherie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0622",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance de bâtiments de collectivités (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0252",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance de matériels, option matériels de parcs et jardins (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0132",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance des matériels, option matériels de travaux publics et de manutention (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0131",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance des matériels, option tracteurs et matériels agricoles (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0130",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance des véhicules automobiles, option motocycles (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0135",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance des véhicules automobiles, option véhicules industriels (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0134",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance des véhicules automobiles, option véhicules particuliers (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0133",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance et hygiène des locaux (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0315",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maroquinerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0380",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de la gravure, option a : gravure d'ornementation (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0611",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de la gravure, option b : gravure d'impression (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0612",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de la gravure, option c : gravure en modèle (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0613",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de l'enseigne et de la signalétique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0167",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de la mode - vêtement flou (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0373",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de la mode - vêtement tailleur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0374",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers du football (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0660",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Mise en forme des matériaux (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0097",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Mise en œuvre des caoutchoucs et des élastomères thermoplastiques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0300",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Modèles et moules céramiques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0090",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Monteur en isolation thermique et acoustique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0091",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Construction des carrosseries (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0137",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Cordonnier bottier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0377",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Couvreur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0253",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Podo-orthésiste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0385",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Rentrayeur, option b : tapisserie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0572",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Réparation des carrosseries (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0139",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Restaurant (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0708",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Réparation entretien des embarcations de plaisance (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0136",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Sellerie générale (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0381",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Sellier harnacheur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0376",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Sérigraphie industrielle (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0482",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Serrurier métallier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0262",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Souffleur de verre, option enseigne lumineuse (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0558",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Souffleur de verre, option verrerie scientifique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0559",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Staffeur ornemaniste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0528",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Tailleur de pierre - marbrier du bâtiment et de la décoration (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0219",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Tapissier d'ameublement en décor (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0547",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Tournage en céramique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0553",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Transport fluvial (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0459",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Transport par câbles et remontées mécaniques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0166",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Vannerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0545",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Vendeur magasinier en pièces de rechange et équipements automobiles (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0656",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Vêtement de peau (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0382",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Opérateur des industries du recyclage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0313",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Opérateur projectionniste de cinéma (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0485",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Orfèvre, option d : planeur en orfèvrerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0596",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Orthoprothésiste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0384",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Outillages en moules métalliques  (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0098",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Outillages en outils à découper et à emboutir (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0094",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Ouvrier archetier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0621",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Pâtissier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0347",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Peinture en carrosserie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0138",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Petite enfance (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0749",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Plasturgie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0301",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Constructeur en canalisations des travaux publics (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0215",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Plâtrier - plaquiste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0261",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Poissonnier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0348",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Préparation et réalisation d'ouvrages électriques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0168",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Rentrayeur, option a : tapis (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0571",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Services en brasserie - café (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0709",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Services hôteliers (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0707",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Signalétique, enseigne et décor (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0483",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Solier moquettiste","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0259",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Tapissier d'ameublement en siège (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0546",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Tonnellerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0422",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Tuyautier en orgues (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0623",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Instruments coupants et de chirurgie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0092",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Constructeur en béton armé du bâtiment (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0221",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Constructeur de routes (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0214",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Agent d'accueil et de conduite routière - transport de voyageurs (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0454",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Agent d'assainissement et de collecte des déchets liquides spéciaux (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0324",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Agent de maintenance des industries de matériaux de construction et connexes (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0071",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Agent polyvalent de restauration (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0705",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Agent vérificateur d'appareils extincteurs (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0095",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Arts de la broderie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0573",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Arts de la reliure (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0616",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Arts du bois, option c : marqueteur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0421",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Arts du verre et du cristal (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0557",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Assistant technique en instruments de musique, option accordéon (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0625",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Assistant technique en instruments de musique, option piano (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0627",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Boulanger (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0344",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Bronzier, option c : tourneur sur bronze (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0594",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Charcutier traiteur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0343",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Chaussure (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0379",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Coiffure (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0734",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Conducteur livreur de marchandises (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0457",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Constructeur bois (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0425",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Cordonnerie multiservice (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0383",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Cuisine (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0706",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Déménageur sur véhicule utilitaire léger (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0458",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Ébéniste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0423",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Emballeur professionnel (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0453",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Employé de vente spécialisé, option d : librairie - papeterie - presse (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0659",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Employé technique de laboratoire (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0298",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Fabrication industrielle des céramiques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0299",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "tailleur de pierre (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0849",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "maintenance des véhicules, option a : voitures particulières (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0832",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "maintenance des véhicules, option b : véhicules de transport routier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0831",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "aéronautique option structure (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0834",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "ferronier d'art (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0798",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "agent de propreté et d'hygiène (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0822",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "opérateur/opératrice logistique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0819",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "propreté de l'environnement urbain - collecte et recyclage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0820",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "maintenance des véhicules, option c : motocycles (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0830",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "installateur en froid et conditionnement d'air (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0843",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "marbrier du bâtiment et de la décoration (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0850",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Froid et climatisation (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0250",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Industries chimiques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0312",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Lapidaire, option a : diamant (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0587",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maçon (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0220",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance sur systèmes d'aéronefs (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0195",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Mareyage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0341",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Mécanicien cellules d'aéronefs (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0196",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Mécanicien conducteur des scieries et des industries mécaniques du bois, option b : mécanicien affûteur de sciage, tranchage, déroulage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0416",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Menuisier en sièges (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0417",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Menuisier fabricant de menuiserie, mobilier et agencement (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0426",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Menuisier installateur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0427",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métier du pressing (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0366",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de la blanchisserie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0367",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de la fonderie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0089",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de la gravure, option d : marquage poinçonnage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0614",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de la mode - chapelier-modiste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0375",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Monteur de structures mobiles (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0451",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Monteur en chapiteaux (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0640",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Orfèvre, option a : monteur en orfèvrerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0588",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Orfèvre, option b : tourneur repousseur en orfèvrerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0589",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Orfèvre, option c : polisseur aviveur en orfèvrerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0590",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Peintre - applicateur de revêtement (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0258",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "BEP (Brevet d'études professionnelles)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0060",
-			"icon" : false,
-			"children" : [{
-			"title" : "Optique lunetterie (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0745",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Accompagnement, soins et services à la personne (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0747",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Auxiliaire en prothèse dentaire (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0748",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Assistant perruquier posticheur (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0732",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Restauration, option cuisine (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0702",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Restauration, option commercialisation et services en restauration (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0704",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers des services administratifs (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0676",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de la relation aux clients et aux usagers (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0652",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers d'art - marchandisage visuel (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0519",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "métiers d'art - tapissier-tapissière d'ameublement (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0542",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers d'art - verre, option verrerie scientifique et technique (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0552",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Systèmes électroniques numériques (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0165",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Agencement (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0415",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Études du bâtiment (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0210",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Topographie (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0211",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Industries graphiques, option b : production graphique (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0477",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Industries graphiques, option a : production imprimée (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0478",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Industries graphiques, option c : façonnage de produits imprimés (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0479",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers d'arts - élaboration de projets de communication visuelle (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0480",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Aménagement - finition (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0247",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers d'art - art de la pierre (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0213",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Bois, option construction bois (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0413",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Bois, option fabrication bois et matériaux associés (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0412",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Bois, option menuiserie - agencement (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0414",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Bois, option scierie (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0411",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers d'art - verre, option métiers de l'enseigne et de la signalétique (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0243",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Logistique et transport (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0651",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Modeleur maquettiste (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0088",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Boucher charcutier (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0340",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers du cuir, option chaussures (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0363",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Représentation informatisée de produits industriels (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0086",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers du pressing et de la blanchisserie (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0361",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Réalisations du gros œuvre (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0207",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Travaux publics (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0212",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Plastiques et composites (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0297",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Électrotechnique énergie équipements communicants (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0164",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Production mécanique (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0087",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Réalisation d'ouvrages de métallerie du bâtiment (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0249",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de la mode - vêtement (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0362",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Conduite de procédés industriels et transformations (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0296",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de l'hygiène, de la propreté et de l'environnement (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0311",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Installation des systèmes énergétiques et climatiques (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0245",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers du cuir, option maroquinerie (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0364",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance des systèmes énergétiques et climatiques (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0244",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Froid et conditionnement de l'air (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0246",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance des produits et équipements industriels (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0163",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Réalisation d'ouvrages du bâtiment en aluminium, verre et matériaux de synthèse (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0248",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "réalisation de produits imprimés et plurimedia, option a : productions graphiques (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0808",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "réalisation de produits imprimés et plurimedia, option b : productions imprimées (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0807",
-			"icon" : false,
-			"children" : []
-			}]
-			},{
-			"title" : "MC (Mention complémentaire)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0061",
-			"icon" : false,
-			"children" : [{
-			"title" : "Aide à domicile (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0753",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Styliste visagiste (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0736",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Coloriste permanentiste (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0737",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Employé traiteur (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0710",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Cuisinier en desserts de restaurant (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0711",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Art de la cuisine allégée (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0712",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Sommellerie (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0713",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Employé barman (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0714",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Organisateur de réception (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0724",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Accueil - réception (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0725",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Services financiers (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0689",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Assistance, conseil, vente à distance (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0669",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Décors textiles permanents et éphémères (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0548",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Joaillerie (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0602",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Entretien des collections du patrimoine (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0617",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Aéronautique, option avionique (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0201",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Aéronautique, option avions à moteurs à pistons (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0202",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maquettes et prototypes (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0116",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Aéronautique, option avions à moteurs à turbines (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0203",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Aéronautique, option hélicoptère à moteurs à pistons (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0204",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Aéronautique, option hélicoptère à moteurs à turbines (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0205",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Accueil dans les transports (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0473",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Agent de contrôle non destructif (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0083",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance et contrôles des matériels (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0141",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Agent transport exploitation ferroviaire (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0474",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Sécurité civile et d'entreprise (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0464",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Essayage - retouche - vente (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0386",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Pâtisserie boulangère (MC5)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0352",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Pâtisserie, glacerie, chocolaterie, confiserie spécialisées (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0349",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Zinguerie (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0265",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Piquage d'articles chaussants (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0387",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Plaquiste (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0266",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Conducteur de machines de verrerie (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0303",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Boulangerie spécialisée (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0351",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Peinture décoration (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0289",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Sûreté des espaces ouverts au public (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0463",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Transporteur fluvial (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0462",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Graveur sur pierre (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0223",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Vendeur spécialisé en alimentation (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0350",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Parqueteur (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0430",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Technicien en énergies renouvelables, option b : énergie thermique (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0288",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Technicien en énergies renouvelables, option a : énergie électrique (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0287",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Métiers de l'eau (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0320",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance des moteurs diesel et de leurs équipements (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0140",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Réalisation de circuits oléohydrauliques et pneumatiques (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0169",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Technicien ascensoriste (service et modernisation) (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0182",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance des installations oléohydrauliques et pneumatiques (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0183",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance des systèmes embarqués de l'automobile (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0142",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "Maintenance en équipement thermique individuel (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0264",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "coiffure coupe couleur (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0802",
-			"icon" : false,
-			"children" : []
-			},{
-			"title" : "vendeur-conseil en produits techniques pour l'habitat (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0806",
-			"icon" : false,
-			"children" : []
-			}]
-			}]
-			},{
 			"title" : "Niveau III","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0064",
 			"icon" : false,
 			"children" : [{
@@ -5608,10 +4420,6 @@
 			"icon" : false,
 			"children" : []
 			},{
-			"title" : "Décor architectural, option c : domaine du métal (DMA)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0536",
-			"icon" : false,
-			"children" : []
-			},{
 			"title" : "Décor architectural, option b : domaine du décor du mur (DMA)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0535",
 			"icon" : false,
 			"children" : []
@@ -5665,6 +4473,10 @@
 			"children" : []
 			},{
 			"title" : "Facture instrumentale, option accordéon (DMA)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0636",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Décor architectural, option c : domaine du métal (DMA)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0536",
 			"icon" : false,
 			"children" : []
 			}]
@@ -5725,6 +4537,1194 @@
 			"children" : []
 			},{
 			"title" : "Mode et environnement (DSAA)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0527",
+			"icon" : false,
+			"children" : []
+			}]
+			}]
+			},{
+			"title" : "Niveau V","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0066",
+			"icon" : false,
+			"children" : [{
+			"title" : "CEP (Certificat d'études primaires) (ancien)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0058",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "CAP (Certificat d'aptitude professionnelle)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0059",
+			"icon" : false,
+			"children" : [{
+			"title" : "Mouleur noyauteur - cuivre et bronze (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0585",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Arts du tapis et de la tapisserie de lisse (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0576",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Arts et techniques du verre, option vitrailliste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0555",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Assistant technique en instruments de musique, option instruments à vents (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0626",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Boucher (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0346",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Bronzier, option b : ciseleur sur bronze (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0593",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Cannage et paillage en ameublement (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0543",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Charpentier bois (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0424",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Chocolatier confiseur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0345",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Conducteur d'engins de travaux publics et carrières (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0217",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Décoration en céramique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0554",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Distribution d'objets et services à la clientèle (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0677",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Doreur à la feuille ornemaniste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0586",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Électricien systèmes d'aéronefs (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0197",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Émailleur d'art sur métaux (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0595",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Employé de commerce multi-spécialités (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0653",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Charpentier de marine (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0429",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Composites, plastiques chaudronnés (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0302",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Conducteur d'installations de production (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0068",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Conducteur routier marchandises (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0456",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Constructeur en ouvrages d'art (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0216",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Agent de sécurité (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0461",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Armurerie (fabrication et réparation) (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0096",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Art et techniques de la bijouterie joaillerie, option polissage finition (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0599",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Arts de la dentelle, option fuseaux (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0574",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Arts du bois, option b : tourneur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0420",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Arts et techniques du verre, option décorateur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0556",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Assistant technique en instruments de musique, option guitare (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0628",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "assistant(e) technique en milieux familial et collectif (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0750",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Bronzier, option a : monteur en bronze (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0592",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Carreleur mosaïste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0257",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance de véhicules automobiles, option véhicules industriels (BAC PRO)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0146",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Accessoiriste réalisateur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0641",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Accordeur de piano (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0624",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Agent de la qualité de l'eau (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0314",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Conducteur - opérateur de scierie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0428",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Constructeur d'ouvrages du bâtiment en aluminium, verre et matériaux de synthèse (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0260",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Réalisation en chaudronnerie industrielle  (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0099",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Agent d'entreposage et de messagerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0455",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Agent de prévention et de médiation (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0751",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Art et techniques de la bijouterie joaillerie, option bijouterie joaillerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0597",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Art et techniques de la bijouterie joaillerie, option bijouterie sertissage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0598",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Arts de la dentelle, option aiguille (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0575",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Arts du bois, option a : sculpteur ornemaniste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0419",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Employé de vente spécialisé, option a : produits alimentaires (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0654",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Employé de vente spécialisé, option b : produits d'équipement courant (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0655",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Employé de vente spécialisé, option c : service à la clientèle (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0658",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Encadreur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0544",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Esthétique cosmétique parfumerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0735",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Étancheur du bâtiment et des travaux publics (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0222",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Facteur d'orgues (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0620",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Ferronnier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0601",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Fleuriste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0657",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Fourrure (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0378",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Gardien d'immeuble (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0752",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Gestion des déchets et propreté urbaine (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0460",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Glacier fabricant (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0342",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Graveur sur pierre (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0218",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Horlogerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0600",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Installateur sanitaire (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0256",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Installateur thermique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0251",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Lapidaire, option b : pierres de couleur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0591",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Lutherie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0622",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance de bâtiments de collectivités (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0252",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance de matériels, option matériels de parcs et jardins (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0132",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance des matériels, option matériels de travaux publics et de manutention (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0131",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance des matériels, option tracteurs et matériels agricoles (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0130",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance des véhicules automobiles, option motocycles (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0135",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance des véhicules automobiles, option véhicules industriels (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0134",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance des véhicules automobiles, option véhicules particuliers (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0133",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance et hygiène des locaux (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0315",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maroquinerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0380",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de la gravure, option a : gravure d'ornementation (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0611",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de la gravure, option b : gravure d'impression (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0612",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de la gravure, option c : gravure en modèle (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0613",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de l'enseigne et de la signalétique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0167",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de la mode - vêtement flou (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0373",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de la mode - vêtement tailleur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0374",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers du football (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0660",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Mise en forme des matériaux (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0097",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Mise en œuvre des caoutchoucs et des élastomères thermoplastiques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0300",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Modèles et moules céramiques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0090",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Monteur en isolation thermique et acoustique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0091",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Opérateur des industries du recyclage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0313",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Construction des carrosseries (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0137",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Cordonnier bottier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0377",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Couvreur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0253",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Décolletage, opérateur régleur en décolletage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0093",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Podo-orthésiste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0385",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Rentrayeur, option b : tapisserie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0572",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Réparation des carrosseries (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0139",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Restaurant (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0708",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Réparation entretien des embarcations de plaisance (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0136",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Sellerie générale (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0381",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Sellier harnacheur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0376",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Sérigraphie industrielle (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0482",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Serrurier métallier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0262",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Souffleur de verre, option enseigne lumineuse (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0558",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Souffleur de verre, option verrerie scientifique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0559",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Staffeur ornemaniste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0528",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Tailleur de pierre - marbrier du bâtiment et de la décoration (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0219",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Tapissier d'ameublement en décor (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0547",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Tournage en céramique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0553",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Transport fluvial (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0459",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Transport par câbles et remontées mécaniques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0166",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Vannerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0545",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Vendeur magasinier en pièces de rechange et équipements automobiles (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0656",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Vêtement de peau (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0382",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Opérateur projectionniste de cinéma (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0485",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Orfèvre, option d : planeur en orfèvrerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0596",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Orthoprothésiste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0384",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Outillages en moules métalliques  (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0098",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Outillages en outils à découper et à emboutir (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0094",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Ouvrier archetier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0621",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Pâtissier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0347",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Peinture en carrosserie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0138",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Petite enfance (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0749",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Plasturgie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0301",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Constructeur en canalisations des travaux publics (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0215",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Poissonnier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0348",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Préparation et réalisation d'ouvrages électriques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0168",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Rentrayeur, option a : tapis (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0571",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Services en brasserie - café (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0709",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Services hôteliers (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0707",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Signalétique, enseigne et décor (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0483",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Solier moquettiste","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0259",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Tapissier d'ameublement en siège (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0546",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Tonnellerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0422",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Tuyautier en orgues (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0623",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Instruments coupants et de chirurgie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0092",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Constructeur en béton armé du bâtiment (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0221",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Constructeur de routes (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0214",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Agent d'accueil et de conduite routière - transport de voyageurs (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0454",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Agent d'assainissement et de collecte des déchets liquides spéciaux (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0324",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Agent de maintenance des industries de matériaux de construction et connexes (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0071",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Agent polyvalent de restauration (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0705",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Agent vérificateur d'appareils extincteurs (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0095",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Arts de la broderie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0573",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Arts de la reliure (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0616",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Arts du bois, option c : marqueteur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0421",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Arts du verre et du cristal (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0557",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Assistant technique en instruments de musique, option accordéon (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0625",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Assistant technique en instruments de musique, option piano (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0627",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Boulanger (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0344",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Bronzier, option c : tourneur sur bronze (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0594",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Charcutier traiteur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0343",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Chaussure (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0379",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Coiffure (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0734",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Conducteur livreur de marchandises (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0457",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Constructeur bois (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0425",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Cordonnerie multiservice (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0383",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Cuisine (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0706",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Déménageur sur véhicule utilitaire léger (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0458",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Ébéniste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0423",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Emballeur professionnel (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0453",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Employé de vente spécialisé, option d : librairie - papeterie - presse (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0659",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Employé technique de laboratoire (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0298",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Fabrication industrielle des céramiques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0299",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Froid et climatisation (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0250",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "maintenance des véhicules, option a : voitures particulières (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0832",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "maintenance des véhicules, option b : véhicules de transport routier (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0831",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "aéronautique option structure (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0834",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "ferronier d'art (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0798",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "agent de propreté et d'hygiène (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0822",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "opérateur/opératrice logistique (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0819",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "propreté de l'environnement urbain - collecte et recyclage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0820",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "maintenance des véhicules, option c : motocycles (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0830",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "installateur en froid et conditionnement d'air (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0843",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "marbrier du bâtiment et de la décoration (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0850",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "tailleur de pierre (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0849",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Industries chimiques (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0312",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Lapidaire, option a : diamant (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0587",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maçon (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0220",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance sur systèmes d'aéronefs (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0195",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Mareyage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0341",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Mécanicien cellules d'aéronefs (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0196",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Mécanicien conducteur des scieries et des industries mécaniques du bois, option b : mécanicien affûteur de sciage, tranchage, déroulage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0416",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Menuisier en sièges (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0417",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Menuisier fabricant de menuiserie, mobilier et agencement (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0426",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Menuisier installateur (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0427",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métier du pressing (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0366",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de la blanchisserie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0367",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de la fonderie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0089",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de la gravure, option d : marquage poinçonnage (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0614",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de la mode - chapelier-modiste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0375",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Monteur de structures mobiles (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0451",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Monteur en chapiteaux (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0640",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Orfèvre, option a : monteur en orfèvrerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0588",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Orfèvre, option b : tourneur repousseur en orfèvrerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0589",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Orfèvre, option c : polisseur aviveur en orfèvrerie (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0590",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Peintre - applicateur de revêtement (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0258",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Plâtrier - plaquiste (CAP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0261",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "BEP (Brevet d'études professionnelles)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0060",
+			"icon" : false,
+			"children" : [{
+			"title" : "Optique lunetterie (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0745",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Accompagnement, soins et services à la personne (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0747",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Auxiliaire en prothèse dentaire (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0748",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Assistant perruquier posticheur (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0732",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Restauration, option cuisine (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0702",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Restauration, option commercialisation et services en restauration (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0704",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers des services administratifs (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0676",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de la relation aux clients et aux usagers (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0652",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers d'art - marchandisage visuel (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0519",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "métiers d'art - tapissier-tapissière d'ameublement (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0542",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers d'art - verre, option verrerie scientifique et technique (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0552",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Systèmes électroniques numériques (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0165",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Agencement (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0415",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Études du bâtiment (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0210",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Topographie (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0211",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Industries graphiques, option b : production graphique (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0477",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Industries graphiques, option a : production imprimée (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0478",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Industries graphiques, option c : façonnage de produits imprimés (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0479",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers d'arts - élaboration de projets de communication visuelle (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0480",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Aménagement - finition (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0247",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers d'art - art de la pierre (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0213",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Bois, option construction bois (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0413",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Bois, option fabrication bois et matériaux associés (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0412",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Bois, option menuiserie - agencement (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0414",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Bois, option scierie (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0411",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers d'art - verre, option métiers de l'enseigne et de la signalétique (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0243",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Logistique et transport (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0651",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Modeleur maquettiste (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0088",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Boucher charcutier (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0340",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers du cuir, option chaussures (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0363",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Représentation informatisée de produits industriels (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0086",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers du pressing et de la blanchisserie (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0361",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Réalisations du gros œuvre (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0207",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Travaux publics (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0212",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Plastiques et composites (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0297",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Électrotechnique énergie équipements communicants (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0164",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Production mécanique (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0087",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Réalisation d'ouvrages de métallerie du bâtiment (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0249",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de la mode - vêtement (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0362",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Conduite de procédés industriels et transformations (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0296",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de l'hygiène, de la propreté et de l'environnement (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0311",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Installation des systèmes énergétiques et climatiques (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0245",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers du cuir, option maroquinerie (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0364",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance des systèmes énergétiques et climatiques (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0244",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Froid et conditionnement de l'air (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0246",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance des produits et équipements industriels (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0163",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Réalisation d'ouvrages du bâtiment en aluminium, verre et matériaux de synthèse (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0248",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "réalisation de produits imprimés et plurimedia, option a : productions graphiques (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0808",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "réalisation de produits imprimés et plurimedia, option b : productions imprimées (BEP)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0807",
+			"icon" : false,
+			"children" : []
+			}]
+			},{
+			"title" : "MC (Mention complémentaire)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0061",
+			"icon" : false,
+			"children" : [{
+			"title" : "Aide à domicile (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0753",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Styliste visagiste (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0736",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Coloriste permanentiste (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0737",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Employé traiteur (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0710",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Cuisinier en desserts de restaurant (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0711",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Art de la cuisine allégée (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0712",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Sommellerie (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0713",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Employé barman (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0714",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Organisateur de réception (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0724",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Accueil - réception (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0725",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Services financiers (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0689",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Assistance, conseil, vente à distance (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0669",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Décors textiles permanents et éphémères (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0548",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Joaillerie (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0602",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Entretien des collections du patrimoine (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0617",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Aéronautique, option avionique (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0201",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Aéronautique, option avions à moteurs à pistons (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0202",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maquettes et prototypes (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0116",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Aéronautique, option avions à moteurs à turbines (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0203",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Aéronautique, option hélicoptère à moteurs à pistons (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0204",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Aéronautique, option hélicoptère à moteurs à turbines (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0205",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Accueil dans les transports (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0473",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Agent de contrôle non destructif (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0083",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance et contrôles des matériels (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0141",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Agent transport exploitation ferroviaire (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0474",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Sécurité civile et d'entreprise (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0464",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Essayage - retouche - vente (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0386",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Pâtisserie boulangère (MC5)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0352",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Pâtisserie, glacerie, chocolaterie, confiserie spécialisées (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0349",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Zinguerie (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0265",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Piquage d'articles chaussants (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0387",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Plaquiste (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0266",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Conducteur de machines de verrerie (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0303",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Boulangerie spécialisée (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0351",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Peinture décoration (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0289",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Sûreté des espaces ouverts au public (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0463",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Transporteur fluvial (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0462",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Graveur sur pierre (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0223",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Vendeur spécialisé en alimentation (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0350",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Parqueteur (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0430",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Technicien en énergies renouvelables, option b : énergie thermique (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0288",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Technicien en énergies renouvelables, option a : énergie électrique (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0287",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Métiers de l'eau (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0320",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance des moteurs diesel et de leurs équipements (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0140",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Réalisation de circuits oléohydrauliques et pneumatiques (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0169",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Technicien ascensoriste (service et modernisation) (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0182",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance des installations oléohydrauliques et pneumatiques (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0183",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance des systèmes embarqués de l'automobile (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0142",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "Maintenance en équipement thermique individuel (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-029-num-0264",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "coiffure coupe couleur (MC Niveau V)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0802",
+			"icon" : false,
+			"children" : []
+			},{
+			"title" : "vendeur-conseil en produits techniques pour l'habitat (MC Niveau IV)","key" : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-046-num-0806",
 			"icon" : false,
 			"children" : []
 			}]
