@@ -173,6 +173,9 @@ class Model {
 	public function getThumbsSuggestionsLink() {
 		return $this->parameters ["services"] ["thumbs"] . '/suggestions?mdid=' . $this->getMetadata ()->getLink ();
 	}
+	public function useUriAsTaxonPathSource() {
+		return isset ( $this->parameters ["options"] ["use_uri_as_taxonpath_source"] ) && $this->parameters ["options"] ["use_uri_as_taxonpath_source"];
+	}
 	public function technicalInfosSyncRequest() {
 		return $this->getServiceAccess ()->createContentRefreshRequest ( "sync-tech-infos", $this->getContent ()->getId (), $this->getContent ()->getEtag () );
 	}

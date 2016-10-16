@@ -43,13 +43,14 @@ abstract class AbstractView implements IView {
 	protected  function getScolomfrForm($url) {
 		assert(!is_null($this->model->getLomMetadata()) && $this->model->getLomMetadata()->isBuilt());
 		$scolomfrXML=$this->model->getLomMetadata()->getDocument();
-		//die($scolomfrXML->saveXML());
-		return $this->transformScolomfrToForm($scolomfrXML, $url);
+		$useUriAsTaxonPathSource=$this->model->useUriAsTaxonPathSource();
+		return $this->transformScolomfrToForm($scolomfrXML, $url, $useUriAsTaxonPathSource);
 	}
-	private function transformScolomfrToForm($scolomfrXML, $url) {
+	private function transformScolomfrToForm($scolomfrXML, $url, $useUriAsTaxonPathSource) {
 		$this->proc = $this->getXSLTProcessor('xsl/scolomfrForm.xsl');
 		$this->proc->setParameter('', 'prefix', $this->prefix);
 		$this->proc->setParameter('', 'url', $url);
+		$this->proc->setParameter('', 'useUriAsTaxonPathSource', $useUriAsTaxonPathSource);
 		return $this->proc->transformToXML($scolomfrXML);
 	}
 

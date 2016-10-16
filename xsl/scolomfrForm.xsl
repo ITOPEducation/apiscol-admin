@@ -7,6 +7,7 @@
 		select="document('../scolomfr/extracted_vocab_values.xml')" />
 	<xsl:param name="prefix" select="/" />
 	<xsl:param name="url" />
+	<xsl:param name="useUriAsTaxonPathSource" select="false" />
 	<xsl:output method="html" omit-xml-declaration="yes"
 		encoding="UTF-8" indent="yes" />
 	<xsl:strip-space elements="*" />
@@ -16,6 +17,11 @@
 			<xsl:attribute name="action">
 		<xsl:value-of select="$url"></xsl:value-of>
 		</xsl:attribute>
+			<input type="hidden" id="use_uri_as_taxonpath_source">
+				<xsl:attribute name="value">
+		<xsl:value-of select="$useUriAsTaxonPathSource"></xsl:value-of>
+		</xsl:attribute>
+			</input>
 			<div id="visualisation">
 				<div class="cadre ui-helper-clearfix">
 					<span class="cadre_icones_droite" name="cadre_icones"></span>
@@ -110,7 +116,10 @@
 											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
 										<xsl:apply-templates
 											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
-											<xsl:with-param name="source" select="'ScoLomFr Vocabulaire22'"></xsl:with-param>
+											<xsl:with-param name="source"
+												select="'ScoLomFr Vocabulaire22'"></xsl:with-param>
+											<xsl:with-param name="sourceUri"
+												select="'http://data.education.fr/voc/scolomfr/scolomfr-voc-022'"></xsl:with-param>
 										</xsl:apply-templates>
 									</div>
 
@@ -139,7 +148,10 @@
 											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
 										<xsl:apply-templates
 											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
-											<xsl:with-param name="source" select="'ScoLomFr Vocabulaire15'"></xsl:with-param>
+											<xsl:with-param name="source"
+												select="'ScoLomFr Vocabulaire15'"></xsl:with-param>
+											<xsl:with-param name="sourceUri"
+												select="'http://data.education.fr/voc/scolomfr/scolomfr-voc-015'"></xsl:with-param>
 										</xsl:apply-templates>
 									</div>
 
@@ -158,7 +170,10 @@
 											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
 										<xsl:apply-templates
 											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
-											<xsl:with-param name="source" select="'ScoLomFr Vocabulaire16'"></xsl:with-param>
+											<xsl:with-param name="source"
+												select="'ScoLomFr Vocabulaire16'"></xsl:with-param>
+											<xsl:with-param name="sourceUri"
+												select="'http://data.education.fr/voc/scolomfr/scolomfr-voc-016'"></xsl:with-param>
 										</xsl:apply-templates>
 									</div>
 
@@ -177,7 +192,10 @@
 											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
 										<xsl:apply-templates
 											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
-											<xsl:with-param name="source" select="'ScoLomFr Vocabulaire29'"></xsl:with-param>
+											<xsl:with-param name="source"
+												select="'ScoLomFr Vocabulaire29'"></xsl:with-param>
+											<xsl:with-param name="sourceUri"
+												select="'http://data.education.fr/voc/scolomfr/scolomfr-voc-029'"></xsl:with-param>
 										</xsl:apply-templates>
 									</div>
 
@@ -195,7 +213,10 @@
 											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
 										<xsl:apply-templates
 											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
-											<xsl:with-param name="source" select="'ScoLomFr Vocabulaire21'"></xsl:with-param>
+											<xsl:with-param name="source"
+												select="'ScoLomFr Vocabulaire21'"></xsl:with-param>
+											<xsl:with-param name="sourceUri"
+												select="'http://data.education.fr/voc/scolomfr/scolomfr-voc-021'"></xsl:with-param>
 										</xsl:apply-templates>
 									</div>
 
@@ -213,7 +234,10 @@
 											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
 										<xsl:apply-templates
 											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
-											<xsl:with-param name="source" select="'ScoLomFr Vocabulaire40'"></xsl:with-param>
+											<xsl:with-param name="source"
+												select="'ScoLomFr Vocabulaire40'"></xsl:with-param>
+											<xsl:with-param name="sourceUri"
+												select="'http://data.education.fr/voc/scolomfr/scolomfr-voc-040'"></xsl:with-param>
 										</xsl:apply-templates>
 									</div>
 
@@ -232,7 +256,10 @@
 											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
 										<xsl:apply-templates
 											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
-											<xsl:with-param name="source" select="'ScoLomFr Vocabulaire42'"></xsl:with-param>
+											<xsl:with-param name="source"
+												select="'ScoLomFr Vocabulaire42'"></xsl:with-param>
+											<xsl:with-param name="sourceUri"
+												select="'http://data.education.fr/voc/scolomfr/scolomfr-voc-042'"></xsl:with-param>
 										</xsl:apply-templates>
 									</div>
 
@@ -250,7 +277,10 @@
 											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
 										<xsl:apply-templates
 											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
-											<xsl:with-param name="source" select="'ScoLomFr Vocabulaire43'"></xsl:with-param>
+											<xsl:with-param name="source"
+												select="'ScoLomFr Vocabulaire43'"></xsl:with-param>
+											<xsl:with-param name="sourceUri"
+												select="'http://data.education.fr/voc/scolomfr/scolomfr-voc-043'"></xsl:with-param>
 										</xsl:apply-templates>
 									</div>
 
@@ -268,7 +298,10 @@
 											select="$dataPurposeId"></xsl:value-of></xsl:attribute>
 										<xsl:apply-templates
 											select="/lom:lom/lom:classification[lom:purpose/lom:value=$dataPurposeId]">
-											<xsl:with-param name="source" select="'ScoLomFr Vocabulaire41'"></xsl:with-param>
+											<xsl:with-param name="source"
+												select="'ScoLomFr Vocabulaire41'"></xsl:with-param>
+											<xsl:with-param name="sourceUri"
+												select="'http://data.education.fr/voc/scolomfr/scolomfr-voc-041'"></xsl:with-param>
 										</xsl:apply-templates>
 									</div>
 
@@ -374,10 +407,22 @@
 	</xsl:template>
 	<xsl:template match="/lom:lom/lom:classification">
 		<xsl:param name="source"></xsl:param>
-		<div class="source-data" data-source="{$source}">
+		<xsl:param name="sourceUri"></xsl:param>
+		<div class="source-data" data-source="{$source}" data-source-uri="{$sourceUri}">
+			<xsl:variable name="sourceString">
+				<xsl:choose>
+					<xsl:when test="$useUriAsTaxonPathSource">
+						<xsl:value-of select="$sourceUri">
+						</xsl:value-of>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="$source">
+						</xsl:value-of>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:variable>
 			<xsl:apply-templates
-				select="lom:taxonPath[lom:source/lom:string=$source]/lom:taxon">
-
+				select="lom:taxonPath[lom:source/lom:string=$sourceString]/lom:taxon">
 			</xsl:apply-templates>
 		</div>
 	</xsl:template>

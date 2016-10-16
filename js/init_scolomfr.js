@@ -4,6 +4,7 @@ var ned = {
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/educational_level",
 	source : "ScoLomFr Vocabulaire22",
+	sourceUri : "http://data.education.fr/voc/scolomfr/scolomfr-voc-022",
 	help : "Précisez à quel(s) niveau(x) de classes la séquence se destine.",
 	mandatory : true
 };
@@ -13,6 +14,7 @@ var ens = {
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-003",
 	source : "ScoLomFr Vocabulaire15",
+	sourceUri : "http://data.education.fr/voc/scolomfr/scolomfr-voc-015",
 	help : "Précisez la discipline pour laquelle la séquence est adaptée.",
 	mandatory : true
 };
@@ -22,6 +24,7 @@ var scc = {
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/competency",
 	source : "ScoLomFr Vocabulaire16",
+	sourceUri : "http://data.education.fr/voc/scolomfr/scolomfr-voc-016",
 	help : "Précisez les compétences du socle commun.",
 	mandatory : true
 };
@@ -31,6 +34,7 @@ var dip = {
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-016",
 	source : "ScoLomFr Vocabulaire29",
+	sourceUri : "http://data.education.fr/voc/scolomfr/scolomfr-voc-029",
 	help : "Précisez le diplôme.",
 	mandatory : true
 };
@@ -40,6 +44,7 @@ var pcd = {
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-011",
 	source : "ScoLomFr Vocabulaire21",
+	sourceUri : "http://data.education.fr/voc/scolomfr/scolomfr-voc-021",
 	help : "Précisez le public cible détaillé.",
 	mandatory : true
 };
@@ -49,6 +54,7 @@ var cap = {
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/competency",
 	source : "ScoLomFr Vocabulaire40",
+	sourceUri : "http://data.education.fr/voc/scolomfr/scolomfr-voc-040",
 	help : "Précisez le cadre pédagogique.",
 	mandatory : true
 };
@@ -58,6 +64,7 @@ var cecrl = {
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-019",
 	source : "ScoLomFr Vocabulaire42",
+	sourceUri : "http://data.education.fr/voc/scolomfr/scolomfr-voc-042",
 	help : "Précisez le cadre européen commun de référence pour les langues.",
 	mandatory : true
 };
@@ -67,6 +74,7 @@ var sup = {
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-023",
 	source : "ScoLomFr Vocabulaire43",
+	sourceUri : "http://data.education.fr/voc/scolomfr/scolomfr-voc-043",
 	help : "Précisez le Support.",
 	mandatory : true
 };
@@ -76,6 +84,7 @@ var def = {
 	standard : "SCOLOMFRv2.0",
 	purpose : "http://data.education.fr/voc/scolomfr/concept/scolomfr-voc-028-num-017",
 	source : "ScoLomFr Vocabulaire41",
+	sourceUri : "http://data.education.fr/voc/scolomfr/scolomfr-voc-041",
 	help : "Précisez le type de déficience.",
 	mandatory : true
 };
@@ -85,9 +94,11 @@ var trees = new Object();
 var disableDynatreeOnSelect;
 var submitButton;
 var initialization = true;
-
+var useUriAsTaxonPathSource = false;
 function initScolomFr() {
-
+	useUriAsTaxonPathSource = $("#use_uri_as_taxonpath_source").val() ? true
+			: false;
+	console.log(useUriAsTaxonPathSource);
 	classifications = new Object();
 	$("#ned_tree").append(ajouterChampProgramme(ned));
 	$("#ens_tree").append(ajouterChampProgramme(ens));
@@ -358,7 +369,9 @@ function mettreAJourChampProgramme(program) {
 			function(node) {
 				if (!node.isStatusNode() && !node.hasChildren()) {
 					if (hasProgramEntry(node.data.key, program.purpose,
-							program.standard, program.source))
+							program.standard,
+							useUriAsTaxonPathSource ? program.sourceUri
+									: program.source))
 						node.select();
 				}
 			});
@@ -366,10 +379,12 @@ function mettreAJourChampProgramme(program) {
 }
 function hasProgramEntry(id, purpose, standard, source) {
 	var found = false;
+	var taxonPathSourceAttributename = useUriAsTaxonPathSource ? "data-source-uri"
+			: "data-source";
 	$("div.purpose").each(
 			function(index, elem) {
 				if (source.indexOf($(elem).find(".source-data").attr(
-						"data-source")) >= 0) {
+						taxonPathSourceAttributename)) >= 0) {
 					$(elem).find(".source-data").find(".entry-data").each(
 							function(index, elem) {
 								if ($(elem).attr("data-id") == id)
