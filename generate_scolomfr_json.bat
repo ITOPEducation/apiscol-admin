@@ -1,0 +1,10 @@
+msxsl.exe scolomfr\skos\scolomfr.skos xsl\buildJsonHirarchyFromSkos.xsl -t -xw -o cache\ens.txt vocabtitle='Enseignement' vocabnumber='015'
+msxsl.exe scolomfr\skos\scolomfr.skos xsl\buildJsonHirarchyFromSkos.xsl -t -xw -o cache\scc.txt vocabtitle='Compétences du socle commun' vocabnumber='016'
+msxsl.exe scolomfr\skos\scolomfr.skos xsl\buildJsonHirarchyFromSkos.xsl -t -xw -o cache\pcd.txt vocabtitle='Public cible détaillé' vocabnumber='021'
+msxsl.exe scolomfr\skos\scolomfr.skos xsl\buildJsonHirarchyFromSkos.xsl -t -xw -o cache\ned.txt vocabtitle='Niveau éducatif détaillé' vocabnumber=022''
+msxsl.exe scolomfr\skos\scolomfr.skos xsl\buildJsonHirarchyFromSkos.xsl -t -xw -o cache\dip.txt vocabtitle='Diplômes' vocabnumber='029'
+msxsl.exe scolomfr\skos\scolomfr.skos xsl\buildJsonHirarchyFromSkos.xsl -t -xw -o cache\cap.txt vocabtitle='Cadre pédagogique' vocabnumber='040'
+msxsl.exe scolomfr\skos\scolomfr.skos xsl\buildJsonHirarchyFromSkos.xsl -t -xw -o cache\def.txt vocabtitle='Type de déficience' vocabnumber='041'
+msxsl.exe scolomfr\skos\scolomfr.skos xsl\buildJsonHirarchyFromSkos.xsl -t -xw -o cache\cecrl.txt vocabtitle='Cadre européen commun de référence pour les langues' vocabnumber='042'
+msxsl.exe scolomfr\skos\scolomfr.skos xsl\buildJsonHirarchyFromSkos.xsl -t -xw -o cache\sup.txt vocabtitle='Support' vocabnumber='043'
+@PAUSE
